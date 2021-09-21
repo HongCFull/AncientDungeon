@@ -8,8 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: SMDP_Mat_Fire 3
-  m_Shader: {fileID: -6465566751694194690, guid: fb6ffc5b7ce376c45a68fbe228d8ae44,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: fb6ffc5b7ce376c45a68fbe228d8ae44, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
@@ -48,6 +47,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: eee2cc19f8e6ddc47825b1bfa85001d3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_97a51a80392b4c82b29c86ea9eb13117_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 0da4a6a5417f98f40911a8d1379831ba, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_A384AA16_Texture_1:
         m_Texture: {fileID: 2800000, guid: 3c02972cb4aa8284fbbcc7f9be8c99ea, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -61,6 +64,18 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -111,6 +126,7 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  m_BuildTextureStacks: []
 --- !u!114 &7327122800860417750
 MonoBehaviour:
   m_ObjectHideFlags: 11

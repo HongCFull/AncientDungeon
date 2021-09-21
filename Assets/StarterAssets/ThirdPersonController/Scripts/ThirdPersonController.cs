@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.Collections;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
 #endif
@@ -14,17 +15,33 @@ namespace StarterAssets
 #endif
 	public class ThirdPersonController : MonoBehaviour
 	{
+		//Player
 		[Header("Player")]
+		
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 2.0f;
+		
 		[Tooltip("Sprint speed of the character in m/s")]
 		public float SprintSpeed = 5.335f;
+		
 		[Tooltip("How fast the character turns to face movement direction")]
 		[Range(0.0f, 0.3f)]
 		public float RotationSmoothTime = 0.12f;
+		
 		[Tooltip("Acceleration and deceleration")]
 		public float SpeedChangeRate = 10.0f;
 
+		[Tooltip("For tuning rotation time. The speed threshold to identify if the player is considered as moving ")]
+		[Range(0.1f, 2f)]
+		[SerializeField] private float moveSpeedThreshold;
+
+		[Tooltip("This rotation smooth time is applied to the player when the player is identified as idling")]
+		[ReadOnly]  public float idleRotationSmoothTime = 0.015f; 
+		
+		[Tooltip("This rotation smooth time is applied to the player when the player is identified as moving")]
+		[ReadOnly]  public float moveRotationSmoothTime = 0.07f; 
+
+		
 		[Space(10)]
 		[Tooltip("The height the player can jump")]
 		public float JumpHeight = 1.2f;
@@ -47,6 +64,7 @@ namespace StarterAssets
 		[Tooltip("What layers the character uses as ground")]
 		public LayerMask GroundLayers;
 
+		//Cinemachine
 		[Header("Cinemachine")]
 		[Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
 		public GameObject CinemachineCameraTarget;
@@ -120,6 +138,7 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+			
 		}
 
 		private void LateUpdate()
@@ -165,7 +184,8 @@ namespace StarterAssets
 			// Cinemachine will follow this target
 			CinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride, _cinemachineTargetYaw, 0.0f);
 		}
-
+		
+//TODO: when the player is not moving e.g. speed ~= 0 -> make the rotation smooth time to 0.01. Else make it 0.07
 		private void Move()
 		{
 			// set target speed based on move speed, sprint speed and if sprint is pressed
@@ -179,7 +199,9 @@ namespace StarterAssets
 
 			// a reference to the players current horizontal velocity
 			float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
-
+			//Debug.Log("speed = " + currentHorizontalSpeed);
+			ApplyRotationSmoothTimeOnGround(currentHorizontalSpeed);
+			
 			float speedOffset = 0.1f;
 			float inputMagnitude = _input.analogMovement ? _input.move.magnitude : 1f;
 
@@ -314,5 +336,16 @@ namespace StarterAssets
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
 			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
 		}
+
+		private void ApplyRotationSmoothTimeOnGround(float currentHorizontalSpeed ) {
+			//if the player is jumping, dont adjust the rotation smooth time
+			if (!Grounded) return;
+			if (currentHorizontalSpeed>=Mathf.Epsilon && currentHorizontalSpeed<= moveSpeedThreshold) {
+				RotationSmoothTime = 0.015f;
+			}
+			else {
+				RotationSmoothTime = 0.07f;
+			}
+		} 
 	}
 }
