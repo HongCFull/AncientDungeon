@@ -15,11 +15,11 @@ D:/Unity GameProject/Comp4971C
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59758
+50529
 Successfully changed project path to: D:/Unity GameProject/Comp4971C
 D:/Unity GameProject/Comp4971C
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 127.65 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 100.69 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.4f1 (0abb6314276a)
 [Subsystems] Discovering subsystems at path D:/Unity/2020.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -36,47 +36,809 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2020.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2020.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/2020.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56052
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56184
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2020.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/Unity/2020.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002169 seconds.
+Registered in 0.001122 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 115.37 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 93.59 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.067 seconds
+- Completed reload, in  1.576 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003255 seconds.
+Registered in 0.003678 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 107.45 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 100.12 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.102 seconds
+- Completed reload, in  1.749 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.10 seconds
-Refreshing native plugins compatible for Editor in 1.88 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 0.93 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4564 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 214.1 MB.
-System memory in use after: 214.3 MB.
+System memory in use before: 214.2 MB.
+System memory in use after: 214.4 MB.
 
 Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 5003.
-Total: 6.427400 ms (FindLiveObjects: 0.458400 ms CreateObjectMapping: 0.258100 ms MarkObjects: 5.516900 ms  DeleteObjects: 0.192600 ms)
+Total: 4.180200 ms (FindLiveObjects: 0.625100 ms CreateObjectMapping: 0.496200 ms MarkObjects: 2.957100 ms  DeleteObjects: 0.100500 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Prefabs/Player Character.prefab
-  artifactKey: Guid(61d13b4a9aa729943bd0ad2c2d4e2c70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player Character.prefab using Guid(61d13b4a9aa729943bd0ad2c2d4e2c70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59b4d7451bcf9de36d0c5d7aa8ae50b6') in 0.470470 seconds
-  Import took 0.482963 seconds .
+  path: Assets/Scenes/WorkingScene.unity
+  artifactKey: Guid(26678a2b232b5a84aa32828198cd1c09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/WorkingScene.unity using Guid(26678a2b232b5a84aa32828198cd1c09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '323493c2d7ea374788cb4afc468a5770') in 0.022427 seconds
+  Import took 0.031474 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 150.415182 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets
+  artifactKey: Guid(73b1d62de440fa54baf7776c27f89c20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets using Guid(73b1d62de440fa54baf7776c27f89c20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adcbd249dd06be457648fe8090099487') in 0.008826 seconds
+  Import took 0.017923 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.038655 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_5278.asset
+  artifactKey: Guid(f80a6ed1c19b46f4bb957467b5f166ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_5278.asset using Guid(f80a6ed1c19b46f4bb957467b5f166ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89a1edad23dec5d271272614bd544e2e') in 0.107680 seconds
+  Import took 0.116294 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239946.asset
+  artifactKey: Guid(6b770cd57ce9ad641a1c50ab0ea63e55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239946.asset using Guid(6b770cd57ce9ad641a1c50ab0ea63e55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0560ecdcf733b0dec6abb32adb9ddede') in 0.019710 seconds
+  Import took 0.028478 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000255 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239896.asset
+  artifactKey: Guid(ee83003e3ef5032489f3da08cd352c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239896.asset using Guid(ee83003e3ef5032489f3da08cd352c50) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc9eee53406d4a5a704f60d18edde5ac') in 0.018562 seconds
+  Import took 0.027949 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239918.asset
+  artifactKey: Guid(d66cce82ca61a2245a8232fdc2294064) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239918.asset using Guid(d66cce82ca61a2245a8232fdc2294064) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cfbd8c1f1b76eaad566f661513f2be5') in 0.028768 seconds
+  Import took 0.037414 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_77588.asset
+  artifactKey: Guid(4d35956263550b145b29aa2f7141f071) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_77588.asset using Guid(4d35956263550b145b29aa2f7141f071) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e85487b5546618662fd6a52f380e387') in 0.010432 seconds
+  Import took 0.018037 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239836.asset
+  artifactKey: Guid(bf2d2a0dfa0d8bb4eae67e459312c87d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239836.asset using Guid(bf2d2a0dfa0d8bb4eae67e459312c87d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e3eb30ab836200b9a7773b9ba1b2ffe') in 0.013591 seconds
+  Import took 0.021577 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_32102.asset
+  artifactKey: Guid(f184732800c9ff940a5a5ff72766408f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_32102.asset using Guid(f184732800c9ff940a5a5ff72766408f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e3669150d34bacc6f11a522c5088f25') in 0.012028 seconds
+  Import took 0.020367 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_240046.asset
+  artifactKey: Guid(88812d743d4f1da48a212dd094e43bdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_240046.asset using Guid(88812d743d4f1da48a212dd094e43bdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe7859821ef0a0aab3ff0ac7a33f36e4') in 0.021306 seconds
+  Import took 0.029946 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239998.asset
+  artifactKey: Guid(3f951d9888becca49833b09ca110220b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239998.asset using Guid(3f951d9888becca49833b09ca110220b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce27ee7df424e6fab208e1e0f179d320') in 0.014384 seconds
+  Import took 0.023185 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239820.asset
+  artifactKey: Guid(18c1b6c14af18b14aa11d530a2f586cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239820.asset using Guid(18c1b6c14af18b14aa11d530a2f586cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2940580ffd916b245a9e8a98e1fea540') in 0.012999 seconds
+  Import took 0.022089 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239828.asset
+  artifactKey: Guid(630aa2164144f4a4980697d85723be1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239828.asset using Guid(630aa2164144f4a4980697d85723be1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e42dae047b1ca7fe36c1c1aefd3013cc') in 0.012444 seconds
+  Import took 0.020791 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239870.asset
+  artifactKey: Guid(e5757f94bdacdb246b2f57905563e0b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239870.asset using Guid(e5757f94bdacdb246b2f57905563e0b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01e1b5488587469733cb01174c7e882d') in 0.015566 seconds
+  Import took 0.024474 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_240014.asset
+  artifactKey: Guid(8601605143ff4854d8a06541b7867f9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_240014.asset using Guid(8601605143ff4854d8a06541b7867f9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b7df702badcb6f5c7db5fe0a761790d') in 0.011386 seconds
+  Import took 0.019432 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_13678.asset
+  artifactKey: Guid(fa10e4590a958564a81c67f9c7339733) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_13678.asset using Guid(fa10e4590a958564a81c67f9c7339733) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c37cad3a8bacacdaf7e4e1305a0d702') in 0.019440 seconds
+  Import took 0.028405 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239922.asset
+  artifactKey: Guid(c3ebfb424c6cef14ea56dec6d50d962f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239922.asset using Guid(c3ebfb424c6cef14ea56dec6d50d962f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '635aba1bb4ea8512db75119cbe5b075a') in 0.010178 seconds
+  Import took 0.018268 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_72742.asset
+  artifactKey: Guid(f5c9f50c14ef5c0479455f6779429356) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_72742.asset using Guid(f5c9f50c14ef5c0479455f6779429356) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c25e9d926919a3955627daa8d9565011') in 0.009188 seconds
+  Import took 0.018229 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_240004.asset
+  artifactKey: Guid(8434b962b9bcfbe46b334e8413ae8a38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_240004.asset using Guid(8434b962b9bcfbe46b334e8413ae8a38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af8efc9baeeaffc164254615e453a113') in 0.010959 seconds
+  Import took 0.019936 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239934.asset
+  artifactKey: Guid(5f219f5473f75b04589e86e604cde56b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239934.asset using Guid(5f219f5473f75b04589e86e604cde56b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58a20e30b2b5cd479352efeafc08e141') in 0.009550 seconds
+  Import took 0.018207 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_240008.asset
+  artifactKey: Guid(5cc1d6ff6723b2a41a84762bd69a86cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_240008.asset using Guid(5cc1d6ff6723b2a41a84762bd69a86cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ec29de5fc4ab6bc96ca05c2aeb53468') in 0.011250 seconds
+  Import took 0.019774 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239952.asset
+  artifactKey: Guid(eb8c54c8a5035454bbf03d0481e538a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239952.asset using Guid(eb8c54c8a5035454bbf03d0481e538a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2e4e4657d06964749ac0769c47ab07e') in 0.011002 seconds
+  Import took 0.019703 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239840.asset
+  artifactKey: Guid(58091162fb54cbe408f48fbfa624a403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239840.asset using Guid(58091162fb54cbe408f48fbfa624a403) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5dc7119a376f9cba66b3d1a76311a6c') in 0.010262 seconds
+  Import took 0.019004 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_240050.asset
+  artifactKey: Guid(c662195809f047544b91b5b116d864da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_240050.asset using Guid(c662195809f047544b91b5b116d864da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e87d3cc63bc814e05afcc1242484f21') in 0.009754 seconds
+  Import took 0.017924 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239968.asset
+  artifactKey: Guid(ad1982df81b1255428262b2b2d08d2c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239968.asset using Guid(ad1982df81b1255428262b2b2d08d2c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73959ba4954c984a11a43f2d966c613c') in 0.010056 seconds
+  Import took 0.018698 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_31830.asset
+  artifactKey: Guid(708519a4b1bbd694093e02590d463f1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_31830.asset using Guid(708519a4b1bbd694093e02590d463f1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9af5a20644c63fee4ea18c01cba9bb5a') in 0.010663 seconds
+  Import took 0.021920 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239902.asset
+  artifactKey: Guid(3c2b3566ede68ac4e9910d18dc35de29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239902.asset using Guid(3c2b3566ede68ac4e9910d18dc35de29) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e6bbaf633b02c5616fe56f82f346274') in 0.009874 seconds
+  Import took 0.017811 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239810.asset
+  artifactKey: Guid(ab75b2542050a6d478da1f60ba0c9f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239810.asset using Guid(ab75b2542050a6d478da1f60ba0c9f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '265b97c7d3be5ce55d714564e87cc796') in 0.013413 seconds
+  Import took 0.022769 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_240022.asset
+  artifactKey: Guid(0e3beaed05c2bc14c9740d99d4dcb167) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_240022.asset using Guid(0e3beaed05c2bc14c9740d99d4dcb167) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2233e53d9f2cd347d40c1a451d28b525') in 0.015515 seconds
+  Import took 0.024406 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_240058.asset
+  artifactKey: Guid(e7334cac3d39f0a42879506157a30517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_240058.asset using Guid(e7334cac3d39f0a42879506157a30517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e11b1e23a315a712a3ce56634473fee7') in 0.010667 seconds
+  Import took 0.019818 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_31572.asset
+  artifactKey: Guid(7b557f8c7cb18fd4c822cb1e63c642f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_31572.asset using Guid(7b557f8c7cb18fd4c822cb1e63c642f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b61515c8b0e9e7b5524d0bb70a264e8c') in 0.011453 seconds
+  Import took 0.020670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239940.asset
+  artifactKey: Guid(fdb4dd5a046e00c43b4a36d415920442) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239940.asset using Guid(fdb4dd5a046e00c43b4a36d415920442) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54821401976964585c7ff07eeb534132') in 0.009947 seconds
+  Import took 0.018457 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239976.asset
+  artifactKey: Guid(c0ff3b18f2a9bdf459ea03bace510ce5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239976.asset using Guid(c0ff3b18f2a9bdf459ea03bace510ce5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac9422f7b2bac904e29a04682966d927') in 0.010437 seconds
+  Import took 0.019033 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000300 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239856.asset
+  artifactKey: Guid(0de42abba5c66704fb6ea2b93ec69ef7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239856.asset using Guid(0de42abba5c66704fb6ea2b93ec69ef7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '751bb9269d74ff1aef3ce07ebd177015') in 0.010610 seconds
+  Import took 0.020730 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000449 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239992.asset
+  artifactKey: Guid(ccb72c065bd9b2a4c993480cda702848) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239992.asset using Guid(ccb72c065bd9b2a4c993480cda702848) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6412f9ddc16418d287e906cdb5a0d31') in 0.011451 seconds
+  Import took 0.020139 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239852.asset
+  artifactKey: Guid(ca7abce88d5857d44aa1fd049ebf7221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239852.asset using Guid(ca7abce88d5857d44aa1fd049ebf7221) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19c5ed779df28ad9f3fcd797a4c076b2') in 0.011064 seconds
+  Import took 0.020096 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239864.asset
+  artifactKey: Guid(ac79b1253fe622e4884e71c73c626a7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239864.asset using Guid(ac79b1253fe622e4884e71c73c626a7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3e7e7e7fe32d779ebedd6eb8db8b496') in 0.009848 seconds
+  Import took 0.019050 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239892.asset
+  artifactKey: Guid(f3f63eeabab868143b0f69f3805f3260) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239892.asset using Guid(f3f63eeabab868143b0f69f3805f3260) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c6ee24dd0979e3dc93b92cd05e318a7') in 0.009693 seconds
+  Import took 0.017311 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239962.asset
+  artifactKey: Guid(d1421f9e1a0298e46800fb858c4efb7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239962.asset using Guid(d1421f9e1a0298e46800fb858c4efb7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2b9e03e4e7aabad33c22fcec0533740') in 0.009034 seconds
+  Import took 0.017377 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000307 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239982.asset
+  artifactKey: Guid(37594be7443d939439f4c243044c6993) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239982.asset using Guid(37594be7443d939439f4c243044c6993) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25081d9cc152377c62330ea551161443') in 0.009992 seconds
+  Import took 0.019641 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000273 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239910.asset
+  artifactKey: Guid(4313c050e1da8c949a91fe04eefa7cbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239910.asset using Guid(4313c050e1da8c949a91fe04eefa7cbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20ab78e0ad0f9d47c671d55b01d7a77b') in 0.010946 seconds
+  Import took 0.019960 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_240038.asset
+  artifactKey: Guid(6ce17f16dc0bcfc41b1a69ae99da9ca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_240038.asset using Guid(6ce17f16dc0bcfc41b1a69ae99da9ca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9883ce8e97c2af7ea55c59f7597a72d6') in 0.009961 seconds
+  Import took 0.018502 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_239876.asset
+  artifactKey: Guid(2df3171d58e331b44bac6de85659f84f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_239876.asset using Guid(2df3171d58e331b44bac6de85659f84f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '560cf7ac6676415f87ecab35e510ae63') in 0.010420 seconds
+  Import took 0.018921 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001685 seconds.
+  path: Assets/Ancient-Dungeon-URP/MeshAssets/um_240038.asset
+  artifactKey: Guid(6ce17f16dc0bcfc41b1a69ae99da9ca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-URP/MeshAssets/um_240038.asset using Guid(6ce17f16dc0bcfc41b1a69ae99da9ca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9883ce8e97c2af7ea55c59f7597a72d6') in 0.006896 seconds
+  Import took 0.014763 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.408521 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Lamp_A_01.mat
+  artifactKey: Guid(2b75801c71e1c05469aed72adcb713b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Lamp_A_01.mat using Guid(2b75801c71e1c05469aed72adcb713b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '629a757674e87c710dd2defd7dcacd95') in 0.166784 seconds
+  Import took 0.175427 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Pillar_A_01.mat
+  artifactKey: Guid(83c31ba48e023c44bb1b24e9d1153452) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Pillar_A_01.mat using Guid(83c31ba48e023c44bb1b24e9d1153452) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7881760c4a50e853601074bb75e2179') in 0.018614 seconds
+  Import took 0.027424 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Pillar_B_01.mat
+  artifactKey: Guid(853848edbec61f848bec91ee59c4c9d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Pillar_B_01.mat using Guid(853848edbec61f848bec91ee59c4c9d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '213945f4701d5b74f03c43350ffd6ec2') in 0.021330 seconds
+  Import took 0.029656 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000380 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Pillar_C_01.mat
+  artifactKey: Guid(d5aa7fd9677b87644a9bb3b802ad0141) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Pillar_C_01.mat using Guid(d5aa7fd9677b87644a9bb3b802ad0141) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '279e68bf8a40551ed44799770d292692') in 0.029588 seconds
+  Import took 0.038749 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Pillar_D_01.mat
+  artifactKey: Guid(6b0dcded0b43de640a4f3caa38103b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Pillar_D_01.mat using Guid(6b0dcded0b43de640a4f3caa38103b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bba483fc5d18d9c0172d1bc059350d2c') in 0.017859 seconds
+  Import took 0.025663 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004425 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Pillar_D_01.mat
+  artifactKey: Guid(6b0dcded0b43de640a4f3caa38103b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Pillar_D_01.mat using Guid(6b0dcded0b43de640a4f3caa38103b79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bba483fc5d18d9c0172d1bc059350d2c') in 0.011927 seconds
+  Import took 0.019947 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.060371 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Pillar_E_01.mat
+  artifactKey: Guid(057f4ae8a0e9cdf41824b28d28b34196) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Pillar_E_01.mat using Guid(057f4ae8a0e9cdf41824b28d28b34196) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '168e67b500e1d6470d9752bdbfab0c09') in 0.017403 seconds
+  Import took 0.025813 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_RuneGate_A_01.mat
+  artifactKey: Guid(809dc955b42987e4285d4fbf04ae7c72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_RuneGate_A_01.mat using Guid(809dc955b42987e4285d4fbf04ae7c72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '559e4a0a9591b1f067412b70b0239d64') in 0.015756 seconds
+  Import took 0.025484 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Pillar_G_01.mat
+  artifactKey: Guid(4395763ec05354740ad39b6ef568d61f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Pillar_G_01.mat using Guid(4395763ec05354740ad39b6ef568d61f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3287aaa4ab6a647b35ded52e8c457fb8') in 0.013540 seconds
+  Import took 0.022930 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Pillar_E_01.mat
+  artifactKey: Guid(057f4ae8a0e9cdf41824b28d28b34196) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Pillar_E_01.mat using Guid(057f4ae8a0e9cdf41824b28d28b34196) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '168e67b500e1d6470d9752bdbfab0c09') in 0.014412 seconds
+  Import took 0.023564 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Pillar_F_01.mat
+  artifactKey: Guid(3029834c507902c4280c4c282a0d514f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Pillar_F_01.mat using Guid(3029834c507902c4280c4c282a0d514f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec4dd724f6292510e2c8357cb2717a51') in 0.052700 seconds
+  Import took 0.062273 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000295 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_RuneGateGround_A_01.mat
+  artifactKey: Guid(19d692ee661edc54c85c8ffe8a182327) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_RuneGateGround_A_01.mat using Guid(19d692ee661edc54c85c8ffe8a182327) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f9283dc3f6412e089017e15681fda75') in 0.016740 seconds
+  Import took 0.027498 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_RuneGate_B_01.mat
+  artifactKey: Guid(4c99f37754b15644d8bfae4fa72767fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_RuneGate_B_01.mat using Guid(4c99f37754b15644d8bfae4fa72767fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18f82845e3dcd27788a6f91af0c06882') in 0.014466 seconds
+  Import took 0.023218 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Stair_A_01.mat
+  artifactKey: Guid(1bbf2834a7dd7e746907e944bad75150) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Stair_A_01.mat using Guid(1bbf2834a7dd7e746907e944bad75150) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72694bf0765f4b1d4d9038798226ec83') in 0.014776 seconds
+  Import took 0.023586 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_RuneGateGround_B_01.mat
+  artifactKey: Guid(977814129b1a10d478e368162dbb728e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_RuneGateGround_B_01.mat using Guid(977814129b1a10d478e368162dbb728e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70845d5f5d412f8b6e6bb7fbd0bbaa68') in 0.014061 seconds
+  Import took 0.023109 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Stair_A_01.mat
+  artifactKey: Guid(1bbf2834a7dd7e746907e944bad75150) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Stair_A_01.mat using Guid(1bbf2834a7dd7e746907e944bad75150) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72694bf0765f4b1d4d9038798226ec83') in 0.012297 seconds
+  Import took 0.020544 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Stair_A_02.mat
+  artifactKey: Guid(47ef45b22f8d67f4c9871eec04bb7044) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Stair_A_02.mat using Guid(47ef45b22f8d67f4c9871eec04bb7044) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40cabe3c2004c3a04dbcf8855144737a') in 0.013669 seconds
+  Import took 0.022688 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Wall_E_01.mat
+  artifactKey: Guid(99f0ebe48463bf34e99c7a739e52fa49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Wall_E_01.mat using Guid(99f0ebe48463bf34e99c7a739e52fa49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68e785d31cd3a94147bd4ec5e3031415') in 0.014960 seconds
+  Import took 0.024763 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Wall_F_01.mat
+  artifactKey: Guid(951aaf91cd1d16244bc1e21cee8cd9c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Wall_F_01.mat using Guid(951aaf91cd1d16244bc1e21cee8cd9c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c17af6f8990de8630c2765e7403fd46e') in 0.014247 seconds
+  Import took 0.023096 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Wall_D_01.mat
+  artifactKey: Guid(684bd0d42341b8945b81ba70519b01db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Wall_D_01.mat using Guid(684bd0d42341b8945b81ba70519b01db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bec064177e75d27c8b9850d3dfa5ad06') in 0.015047 seconds
+  Import took 0.023699 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000324 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Tile_A_01.mat
+  artifactKey: Guid(02ebb9bc637679a4da49d62e57115971) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Tile_A_01.mat using Guid(02ebb9bc637679a4da49d62e57115971) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '696012b97b554934c643ea28302b1639') in 0.014798 seconds
+  Import took 0.022656 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Wall_A_01.mat
+  artifactKey: Guid(d0cee93c7eede2546943bbe261487af3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Wall_A_01.mat using Guid(d0cee93c7eede2546943bbe261487af3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccd22643b6af16723797b36bb9cf1e99') in 0.013343 seconds
+  Import took 0.022038 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Wall_B_01.mat
+  artifactKey: Guid(b9d24b1b610ff4d4e9c2433454615de5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_Wall_B_01.mat using Guid(b9d24b1b610ff4d4e9c2433454615de5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5e60c9d2af32256fa683563bb5044c7') in 0.017574 seconds
+  Import took 0.025911 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.180254 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_WallTile_A_01.mat
+  artifactKey: Guid(dc751b7b2d508a64eb2f55f028b08105) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_WallTile_A_01.mat using Guid(dc751b7b2d508a64eb2f55f028b08105) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70ba15e723325788d0df58cb49c3ee07') in 0.013488 seconds
+  Import took 0.021251 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_WallTile_B_01.mat
+  artifactKey: Guid(ce2115abde23efe4f973ac6285b504ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_WallTile_B_01.mat using Guid(ce2115abde23efe4f973ac6285b504ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5e81b7f78840e2813f39806cc6e1397') in 0.012819 seconds
+  Import took 0.019740 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/UModeler_Gray.mat
+  artifactKey: Guid(b1450ddfe148e534caf7aeda451214cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/UModeler_Gray.mat using Guid(b1450ddfe148e534caf7aeda451214cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1edfc9d809acd322cd59f125aeee0f4') in 0.016672 seconds
+  Import took 0.025818 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_WallTile_B_01.mat
+  artifactKey: Guid(ce2115abde23efe4f973ac6285b504ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_WallTile_B_01.mat using Guid(ce2115abde23efe4f973ac6285b504ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5e81b7f78840e2813f39806cc6e1397') in 0.012897 seconds
+  Import took 0.020656 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_WallTile_A_01.mat
+  artifactKey: Guid(dc751b7b2d508a64eb2f55f028b08105) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/AD_WallTile_A_01.mat using Guid(dc751b7b2d508a64eb2f55f028b08105) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70ba15e723325788d0df58cb49c3ee07') in 0.012755 seconds
+  Import took 0.020502 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/UModeler_Gray.mat
+  artifactKey: Guid(b1450ddfe148e534caf7aeda451214cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/UModeler_Gray.mat using Guid(b1450ddfe148e534caf7aeda451214cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1edfc9d809acd322cd59f125aeee0f4') in 0.009901 seconds
+  Import took 0.018138 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Ancient-Dungeon-BuiltInRP/Materials/UModeler_Grid.mat
+  artifactKey: Guid(7302e9b748db2f3408fc91003f109cd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ancient-Dungeon-BuiltInRP/Materials/UModeler_Grid.mat using Guid(7302e9b748db2f3408fc91003f109cd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2018400d68c33d9bae7c0de45fae99bd') in 0.017742 seconds
+  Import took 0.025503 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 585.058553 seconds.
+  path: Assets/StylizedModularDungeonPack/Textures/MasterMat_1_Mask.tga
+  artifactKey: Guid(bccc7acbaa1c8974ca8cf916b1aa1612) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StylizedModularDungeonPack/Textures/MasterMat_1_Mask.tga using Guid(bccc7acbaa1c8974ca8cf916b1aa1612) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14396851b255d08e030045f36ac6c6ef') in 0.016911 seconds
+  Import took 0.025608 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002834 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.350 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.96 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4327 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 204.2 MB.
+System memory in use after: 204.4 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 5173.
+Total: 5.349500 ms (FindLiveObjects: 1.119800 ms CreateObjectMapping: 0.487800 ms MarkObjects: 3.705300 ms  DeleteObjects: 0.035400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 362.966644 seconds.
+  path: Assets/Prefabs/Tiles/Hall T.prefab
+  artifactKey: Guid(d2765ba3e7171c64381e850fd023ee78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tiles/Hall T.prefab using Guid(d2765ba3e7171c64381e850fd023ee78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0bd4ce5d12e5277c979c451e85fd27e') in 0.134995 seconds
+  Import took 0.143316 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000359 seconds.
+  path: Assets/Prefabs/Tiles/Room L.prefab
+  artifactKey: Guid(82be1727dab80144c9f143800c36c225) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tiles/Room L.prefab using Guid(82be1727dab80144c9f143800c36c225) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40d12f2019b0c00394038eb942ee1d0f') in 0.014730 seconds
+  Import took 0.023135 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/Prefabs/Tiles/Hall I.prefab
+  artifactKey: Guid(3ed752610ff4dc74ba8346f7564c1f23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tiles/Hall I.prefab using Guid(3ed752610ff4dc74ba8346f7564c1f23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '255fd1ac077a16dcfc3dfd81f102bb8c') in 0.014233 seconds
+  Import took 0.024119 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/Prefabs/Tiles/Hall L.prefab
+  artifactKey: Guid(44aa282d9f12c2a4c8394132801b4d21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tiles/Hall L.prefab using Guid(44aa282d9f12c2a4c8394132801b4d21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05fc750907ffb315b1800198b18da927') in 0.014162 seconds
+  Import took 0.022589 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/Prefabs/Tiles/Room X.prefab
+  artifactKey: Guid(6629f521e30c7a74bb2f1be5a863a006) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tiles/Room X.prefab using Guid(6629f521e30c7a74bb2f1be5a863a006) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1482bc3b2340edded02544d80e5bd86b') in 0.036885 seconds
+  Import took 0.045403 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/Prefabs/Tiles/Room Cap.soft.prefab
+  artifactKey: Guid(a3c39e53a1d147047975f687e69f668b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tiles/Room Cap.soft.prefab using Guid(a3c39e53a1d147047975f687e69f668b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '203c6e4ba7cb6862ab79bb4a5f073b4b') in 0.013346 seconds
+  Import took 0.021624 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/Prefabs/Tiles/Room Cap.prefab
+  artifactKey: Guid(ca3c17b63ec60a346b8a6a7e2e0d792b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tiles/Room Cap.prefab using Guid(ca3c17b63ec60a346b8a6a7e2e0d792b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '346d20209c241df4bb88280554b6b30a') in 0.011611 seconds
+  Import took 0.019979 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000401 seconds.
+  path: Assets/Prefabs/Tiles/Room T.prefab
+  artifactKey: Guid(f0755db3fc3048d41a370303f2a92b81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tiles/Room T.prefab using Guid(f0755db3fc3048d41a370303f2a92b81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6cb2fbb46701834ad17003bfb6e6389') in 0.014256 seconds
+  Import took 0.024379 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/Prefabs/Tiles/Odd Room.prefab
+  artifactKey: Guid(7e42f406dd193db4cb1e9b8b657a9ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tiles/Odd Room.prefab using Guid(7e42f406dd193db4cb1e9b8b657a9ecd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a457af6730669aaaee20b96e31be92f6') in 0.033859 seconds
+  Import took 0.042245 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Prefabs/Tiles/Hall Slope.prefab
+  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06fe90fdc3cdda06150629e50791eb6d') in 0.011204 seconds
+  Import took 0.019410 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Prefabs/Tiles/Room Cap.fancy.prefab
+  artifactKey: Guid(d9b58493395c62e4eac7f4634c0e5cae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tiles/Room Cap.fancy.prefab using Guid(d9b58493395c62e4eac7f4634c0e5cae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c7484329f9902bea398186d1edb4ad7') in 0.033427 seconds
+  Import took 0.042152 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Prefabs/Tiles/Hall X.prefab
+  artifactKey: Guid(41fc7c2f7fc36a945b58647a8272788a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tiles/Hall X.prefab using Guid(41fc7c2f7fc36a945b58647a8272788a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f17228e37ce3d6272401787e4dfa5934') in 0.011509 seconds
+  Import took 0.019877 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Prefabs/Tiles/Room I.prefab
+  artifactKey: Guid(35a1ef28120c136459bde9c4bf71fbd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Tiles/Room I.prefab using Guid(35a1ef28120c136459bde9c4bf71fbd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7c6f98f1afa1579b47652d5be71e3fe') in 0.010241 seconds
+  Import took 0.019402 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003258 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.333 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.10 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4327 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 204.4 MB.
+System memory in use after: 204.7 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 5296.
+Total: 6.329200 ms (FindLiveObjects: 1.138800 ms CreateObjectMapping: 0.594600 ms MarkObjects: 4.561600 ms  DeleteObjects: 0.032400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002961 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.30 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.498 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.94 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4327 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 204.5 MB.
+System memory in use after: 204.7 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 5299.
+Total: 5.128100 ms (FindLiveObjects: 0.588700 ms CreateObjectMapping: 0.490900 ms MarkObjects: 4.013900 ms  DeleteObjects: 0.033300 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
