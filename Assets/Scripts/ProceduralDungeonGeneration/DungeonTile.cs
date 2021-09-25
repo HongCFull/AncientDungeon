@@ -5,9 +5,11 @@ using UnityEngine;
 public class DungeonTile : MonoBehaviour
 {
     [SerializeField] private List<Connector> corridorConnector;
-    [ReadOnly] private List<Connector> connectedConnectors = new List<Connector>();
+    [SerializeField] private List<Connector> connectedConnectors = new List<Connector>();   //should be read only
+    public DungeonTile parentTile = null;
+    public Connector parentConnector = null;
     
-    public Connector GetRandomConnectableConnector() {
+    public Connector PopRandomConnectableConnector() {
         if (corridorConnector.Count == 0) {
             Debug.Log("no connector is connectable");
             return null;
@@ -19,6 +21,10 @@ public class DungeonTile : MonoBehaviour
         corridorConnector.Remove(selectedConnector);
         connectedConnectors.Add(selectedConnector);
         return selectedConnector;
+    }
+
+    public List<Connector> GetAllConnectableConnectors() {
+        return corridorConnector;
     }
 
     public bool TileIsFullyConnected() {
