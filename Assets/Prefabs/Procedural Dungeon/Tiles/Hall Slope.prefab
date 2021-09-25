@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7868994173855071354}
   - component: {fileID: 3459488924536300291}
   - component: {fileID: 7425072549648014565}
+  - component: {fileID: 2956460464750826156}
   m_Layer: 6
   m_Name: Hall Slope
   m_TagString: Untagged
@@ -97,6 +98,21 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7503192806316419419, guid: aeca581fc1e58c8428c885be0b0b7acd, type: 3}
+--- !u!114 &2956460464750826156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601196188259834397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d30da17623c29db418a68d1790c882f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  corridorConnector:
+  - {fileID: 733311788954906305}
+  - {fileID: 1612874559001118304}
 --- !u!1 &4806007062103481913
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,6 +215,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1463807979132297358, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
   m_PrefabInstance: {fileID: 7938844924844019161}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &733311788954906305 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
+  m_PrefabInstance: {fileID: 7938844924844019161}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 977d938f9632dda43b69b10d00b20d77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8242531351345505656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -269,3 +296,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1463807979132297358, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
   m_PrefabInstance: {fileID: 8242531351345505656}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1612874559001118304 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
+  m_PrefabInstance: {fileID: 8242531351345505656}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 977d938f9632dda43b69b10d00b20d77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

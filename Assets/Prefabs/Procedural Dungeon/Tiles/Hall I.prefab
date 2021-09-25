@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 1086358775127801480}
   - component: {fileID: 8320206361259822504}
   - component: {fileID: 2880044979498379118}
+  - component: {fileID: -3057948284657226111}
   m_Layer: 6
   m_Name: Hall I
   m_TagString: Untagged
@@ -129,6 +130,21 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7372182404366515707, guid: aeca581fc1e58c8428c885be0b0b7acd, type: 3}
+--- !u!114 &-3057948284657226111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4781961577853091688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d30da17623c29db418a68d1790c882f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  corridorConnector:
+  - {fileID: 6352478643685921347}
+  - {fileID: 538891833346669047}
 --- !u!1001 &4335215885541798235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -199,6 +215,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1463807979132297358, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
   m_PrefabInstance: {fileID: 4335215885541798235}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6352478643685921347 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
+  m_PrefabInstance: {fileID: 4335215885541798235}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 977d938f9632dda43b69b10d00b20d77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7168544293865544431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -269,3 +296,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1463807979132297358, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
   m_PrefabInstance: {fileID: 7168544293865544431}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &538891833346669047 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
+  m_PrefabInstance: {fileID: 7168544293865544431}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 977d938f9632dda43b69b10d00b20d77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -6,10 +6,12 @@ using UnityEngine;
 /// <summary>
 /// The GameObject attached with this script should in the bottom mid of the connector.
 /// </summary>
-public class CorridorConnector : MonoBehaviour
+public class Connector : MonoBehaviour
 {
     [SerializeField] private Vector2 corridorSize;
-
+    [ReadOnly] public bool isConnected = false; 
+    
+    
     private void OnDrawGizmos() {
         
         //Draw forward vector at the centroid of the corridor
