@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 
-
 public class DungeonGenerator : MonoBehaviour
 {
 
@@ -18,8 +17,12 @@ public class DungeonGenerator : MonoBehaviour
     [SerializeField] private DungeonTile[] exitRoomPrefabs;
     [SerializeField] private DungeonTile[] blockingPrefabs;
     [SerializeField] private DungeonTile[] doorPrefabs;
-    
+
     [Header("Dungeon Generation Settings")]
+    
+    [Tooltip("The amount of time delay after connecting 2 tiles")]
+    [SerializeField] [Range(0f, 1f)] private float generationDelay;
+    
     [Tooltip("The main path will have dungeonDepth + 1(root) rooms")]
     [SerializeField] [Range(0,100)] private int dungeonDepth;
     [SerializeField] [Range(0, 10)] private int branchDepth;
@@ -31,44 +34,61 @@ public class DungeonGenerator : MonoBehaviour
     [SerializeField] private List<Connector> remainingConnectors = new List<Connector>();    //Should be read only! the connectors that are available after creating the main path
     private DungeonTile tileFrom, tileTo, rootTile;
     
-    
+
     void Start() {
-        GenerateDungeon();
+        StartCoroutine(GenerateDungeon());
     }
 
     void Update() {
         if (Input.GetKeyDown(KeyCode.P))
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
     }
     
-    void GenerateDungeon() {
-        GenerateDungeonMainPath();
+    IEnumerator GenerateDungeon() {
+        yield return StartCoroutine(GenerateDungeonMainPath());
         GetRemainingConnectors();
+        yield return new WaitForSeconds(1);
+        StartCoroutine(GenerateBranches());
     }
 
     //Similar to DFS
-    void GenerateDungeonMainPath() {
-        //create starting room
+    IEnumerator GenerateDungeonMainPath() {
+        GameObject mainPathObj = new GameObject();
+        mainPathObj.transform.SetParent(this.transform);
+        mainPathObj.transform.position = this.transform.position;
+        mainPathObj.name = "Main Path";
+        
         rootTile = GenerateStartingRoom();
-        tileFrom = null;
-        tileTo = rootTile;
-
+        rootTile.transform.SetParent(mainPathObj.transform);
+        
         //create dungeon main path
-        for (int i = 0; i < dungeonDepth; i++) {
-            tileFrom = tileTo;
-
-            if (i == dungeonDepth - 1) {
-                tileTo = GenerateEndingRoom();  //create ending room
-            }else {
-                tileTo = GenerateTile();    //creating intermediate room for the main path
-            }
-
-            ConnectTiles();
-        }
+        yield return StartCoroutine(ExpandPathFromTile(rootTile,dungeonDepth,mainPathObj.transform));
     }
 
-    void GenerateBranches() {
-        //remainingConnectors.
+    /// <summary>
+    /// Note: It doesnt generate by referring that connector but the tile owner of that connector. The remaining connector is just indicating which tile can still be expanded only!
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator GenerateBranches() {
+        remainingConnectors.Shuffle();
+        for (int i = 0; i < totalBranches; i++) {
+            if (i >= remainingConnectors.Count) break;  //catch when remaining < totalBranches  
+
+            DungeonTile extendFromTile = remainingConnectors[i].GetTileOwner();
+            
+            GameObject branchHolder = new GameObject();
+            branchHolder.transform.SetParent(this.transform);
+            branchHolder.transform.position = remainingConnectors[i].transform.position;
+            branchHolder.name = "Branch " + (i+1);
+
+            GameObject branchFrom = new GameObject();
+            branchFrom.name = "Extended from tile: " + extendFromTile.name;
+            branchFrom.transform.SetParent(branchHolder.transform);
+            
+            int randomBranchDepth = Random.Range(1, branchDepth + 1);
+            yield return StartCoroutine(ExpandPathFromTile(extendFromTile, randomBranchDepth, branchHolder.transform));
+        }
     }
 
     /// <summary>
@@ -98,7 +118,7 @@ public class DungeonGenerator : MonoBehaviour
         return startingRoom;
     }
 
-    DungeonTile GenerateTile() {
+    DungeonTile GenerateIntermediateTile() {
         int index = Random.Range(0, tilePrefabs.Length);
         DungeonTile tile = Instantiate(tilePrefabs[index], transform.position, Quaternion.identity, transform);
         generatedTiles.Add(tile);
@@ -115,11 +135,46 @@ public class DungeonGenerator : MonoBehaviour
         return tile;
     }
     
-    void ConnectTiles() {
+
+    IEnumerator ExpandPathFromTile(DungeonTile tile, int depth, Transform pathHolderObject=null) {
+        Debug.Log("Expanding the path from "+ tile.name);
+        //If tileHolder is not specified: use default tileHolder object = the dungeonGenerator
+        if (pathHolderObject == null)
+            pathHolderObject = this.transform;
+        
+        tileTo = tile;
+
+        for (int i = 0; i < depth; i++) {
+            tileFrom = tileTo;
+
+            if (i == depth - 1) {
+                tileTo = GenerateEndingRoom();  //create ending room
+                tileTo.name += " of " + pathHolderObject.name;
+            }else {
+                tileTo = GenerateIntermediateTile();    //creating intermediate room for the path
+                tileTo.name += " "+i;   //give an index for naming clarity
+            }
+
+            ConnectTiles(pathHolderObject);
+            yield return new WaitForSeconds(generationDelay);
+        }
+    }
+    
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="tileHolder"></param>
+    void ConnectTiles(Transform tileHolder =null) {
         if (tileFrom == null || tileTo == null) {
             Debug.Log("one of the tiles is null");
             return;
         }
+        Debug.Log("From "+tileFrom.name+" to "+tileTo.name);
+        
+        //If tileHolder is not specified: use default tileHolder object = the dungeonGenerator
+        if (tileHolder == null) 
+            tileHolder = transform;
+
         Connector fromConnector = tileFrom.PopRandomConnectableConnector();
         if (fromConnector == null) return;
         fromConnector.isConnected = true;
@@ -130,7 +185,7 @@ public class DungeonGenerator : MonoBehaviour
         
         //unpack the connector to outside
         Transform toConnectorTransform = toConnector.transform;
-        toConnectorTransform.SetParent(this.transform);
+        toConnectorTransform.SetParent(tileHolder);
         tileTo.transform.SetParent(toConnectorTransform);
         
         //append the toConnector to fromConnector & set the transform;
@@ -140,14 +195,17 @@ public class DungeonGenerator : MonoBehaviour
         toConnectorTransform.Rotate(0,180,0);
     
         //restructure the tile hierarchy and make it back to a child of the generator  
-        tileTo.transform.SetParent(this.transform);
-        toConnectorTransform.parent = tileTo.transform;
+        tileTo.transform.SetParent(tileHolder);
+        toConnectorTransform.SetParent(tileTo.transform);
        
         //Update tile's parent
         tileTo.parentTile = tileFrom;
         tileTo.parentConnector = fromConnector;
+        
 
     }
-    
-    
+
 }
+
+
+

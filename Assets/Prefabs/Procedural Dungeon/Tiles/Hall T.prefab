@@ -147,6 +147,9 @@ MonoBehaviour:
   - {fileID: 6806032214979085907}
   - {fileID: 8660648909324134050}
   - {fileID: 4052373493382089504}
+  connectedConnectors: []
+  parentTile: {fileID: 0}
+  parentConnector: {fileID: 0}
 --- !u!1001 &2031545672038958522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -202,6 +205,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
+      propertyPath: tileOwner
+      value: 
+      objectReference: {fileID: 7548762569196026622}
     - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
       propertyPath: corridorSize.x
       value: 6
@@ -284,6 +291,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
+      propertyPath: tileOwner
+      value: 
+      objectReference: {fileID: 7548762569196026622}
+    - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
       propertyPath: corridorSize.x
       value: 6
       objectReference: {fileID: 0}
@@ -364,6 +375,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
+      propertyPath: tileOwner
+      value: 
+      objectReference: {fileID: 7548762569196026622}
     - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
       propertyPath: corridorSize.x
       value: 6

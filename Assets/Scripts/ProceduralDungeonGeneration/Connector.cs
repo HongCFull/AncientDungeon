@@ -2,15 +2,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.WSA;
 
 /// <summary>
 /// The GameObject attached with this script should in the bottom mid of the connector.
 /// </summary>
 public class Connector : MonoBehaviour
 {
+    [SerializeField] private DungeonTile tileOwner;
     [SerializeField] private Vector2 corridorSize;
-    [ReadOnly] public bool isConnected = false; 
-    
+    [ReadOnly] public bool isConnected = false;
+
+    public DungeonTile GetTileOwner() {
+        return tileOwner;
+    }
     
     private void OnDrawGizmos() {
         
@@ -40,7 +45,6 @@ public class Connector : MonoBehaviour
         //Draw Diagonals
         Gizmos.DrawLine(leftUp, rightDown);
         Gizmos.DrawLine(rightUp, leftDown);
-
 
     }
 }

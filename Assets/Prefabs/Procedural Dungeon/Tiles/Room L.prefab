@@ -113,6 +113,9 @@ MonoBehaviour:
   corridorConnector:
   - {fileID: 260402249528492256}
   - {fileID: 3141465774305339689}
+  connectedConnectors: []
+  parentTile: {fileID: 0}
+  parentConnector: {fileID: 0}
 --- !u!1 &8754911633460522274
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,6 +204,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
+      propertyPath: tileOwner
+      value: 
+      objectReference: {fileID: -8572956717992521664}
+    - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
       propertyPath: corridorSize.x
       value: 6
       objectReference: {fileID: 0}
@@ -281,6 +288,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
+      propertyPath: tileOwner
+      value: 
+      objectReference: {fileID: -8572956717992521664}
     - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
       propertyPath: corridorSize.x
       value: 6

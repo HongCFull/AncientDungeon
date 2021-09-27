@@ -6,12 +6,12 @@ public class DungeonTile : MonoBehaviour
 {
     [SerializeField] private List<Connector> corridorConnector;
     [SerializeField] private List<Connector> connectedConnectors = new List<Connector>();   //should be read only
-    public DungeonTile parentTile = null;
-    public Connector parentConnector = null;
+    [HideInInspector] public DungeonTile parentTile = null;
+    [HideInInspector] public Connector parentConnector = null;
     
     public Connector PopRandomConnectableConnector() {
         if (corridorConnector.Count == 0) {
-            Debug.Log("no connector is connectable");
+            Debug.Log("no connector is connectable in this tile");
             return null;
         }
         

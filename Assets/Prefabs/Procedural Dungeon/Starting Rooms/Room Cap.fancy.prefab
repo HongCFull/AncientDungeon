@@ -112,6 +112,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   corridorConnector:
   - {fileID: 8684538409268520758}
+  connectedConnectors: []
+  parentTile: {fileID: 0}
+  parentConnector: {fileID: 0}
 --- !u!1 &5517115286526391368
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,6 +201,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
+      propertyPath: tileOwner
+      value: 
+      objectReference: {fileID: -1412493138797289101}
     - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
       propertyPath: corridorSize.x
       value: 6
