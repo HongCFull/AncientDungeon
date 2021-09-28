@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.Mathematics;
 using UnityEditor;
 using UnityEngine;
@@ -204,6 +206,38 @@ public class DungeonGenerator : MonoBehaviour
         
 
     }
+
+    bool HasCollisionOnNewlyConnectedTiles(int attempt=0) {
+        BoxCollider tileToBoundingBox = tileTo.boundingBox;
+        //The displacement vector from the origin of tileTo's transform to the centroid of the box.  
+        Vector3 centerOffset = tileTo.transform.right * tileToBoundingBox.center.x +
+                               tileTo.transform.up * tileToBoundingBox.center.y +
+                               tileTo.transform.forward * tileToBoundingBox.center.z;
+        Vector3 centerOfBoundingBox = tileTo.gameObject.transform.position + centerOffset;
+        
+        Vector3 boxHalfExtents = tileToBoundingBox.bounds.extents;
+        List<Collider> collidersHit = Physics
+            .OverlapBox(centerOfBoundingBox, boxHalfExtents, Quaternion.identity, LayerMask.GetMask("Tile")).ToList();
+
+        if (collidersHit.Count > 0) {   //if overlapped some thing
+            
+            //This lambda expression check if the collider collides with colliders that are not tileFrom and tileTo  
+            Predicate<Collider> hasOverlappedPredicate =
+            (Collider x) => {
+                return (x.transform != tileFrom.gameObject.transform) &&
+                       (x.transform != tileTo.gameObject.transform);
+            };
+
+            if (collidersHit.Exists(hasOverlappedPredicate)) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        return false;
+    }
+    
 
 }
 

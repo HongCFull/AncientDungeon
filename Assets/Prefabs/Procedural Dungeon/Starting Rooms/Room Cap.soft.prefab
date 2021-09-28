@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2541489557096327672}
   - component: {fileID: 689184983461710336}
   - component: {fileID: 6544990160904954178}
+  - component: {fileID: 9160843877124651530}
   m_Layer: 6
   m_Name: Room Cap.soft
   m_TagString: Untagged
@@ -115,6 +116,19 @@ MonoBehaviour:
   connectedConnectors: []
   parentTile: {fileID: 0}
   parentConnector: {fileID: 0}
+--- !u!65 &9160843877124651530
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613234285913356810}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12, y: 5.158057, z: 13}
+  m_Center: {x: 0, y: 2.4209714, z: -0.5}
 --- !u!1 &4205533566988020983
 GameObject:
   m_ObjectHideFlags: 0

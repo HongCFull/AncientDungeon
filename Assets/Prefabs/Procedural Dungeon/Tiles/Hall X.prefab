@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 440569447714027810}
   - component: {fileID: 176789407862094829}
   - component: {fileID: -4852945424426744004}
+  - component: {fileID: -6904716589764855331}
   m_Layer: 6
   m_Name: Hall X
   m_TagString: Untagged
@@ -152,6 +153,19 @@ MonoBehaviour:
   connectedConnectors: []
   parentTile: {fileID: 0}
   parentConnector: {fileID: 0}
+--- !u!65 &-6904716589764855331
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7816814947589006772}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15, y: 5, z: 10}
+  m_Center: {x: -1.5, y: 2.5, z: -1}
 --- !u!1001 &322323929979417041
 PrefabInstance:
   m_ObjectHideFlags: 0

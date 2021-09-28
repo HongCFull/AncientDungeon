@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5221755461094967248}
   - component: {fileID: 4719246027945984801}
   - component: {fileID: -5383508873647979302}
+  - component: {fileID: 7126956026835475577}
   m_Layer: 6
   m_Name: Room T
   m_TagString: Untagged
@@ -117,6 +118,19 @@ MonoBehaviour:
   connectedConnectors: []
   parentTile: {fileID: 0}
   parentConnector: {fileID: 0}
+--- !u!65 &7126956026835475577
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2863001633556458398}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 18, y: 5, z: 18}
+  m_Center: {x: 0, y: 2.5, z: 0}
 --- !u!1 &4292038225842133184
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3459488924536300291}
   - component: {fileID: 7425072549648014565}
   - component: {fileID: 2956460464750826156}
+  - component: {fileID: 4438116420085648489}
   m_Layer: 6
   m_Name: Hall Slope
   m_TagString: Untagged
@@ -110,12 +111,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30da17623c29db418a68d1790c882f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boundingBox: {fileID: 4438116420085648489}
   corridorConnector:
   - {fileID: 733311788954906305}
   - {fileID: 1612874559001118304}
   connectedConnectors: []
   parentTile: {fileID: 0}
   parentConnector: {fileID: 0}
+--- !u!65 &4438116420085648489
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601196188259834397}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 9, z: 17}
+  m_Center: {x: 0, y: 2.5, z: -0.5}
 --- !u!1 &4806007062103481913
 GameObject:
   m_ObjectHideFlags: 0

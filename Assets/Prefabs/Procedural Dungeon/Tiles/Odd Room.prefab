@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2551339872548740698}
   - component: {fileID: 6978495488449903892}
   - component: {fileID: -8524046996595926924}
+  - component: {fileID: -6259911273480261483}
   m_Layer: 6
   m_Name: Odd Room
   m_TagString: Untagged
@@ -117,6 +118,19 @@ MonoBehaviour:
   connectedConnectors: []
   parentTile: {fileID: 0}
   parentConnector: {fileID: 0}
+--- !u!65 &-6259911273480261483
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3440365616652151077}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 21, y: 5, z: 30}
+  m_Center: {x: -0.5, y: 2.5, z: -5}
 --- !u!1 &8922799656853555229
 GameObject:
   m_ObjectHideFlags: 0
