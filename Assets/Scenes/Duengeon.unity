@@ -171,12 +171,14 @@ MonoBehaviour:
   blockingPrefabs: []
   doorPrefabs: []
   generationDelay: 0.214
-  dungeonDepth: 6
+  retryMaxCount: 1
+  dungeonDepth: 89
+  totalBranches: 7
   branchDepth: 3
-  totalBranches: 4
+  useRandomDepthForBranches: 0
   doorPercentage: 0
   generatedTiles: []
-  remainingConnectors: []
+  connectableTilesForBranching: []
 --- !u!4 &54503691
 Transform:
   m_ObjectHideFlags: 0

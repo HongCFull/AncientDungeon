@@ -63,7 +63,7 @@ public class DungeonGenerator : MonoBehaviour
     IEnumerator GenerateDungeon() 
     {
         yield return StartCoroutine(GenerateDungeonMainPath());
-        EndRoomSpawnChecking();
+        ForceMainPathEndRoomSpawning();
         GetConnectableTilesForBranching();
         yield return new WaitForSeconds(1);
         yield return StartCoroutine(GenerateBranches());
@@ -86,7 +86,7 @@ public class DungeonGenerator : MonoBehaviour
     }
 
     /// <summary>
-    /// Note: It doesnt generate by referring that connector but the tile owner of that connector. The remaining connector is just indicating which tile can still be expanded only!
+    /// Note: 
     /// </summary>
     /// <returns></returns>
     IEnumerator GenerateBranches() 
@@ -298,6 +298,9 @@ public class DungeonGenerator : MonoBehaviour
         return false;
     }
 
+    /// <summary>
+    /// Completely remove the TileTo and it's artifact 
+    /// </summary>
     void CullOutTileTo() 
     {
         connectableTilesForBranching.Remove(tileTo);
@@ -307,6 +310,9 @@ public class DungeonGenerator : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Completely remove the last generated tile and it's artifact
+    /// </summary>
     void CullOutLastGeneratedTile() 
     {
         DungeonTile lastTile = generatedTiles.Last();
@@ -316,7 +322,10 @@ public class DungeonGenerator : MonoBehaviour
 
     }
 
-    void EndRoomSpawnChecking() 
+    /// <summary>
+    /// Force the generation of the end room in the main path if it is not spawned yet
+    /// </summary>
+    void ForceMainPathEndRoomSpawning() 
     {
         while (endTile==null) {
             //ending room is not spawned
