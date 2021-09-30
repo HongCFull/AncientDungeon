@@ -44,7 +44,7 @@ public class DungeonGenerator : MonoBehaviour
     
     [Header("Runtime Properties")]
     [SerializeField] List<DungeonTile> generatedTiles = new List<DungeonTile>();
-    [SerializeField] private List<Connector> connectorsForBranching = new List<Connector>();    //Should be read only! the connectors that are available after creating the main path
+    [SerializeField] private List<DungeonTile> connectableTilesForBranching = new List<DungeonTile>();    //Should be read only! the tiles that are available after creating the main path
     private List<GameObject> pathHolderList = new List<GameObject>();
     private DungeonTile tileFrom, tileTo, rootTile, endTile;
     
@@ -63,9 +63,9 @@ public class DungeonGenerator : MonoBehaviour
     IEnumerator GenerateDungeon() 
     {
         yield return StartCoroutine(GenerateDungeonMainPath());
-        GetConnectorsForBranching();
-        yield return new WaitForSeconds(1);
         EndRoomSpawnChecking();
+        GetConnectableTilesForBranching();
+        yield return new WaitForSeconds(1);
         yield return StartCoroutine(GenerateBranches());
     }
 
@@ -91,16 +91,16 @@ public class DungeonGenerator : MonoBehaviour
     /// <returns></returns>
     IEnumerator GenerateBranches() 
     {
-        connectorsForBranching.Shuffle();
+        connectableTilesForBranching.Shuffle();
         for (int i = 0; i < totalBranches; i++) {
-            if (i >= connectorsForBranching.Count) break;  //catch when remaining < totalBranches  
+            if (i >= connectableTilesForBranching.Count) break;  //catch when remaining < totalBranches  
 
-            DungeonTile tileForExtension = connectorsForBranching[i].GetTileOwner();
+            DungeonTile tileForExtension = connectableTilesForBranching[i];
             
             GameObject branchHolder = new GameObject();
             pathHolderList.Add(branchHolder);
             branchHolder.transform.SetParent(this.transform);
-            branchHolder.transform.position = connectorsForBranching[i].transform.position;
+            branchHolder.transform.position = connectableTilesForBranching[i].transform.position;
             branchHolder.name = "Branch " + (i+1);
 
             GameObject branchDescriptionObj = new GameObject();
@@ -114,16 +114,16 @@ public class DungeonGenerator : MonoBehaviour
     }
 
     /// <summary>
-    /// Get the remaining connectable connectors from generated tile list
+    /// Get the remaining connectable tiles (with duplicates) from generated tile list
     /// </summary>
-    void GetConnectorsForBranching() 
+    void GetConnectableTilesForBranching() 
     {
         if(generatedTiles.Count==0) return;
 
         foreach (DungeonTile tile in generatedTiles) {
             List<Connector> connectors = tile.GetAllConnectableConnectors();
             foreach (Connector connector in connectors) {
-                connectorsForBranching.Add(connector);
+                connectableTilesForBranching.Add(connector.GetTileOwner());
             }
         }
     }
@@ -300,21 +300,19 @@ public class DungeonGenerator : MonoBehaviour
 
     void CullOutTileTo() 
     {
-        //remove last element
-        //generatedTiles.RemoveAt(generatedTiles.Count - 1);
+        connectableTilesForBranching.Remove(tileTo);
         generatedTiles.Remove(tileTo);
         DestroyImmediate(tileTo.gameObject);
         tileTo = null;
         
-        //remove all elements of it in connectorsForBranching 
     }
 
     void CullOutLastGeneratedTile() 
     {
         DungeonTile lastTile = generatedTiles.Last();
+        connectableTilesForBranching.Remove(lastTile);
         generatedTiles.Remove(lastTile);
         DestroyImmediate(lastTile.gameObject);
-        //remove all elements of it in connectorsForBranching 
 
     }
 
@@ -330,7 +328,7 @@ public class DungeonGenerator : MonoBehaviour
             CullOutLastGeneratedTile();
             
             tileTo = GenerateEndingRoom();
-            ConnectTiles(true, pathHolderList.First().transform);
+            ConnectTiles(false, pathHolderList.First().transform);
             if (tileFrom != tileTo)
                 endTile = tileTo;
         }
