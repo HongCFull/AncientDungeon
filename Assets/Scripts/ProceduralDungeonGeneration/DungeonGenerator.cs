@@ -10,6 +10,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
+//Bug = tiles in retry generation no collision checking? 
 
 public class DungeonGenerator : MonoBehaviour
 {
@@ -209,6 +210,7 @@ public class DungeonGenerator : MonoBehaviour
             endTile = tileTo;
                 
         if (attempt > retryMaxCount) {
+            tileFrom.RestorePreviousPoppedConnector();
             CullOutTileTo();
             tileTo = tileFrom;  //move the original tileFrom to tileTo for next depth generation
             return;
@@ -274,10 +276,16 @@ public class DungeonGenerator : MonoBehaviour
                                tileTo.transform.up * tileToBoundingBox.center.y +
                                tileTo.transform.forward * tileToBoundingBox.center.z;
         Vector3 centerOfBoundingBox = tileTo.gameObject.transform.position + centerOffset;
-        
+
         Vector3 boxHalfExtents = tileToBoundingBox.bounds.extents;
+        Vector3 scaledVector = tileToBoundingBox.gameObject.transform.localScale;
+        Vector3 scaledBoxHalfExtents = new Vector3(
+            scaledVector.x * boxHalfExtents.x , scaledVector.y * boxHalfExtents.y, scaledVector.z * boxHalfExtents.z
+            ) ;
+        
+        //tileToBoundingBox.gameObject.transform.localScale
         List<Collider> collidersHit = Physics
-            .OverlapBox(centerOfBoundingBox, boxHalfExtents, Quaternion.identity, LayerMask.GetMask("Tile")).ToList();
+            .OverlapBox(centerOfBoundingBox, scaledBoxHalfExtents, Quaternion.identity, LayerMask.GetMask("Tile")).ToList();
 
         if (collidersHit.Count > 0) {   //if overlapped some thing
             

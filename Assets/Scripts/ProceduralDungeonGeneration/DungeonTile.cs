@@ -9,7 +9,7 @@ public class DungeonTile : MonoBehaviour
 {
     [SerializeField] private List<Connector> corridorConnector;
     [SerializeField] private List<Connector> connectedConnectors = new List<Connector>();   //should be read only
-    [HideInInspector] public DungeonTile parentTile = null;
+    [ReadOnly] public DungeonTile parentTile = null;
     [HideInInspector] public Connector parentConnector = null;
     
     public BoxCollider boundingBox { get; private set; }
