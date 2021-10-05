@@ -124,6 +124,7 @@ namespace StarterAssets
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
 
+			InitializeVariables();
 			AssignAnimationIDs();
 
 			// reset our timeouts on start
@@ -146,6 +147,12 @@ namespace StarterAssets
 			CameraRotation();
 		}
 
+		private void InitializeVariables()
+		{
+			_speed = MoveSpeed;
+			//_animator.SetFloat(_animIDMotionSpeed, _speed);
+		}
+		
 		private void AssignAnimationIDs()
 		{
 			_animIDSpeed = Animator.StringToHash("Speed");
