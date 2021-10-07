@@ -22,7 +22,10 @@ namespace TPSTemplate
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
 #endif
-
+		//jumping internal constraints;
+		private const float maxJumpHoldingTime = 0.03f;
+		private float jumpHoldingTimer =0f;
+		
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 		public void OnMove(InputValue value)
 		{
@@ -40,6 +43,7 @@ namespace TPSTemplate
 		public void OnJump(InputValue value)
 		{
 			JumpInput(value.isPressed);
+			
 		}
 
 		public void OnSprint(InputValue value)

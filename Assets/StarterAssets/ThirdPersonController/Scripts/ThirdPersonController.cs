@@ -274,7 +274,7 @@ namespace TPSTemplate
 				// reset the fall timeout timer
 				_fallTimeoutDelta = FallTimeout;
 
-				_animator.SetBool(_animIDJump, false);
+				_animator.SetBool(_animIDJump,false);
 				_animator.SetBool(_animIDFreeFall, false);
 
 				// stop our velocity dropping infinitely when grounded
@@ -289,8 +289,8 @@ namespace TPSTemplate
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
 
 					// update animator if using character
-					_animator.SetBool(_animIDJump, true);
-					
+					_animator.SetBool(_animIDJump,true);
+					//Debug.Log("physically jumped");
 				}
 
 				// jump timeout
