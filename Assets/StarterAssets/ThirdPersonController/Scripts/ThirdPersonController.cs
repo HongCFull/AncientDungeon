@@ -16,7 +16,7 @@ namespace TPSTemplate
 	public class ThirdPersonController : MonoBehaviour
 	{
 		//Player
-		[Header("Player")]
+		[Header("Player")] 
 		
 		[Tooltip("Move speed of the character in m/s")]
 		public float MoveSpeed = 2.0f;
@@ -82,6 +82,7 @@ namespace TPSTemplate
 		private float _cinemachineTargetPitch;
 
 		// player
+		private bool enableMovement = true;
 		private float _speed;
 		private float _animationBlend;
 		private float _targetRotation = 0.0f;
@@ -108,7 +109,7 @@ namespace TPSTemplate
 
 		private const float _threshold = 0.01f;
 
-		private bool _hasAnimator;
+		//private bool _hasAnimator;
 
 		private void Awake()
 		{
@@ -121,7 +122,7 @@ namespace TPSTemplate
 
 		private void Start()
 		{
-			_hasAnimator = TryGetComponent(out _animator);
+			_animator = GetComponent<Animator>();
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
 
@@ -135,11 +136,12 @@ namespace TPSTemplate
 
 		private void Update()
 		{
-			_hasAnimator = TryGetComponent(out _animator);
+			if (enableMovement) {
+				JumpAndGravity();
+				Move();
+			}
 			
-			JumpAndGravity();
 			GroundedCheck();
-			Move();
 			HandleAttack();
 
 		}
@@ -148,6 +150,21 @@ namespace TPSTemplate
 		{
 			CameraRotation();
 		}
+
+///========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+/// public functions
+///========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+		public void EnableCharacterMovement() {
+			enableMovement = true;
+		}  	
+
+		public void DisableCharacterMovement() {
+			enableMovement = false;
+		}  	
+		
+///====================================================================================================================================================================================================================================================================================
+/// private functions
+///====================================================================================================================================================================================================================================================================================
 
 		private void InitializeVariables()
 		{
@@ -171,11 +188,8 @@ namespace TPSTemplate
 			Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
 			Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
 
-			// update animator if using character
-			if (_hasAnimator)
-			{
-				_animator.SetBool(_animIDGrounded, Grounded);
-			}
+			_animator.SetBool(_animIDGrounded, Grounded);
+			
 		}
 
 		private void CameraRotation()
@@ -198,16 +212,13 @@ namespace TPSTemplate
 //TODO: when the player is not moving e.g. speed ~= 0 -> make the rotation smooth time to 0.01. Else make it 0.07
 		private void Move()
 		{
-			// set target speed based on move speed, sprint speed and if sprint is pressed
-			float targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
 
-			// a simplistic acceleration and deceleration designed to be easy to remove, replace, or iterate upon
-
-			// note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
-			// if there is no input, set the target speed to 0
-			if (_input.move == Vector2.zero) targetSpeed = 0.0f;
-
-			// a reference to the players current horizontal velocity
+			float targetSpeed;
+			if (_input.move == Vector2.zero) 
+				targetSpeed = 0.0f;
+			else 
+				targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
+			
 			float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
 			//Debug.Log("speed = " + currentHorizontalSpeed);
 			ApplyRotationSmoothTimeOnGround(currentHorizontalSpeed);
@@ -251,70 +262,52 @@ namespace TPSTemplate
 			// move the player
 			_controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 
-			// update animator if using character
-			if (_hasAnimator)
-			{
-				_animator.SetFloat(_animIDSpeed, _animationBlend);
-				_animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
-			}
+			_animator.SetFloat(_animIDSpeed, _animationBlend);
+			_animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
+		
 		}
 
 		private void JumpAndGravity()
 		{
-			if (Grounded)
-			{
+			if (Grounded) {
 				// reset the fall timeout timer
 				_fallTimeoutDelta = FallTimeout;
 
 				// update animator if using character
-				if (_hasAnimator)
-				{
-					_animator.SetBool(_animIDJump, false);
-					_animator.SetBool(_animIDFreeFall, false);
-				}
+				_animator.SetBool(_animIDJump, false);
+				_animator.SetBool(_animIDFreeFall, false);
+				
 
 				// stop our velocity dropping infinitely when grounded
-				if (_verticalVelocity < 0.0f)
-				{
+				if (_verticalVelocity < 0.0f) {
 					_verticalVelocity = -2f;
 				}
 
 				// Jump
-				if (_input.jump && _jumpTimeoutDelta <= 0.0f)
-				{
+				if (_input.jump && _jumpTimeoutDelta <= 0.0f) {
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
 
 					// update animator if using character
-					if (_hasAnimator)
-					{
-						_animator.SetBool(_animIDJump, true);
-					}
+					_animator.SetBool(_animIDJump, true);
+					
 				}
 
 				// jump timeout
-				if (_jumpTimeoutDelta >= 0.0f)
-				{
+				if (_jumpTimeoutDelta >= 0.0f) {
 					_jumpTimeoutDelta -= Time.deltaTime;
 				}
 			}
-			else
-			{
+			else {
 				// reset the jump timeout timer
 				_jumpTimeoutDelta = JumpTimeout;
 
 				// fall timeout
-				if (_fallTimeoutDelta >= 0.0f)
-				{
+				if (_fallTimeoutDelta >= 0.0f) {
 					_fallTimeoutDelta -= Time.deltaTime;
 				}
-				else
-				{
-					// update animator if using character
-					if (_hasAnimator)
-					{
-						_animator.SetBool(_animIDFreeFall, true);
-					}
+				else {
+					_animator.SetBool(_animIDFreeFall, true);
 				}
 
 				// if we are not grounded, do not jump
@@ -322,8 +315,7 @@ namespace TPSTemplate
 			}
 
 			// apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
-			if (_verticalVelocity < _terminalVelocity)
-			{
+			if (_verticalVelocity < _terminalVelocity) {
 				_verticalVelocity += Gravity * Time.deltaTime;
 			}
 		}
@@ -343,7 +335,8 @@ namespace TPSTemplate
 			return Mathf.Clamp(lfAngle, lfMin, lfMax);
 		}
 
-		private void ApplyRotationSmoothTimeOnGround(float currentHorizontalSpeed ) {
+		private void ApplyRotationSmoothTimeOnGround(float currentHorizontalSpeed ) 
+		{
 			//if the player is jumping, dont adjust the rotation smooth time
 			if (!Grounded) return;
 			if (currentHorizontalSpeed>=Mathf.Epsilon && currentHorizontalSpeed<= moveSpeedThreshold) {

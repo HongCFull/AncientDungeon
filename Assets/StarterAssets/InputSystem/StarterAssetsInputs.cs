@@ -48,7 +48,7 @@ namespace TPSTemplate
 		}
 		
 		public void OnMeleeAttack(InputValue value) {
-			Debug.Log("OnMeleeAttack is called!");
+			//Debug.Log("OnMeleeAttack is called!");
 			MeleeAttackInput(value.isPressed);
 		}
 #else
