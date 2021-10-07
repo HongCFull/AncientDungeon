@@ -114,17 +114,13 @@ namespace TPSTemplate
 		private void Awake()
 		{
 			// get a reference to our main camera
-			if (_mainCamera == null)
-			{
+			if (_mainCamera == null) {
 				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 			}
 		}
 
 		private void Start()
 		{
-			_animator = GetComponent<Animator>();
-			_controller = GetComponent<CharacterController>();
-			_input = GetComponent<StarterAssetsInputs>();
 
 			InitializeVariables();
 			AssignAnimationIDs();
@@ -140,7 +136,10 @@ namespace TPSTemplate
 				JumpAndGravity();
 				Move();
 			}
-			
+			else {
+				ResetAnimatorMovementPara();
+			}
+
 			GroundedCheck();
 			HandleAttack();
 
@@ -168,8 +167,10 @@ namespace TPSTemplate
 
 		private void InitializeVariables()
 		{
+			_animator = GetComponent<Animator>();
+			_controller = GetComponent<CharacterController>();
+			_input = GetComponent<StarterAssetsInputs>();
 			_speed = MoveSpeed;
-			//_animator.SetFloat(_animIDMotionSpeed, _speed);
 		}
 		
 		private void AssignAnimationIDs()
@@ -195,8 +196,7 @@ namespace TPSTemplate
 		private void CameraRotation()
 		{
 			// if there is an input and camera position is not fixed
-			if (_input.look.sqrMagnitude >= _threshold && !LockCameraPosition)
-			{
+			if (_input.look.sqrMagnitude >= _threshold && !LockCameraPosition) {
 				_cinemachineTargetYaw += _input.look.x * Time.deltaTime;
 				_cinemachineTargetPitch += _input.look.y * Time.deltaTime;
 			}
@@ -264,19 +264,18 @@ namespace TPSTemplate
 
 			_animator.SetFloat(_animIDSpeed, _animationBlend);
 			_animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
-		
+
 		}
 
 		private void JumpAndGravity()
 		{
+
 			if (Grounded) {
 				// reset the fall timeout timer
 				_fallTimeoutDelta = FallTimeout;
 
-				// update animator if using character
 				_animator.SetBool(_animIDJump, false);
 				_animator.SetBool(_animIDFreeFall, false);
-				
 
 				// stop our velocity dropping infinitely when grounded
 				if (_verticalVelocity < 0.0f) {
@@ -284,7 +283,8 @@ namespace TPSTemplate
 				}
 
 				// Jump
-				if (_input.jump && _jumpTimeoutDelta <= 0.0f) {
+
+				if (_input.jump && _jumpTimeoutDelta <= 0.0f && enableMovement) {
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
 
@@ -320,7 +320,13 @@ namespace TPSTemplate
 			}
 		}
 
-		private void HandleAttack() {
+		private void ResetAnimatorMovementPara() {
+			_animator.SetFloat(_animIDSpeed, 0);
+			_animator.SetFloat(_animIDMotionSpeed, 0);
+		}
+		
+		private void HandleAttack() 
+		{
 			_animator.ResetTrigger(_animIDMeleeAttack);
 			if (_input.meleeAttack) {
 				_input.meleeAttack = false;
