@@ -7,7 +7,7 @@ using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 using PackageInfo = UnityEditor.PackageManager.PackageInfo;
 
-namespace StarterAssets
+namespace TPSTemplate
 {
     public static class PackageChecker
     {

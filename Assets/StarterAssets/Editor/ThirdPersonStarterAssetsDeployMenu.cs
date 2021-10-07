@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace StarterAssets
+namespace TPSTemplate
 {
     public partial class StarterAssetsDeployMenu : ScriptableObject
     {

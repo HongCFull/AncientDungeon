@@ -1,6 +1,6 @@
 ﻿using UnityEditor;
 
-namespace StarterAssets
+namespace TPSTemplate
 {
     public static class ScriptingDefineUtils
     {

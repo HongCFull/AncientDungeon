@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace StarterAssets
+namespace TPSTemplate
 {
     public class UICanvasControllerInput : MonoBehaviour
     {

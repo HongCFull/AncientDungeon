@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 /* Note: animations are called via the controller for both the character and capsule using animator null checks
  */
 
-namespace StarterAssets
+namespace TPSTemplate
 {
 	[RequireComponent(typeof(CharacterController))]
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
@@ -99,6 +99,7 @@ namespace StarterAssets
 		private int _animIDJump;
 		private int _animIDFreeFall;
 		private int _animIDMotionSpeed;
+		private int _animIDMeleeAttack;
 
 		private Animator _animator;
 		private CharacterController _controller;
@@ -139,7 +140,8 @@ namespace StarterAssets
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
-			
+			HandleAttack();
+
 		}
 
 		private void LateUpdate()
@@ -160,6 +162,7 @@ namespace StarterAssets
 			_animIDJump = Animator.StringToHash("Jump");
 			_animIDFreeFall = Animator.StringToHash("FreeFall");
 			_animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
+			_animIDMeleeAttack = Animator.StringToHash("MeleeAttack");
 		}
 
 		private void GroundedCheck()
@@ -325,23 +328,19 @@ namespace StarterAssets
 			}
 		}
 
+		private void HandleAttack() {
+			_animator.ResetTrigger(_animIDMeleeAttack);
+			if (_input.meleeAttack) {
+				_input.meleeAttack = false;
+				_animator.SetTrigger(_animIDMeleeAttack);
+			}
+		}
+		
 		private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
 		{
 			if (lfAngle < -360f) lfAngle += 360f;
 			if (lfAngle > 360f) lfAngle -= 360f;
 			return Mathf.Clamp(lfAngle, lfMin, lfMax);
-		}
-
-		private void OnDrawGizmosSelected()
-		{
-			Color transparentGreen = new Color(0.0f, 1.0f, 0.0f, 0.35f);
-			Color transparentRed = new Color(1.0f, 0.0f, 0.0f, 0.35f);
-
-			if (Grounded) Gizmos.color = transparentGreen;
-			else Gizmos.color = transparentRed;
-			
-			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
-			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
 		}
 
 		private void ApplyRotationSmoothTimeOnGround(float currentHorizontalSpeed ) {
@@ -353,6 +352,21 @@ namespace StarterAssets
 			else {
 				RotationSmoothTime = 0.07f;
 			}
-		} 
+		}
+
+
+#if  UNITY_EDITOR
+		private void OnDrawGizmosSelected()
+		{
+			Color transparentGreen = new Color(0.0f, 1.0f, 0.0f, 0.35f);
+			Color transparentRed = new Color(1.0f, 0.0f, 0.0f, 0.35f);
+
+			if (Grounded) Gizmos.color = transparentGreen;
+			else Gizmos.color = transparentRed;
+			
+			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
+			Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z), GroundedRadius);
+		}
+#endif
 	}
 }

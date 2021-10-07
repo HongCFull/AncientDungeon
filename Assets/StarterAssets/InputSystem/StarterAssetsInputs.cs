@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 #endif
 
-namespace StarterAssets
+namespace TPSTemplate
 {
 	public class StarterAssetsInputs : MonoBehaviour
 	{
@@ -12,7 +12,8 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump = false;
 		public bool sprint =false ;
-
+		public bool meleeAttack = false;
+		
 		[Header("Movement Settings")]
 		public bool analogMovement;
 
@@ -45,6 +46,11 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
+		
+		public void OnMeleeAttack(InputValue value) {
+			Debug.Log("OnMeleeAttack is called!");
+			MeleeAttackInput(value.isPressed);
+		}
 #else
 	// old input sys if we do decide to have it (most likely wont)...
 #endif
@@ -70,6 +76,10 @@ namespace StarterAssets
 			sprint = newSprintState;
 		}
 
+		private void MeleeAttackInput(bool newAttackState) {
+			meleeAttack = newAttackState;
+		}
+		
 #if !UNITY_IOS || !UNITY_ANDROID
 
 		private void OnApplicationFocus(bool hasFocus)
@@ -81,6 +91,8 @@ namespace StarterAssets
 		{
 			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
 		}
+		
+
 
 #endif
 
