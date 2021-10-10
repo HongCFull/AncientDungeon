@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class EnterMeleeComboState : StateMachineBehaviour
 {
-    [SerializeField] private int slashVFXIndex;
+    [Tooltip("It can trigger multiple vfx in one state")]
+    [SerializeField] private int[] slashVFXIndexs;
     private ThirdPersonController tpsController = null;
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -25,7 +26,8 @@ public class EnterMeleeComboState : StateMachineBehaviour
         if(!tpsController )
             tpsController = animator.GetComponent<ThirdPersonController>(); 
         
-        tpsController.slashVFXManager.SpawnSlashEffect(slashVFXIndex);
+        for (int i = 0; i<slashVFXIndexs.Length; i++)
+            tpsController.slashVFXManager.SpawnSlashEffect(slashVFXIndexs[i]);
        
 
     }
