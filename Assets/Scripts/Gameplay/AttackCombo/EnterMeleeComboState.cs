@@ -9,10 +9,11 @@ public class EnterMeleeComboState : StateMachineBehaviour
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         ResetMeleeAttack(animator);
+        Debug.Log("Enter melee combo state");
     }
 
     void ResetMeleeAttack(Animator animator) {
         animator.ResetTrigger("MeleeAttack");
-        Debug.Log("Reset MeleeAttack bool");   
+        //Debug.Log("Reset MeleeAttack");   
     }
 }

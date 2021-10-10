@@ -8,6 +8,7 @@ public class EnterLocoMotionState : StateMachineBehaviour
     private ThirdPersonController tpsController = null;
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         base.OnStateEnter(animator, stateInfo, layerIndex);
+        Debug.Log("On loco motion state");
         EnableTPSMovement(animator);
     }
 
