@@ -224,7 +224,7 @@ public class DungeonGenerator : MonoBehaviour
 
         TileToTransformation(tileHolder, toConnector, fromConnector);
 
-        if (HasCollisionOnNewlyConnectedTiles()) {
+        if (HaveCollisionOnNewlyConnectedTiles()) {
  
             tileFrom.RestorePreviousPoppedConnector();  
             
@@ -268,7 +268,7 @@ public class DungeonGenerator : MonoBehaviour
     /// 
     /// </summary>
     /// <returns></returns>
-    bool HasCollisionOnNewlyConnectedTiles() 
+    bool HaveCollisionOnNewlyConnectedTiles() 
     {
         BoxCollider tileToBoundingBox = tileTo.boundingBox;
         //The displacement vector from the origin of tileTo's transform to the centroid of the box.  
