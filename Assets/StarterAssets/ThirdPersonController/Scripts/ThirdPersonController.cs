@@ -81,6 +81,9 @@ namespace TPSTemplate
 		private float _cinemachineTargetYaw;
 		private float _cinemachineTargetPitch;
 
+		//object references
+		public SlashVFXManager slashVFXManager;
+
 		// player
 		private bool enableMovement = true;
 		private float _speed;
