@@ -14,12 +14,13 @@ public class DungeonTile : MonoBehaviour
     
     public BoxCollider boundingBox { get; private set; }
     private Connector latestPopedConnector;
-    
+    private Vector3 scaleVector;
     private void Awake() {
         //cache boundingBox
         boundingBox = GetComponent<BoxCollider>();
+        scaleVector = transform.localScale;
     }
-
+    
     /// <summary>
     /// Pop and assume the connector is connected 
     /// </summary>
@@ -64,4 +65,28 @@ public class DungeonTile : MonoBehaviour
     public bool TileIsFullyConnected() {
         return connectedConnectors.Count == 0;
     }
+
+    public Vector3 GetGlobalCollisionBoxCenter() {
+        Vector3 centerOffset = transform.right * boundingBox.center.x *scaleVector.x+
+                               transform.up * boundingBox.center.y *scaleVector.y+
+                               transform.forward * boundingBox.center.z*scaleVector.z;
+        return transform.position + centerOffset;
+    }
+
+    public Vector3 GetScaledCollisionBoxHalfExtend() {
+        Vector3 originalBoxHalfExtents = boundingBox.bounds.extents;
+        Vector3 scaledBoxHalfExtents = new Vector3(
+            scaleVector.x * originalBoxHalfExtents.x , scaleVector.y * originalBoxHalfExtents.y, scaleVector.z * originalBoxHalfExtents.z
+        );
+        return scaledBoxHalfExtents;
+    }
+    
+#if UNITY_EDITOR
+    private void OnDrawGizmos() 
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(GetGlobalCollisionBoxCenter(),GetScaledCollisionBoxHalfExtend());
+    }
+
+#endif
 }

@@ -14,7 +14,7 @@ public class EnterMeleeComboState : StateMachineBehaviour
         base.OnStateEnter(animator, stateInfo, layerIndex);
         ResetMeleeAttack(animator);
         SpawnSlashVFX(animator);
-       // Debug.Log("Enter melee combo state");
+        Debug.Log("Enter melee combo state");
     }
 
     void ResetMeleeAttack(Animator animator) {

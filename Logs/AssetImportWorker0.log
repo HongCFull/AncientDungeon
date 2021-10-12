@@ -15,11 +15,11 @@ D:/Unity GameProject/Comp4971C
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-50733
+64266
 Successfully changed project path to: D:/Unity GameProject/Comp4971C
 D:/Unity GameProject/Comp4971C
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 112.98 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 125.26 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.4f1 (0abb6314276a)
 [Subsystems] Discovering subsystems at path D:/Unity/2020.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -36,150 +36,1802 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2020.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2020.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/2020.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56096
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56880
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2020.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/Unity/2020.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001124 seconds.
+Registered in 0.001180 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 119.00 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 123.46 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.687 seconds
+- Completed reload, in  1.798 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003591 seconds.
+Registered in 0.005221 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 133.69 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 125.57 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.926 seconds
+- Completed reload, in  1.934 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
-Refreshing native plugins compatible for Editor in 1.91 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.37 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4607 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 232.4 MB.
-System memory in use after: 232.6 MB.
+System memory in use before: 232.5 MB.
+System memory in use after: 232.7 MB.
 
 Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 5057.
-Total: 3.376500 ms (FindLiveObjects: 0.399800 ms CreateObjectMapping: 0.249600 ms MarkObjects: 2.636200 ms  DeleteObjects: 0.090100 ms)
+Total: 4.204200 ms (FindLiveObjects: 0.377200 ms CreateObjectMapping: 0.200100 ms MarkObjects: 3.526000 ms  DeleteObjects: 0.099800 ms)
 
 ========================================================================
 Received Import Request.
+  path: Assets/Animations/grimreaper
+  artifactKey: Guid(c700b010f290f8249b535c245f991228) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper using Guid(c700b010f290f8249b535c245f991228) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06497b5632ebcada4ae2688db02ea107') in 0.017316 seconds
+  Import took 0.026708 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 119.794305 seconds.
+  path: Assets/Animations/grimreaper/Appear.FBX
+  artifactKey: Guid(a9d641e03c7b7fd43ab31c136cda4469) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Appear.FBX using Guid(a9d641e03c7b7fd43ab31c136cda4469) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4f14b2af000f071483ae2aa9e39f4ed') in 0.490745 seconds
+  Import took 0.500927 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/Animations/grimreaper/dead2.FBX
+  artifactKey: Guid(adf1dbcc5e4ea734da639a4648e6f9e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/dead2.FBX using Guid(adf1dbcc5e4ea734da639a4648e6f9e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd11d0f2f06dfcc6506b6d526e72e6ae') in 0.047464 seconds
+  Import took 0.058279 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Animations/grimreaper/Flying_attack05.FBX
+  artifactKey: Guid(9e01627d4d57934439cfe47e03c3c12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_attack05.FBX using Guid(9e01627d4d57934439cfe47e03c3c12d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ec3a86142e69046df6784dfc2c21a98') in 0.040537 seconds
+  Import took 0.051536 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Animations/grimreaper/Ground_air_spin.FBX
+  artifactKey: Guid(408ba95d0470a5e438836eb3267c724e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_air_spin.FBX using Guid(408ba95d0470a5e438836eb3267c724e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d33e64236840cd12bc6bb620376c14d') in 0.036583 seconds
+  Import took 0.046683 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/Animations/grimreaper/flying_movement_f_back.FBX
+  artifactKey: Guid(30ee74daf2a278340a7ff35d9a819e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/flying_movement_f_back.FBX using Guid(30ee74daf2a278340a7ff35d9a819e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '923fbb0798d9d053edd558c857120746') in 0.034887 seconds
+  Import took 0.045754 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Animations/grimreaper/Flying_attack03.FBX
+  artifactKey: Guid(5656305c2a04b004fb6077f80063b020) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_attack03.FBX using Guid(5656305c2a04b004fb6077f80063b020) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3b02ba3d889da5550b1e9d31b33f73f') in 0.040316 seconds
+  Import took 0.051693 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Animations/grimreaper/Flying_idle.FBX
+  artifactKey: Guid(d9dcf7a72184b514cbf85959309a56f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_idle.FBX using Guid(d9dcf7a72184b514cbf85959309a56f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd32d476848c7e26fffe4e59b1f4835c1') in 0.036491 seconds
+  Import took 0.045857 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/Animations/grimreaper/groggy1_loop.FBX
+  artifactKey: Guid(b09918119833c0c4dade80ff618ac2ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/groggy1_loop.FBX using Guid(b09918119833c0c4dade80ff618ac2ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9f16c4b03b3bb2b1466ef438c6defb3') in 0.036271 seconds
+  Import took 0.046423 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Animations/grimreaper/dead4.FBX
+  artifactKey: Guid(742e4fbfea171c04f8163b908ab5680e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/dead4.FBX using Guid(742e4fbfea171c04f8163b908ab5680e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7693fc957c198f7f81d993926989be24') in 0.033757 seconds
+  Import took 0.043372 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Animations/grimreaper/Flying_attack02.FBX
+  artifactKey: Guid(910c9c1721d53bc4a9cee1630ff8a32d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_attack02.FBX using Guid(910c9c1721d53bc4a9cee1630ff8a32d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '716287a6d14fff5939a4482595951fec') in 0.044423 seconds
+  Import took 0.054259 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Animations/grimreaper/flying_movement_s_right.FBX
+  artifactKey: Guid(292242ff68e8cb446bac786d94bd3cfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/flying_movement_s_right.FBX using Guid(292242ff68e8cb446bac786d94bd3cfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c010372aa5a93de1c85c9ea42286eab3') in 0.041153 seconds
+  Import took 0.050647 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Animations/grimreaper/equip.FBX
+  artifactKey: Guid(8f0f3c5901c96164d9f10ebd6b5462d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/equip.FBX using Guid(8f0f3c5901c96164d9f10ebd6b5462d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfab417e914fe4d27424446967258f89') in 0.038842 seconds
+  Import took 0.046862 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Animations/grimreaper/Flying_air_spin_01.FBX
+  artifactKey: Guid(2c290ae157659a049afcbdd7836dbd20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_air_spin_01.FBX using Guid(2c290ae157659a049afcbdd7836dbd20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f183577256d08bbe9eac2b9bc6e1f61') in 0.038527 seconds
+  Import took 0.047058 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Animations/grimreaper/Flying_air_spin_02.FBX
+  artifactKey: Guid(d04c1fde624992244800bd38eb9566e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_air_spin_02.FBX using Guid(d04c1fde624992244800bd38eb9566e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e9737f005f18820c5c949fc3f0927c6') in 0.040543 seconds
+  Import took 0.049908 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/Animations/grimreaper/Flying_attack13.FBX
+  artifactKey: Guid(fe6b5e5712e40934b96e3a7fadbc25fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_attack13.FBX using Guid(fe6b5e5712e40934b96e3a7fadbc25fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '534714aff7c33782ef6eaaf3da2f2897') in 0.035707 seconds
+  Import took 0.044892 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/Animations/grimreaper/Flying_attack04.FBX
+  artifactKey: Guid(f9e1c3ade98058e4581cc6c680810002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_attack04.FBX using Guid(f9e1c3ade98058e4581cc6c680810002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3483a2f2053a551490b47c3161e87db5') in 0.037500 seconds
+  Import took 0.046978 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/Animations/grimreaper/Flying_attack_Dash.FBX
+  artifactKey: Guid(c385df4f2781940459dc028ccd334a48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_attack_Dash.FBX using Guid(c385df4f2781940459dc028ccd334a48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc9081bb46fd2fabb686b63124ccc328') in 0.044350 seconds
+  Import took 0.055460 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/Animations/grimreaper/down_idle.FBX
+  artifactKey: Guid(d6bebeeabc863f34ba6a514b70e1126f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/down_idle.FBX using Guid(d6bebeeabc863f34ba6a514b70e1126f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f43bf200ee2bf88af2fd55523296607') in 0.046441 seconds
+  Import took 0.056714 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Animations/grimreaper/flying_movement_c_backleft.FBX
+  artifactKey: Guid(5ede2dd23f1c1544d8c7cbce45525806) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/flying_movement_c_backleft.FBX using Guid(5ede2dd23f1c1544d8c7cbce45525806) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6ecf266bbd5b9464e509ab541c01767') in 0.036499 seconds
+  Import took 0.045305 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Animations/grimreaper/Ground_air_spin_Z0.FBX
+  artifactKey: Guid(768a2e30ae82b014aa4c3f288dd3d60d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_air_spin_Z0.FBX using Guid(768a2e30ae82b014aa4c3f288dd3d60d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1930ef0038a3cfebe6e3c341f0b8e7d1') in 0.038325 seconds
+  Import took 0.048847 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/Animations/grimreaper/dead1.FBX
+  artifactKey: Guid(4f8a0aaa2ad357e4eb027c3405382d62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/dead1.FBX using Guid(4f8a0aaa2ad357e4eb027c3405382d62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6864ab1c12bae8e251d9958075384a7') in 0.041194 seconds
+  Import took 0.049591 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Animations/grimreaper/Flying_attack_down.FBX
+  artifactKey: Guid(0b388f20b2024fc48944054203bd4dcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_attack_down.FBX using Guid(0b388f20b2024fc48944054203bd4dcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff6025a5ce67412a5eb6cfc9cbba0471') in 0.037967 seconds
+  Import took 0.046375 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Animations/grimreaper/Flying_attack_handyshock.FBX
+  artifactKey: Guid(28bcc319b22ae4f41b8ebd1ac29bd45c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_attack_handyshock.FBX using Guid(28bcc319b22ae4f41b8ebd1ac29bd45c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '249cbf50355c78adb1eb7452c98a7206') in 0.031906 seconds
+  Import took 0.039937 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/Animations/grimreaper/Flying_attack08.FBX
+  artifactKey: Guid(14a6585cea138e748a0c755f2d980110) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_attack08.FBX using Guid(14a6585cea138e748a0c755f2d980110) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '240d35da66142a70cb643dd7800956ae') in 0.042947 seconds
+  Import took 0.052152 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/Animations/grimreaper/flying_movement_c_frontleft.FBX
+  artifactKey: Guid(7a3b9050d7cb5904297ac78f9e080a3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/flying_movement_c_frontleft.FBX using Guid(7a3b9050d7cb5904297ac78f9e080a3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1a26ccb23bc613a2e257a571da33d63') in 0.035259 seconds
+  Import took 0.045739 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack01.FBX
+  artifactKey: Guid(74f833269003da14a8dd7e305def6c08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack01.FBX using Guid(74f833269003da14a8dd7e305def6c08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efefe6f4ffb4840af396db76fc24efdf') in 0.033637 seconds
+  Import took 0.041132 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Animations/grimreaper/dead5.FBX
+  artifactKey: Guid(4a4c9dc746c37174199f0d5996ee044e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/dead5.FBX using Guid(4a4c9dc746c37174199f0d5996ee044e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3ab088daef5df3b3cc31a3a254e7ddf') in 0.046928 seconds
+  Import took 0.055863 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000338 seconds.
+  path: Assets/Animations/grimreaper/flying_movement_f_front2.FBX
+  artifactKey: Guid(e6b9e0637a7638f4bb8b49a3d45818b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/flying_movement_f_front2.FBX using Guid(e6b9e0637a7638f4bb8b49a3d45818b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd0d3c0da41b0bf36811ad164995737b') in 0.033235 seconds
+  Import took 0.041847 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Animations/grimreaper/Flying_attack_spin.FBX
+  artifactKey: Guid(9fe2dc91dea78254ba8ccc9b0a07efb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_attack_spin.FBX using Guid(9fe2dc91dea78254ba8ccc9b0a07efb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8dc72351022f83fd8ac29a2ce99ea952') in 0.039051 seconds
+  Import took 0.047834 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/Animations/grimreaper/Flying_attack01.FBX
+  artifactKey: Guid(ca32d3edaa565044580483fe46e6bd45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_attack01.FBX using Guid(ca32d3edaa565044580483fe46e6bd45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27930fd6b34ca92ae342773f320e8328') in 0.045367 seconds
+  Import took 0.055388 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000321 seconds.
+  path: Assets/Animations/grimreaper/Flying_air_spin_02_Z0.FBX
+  artifactKey: Guid(87ef7857117e9624087d1b01a7483b85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_air_spin_02_Z0.FBX using Guid(87ef7857117e9624087d1b01a7483b85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd039bec2074fac9183398e5d70d92381') in 0.035306 seconds
+  Import took 0.044417 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/Animations/grimreaper/Flying_air_spin_01_Z0.FBX
+  artifactKey: Guid(ff3fa453378e64e418a559e9d8246133) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_air_spin_01_Z0.FBX using Guid(ff3fa453378e64e418a559e9d8246133) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04df875f20cd9a2c46e3ddb782daa1a3') in 0.038661 seconds
+  Import took 0.049356 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/Animations/grimreaper/flying_movement_c_backright.FBX
+  artifactKey: Guid(895906ad9e141724ca80449fd44d295e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/flying_movement_c_backright.FBX using Guid(895906ad9e141724ca80449fd44d295e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a92759f5f59f80137d3859beb6f5e1f2') in 0.044393 seconds
+  Import took 0.054790 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/Animations/grimreaper/defence.FBX
+  artifactKey: Guid(0d51d87e38a030c4295dba0d6bf86de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/defence.FBX using Guid(0d51d87e38a030c4295dba0d6bf86de7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a1479478746086d2fd1937111f595a0') in 0.038630 seconds
+  Import took 0.048432 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Animations/grimreaper/Flying_attack09.FBX
+  artifactKey: Guid(11a4638886d980248a3bbbb25d931588) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_attack09.FBX using Guid(11a4638886d980248a3bbbb25d931588) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54544c43153c26b335193b4b30cc2fea') in 0.029122 seconds
+  Import took 0.038429 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/Animations/grimreaper/flying_movement_f_front1.FBX
+  artifactKey: Guid(132305d5366a745449ae68c405778182) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/flying_movement_f_front1.FBX using Guid(132305d5366a745449ae68c405778182) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43450a694ac87df8638579377b3823c6') in 0.032741 seconds
+  Import took 0.041414 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Animations/grimreaper/flying_movement_c_frontright.FBX
+  artifactKey: Guid(3929720284b842e44bdc10754ef64a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/flying_movement_c_frontright.FBX using Guid(3929720284b842e44bdc10754ef64a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e701e0623625f9af8adf3e67c303b558') in 0.042180 seconds
+  Import took 0.051105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/Animations/grimreaper/Flying_attack10.FBX
+  artifactKey: Guid(b8f09bfb9d4038b43a37a59e5253f9d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_attack10.FBX using Guid(b8f09bfb9d4038b43a37a59e5253f9d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e20c26010db17ac67a14461f3ff7767d') in 0.030714 seconds
+  Import took 0.039204 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Animations/grimreaper/Flying_attack12.FBX
+  artifactKey: Guid(7fdf7b91782bc9d47857405a5af1dd32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_attack12.FBX using Guid(7fdf7b91782bc9d47857405a5af1dd32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ed17fdbe2d45c6733302b012b68e515') in 0.035888 seconds
+  Import took 0.043686 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Animations/grimreaper/down_rise.FBX
+  artifactKey: Guid(5862bec3a942855499c0cd6530e4db32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/down_rise.FBX using Guid(5862bec3a942855499c0cd6530e4db32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ff100fdb4cb811523f74e0190d7e31b') in 0.039983 seconds
+  Import took 0.049475 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Animations/grimreaper/flying_movement_f_front.FBX
+  artifactKey: Guid(35bdd09dc0ec3744ea9e3fe0870222ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/flying_movement_f_front.FBX using Guid(35bdd09dc0ec3744ea9e3fe0870222ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40c97a48cbf3fe4d0c0c8e82030dd9a2') in 0.031152 seconds
+  Import took 0.038787 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/Animations/grimreaper/groggy2_loop.FBX
+  artifactKey: Guid(235355e23e653dc4d93a4c6ac11711ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/groggy2_loop.FBX using Guid(235355e23e653dc4d93a4c6ac11711ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4fea464ecf99dafd674104a4be50d60') in 0.039789 seconds
+  Import took 0.050990 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/Animations/grimreaper/flying_movement_s_left.FBX
+  artifactKey: Guid(f213f91dec435064eaa79b610f79be57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/flying_movement_s_left.FBX using Guid(f213f91dec435064eaa79b610f79be57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebdaf55855edb8bbb6485df6cccc4f97') in 0.039516 seconds
+  Import took 0.049133 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/Animations/grimreaper/Flying_attack06.FBX
+  artifactKey: Guid(8b126fb82899aa84eb7051c144fb79d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_attack06.FBX using Guid(8b126fb82899aa84eb7051c144fb79d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ddc82cee8fe9af540d4fd32237177e8') in 0.036449 seconds
+  Import took 0.044554 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/Animations/grimreaper/Flying_attack07.FBX
+  artifactKey: Guid(e11f9ceddfb5ed640b96137083cb33a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_attack07.FBX using Guid(e11f9ceddfb5ed640b96137083cb33a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd3dc252bb19a8dbd724a0d03e60ea9d') in 0.037781 seconds
+  Import took 0.051109 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.522340 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack02.FBX
+  artifactKey: Guid(aa122f05575d3ca45ad122514c6f789c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack02.FBX using Guid(aa122f05575d3ca45ad122514c6f789c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65c9526896cdd1fd2eee0b690ca2952b') in 0.048772 seconds
+  Import took 0.057580 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Animations/grimreaper/jump_long_Z0.FBX
+  artifactKey: Guid(106be3cdd4a289948a1f25a5a0d91424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/jump_long_Z0.FBX using Guid(106be3cdd4a289948a1f25a5a0d91424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d7b19de656b9d9ac50dc14a80ecaf85') in 0.056073 seconds
+  Import took 0.067691 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack07.FBX
+  artifactKey: Guid(f2d5797963d7508468781d3d97bc32e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack07.FBX using Guid(f2d5797963d7508468781d3d97bc32e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf5288828e4c2e463a80c405dfc2eb18') in 0.064206 seconds
+  Import took 0.074298 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack03.FBX
+  artifactKey: Guid(573738e8e3add83429bf3747275c46de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack03.FBX using Guid(573738e8e3add83429bf3747275c46de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a10fdbc0654699455c2040cf03ed201d') in 0.052007 seconds
+  Import took 0.064197 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/Animations/grimreaper/jump.FBX
+  artifactKey: Guid(6f7396de442b38049b5a93cc56ef5291) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/jump.FBX using Guid(6f7396de442b38049b5a93cc56ef5291) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e90af5552faa875f93220e2c128841b6') in 0.055577 seconds
+  Import took 0.066512 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack10.FBX
+  artifactKey: Guid(30b280ef139b0f54f8e944eaaa4e8763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack10.FBX using Guid(30b280ef139b0f54f8e944eaaa4e8763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b53db5d2030c7e8647e3e140c77ace8') in 0.068885 seconds
+  Import took 0.083381 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack08.FBX
+  artifactKey: Guid(80fe403865bfdfb4b86c47ca13c05e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack08.FBX using Guid(80fe403865bfdfb4b86c47ca13c05e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39ce05c05ac5bd46ada36ccbf4ef10ef') in 0.057601 seconds
+  Import took 0.069558 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_run_R135.FBX
+  artifactKey: Guid(1990f37ac15dd0841807e213434264fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_run_R135.FBX using Guid(1990f37ac15dd0841807e213434264fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1fa56c0692c13c59e947aa4fea29dcf') in 0.058235 seconds
+  Import took 0.067846 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_walk_F.FBX
+  artifactKey: Guid(4bdf235775f27314a91b2f61ea862b09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_walk_F.FBX using Guid(4bdf235775f27314a91b2f61ea862b09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39b7c8d5e37812f64811c1a18eb13389') in 0.056035 seconds
+  Import took 0.066256 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_run_R135.FBX
+  artifactKey: Guid(1990f37ac15dd0841807e213434264fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_run_R135.FBX using Guid(1990f37ac15dd0841807e213434264fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1fa56c0692c13c59e947aa4fea29dcf') in 0.047360 seconds
+  Import took 0.057117 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/Animations/grimreaper/Ground_run_fast.FBX
+  artifactKey: Guid(b5a127fa2eb9a054caed5021bdc46593) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_run_fast.FBX using Guid(b5a127fa2eb9a054caed5021bdc46593) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d0b6bb0904e9e0d67f58df1e99d1d80') in 0.055349 seconds
+  Import took 0.066377 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_run_R.FBX
+  artifactKey: Guid(edd72559e5f62bd4f9277f1cb589b79c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_run_R.FBX using Guid(edd72559e5f62bd4f9277f1cb589b79c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a805fdc6035dc2c967333ac9c55dbc46') in 0.064888 seconds
+  Import took 0.074937 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_walk_B.FBX
+  artifactKey: Guid(1b2a776f95b619b4799d72ea6b403988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_walk_B.FBX using Guid(1b2a776f95b619b4799d72ea6b403988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '201a6c1950f5716826422cd88bc148fd') in 0.063880 seconds
+  Import took 0.074333 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_walk_R.FBX
+  artifactKey: Guid(343559934d8859d47aa40fa51b855d2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_walk_R.FBX using Guid(343559934d8859d47aa40fa51b855d2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6862c4ea6e5f7bfe37e0b6d857f1b6dc') in 0.064058 seconds
+  Import took 0.073325 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_run_L.FBX
+  artifactKey: Guid(e38fe4143a9dab9469ae65d895ef153d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_run_L.FBX using Guid(e38fe4143a9dab9469ae65d895ef153d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc4cf3c67a1d6901aa198bf095c04e0c') in 0.054368 seconds
+  Import took 0.063376 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_walk_R45.FBX
+  artifactKey: Guid(ba4f85039ced7f147a67f512255d109f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_walk_R45.FBX using Guid(ba4f85039ced7f147a67f512255d109f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4248bc56b9bc67b89e32a5223a7bd51d') in 0.058473 seconds
+  Import took 0.069755 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack05.FBX
+  artifactKey: Guid(e00eaf9f905b37c48a5ad1fb675434f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack05.FBX using Guid(e00eaf9f905b37c48a5ad1fb675434f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f3a448257cf1cdb6fd029acf9b571b3') in 0.050590 seconds
+  Import took 0.060674 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack09.FBX
+  artifactKey: Guid(e53060694d2a48445a660fabcfcdb1c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack09.FBX using Guid(e53060694d2a48445a660fabcfcdb1c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c25d60b3142154362550a717484b9c7') in 0.058034 seconds
+  Import took 0.069812 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack13.FBX
+  artifactKey: Guid(54fa867a0f610e846a79bb6819940c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack13.FBX using Guid(54fa867a0f610e846a79bb6819940c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dbd8557c9ed17f1c6a0d4bea5e89dd7') in 0.045728 seconds
+  Import took 0.055933 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000247 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_walk_L135.FBX
+  artifactKey: Guid(aca08ca0ae7f7524085dcce1304e362b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_walk_L135.FBX using Guid(aca08ca0ae7f7524085dcce1304e362b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9870072de81582946aa447eec7332ec4') in 0.067297 seconds
+  Import took 0.079360 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/Animations/grimreaper/hit_left.FBX
+  artifactKey: Guid(e69514c25ba484e4387d31228f06cdc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/hit_left.FBX using Guid(e69514c25ba484e4387d31228f06cdc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '223e704b79515d304c6f6fe6879e4552') in 0.052438 seconds
+  Import took 0.061579 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/Animations/grimreaper/jump_long.FBX
+  artifactKey: Guid(e269c834e396a0044ab78f4724e0b51a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/jump_long.FBX using Guid(e269c834e396a0044ab78f4724e0b51a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4e98a3ea39587d4fd4052e0557fff58') in 0.045854 seconds
+  Import took 0.056300 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/Animations/grimreaper/Transition_GtoF.FBX
+  artifactKey: Guid(83c81cf2fe854ee4f99f40978a2ec3f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Transition_GtoF.FBX using Guid(83c81cf2fe854ee4f99f40978a2ec3f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db89ab73aeed0836868d1cc80c17b290') in 0.051849 seconds
+  Import took 0.065336 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/Animations/grimreaper/rise_rise2.FBX
+  artifactKey: Guid(10660ad5f76adc949a16b6fed639dd22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/rise_rise2.FBX using Guid(10660ad5f76adc949a16b6fed639dd22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7abb171d3c3f63865e53addb014191f4') in 0.054788 seconds
+  Import took 0.063522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/Animations/grimreaper/hit_front.FBX
+  artifactKey: Guid(d669bfc91d3e8f242b5d180111339df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/hit_front.FBX using Guid(d669bfc91d3e8f242b5d180111339df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4732f0808fc604adf00698662fdde53f') in 0.046375 seconds
+  Import took 0.056902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_run_L45.FBX
+  artifactKey: Guid(c76b4a60894160747a7a6c82fc6e5e14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_run_L45.FBX using Guid(c76b4a60894160747a7a6c82fc6e5e14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0938631191d41d31bbb8606270a01fc') in 0.053025 seconds
+  Import took 0.062591 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/Animations/grimreaper/hit_right.FBX
+  artifactKey: Guid(0b85adada7fa7394181ea8b470baf214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/hit_right.FBX using Guid(0b85adada7fa7394181ea8b470baf214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff2a10887fd691466a03049d2de05060') in 0.050930 seconds
+  Import took 0.061163 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_walk_L.FBX
+  artifactKey: Guid(4aede704a583a6944bfdefde7f0c75b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_walk_L.FBX using Guid(4aede704a583a6944bfdefde7f0c75b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9e158bbdfb6af69f401f8396a880d17') in 0.053691 seconds
+  Import took 0.063188 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Animations/grimreaper/rise_rise3.FBX
+  artifactKey: Guid(c2d657eedae643746a26bf7df66198c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/rise_rise3.FBX using Guid(c2d657eedae643746a26bf7df66198c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53b4b83ae23bbca44bf16970353dff03') in 0.041492 seconds
+  Import took 0.053262 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_walk_L45.FBX
+  artifactKey: Guid(c4f0304505172d74c865b6bba79bbd28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_walk_L45.FBX using Guid(c4f0304505172d74c865b6bba79bbd28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6bb76c8ef2b58bf03d8b2a52fcd06eb') in 0.045678 seconds
+  Import took 0.055328 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000178 seconds.
+  path: Assets/Animations/grimreaper/hit_down.FBX
+  artifactKey: Guid(c4088e038c078fa4aa9f966f912d78b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/hit_down.FBX using Guid(c4088e038c078fa4aa9f966f912d78b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82983257fd3d45ad0e9f4e55450bde76') in 0.045366 seconds
+  Import took 0.055747 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/Animations/grimreaper/rise1.FBX
+  artifactKey: Guid(58e8b136859e1b8438a1d291f63ead82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/rise1.FBX using Guid(58e8b136859e1b8438a1d291f63ead82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '060d47ab97035d798daf8d352f677c53') in 0.046668 seconds
+  Import took 0.056114 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_run_B.FBX
+  artifactKey: Guid(7e954158f8acda543924b6937356e8c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_run_B.FBX using Guid(7e954158f8acda543924b6937356e8c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0f8122762788d9d70e076c0b711b32a') in 0.041705 seconds
+  Import took 0.052940 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_walk_R135.FBX
+  artifactKey: Guid(8e199b7d879e973438c0d6c6ed4f6727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_walk_R135.FBX using Guid(8e199b7d879e973438c0d6c6ed4f6727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '760332dc94f6a07a52f3386ac79de5b4') in 0.040980 seconds
+  Import took 0.050300 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Animations/grimreaper/Ground_idle.FBX
+  artifactKey: Guid(09ee212a2ebdcf34c8a13afcc4e0d0d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_idle.FBX using Guid(09ee212a2ebdcf34c8a13afcc4e0d0d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df4d37e5d9949137de5648ebb2234b9d') in 0.043105 seconds
+  Import took 0.052807 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_run_R45.FBX
+  artifactKey: Guid(0d27b5939f7c4614895d1005aba4f1db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_run_R45.FBX using Guid(0d27b5939f7c4614895d1005aba4f1db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11acbaf2e08fab348e2a3419882301b1') in 0.042334 seconds
+  Import took 0.052348 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack06.FBX
+  artifactKey: Guid(aa7e0f34aee117444a83a89468c4776e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack06.FBX using Guid(aa7e0f34aee117444a83a89468c4776e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '670d7c69c82b0d2a4999d19664b782cb') in 0.048356 seconds
+  Import took 0.056957 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_run_F.FBX
+  artifactKey: Guid(4bf4052aef2a97d44a488a9604c0d6ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_run_F.FBX using Guid(4bf4052aef2a97d44a488a9604c0d6ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce90ebbf6c015499bfceb2bff27cb35a') in 0.047540 seconds
+  Import took 0.057600 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_run_L135.FBX
+  artifactKey: Guid(ab13104ab4618814fb9f99c89e73d298) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_run_L135.FBX using Guid(ab13104ab4618814fb9f99c89e73d298) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6d871f31b9b0175fac4892be3c6e94c') in 0.048001 seconds
+  Import took 0.057781 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack12.FBX
+  artifactKey: Guid(37ed935c2f27e6e4b9affeb9afe0d789) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack12.FBX using Guid(37ed935c2f27e6e4b9affeb9afe0d789) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29097ba10156381bd7adb468628d1d72') in 0.047539 seconds
+  Import took 0.057693 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/Animations/grimreaper/jump_Z0.FBX
+  artifactKey: Guid(b70c74527c4ad6141b5222b960f81932) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/jump_Z0.FBX using Guid(b70c74527c4ad6141b5222b960f81932) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85a2b8a23fe6391008b84affbb85d01d') in 0.044204 seconds
+  Import took 0.054120 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/Animations/grimreaper/Transition_FtoG.FBX
+  artifactKey: Guid(5563ccf43cc052a4e95f11d48217a102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Transition_FtoG.FBX using Guid(5563ccf43cc052a4e95f11d48217a102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b5f1d5be9e99430771806fc1ef45eaa') in 0.042993 seconds
+  Import took 0.052018 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Animations/grimreaper/hit_back.FBX
+  artifactKey: Guid(b13b79aa5eb6c3449ac5ca116a17e5ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/hit_back.FBX using Guid(b13b79aa5eb6c3449ac5ca116a17e5ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4a2db9c48cfa0a2de769a67608dd0ff') in 0.041875 seconds
+  Import took 0.051507 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/Animations/grimreaper/unequip.FBX
+  artifactKey: Guid(759a42584bc13b2439892753ee3dfb4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/unequip.FBX using Guid(759a42584bc13b2439892753ee3dfb4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40a2ac7565e955929427fbe1b60f4374') in 0.044973 seconds
+  Import took 0.054720 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack04.FBX
+  artifactKey: Guid(f792d5646da4a2041b05b52a3d3a6ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack04.FBX using Guid(f792d5646da4a2041b05b52a3d3a6ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '826955844277fbc9b74f98f3958af21b') in 0.046252 seconds
+  Import took 0.056426 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/Animations/grimreaper/Ground_run.FBX
+  artifactKey: Guid(c0db9601838a91147b02d590563431bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_run.FBX using Guid(c0db9601838a91147b02d590563431bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '422b6d9a58ee6d9dc2c5c830809700a0') in 0.046900 seconds
+  Import took 0.057703 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 206.697505 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack02.FBX
+  artifactKey: Guid(aa122f05575d3ca45ad122514c6f789c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack02.FBX using Guid(aa122f05575d3ca45ad122514c6f789c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7167be19dbede3dad16310e2cb0f472a') in 0.045394 seconds
+  Import took 0.055970 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004979 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.19 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.615 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 236.1 MB.
+System memory in use after: 236.4 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5226.
+Total: 4.500400 ms (FindLiveObjects: 0.401900 ms CreateObjectMapping: 0.176600 ms MarkObjects: 3.867100 ms  DeleteObjects: 0.053300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.416114 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack02.FBX
+  artifactKey: Guid(aa122f05575d3ca45ad122514c6f789c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack02.FBX using Guid(aa122f05575d3ca45ad122514c6f789c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5441e917eeb56ec8d18ba3e2611cb887') in 0.237667 seconds
+  Import took 0.250186 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005554 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.31 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.817 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.28 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 236.3 MB.
+System memory in use after: 236.6 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5349.
+Total: 6.890300 ms (FindLiveObjects: 0.809500 ms CreateObjectMapping: 0.584600 ms MarkObjects: 5.461400 ms  DeleteObjects: 0.032900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004177 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.40 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.950 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.66 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 236.4 MB.
+System memory in use after: 236.6 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5352.
+Total: 6.001600 ms (FindLiveObjects: 0.788900 ms CreateObjectMapping: 0.647600 ms MarkObjects: 4.530400 ms  DeleteObjects: 0.032600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.402275 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack02.FBX
+  artifactKey: Guid(aa122f05575d3ca45ad122514c6f789c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack02.FBX using Guid(aa122f05575d3ca45ad122514c6f789c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cd4bba969e897e21718ea7ed2b7b7ec') in 0.218351 seconds
+  Import took 0.229247 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009654 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack02.FBX
+  artifactKey: Guid(aa122f05575d3ca45ad122514c6f789c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack02.FBX using Guid(aa122f05575d3ca45ad122514c6f789c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cd4bba969e897e21718ea7ed2b7b7ec') in 0.033636 seconds
+  Import took 0.041364 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.418756 seconds.
   path: Assets/Animations/Third person starter/StarterAssetsThirdPerson.controller
   artifactKey: Guid(40db3173a05ae3242b1c182a09b0a183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Third person starter/StarterAssetsThirdPerson.controller using Guid(40db3173a05ae3242b1c182a09b0a183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29aa7c8809cb0e5dc07749729850218b') in 0.168697 seconds
-  Import took 0.178441 seconds .
+Start importing Assets/Animations/Third person starter/StarterAssetsThirdPerson.controller using Guid(40db3173a05ae3242b1c182a09b0a183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '298977c97b4a63dded4a63c2fb539c47') in 0.142066 seconds
+  Import took 0.151764 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 124.697217 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack03.FBX
+  artifactKey: Guid(573738e8e3add83429bf3747275c46de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack03.FBX using Guid(573738e8e3add83429bf3747275c46de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e68f6fe7e6d0671bd645e7061599ced4') in 0.096373 seconds
+  Import took 0.110076 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 57.623387 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_run_R135.FBX
+  artifactKey: Guid(1990f37ac15dd0841807e213434264fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_run_R135.FBX using Guid(1990f37ac15dd0841807e213434264fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb50c0c24ceb06b6eac75f27724bcd52') in 0.052353 seconds
+  Import took 0.064585 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Animations/grimreaper/jump.FBX
+  artifactKey: Guid(6f7396de442b38049b5a93cc56ef5291) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/jump.FBX using Guid(6f7396de442b38049b5a93cc56ef5291) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd77ecdf0bf34aa3ac1b9a81951159bb4') in 0.055221 seconds
+  Import took 0.063251 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_walk_F.FBX
+  artifactKey: Guid(4bdf235775f27314a91b2f61ea862b09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_walk_F.FBX using Guid(4bdf235775f27314a91b2f61ea862b09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d89c4b5d65863aa25f88a23ec4fd89d') in 0.047858 seconds
+  Import took 0.056645 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_walk_R.FBX
+  artifactKey: Guid(343559934d8859d47aa40fa51b855d2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_walk_R.FBX using Guid(343559934d8859d47aa40fa51b855d2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1da98c6f28984c71d0df2f57659fde7') in 0.050490 seconds
+  Import took 0.059336 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_walk_B.FBX
+  artifactKey: Guid(1b2a776f95b619b4799d72ea6b403988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_walk_B.FBX using Guid(1b2a776f95b619b4799d72ea6b403988) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32c0b6a89faca0f73606ebcdd8e6906f') in 0.046726 seconds
+  Import took 0.055777 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_walk_R45.FBX
+  artifactKey: Guid(ba4f85039ced7f147a67f512255d109f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_walk_R45.FBX using Guid(ba4f85039ced7f147a67f512255d109f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fa6c14fc645c4e880e6986091924613') in 0.060654 seconds
+  Import took 0.069656 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_walk_L135.FBX
+  artifactKey: Guid(aca08ca0ae7f7524085dcce1304e362b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_walk_L135.FBX using Guid(aca08ca0ae7f7524085dcce1304e362b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2472823f1dea4c9aa4907fe7da0f9afc') in 0.054306 seconds
+  Import took 0.063945 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000159 seconds.
+  path: Assets/Animations/grimreaper/rise_rise2.FBX
+  artifactKey: Guid(10660ad5f76adc949a16b6fed639dd22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/rise_rise2.FBX using Guid(10660ad5f76adc949a16b6fed639dd22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2754868d43e65e4e3df0dccf95d594a1') in 0.136642 seconds
+  Import took 0.148241 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/Animations/grimreaper/hit_left.FBX
+  artifactKey: Guid(e69514c25ba484e4387d31228f06cdc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/hit_left.FBX using Guid(e69514c25ba484e4387d31228f06cdc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de9a3df7eddf97fe2a753a6c6c7188a7') in 0.061191 seconds
+  Import took 0.069577 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000405 seconds.
+  path: Assets/Animations/grimreaper/jump_long.FBX
+  artifactKey: Guid(e269c834e396a0044ab78f4724e0b51a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/jump_long.FBX using Guid(e269c834e396a0044ab78f4724e0b51a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c34e3ec7945e191254db09ba41a9c140') in 0.050270 seconds
+  Import took 0.058954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/Animations/grimreaper/Transition_GtoF.FBX
+  artifactKey: Guid(83c81cf2fe854ee4f99f40978a2ec3f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Transition_GtoF.FBX using Guid(83c81cf2fe854ee4f99f40978a2ec3f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '727d1ea1a7271f3beee7bc752af25dc4') in 0.040123 seconds
+  Import took 0.051496 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Animations/grimreaper/hit_front.FBX
+  artifactKey: Guid(d669bfc91d3e8f242b5d180111339df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/hit_front.FBX using Guid(d669bfc91d3e8f242b5d180111339df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96840b2206232d011afe3dabd2afe9f0') in 0.031849 seconds
+  Import took 0.040879 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Animations/grimreaper/hit_right.FBX
+  artifactKey: Guid(0b85adada7fa7394181ea8b470baf214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/hit_right.FBX using Guid(0b85adada7fa7394181ea8b470baf214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e59590e1a91009cad58f27fe85fe469') in 0.036574 seconds
+  Import took 0.045835 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_walk_L.FBX
+  artifactKey: Guid(4aede704a583a6944bfdefde7f0c75b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_walk_L.FBX using Guid(4aede704a583a6944bfdefde7f0c75b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c3f5cf04705eeba2f31f05d2a62d3ed') in 0.039898 seconds
+  Import took 0.048918 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Animations/grimreaper/rise_rise3.FBX
+  artifactKey: Guid(c2d657eedae643746a26bf7df66198c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/rise_rise3.FBX using Guid(c2d657eedae643746a26bf7df66198c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e53ac200693432b2163de88a562a3db') in 0.037545 seconds
+  Import took 0.046604 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_walk_L45.FBX
+  artifactKey: Guid(c4f0304505172d74c865b6bba79bbd28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_walk_L45.FBX using Guid(c4f0304505172d74c865b6bba79bbd28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '513284b227b78377b5e1bbf7cfea6fc3') in 0.040875 seconds
+  Import took 0.053115 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Animations/grimreaper/hit_down.FBX
+  artifactKey: Guid(c4088e038c078fa4aa9f966f912d78b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/hit_down.FBX using Guid(c4088e038c078fa4aa9f966f912d78b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0de71b691334f87459827531241fef04') in 0.042211 seconds
+  Import took 0.050933 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/Animations/grimreaper/rise1.FBX
+  artifactKey: Guid(58e8b136859e1b8438a1d291f63ead82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/rise1.FBX using Guid(58e8b136859e1b8438a1d291f63ead82) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '516db20610ecf75923d0163814801876') in 0.039293 seconds
+  Import took 0.049526 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_walk_R135.FBX
+  artifactKey: Guid(8e199b7d879e973438c0d6c6ed4f6727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_walk_R135.FBX using Guid(8e199b7d879e973438c0d6c6ed4f6727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '977205878c4d0121865823b670d8e411') in 0.036612 seconds
+  Import took 0.046285 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Animations/grimreaper/jump_Z0.FBX
+  artifactKey: Guid(b70c74527c4ad6141b5222b960f81932) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/jump_Z0.FBX using Guid(b70c74527c4ad6141b5222b960f81932) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34a05cb23da1b073febfd3c2154fda52') in 0.038980 seconds
+  Import took 0.048638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/Animations/grimreaper/Transition_FtoG.FBX
+  artifactKey: Guid(5563ccf43cc052a4e95f11d48217a102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Transition_FtoG.FBX using Guid(5563ccf43cc052a4e95f11d48217a102) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0c2f0af653917c37064ec29312f1dc0') in 0.037601 seconds
+  Import took 0.046348 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/Animations/grimreaper/hit_back.FBX
+  artifactKey: Guid(b13b79aa5eb6c3449ac5ca116a17e5ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/hit_back.FBX using Guid(b13b79aa5eb6c3449ac5ca116a17e5ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21212daedb41988aa38626885f684506') in 0.114232 seconds
+  Import took 0.135936 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000227 seconds.
+  path: Assets/Animations/grimreaper/unequip.FBX
+  artifactKey: Guid(759a42584bc13b2439892753ee3dfb4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/unequip.FBX using Guid(759a42584bc13b2439892753ee3dfb4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91f06fe30ede1e04a898eaa8b23bd396') in 0.037429 seconds
+  Import took 0.048974 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Animations/grimreaper/Flying_attack06.FBX
+  artifactKey: Guid(8b126fb82899aa84eb7051c144fb79d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Flying_attack06.FBX using Guid(8b126fb82899aa84eb7051c144fb79d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ee60623e778c1c8f3fa8552baa983a7') in 0.041213 seconds
+  Import took 0.049553 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Animations/grimreaper/jump_long_Z0.FBX
+  artifactKey: Guid(106be3cdd4a289948a1f25a5a0d91424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/jump_long_Z0.FBX using Guid(106be3cdd4a289948a1f25a5a0d91424) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c92f1d880505dc7038079da577da959') in 0.041440 seconds
+  Import took 0.051983 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.507637 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack13.FBX
+  artifactKey: Guid(54fa867a0f610e846a79bb6819940c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack13.FBX using Guid(54fa867a0f610e846a79bb6819940c96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb896e873901ce97ec2a506170fca442') in 0.034018 seconds
+  Import took 0.042726 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/Animations/grimreaper/Ground_run_fast.FBX
+  artifactKey: Guid(b5a127fa2eb9a054caed5021bdc46593) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_run_fast.FBX using Guid(b5a127fa2eb9a054caed5021bdc46593) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a23f7c0a2672d704d3e0dc27d828a4c') in 0.036064 seconds
+  Import took 0.043538 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_run_R.FBX
+  artifactKey: Guid(edd72559e5f62bd4f9277f1cb589b79c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_run_R.FBX using Guid(edd72559e5f62bd4f9277f1cb589b79c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd36c73af8ca635d012116b8b796eb256') in 0.039961 seconds
+  Import took 0.049996 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_run_L.FBX
+  artifactKey: Guid(e38fe4143a9dab9469ae65d895ef153d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_run_L.FBX using Guid(e38fe4143a9dab9469ae65d895ef153d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c59c6e20ccb886be0e487956d8fca9b5') in 0.037241 seconds
+  Import took 0.047769 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_run_L45.FBX
+  artifactKey: Guid(c76b4a60894160747a7a6c82fc6e5e14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_run_L45.FBX using Guid(c76b4a60894160747a7a6c82fc6e5e14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b43f516c85f41d32189a0f28458b31dd') in 0.046024 seconds
+  Import took 0.054635 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_run_B.FBX
+  artifactKey: Guid(7e954158f8acda543924b6937356e8c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_run_B.FBX using Guid(7e954158f8acda543924b6937356e8c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78df3c86b1b3b06310aa38a53b108082') in 0.042605 seconds
+  Import took 0.050610 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/Animations/grimreaper/Ground_idle.FBX
+  artifactKey: Guid(09ee212a2ebdcf34c8a13afcc4e0d0d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_idle.FBX using Guid(09ee212a2ebdcf34c8a13afcc4e0d0d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '920eddf162bf52378be190a1da881210') in 0.040855 seconds
+  Import took 0.048820 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_run_R45.FBX
+  artifactKey: Guid(0d27b5939f7c4614895d1005aba4f1db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_run_R45.FBX using Guid(0d27b5939f7c4614895d1005aba4f1db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1202af9911bb1ebb273b6c7840b6a06') in 0.042075 seconds
+  Import took 0.051690 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_run_L135.FBX
+  artifactKey: Guid(ab13104ab4618814fb9f99c89e73d298) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_run_L135.FBX using Guid(ab13104ab4618814fb9f99c89e73d298) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '363914d65c2b7b2da8af546f4e5cc8c8') in 0.049652 seconds
+  Import took 0.059594 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/Animations/grimreaper/Ground_strafe_run_F.FBX
+  artifactKey: Guid(4bf4052aef2a97d44a488a9604c0d6ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_strafe_run_F.FBX using Guid(4bf4052aef2a97d44a488a9604c0d6ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea5560736e6536b06a2b1132484c2242') in 0.042774 seconds
+  Import took 0.052894 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/Animations/grimreaper/Ground_run.FBX
+  artifactKey: Guid(c0db9601838a91147b02d590563431bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_run.FBX using Guid(c0db9601838a91147b02d590563431bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '988bc47724149519ace3474d4cebc3cc') in 0.049745 seconds
+  Import took 0.059670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.747687 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack01.FBX
+  artifactKey: Guid(74f833269003da14a8dd7e305def6c08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack01.FBX using Guid(74f833269003da14a8dd7e305def6c08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8c705e15b5504c51841231002184e60') in 0.041069 seconds
+  Import took 0.051022 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000314 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack07.FBX
+  artifactKey: Guid(f2d5797963d7508468781d3d97bc32e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack07.FBX using Guid(f2d5797963d7508468781d3d97bc32e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d2770f00785b90d68a164d822c6f90f') in 0.051948 seconds
+  Import took 0.061152 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack03.FBX
+  artifactKey: Guid(573738e8e3add83429bf3747275c46de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack03.FBX using Guid(573738e8e3add83429bf3747275c46de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3768b8ce70166085e8deccd50aaefa01') in 0.045788 seconds
+  Import took 0.054264 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack10.FBX
+  artifactKey: Guid(30b280ef139b0f54f8e944eaaa4e8763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack10.FBX using Guid(30b280ef139b0f54f8e944eaaa4e8763) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c5e09037d78e685b93ad8bceb5939f0f') in 0.042018 seconds
+  Import took 0.052042 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000373 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack08.FBX
+  artifactKey: Guid(80fe403865bfdfb4b86c47ca13c05e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack08.FBX using Guid(80fe403865bfdfb4b86c47ca13c05e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e429285dc85344e560213d1c7570f663') in 0.044290 seconds
+  Import took 0.053271 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack05.FBX
+  artifactKey: Guid(e00eaf9f905b37c48a5ad1fb675434f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack05.FBX using Guid(e00eaf9f905b37c48a5ad1fb675434f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44fefb5f0e5d6f071ae4b7dbe3b58f42') in 0.039374 seconds
+  Import took 0.048240 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack09.FBX
+  artifactKey: Guid(e53060694d2a48445a660fabcfcdb1c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack09.FBX using Guid(e53060694d2a48445a660fabcfcdb1c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98869fab35008a020c213a2fe2d3e123') in 0.040755 seconds
+  Import took 0.049917 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack06.FBX
+  artifactKey: Guid(aa7e0f34aee117444a83a89468c4776e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack06.FBX using Guid(aa7e0f34aee117444a83a89468c4776e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45632addfb6409c59c0855ff5f9195f9') in 0.043347 seconds
+  Import took 0.052511 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack12.FBX
+  artifactKey: Guid(37ed935c2f27e6e4b9affeb9afe0d789) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack12.FBX using Guid(37ed935c2f27e6e4b9affeb9afe0d789) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84352b6bfc80b198172537ff2fade175') in 0.046604 seconds
+  Import took 0.056626 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack04.FBX
+  artifactKey: Guid(f792d5646da4a2041b05b52a3d3a6ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack04.FBX using Guid(f792d5646da4a2041b05b52a3d3a6ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30d29e3c33b024d1b9d4461280cd7bb3') in 0.044221 seconds
+  Import took 0.054239 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.089733 seconds.
+  path: Assets/Animations/grimreaper/flying_movement_c_frontright.FBX
+  artifactKey: Guid(3929720284b842e44bdc10754ef64a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/flying_movement_c_frontright.FBX using Guid(3929720284b842e44bdc10754ef64a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b8692e87d471fb0fdda7083dc1ca769') in 0.039750 seconds
+  Import took 0.049663 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/Animations/grimreaper/Ground_air_spin.FBX
+  artifactKey: Guid(408ba95d0470a5e438836eb3267c724e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_air_spin.FBX using Guid(408ba95d0470a5e438836eb3267c724e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a33613072a3c5224a6eb935d615ab556') in 0.054314 seconds
+  Import took 0.062494 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/Animations/grimreaper/flying_movement_f_back.FBX
+  artifactKey: Guid(30ee74daf2a278340a7ff35d9a819e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/flying_movement_f_back.FBX using Guid(30ee74daf2a278340a7ff35d9a819e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dec8a352a76e2f7a988808c026562319') in 0.052788 seconds
+  Import took 0.061328 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/Animations/grimreaper/groggy1_loop.FBX
+  artifactKey: Guid(b09918119833c0c4dade80ff618ac2ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/groggy1_loop.FBX using Guid(b09918119833c0c4dade80ff618ac2ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a13ce517aed6dc47e51ba3a7b35c3d12') in 0.049338 seconds
+  Import took 0.059237 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/Animations/grimreaper/flying_movement_s_right.FBX
+  artifactKey: Guid(292242ff68e8cb446bac786d94bd3cfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/flying_movement_s_right.FBX using Guid(292242ff68e8cb446bac786d94bd3cfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e2df89a8e38f9c34b56443d6e84a74d') in 0.050195 seconds
+  Import took 0.059219 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/Animations/grimreaper/Ground_air_spin_Z0.FBX
+  artifactKey: Guid(768a2e30ae82b014aa4c3f288dd3d60d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_air_spin_Z0.FBX using Guid(768a2e30ae82b014aa4c3f288dd3d60d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45c7715e14a00b1df8359d8fc965765c') in 0.051883 seconds
+  Import took 0.060101 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000160 seconds.
+  path: Assets/Animations/grimreaper/flying_movement_f_front2.FBX
+  artifactKey: Guid(e6b9e0637a7638f4bb8b49a3d45818b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/flying_movement_f_front2.FBX using Guid(e6b9e0637a7638f4bb8b49a3d45818b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '810e14f87204bcf2d69e3779c8eb6122') in 0.052805 seconds
+  Import took 0.060425 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Animations/grimreaper/flying_movement_f_front1.FBX
+  artifactKey: Guid(132305d5366a745449ae68c405778182) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/flying_movement_f_front1.FBX using Guid(132305d5366a745449ae68c405778182) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3af37f8e1c8e22f6369e0eef54d2ec3') in 0.053019 seconds
+  Import took 0.061244 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/Animations/grimreaper/flying_movement_f_front.FBX
+  artifactKey: Guid(35bdd09dc0ec3744ea9e3fe0870222ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/flying_movement_f_front.FBX using Guid(35bdd09dc0ec3744ea9e3fe0870222ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6310b272c880fd294e619b8e2dd41b21') in 0.038852 seconds
+  Import took 0.047975 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/Animations/grimreaper/groggy2_loop.FBX
+  artifactKey: Guid(235355e23e653dc4d93a4c6ac11711ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/groggy2_loop.FBX using Guid(235355e23e653dc4d93a4c6ac11711ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baa402109ee5fd6eb50240d355ed5706') in 0.050543 seconds
+  Import took 0.059609 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/Animations/grimreaper/flying_movement_s_left.FBX
+  artifactKey: Guid(f213f91dec435064eaa79b610f79be57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/flying_movement_s_left.FBX using Guid(f213f91dec435064eaa79b610f79be57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6ddd27683d5f6a7342ab521ca8eb9df') in 0.043733 seconds
+  Import took 0.053193 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.221621 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack04.FBX
+  artifactKey: Guid(f792d5646da4a2041b05b52a3d3a6ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack04.FBX using Guid(f792d5646da4a2041b05b52a3d3a6ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0b7bd07dc3d7860591cff9ceb501e79') in 0.071814 seconds
+  Import took 0.082193 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004984 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack04.FBX
+  artifactKey: Guid(f792d5646da4a2041b05b52a3d3a6ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack04.FBX using Guid(f792d5646da4a2041b05b52a3d3a6ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0b7bd07dc3d7860591cff9ceb501e79') in 0.076941 seconds
+  Import took 0.086395 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.069047 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack04.FBX
+  artifactKey: Guid(f792d5646da4a2041b05b52a3d3a6ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack04.FBX using Guid(f792d5646da4a2041b05b52a3d3a6ff1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91488b0bc13394f40ea695d136bdf3c5') in 0.081544 seconds
+  Import took 0.091671 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003995 seconds.
+Registered in 0.004570 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.46 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.51 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.256 seconds
+- Completed reload, in  1.868 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.69 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 236.9 MB.
+System memory in use after: 237.3 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5475.
+Total: 6.366800 ms (FindLiveObjects: 0.918700 ms CreateObjectMapping: 0.588800 ms MarkObjects: 4.827400 ms  DeleteObjects: 0.029800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003956 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.11 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.842 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.81 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 236.9 MB.
+System memory in use after: 237.3 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5478.
+Total: 6.147400 ms (FindLiveObjects: 0.590200 ms CreateObjectMapping: 0.498200 ms MarkObjects: 5.025900 ms  DeleteObjects: 0.031200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 99.063342 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack05.FBX
+  artifactKey: Guid(e00eaf9f905b37c48a5ad1fb675434f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack05.FBX using Guid(e00eaf9f905b37c48a5ad1fb675434f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9838fe84d76173f34fd6abf6f2da548a') in 0.268000 seconds
+  Import took 0.280923 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004224 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.31 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.443 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.49 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 237.1 MB.
+System memory in use after: 237.5 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5601.
+Total: 6.587200 ms (FindLiveObjects: 1.271400 ms CreateObjectMapping: 0.581300 ms MarkObjects: 4.703700 ms  DeleteObjects: 0.029200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 179.270842 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack06.FBX
+  artifactKey: Guid(aa7e0f34aee117444a83a89468c4776e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack06.FBX using Guid(aa7e0f34aee117444a83a89468c4776e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17d8698f16ca8e966fccf797aa8002a9') in 0.246439 seconds
+  Import took 0.259814 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002532 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack06.FBX
+  artifactKey: Guid(aa7e0f34aee117444a83a89468c4776e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack06.FBX using Guid(aa7e0f34aee117444a83a89468c4776e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17d8698f16ca8e966fccf797aa8002a9') in 0.045152 seconds
+  Import took 0.054507 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003664 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.42 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.158 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.01 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 237.2 MB.
+System memory in use after: 237.7 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5724.
+Total: 6.802900 ms (FindLiveObjects: 0.790600 ms CreateObjectMapping: 0.576300 ms MarkObjects: 5.403100 ms  DeleteObjects: 0.030900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 87.917600 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack08.FBX
+  artifactKey: Guid(80fe403865bfdfb4b86c47ca13c05e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack08.FBX using Guid(80fe403865bfdfb4b86c47ca13c05e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7514c48e9924ac104f285df9155ff5b') in 0.244555 seconds
+  Import took 0.255030 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005366 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.66 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.696 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.33 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 237.5 MB.
+System memory in use after: 238.0 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5847.
+Total: 7.198000 ms (FindLiveObjects: 0.852000 ms CreateObjectMapping: 0.412200 ms MarkObjects: 5.886900 ms  DeleteObjects: 0.045400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.317715 seconds.
+  path: Assets/Animations/grimreaper/Ground_attack08.FBX
+  artifactKey: Guid(80fe403865bfdfb4b86c47ca13c05e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/grimreaper/Ground_attack08.FBX using Guid(80fe403865bfdfb4b86c47ca13c05e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6a9b669e6d626a555507ecfa7cc4922') in 0.230387 seconds
+  Import took 0.239041 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003603 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.67 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.874 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.58 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 237.7 MB.
+System memory in use after: 238.2 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5970.
+Total: 8.092100 ms (FindLiveObjects: 0.944900 ms CreateObjectMapping: 0.685600 ms MarkObjects: 6.429200 ms  DeleteObjects: 0.030800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 70.379538 seconds.
+  path: Assets/Animations/Third person starter/StarterAssetsThirdPerson.controller
+  artifactKey: Guid(40db3173a05ae3242b1c182a09b0a183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Third person starter/StarterAssetsThirdPerson.controller using Guid(40db3173a05ae3242b1c182a09b0a183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baf889016ca54769827cbab291083e47') in 0.130083 seconds
+  Import took 0.143150 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16287.153656 seconds.
+  path: Assets/FemaleMovementAnimsetPro/Models/FemaleDummy.FBX
+  artifactKey: Guid(ce8d2b296626c0241b71585924dd3d51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FemaleMovementAnimsetPro/Models/FemaleDummy.FBX using Guid(ce8d2b296626c0241b71585924dd3d51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a98c780a8d504ff5e819b015655f28d5') in 0.440706 seconds
+  Import took 0.531280 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 496.521426 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/DungeonTile.cs
+  artifactKey: Guid(d30da17623c29db418a68d1790c882f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/DungeonTile.cs using Guid(d30da17623c29db418a68d1790c882f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22c44bbf7584467b8d92e5e05993382f') in 0.024030 seconds
+  Import took 0.033671 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001452 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/DungeonTile.cs
+  artifactKey: Guid(d30da17623c29db418a68d1790c882f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/DungeonTile.cs using Guid(d30da17623c29db418a68d1790c882f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22c44bbf7584467b8d92e5e05993382f') in 0.002295 seconds
+  Import took 0.011449 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006517 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.32 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.100 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.08 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 237.9 MB.
+System memory in use after: 238.3 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 6093.
+Total: 35.648200 ms (FindLiveObjects: 22.189900 ms CreateObjectMapping: 1.908900 ms MarkObjects: 11.482700 ms  DeleteObjects: 0.065000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003942 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.831 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.23 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 237.9 MB.
+System memory in use after: 238.4 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 6096.
+Total: 7.263600 ms (FindLiveObjects: 0.989100 ms CreateObjectMapping: 0.565100 ms MarkObjects: 5.666600 ms  DeleteObjects: 0.040800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 163.514678 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/DungeonTile.cs
+  artifactKey: Guid(d30da17623c29db418a68d1790c882f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/DungeonTile.cs using Guid(d30da17623c29db418a68d1790c882f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4636fd2274b255beba06d1992d80a070') in 0.013276 seconds
+  Import took 0.024280 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003974 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.54 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.738 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.70 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 237.9 MB.
+System memory in use after: 238.4 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 6099.
+Total: 7.807000 ms (FindLiveObjects: 1.072600 ms CreateObjectMapping: 0.598800 ms MarkObjects: 6.069900 ms  DeleteObjects: 0.064100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 322.920267 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/DungeonTile.cs
+  artifactKey: Guid(d30da17623c29db418a68d1790c882f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/DungeonTile.cs using Guid(d30da17623c29db418a68d1790c882f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3dfffe2cfe47418d45c1567e35ce27e') in 0.008144 seconds
+  Import took 0.020164 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004151 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.71 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.482 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.24 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 237.9 MB.
+System memory in use after: 238.4 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 6102.
+Total: 4.657900 ms (FindLiveObjects: 0.492600 ms CreateObjectMapping: 0.198200 ms MarkObjects: 3.941400 ms  DeleteObjects: 0.024900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 42.975961 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/DungeonTile.cs
+  artifactKey: Guid(d30da17623c29db418a68d1790c882f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/DungeonTile.cs using Guid(d30da17623c29db418a68d1790c882f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ede38cdc47a8fb60c5a4bffe0c6053f') in 0.006829 seconds
+  Import took 0.015329 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.818855 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/DungeonTile.cs
+  artifactKey: Guid(d30da17623c29db418a68d1790c882f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/DungeonTile.cs using Guid(d30da17623c29db418a68d1790c882f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ede38cdc47a8fb60c5a4bffe0c6053f') in 0.001810 seconds
+  Import took 0.008877 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003691 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.41 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.603 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.15 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 237.9 MB.
+System memory in use after: 238.4 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 6105.
+Total: 5.049100 ms (FindLiveObjects: 0.565800 ms CreateObjectMapping: 0.208900 ms MarkObjects: 4.248500 ms  DeleteObjects: 0.024600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003797 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.48 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.594 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.81 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 237.9 MB.
+System memory in use after: 238.4 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 6108.
+Total: 7.049400 ms (FindLiveObjects: 0.763700 ms CreateObjectMapping: 0.526700 ms MarkObjects: 5.728500 ms  DeleteObjects: 0.029000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004218 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.18 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.383 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.12 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 237.9 MB.
+System memory in use after: 238.4 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 6111.
+Total: 13.413300 ms (FindLiveObjects: 2.609000 ms CreateObjectMapping: 1.509500 ms MarkObjects: 9.233400 ms  DeleteObjects: 0.052400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003724 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.609 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 238.0 MB.
+System memory in use after: 238.4 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 6114.
+Total: 4.812300 ms (FindLiveObjects: 0.567400 ms CreateObjectMapping: 0.205300 ms MarkObjects: 4.012100 ms  DeleteObjects: 0.026200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005903 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 1.22 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 211.0 MB.
-System memory in use after: 211.2 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5060.
-Total: 4.942100 ms (FindLiveObjects: 0.415900 ms CreateObjectMapping: 0.218400 ms MarkObjects: 4.215200 ms  DeleteObjects: 0.091100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 505.022550 seconds.
-  path: Assets/Prefabs/Slash Combo VFX/Combo_01_4_Part2 Slash 4 .prefab
-  artifactKey: Guid(30ba36232d8e24e4ab59b1fd195dd2e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Slash Combo VFX/Combo_01_4_Part2 Slash 4 .prefab using Guid(30ba36232d8e24e4ab59b1fd195dd2e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab4a311734139233ab2912999bcc8e32') in 0.035736 seconds
-  Import took 0.047365 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005735 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.75 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.611 seconds
+- Completed reload, in  1.411 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.82 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.12 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 211.1 MB.
-System memory in use after: 211.3 MB.
+System memory in use before: 238.0 MB.
+System memory in use after: 238.4 MB.
 
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5063.
-Total: 5.934000 ms (FindLiveObjects: 0.971900 ms CreateObjectMapping: 0.398900 ms MarkObjects: 4.531600 ms  DeleteObjects: 0.029500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004107 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.20 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.242 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.06 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 211.1 MB.
-System memory in use after: 211.4 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5066.
-Total: 4.182800 ms (FindLiveObjects: 0.537600 ms CreateObjectMapping: 0.186400 ms MarkObjects: 3.431300 ms  DeleteObjects: 0.025900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 88.708218 seconds.
-  path: Assets/Prefabs/Slash Combo VFX/Combo_01_4_Part2 Slash 4 .prefab
-  artifactKey: Guid(30ba36232d8e24e4ab59b1fd195dd2e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Slash Combo VFX/Combo_01_4_Part2 Slash 4 .prefab using Guid(30ba36232d8e24e4ab59b1fd195dd2e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4814da1fabb9ad8b70982aa94272fced') in 0.034751 seconds
-  Import took 0.045574 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005155 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.27 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.579 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.36 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 211.1 MB.
-System memory in use after: 211.4 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5069.
-Total: 4.320200 ms (FindLiveObjects: 0.376800 ms CreateObjectMapping: 0.177900 ms MarkObjects: 3.742300 ms  DeleteObjects: 0.022000 ms)
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 6117.
+Total: 4.915900 ms (FindLiveObjects: 0.498400 ms CreateObjectMapping: 0.194600 ms MarkObjects: 4.189500 ms  DeleteObjects: 0.032200 ms)
 

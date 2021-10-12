@@ -270,22 +270,9 @@ public class DungeonGenerator : MonoBehaviour
     /// <returns></returns>
     bool HaveCollisionOnNewlyConnectedTiles() 
     {
-        BoxCollider tileToBoundingBox = tileTo.boundingBox;
-        //The displacement vector from the origin of tileTo's transform to the centroid of the box.  
-        Vector3 centerOffset = tileTo.transform.right * tileToBoundingBox.center.x +
-                               tileTo.transform.up * tileToBoundingBox.center.y +
-                               tileTo.transform.forward * tileToBoundingBox.center.z;
-        Vector3 centerOfBoundingBox = tileTo.gameObject.transform.position + centerOffset;
 
-        Vector3 boxHalfExtents = tileToBoundingBox.bounds.extents;
-        Vector3 scaledVector = tileToBoundingBox.gameObject.transform.localScale;
-        Vector3 scaledBoxHalfExtents = new Vector3(
-            scaledVector.x * boxHalfExtents.x , scaledVector.y * boxHalfExtents.y, scaledVector.z * boxHalfExtents.z
-            ) ;
-        
-        //tileToBoundingBox.gameObject.transform.localScale
         List<Collider> collidersHit = Physics
-            .OverlapBox(centerOfBoundingBox, scaledBoxHalfExtents, Quaternion.identity, LayerMask.GetMask("Tile")).ToList();
+            .OverlapBox(tileTo.GetGlobalCollisionBoxCenter(), tileTo.GetScaledCollisionBoxHalfExtend(), Quaternion.identity, LayerMask.GetMask("Tile")).ToList();
 
         if (collidersHit.Count > 0) {   //if overlapped some thing
             
