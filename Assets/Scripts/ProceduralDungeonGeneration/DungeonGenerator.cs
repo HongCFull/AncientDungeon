@@ -19,8 +19,8 @@ public class DungeonGenerator : MonoBehaviour
     [SerializeField] private DungeonTile[] tilePrefabs;
     [SerializeField] private DungeonTile[] startingRoomPrefabs;
     [SerializeField] private DungeonTile[] exitRoomPrefabs;
-    [SerializeField] private DungeonTile[] blockingPrefabs;
-    [SerializeField] private DungeonTile[] doorPrefabs;
+    [SerializeField] private GameObject[] blockingPrefabs;
+    [SerializeField] private GameObject[] doorPrefabs;
 
     [Header("Dungeon Generation Settings:")]
     
@@ -64,10 +64,11 @@ public class DungeonGenerator : MonoBehaviour
     IEnumerator GenerateDungeon() 
     {
         yield return StartCoroutine(GenerateDungeonMainPath());
-        ForceMainPathEndRoomSpawning();
+        ForceSpawningEndRoomInMainPath();
         GetConnectableTilesForBranching();
         yield return new WaitForSeconds(1);
         yield return StartCoroutine(GenerateBranches());
+        yield return StartCoroutine(FillUpHolds());
     }
 
     //Similar to DFS
@@ -107,13 +108,29 @@ public class DungeonGenerator : MonoBehaviour
             GameObject branchDescriptionObj = new GameObject();
             branchDescriptionObj.name = "Extended from tile: " + tileForExtension.name;
             branchDescriptionObj.transform.SetParent(branchHolder.transform);
-            
-            
+
             int randomBranchDepth = useRandomDepthForBranches? Random.Range(1, branchDepth + 1) : branchDepth ;
             yield return StartCoroutine(ExpandPathFromTile(tileForExtension, randomBranchDepth, branchHolder.transform));
         }
     }
 
+    IEnumerator FillUpHolds()
+    {
+        foreach (DungeonTile tile in generatedTiles) {
+            if (tile.TileIsFullyConnected()) 
+                continue;
+
+            List<Connector> connectors = tile.GetAllConnectableConnectors();
+            
+            foreach (Connector connector in connectors) {
+                GameObject holdFiller = Instantiate(blockingPrefabs[0], connector.transform.position,connector.transform.rotation, tile.pathHolder.transform);
+                holdFiller.transform.Rotate(0f,90f,0f);
+                yield return null;
+            }
+        }
+    }
+    
+    
     /// <summary>
     /// Get the remaining connectable tiles (with duplicates) from generated tile list
     /// </summary>
@@ -163,13 +180,13 @@ public class DungeonGenerator : MonoBehaviour
     }
     
 
-    IEnumerator ExpandPathFromTile(DungeonTile tile, int depth, Transform pathHolderObject=null) 
+    IEnumerator ExpandPathFromTile(DungeonTile tile, int depth, Transform pathObject=null) 
     {
         //Debug.Log("Expanding the path from "+ tile.name);
         
         //If tileHolder is not specified: use default tileHolder object = the dungeonGenerator
-        if (pathHolderObject == null)
-            pathHolderObject = this.transform;
+        if (pathObject == null)
+            pathObject = this.transform;
         
         tileTo = tile;
 
@@ -178,13 +195,13 @@ public class DungeonGenerator : MonoBehaviour
 
             if (i == depth - 1) {
                 tileTo = GenerateEndingRoom();  //create ending room
-                tileTo.name += " of " + pathHolderObject.name;
-                ConnectTiles(false,pathHolderObject);
+                tileTo.name += " of " + pathObject.name;
+                ConnectTiles(false,pathObject);
 
             }else {
                 tileTo = GenerateIntermediateTile();    //creating intermediate room for the path
-                tileTo.name += " "+i+" of " + pathHolderObject.name;   //give an index for naming clarity
-                ConnectTiles(true,pathHolderObject);
+                tileTo.name += " "+i+" of " + pathObject.name;   //give an index for naming clarity
+                ConnectTiles(true,pathObject);
             }
 
             yield return new WaitForSeconds(generationDelay);
@@ -192,10 +209,12 @@ public class DungeonGenerator : MonoBehaviour
     }
     
     /// <summary>
-    /// 
+    /// Connect tileFrom and tileTo recursively. It handles collision when connecting tiles.  
     /// </summary>
-    /// <param name="tileHolder"></param>
-    void ConnectTiles(bool isIntermediate,Transform tileHolder =null, int attempt =0) 
+    /// <param name="isIntermediate"> Is tileTo an intermediate room or an ending room? </param>
+    /// <param name="pathObject"> The object which holds the tiles in that path </param>
+    /// <param name="attempt"> How many times tried to connect this set of tileFrom and tileTo </param>
+    void ConnectTiles(bool isIntermediate,Transform pathObject =null, int attempt =0) 
     {
         if (tileFrom == null || tileTo == null) {
             Debug.Log("one of the tiles is null");
@@ -203,10 +222,10 @@ public class DungeonGenerator : MonoBehaviour
         }
         
         //If tileHolder is not specified: use default tileHolder object = the dungeonGenerator
-        if (tileHolder == null) 
-            tileHolder = transform;
+        if (pathObject == null) 
+            pathObject = transform;
 
-        if (!isIntermediate && tileHolder.name.Contains("Main Path")) //if is the ending room of the main path, cache it in the endTile
+        if (!isIntermediate && pathObject.name.Contains("Main Path")) //if is the ending room of the main path, cache it in the endTile
             endTile = tileTo;
                 
         if (attempt > retryMaxCount) {
@@ -215,14 +234,8 @@ public class DungeonGenerator : MonoBehaviour
             tileTo = tileFrom;  //move the original tileFrom to tileTo for next depth generation
             return;
         }
-
-        Connector fromConnector = tileFrom.PopRandomConnectableConnector(); 
-        if(fromConnector==null) return; // cant get any connectable connector
         
-        Connector toConnector = tileTo.PopRandomConnectableConnector();
-        if(toConnector==null) return; // cant get any connectable connector
-
-        TileToTransformation(tileHolder, toConnector, fromConnector);
+        GlueTileToAndTileFromInto(pathObject);
 
         if (HaveCollisionOnNewlyConnectedTiles()) {
  
@@ -236,17 +249,24 @@ public class DungeonGenerator : MonoBehaviour
                 tileTo= GenerateEndingRoom();
                 tileTo.name = "retry : ending room";
             }
-            ConnectTiles(isIntermediate,tileHolder,++attempt);
+            ConnectTiles(isIntermediate,pathObject,++attempt);
 
         }
             
     }
 
-    void TileToTransformation(Transform tileHolder, Connector toConnector, Connector fromConnector) 
+    void GlueTileToAndTileFromInto(Transform pathHolder) 
     {
+        
+        Connector fromConnector = tileFrom.PopRandomConnectableConnector(); 
+        if(fromConnector==null) return; // cant get any connectable connector
+        
+        Connector toConnector = tileTo.PopRandomConnectableConnector();
+        if(toConnector==null) return; // cant get any connectable connector
+        
         //unpack the connector to outside
         Transform toConnectorTransform = toConnector.transform;
-        toConnectorTransform.SetParent(tileHolder);
+        toConnectorTransform.SetParent(pathHolder);
         tileTo.transform.SetParent(toConnectorTransform);
 
         //append the toConnector to fromConnector & set the transform;
@@ -256,12 +276,16 @@ public class DungeonGenerator : MonoBehaviour
         toConnectorTransform.Rotate(0, 180, 0);
 
         //restructure the tile hierarchy and make it back to a child of the generator  
-        tileTo.transform.SetParent(tileHolder);
+        tileTo.transform.SetParent(pathHolder);
         toConnectorTransform.SetParent(tileTo.transform);
 
         //Update tile's parent
         tileTo.parentTile = tileFrom;
         tileTo.parentConnector = fromConnector;
+        
+        //Update tile's pathHolder
+        tileFrom.pathHolder = pathHolder.gameObject;
+        tileTo.pathHolder = pathHolder.gameObject;
     }
 
     /// <summary>
@@ -320,7 +344,7 @@ public class DungeonGenerator : MonoBehaviour
     /// <summary>
     /// Force the generation of the end room in the main path if it is not spawned yet
     /// </summary>
-    void ForceMainPathEndRoomSpawning() 
+    void ForceSpawningEndRoomInMainPath() 
     {
         while (endTile==null) {
             //ending room is not spawned

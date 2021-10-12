@@ -9,8 +9,10 @@ public class DungeonTile : MonoBehaviour
 {
     [SerializeField] private List<Connector> corridorConnector;
     [SerializeField] private List<Connector> connectedConnectors = new List<Connector>();   //should be read only
-    [ReadOnly] public DungeonTile parentTile = null;
+    
     [HideInInspector] public Connector parentConnector = null;
+    [ReadOnly] public DungeonTile parentTile = null;
+    [ReadOnly] public GameObject pathHolder;
     
     public BoxCollider boundingBox { get; private set; }
     private Connector latestPopedConnector;
@@ -84,6 +86,9 @@ public class DungeonTile : MonoBehaviour
 #if UNITY_EDITOR
     private void OnDrawGizmos() 
     {
+        if(!boundingBox)
+            boundingBox = GetComponent<BoxCollider>();
+
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(GetGlobalCollisionBoxCenter(),GetScaledCollisionBoxHalfExtend());
     }
