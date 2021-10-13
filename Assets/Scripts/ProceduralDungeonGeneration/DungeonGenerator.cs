@@ -231,7 +231,7 @@ public class DungeonGenerator : MonoBehaviour
         if (attempt > retryMaxCount) {
             tileFrom.RestorePreviousPoppedConnector();
             CullOutTileTo();
-            tileTo = tileFrom;  //move the original tileFrom to tileTo for next depth generation
+            tileTo = tileFrom;  //move the original tileFrom to tileTo for next depth of generation
             return;
         }
         
@@ -239,9 +239,9 @@ public class DungeonGenerator : MonoBehaviour
 
         if (HaveCollisionOnNewlyConnectedTiles()) {
  
-            tileFrom.RestorePreviousPoppedConnector();  
-            
+            tileFrom.RestorePreviousPoppedConnector();
             CullOutTileTo();
+            
             if (isIntermediate) {
                 tileTo= GenerateIntermediateTile();
                 tileTo.name = "retry : intermediate tile";
@@ -297,7 +297,8 @@ public class DungeonGenerator : MonoBehaviour
 
         List<Collider> collidersHit = Physics
             .OverlapBox(tileTo.GetGlobalCollisionBoxCenter(), tileTo.GetScaledCollisionBoxHalfExtend(), Quaternion.identity, LayerMask.GetMask("Tile")).ToList();
-
+        tileTo.collidesHit = collidersHit;
+        
         if (collidersHit.Count > 0) {   //if overlapped some thing
             
             //This lambda expression check if the collider collides with colliders that are not tileFrom and tileTo  

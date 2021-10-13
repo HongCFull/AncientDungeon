@@ -13,7 +13,7 @@ public class DungeonTile : MonoBehaviour
     [HideInInspector] public Connector parentConnector = null;
     [ReadOnly] public DungeonTile parentTile = null;
     [ReadOnly] public GameObject pathHolder;
-    
+    [ReadOnly] public List<Collider> collidesHit;
     public BoxCollider boundingBox { get; private set; }
     private Connector latestPopedConnector;
     private Vector3 scaleVector;
