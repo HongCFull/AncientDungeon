@@ -1,4 +1,5 @@
-﻿using Unity.Collections;
+﻿using System;
+using Unity.Collections;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
@@ -92,7 +93,7 @@ namespace TPSTemplate
 		private float _rotationVelocity;
 		private float _verticalVelocity;
 		private float _terminalVelocity = 53.0f;
-
+		
 		// timeout deltatime
 		private float _jumpTimeoutDelta;
 		private float _fallTimeoutDelta;
@@ -132,6 +133,7 @@ namespace TPSTemplate
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
 		}
+		
 
 		private void Update()
 		{
@@ -143,6 +145,7 @@ namespace TPSTemplate
 				ResetAnimatorMovementPara();
 			}
 
+//			_controller.Move(_animator.deltaPosition);
 			GroundedCheck();
 			HandleAttack();
 
@@ -216,7 +219,8 @@ namespace TPSTemplate
 			CinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride, _cinemachineTargetYaw, 0.0f);
 		}
 		
-//TODO: when the player is not moving e.g. speed ~= 0 -> make the rotation smooth time to 0.01. Else make it 0.07
+
+		//TODO: when the player is not moving e.g. speed ~= 0 -> make the rotation smooth time to 0.01. Else make it 0.07
 		private void Move()
 		{
 

@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.4f1 (0abb6314276a) revision 703331'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19042.1237; Version 2009; 64bit' Language: 'en' Physical Memory: 16235 MB
+OS: 'Windows 10 Pro; OS build 19042.1288; Version 2009; 64bit' Language: 'en' Physical Memory: 16235 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
@@ -15,11 +15,11 @@ D:/Unity GameProject/Comp4971C
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53578
+58205
 Successfully changed project path to: D:/Unity GameProject/Comp4971C
 D:/Unity GameProject/Comp4971C
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 108.56 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 152.87 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.4f1 (0abb6314276a)
 [Subsystems] Discovering subsystems at path D:/Unity/2020.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -36,2100 +36,64 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2020.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2020.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/2020.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56524
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56532
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2020.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/Unity/2020.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001118 seconds.
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 106.10 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.420 seconds
-Platform modules already initialized, skipping
-Registering precompiled user dll's ...
-Registered in 0.003646 seconds.
-Begin MonoManager ReloadAssembly
+Registered in 0.001173 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 119.73 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.802 seconds
+- Completed reload, in  1.524 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003466 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 155.96 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.184 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
-Refreshing native plugins compatible for Editor in 1.04 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4607 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 232.5 MB.
-System memory in use after: 232.7 MB.
-
-Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 5057.
-Total: 4.530400 ms (FindLiveObjects: 0.665100 ms CreateObjectMapping: 0.516000 ms MarkObjects: 3.241500 ms  DeleteObjects: 0.107000 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/StylizedModularDungeonPack/Textures
-  artifactKey: Guid(6987cd347830e8d439b0e24662798243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/StylizedModularDungeonPack/Textures using Guid(6987cd347830e8d439b0e24662798243) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e8589a6b2ec78f86bc88bac618de614') in 0.013834 seconds
-  Import took 0.022001 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.911401 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c92f951f6e0f32301cf0e9aa2015678d') in 0.392711 seconds
-  Import took 0.402392 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 35.431075 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1eb5085193744ee8ef470e1347e72af') in 0.031187 seconds
-  Import took 0.040068 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.384685 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0871819dc72629d9302b3c472de04d1a') in 0.029841 seconds
-  Import took 0.038231 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.816797 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcbc725cdedeae74fe2ab6264eea327c') in 0.023240 seconds
-  Import took 0.030896 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.005199 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f6ceb1724bdafbeaeb0b4295f51f8b3') in 0.024584 seconds
-  Import took 0.032826 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.601827 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e216c1e6315ec5804ca3abddb313302') in 0.024327 seconds
-  Import took 0.032897 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.381157 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf4e3521c893add0f09542ff2211a079') in 0.020387 seconds
-  Import took 0.029653 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 25.973277 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8de85839befa94a80078e75c71b40f07') in 0.020271 seconds
-  Import took 0.027679 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.045966 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be15884f8ca9212e33e45dfcf4ddedb1') in 0.019593 seconds
-  Import took 0.028056 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004138 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.78 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.795 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.03 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 219.6 MB.
-System memory in use after: 219.9 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5190.
-Total: 3.856200 ms (FindLiveObjects: 0.453800 ms CreateObjectMapping: 0.166600 ms MarkObjects: 3.197800 ms  DeleteObjects: 0.036900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003496 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 1.25 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.736 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.16 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 219.7 MB.
-System memory in use after: 220.0 MB.
+Unloading 4967 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 252.0 MB.
+System memory in use after: 252.2 MB.
 
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5193.
-Total: 5.019400 ms (FindLiveObjects: 0.815500 ms CreateObjectMapping: 0.528400 ms MarkObjects: 3.648900 ms  DeleteObjects: 0.024100 ms)
+Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 5418.
+Total: 4.116700 ms (FindLiveObjects: 0.428800 ms CreateObjectMapping: 0.239300 ms MarkObjects: 3.270700 ms  DeleteObjects: 0.176800 ms)
 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003570 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.16 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.517 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.06 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 219.8 MB.
-System memory in use after: 220.0 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5196.
-Total: 4.622100 ms (FindLiveObjects: 0.593000 ms CreateObjectMapping: 0.202000 ms MarkObjects: 3.800500 ms  DeleteObjects: 0.025000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004129 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.88 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.526 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.42 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 219.8 MB.
-System memory in use after: 220.1 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5199.
-Total: 4.491800 ms (FindLiveObjects: 0.616300 ms CreateObjectMapping: 0.188300 ms MarkObjects: 3.656300 ms  DeleteObjects: 0.029800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 415.892192 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afc3b014284a977d8920ca85c0c77cf3') in 0.161714 seconds
-  Import took 0.171194 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.125366 seconds.
-  path: Assets/Scripts/ProceduralDungeonGeneration/DungeonGenerator.cs
-  artifactKey: Guid(de0a0c8feb6392449a01bd310ed2f0bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/ProceduralDungeonGeneration/DungeonGenerator.cs using Guid(de0a0c8feb6392449a01bd310ed2f0bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e5e73a19ea7489361156bfa6cab7044') in 0.016113 seconds
-  Import took 0.024112 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 442.863032 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f34f18b9937d776dbc87d85dafb8e041') in 0.024364 seconds
-  Import took 0.033797 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004010 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.13 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.295 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 220.0 MB.
-System memory in use after: 220.2 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5322.
-Total: 4.398000 ms (FindLiveObjects: 0.580400 ms CreateObjectMapping: 0.178200 ms MarkObjects: 3.595500 ms  DeleteObjects: 0.043000 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 64.813443 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd14453b3e46f0ad1f11ed968dac4ceae') in 0.157196 seconds
-  Import took 0.168263 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.043285 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7069b396a14727a7122c573ded9179c') in 0.027729 seconds
-  Import took 0.035851 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.131657 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c837e7bdb6e5e0916aaa657f6a02c639') in 0.020661 seconds
-  Import took 0.029694 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.175044 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e51aca5b1aa1139e88458e88b83ad7fa') in 0.021442 seconds
-  Import took 0.031089 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.402820 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97d5d82264b6a07bb4235230c72dfb7d') in 0.020795 seconds
-  Import took 0.030801 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 122.659270 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f5a89695e5513a5c3f36d956fde4b5d') in 0.020957 seconds
-  Import took 0.030904 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.015956 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fd5a662c65d509817f375fe2bc081b4') in 0.018631 seconds
-  Import took 0.026962 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003855 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.19 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.288 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.02 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 220.4 MB.
-System memory in use after: 220.8 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5445.
-Total: 5.340000 ms (FindLiveObjects: 0.670600 ms CreateObjectMapping: 0.532400 ms MarkObjects: 4.089100 ms  DeleteObjects: 0.046800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 135.400980 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16a5d3220ac3ea4890383f7ed98c9b84') in 0.156635 seconds
-  Import took 0.167005 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.780611 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '834c166508b6d39f1126f8d92023d122') in 0.022529 seconds
-  Import took 0.031304 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.616079 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c75d00bb5de792c9f15b9d691b09130c') in 0.018595 seconds
-  Import took 0.027387 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.038205 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38d82205347321f2faa8ac4505f61b36') in 0.020918 seconds
-  Import took 0.030926 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.439846 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd34dcc49da406b62d1de653d9b7a0ee0') in 0.018291 seconds
-  Import took 0.027186 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.876491 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ed80dfd3e9b3061781fa08e7ec05715') in 0.019213 seconds
-  Import took 0.028028 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.814288 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3418d6c044c098edf687e70ca068507') in 0.019590 seconds
-  Import took 0.029297 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.845439 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7060c1382a74a822fa6781e99bab337') in 0.021344 seconds
-  Import took 0.031133 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.836398 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f14208aa3d2bf910eedfb6a627ba612') in 0.024232 seconds
-  Import took 0.034348 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.000898 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc12fbc5dc89fd46591e2769d9e100dc') in 0.024832 seconds
-  Import took 0.034170 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.028795 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71c63cb9423e0417c59379c219f11bb0') in 0.018710 seconds
-  Import took 0.027506 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.265736 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b095ae3becf513b2c9b089d79e675cc4') in 0.021793 seconds
-  Import took 0.030563 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.654814 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe184192bcc333ec6c3221ac77b28cda') in 0.021011 seconds
-  Import took 0.029597 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.199385 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7edb11ace6d73fcdc557e8eefc957c6') in 0.023689 seconds
-  Import took 0.032518 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.595793 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b32adc3ced2efcd5ec4d205812cb28c7') in 0.020720 seconds
-  Import took 0.030300 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.410289 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '171427da19bb9383b18b884d985ef6ba') in 0.022262 seconds
-  Import took 0.030488 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.584565 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bb30f2b9f0cbecb62d101258d2bf0a6') in 0.021583 seconds
-  Import took 0.031168 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.649143 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad452614dc2ffc711b1eef67a77ff8de') in 0.020698 seconds
-  Import took 0.029570 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.052475 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0049c92afeb01d14c8e355a75394fd8a') in 0.019018 seconds
-  Import took 0.027619 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.252808 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e47d94e751d11a0d46a1e0ae3923936a') in 0.023787 seconds
-  Import took 0.032016 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.564004 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13bef5301f8d2bebb9f0b8f35acefee9') in 0.020777 seconds
-  Import took 0.029216 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.033588 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e9dd71297f7936e9cd98fb13e6b5cbe') in 0.028949 seconds
-  Import took 0.037515 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.580174 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d59864f09119fea2d0dbaa2c1ef849a') in 0.031065 seconds
-  Import took 0.039596 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003874 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.80 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.737 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 220.6 MB.
-System memory in use after: 221.0 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5568.
-Total: 4.692800 ms (FindLiveObjects: 0.478900 ms CreateObjectMapping: 0.196800 ms MarkObjects: 3.988800 ms  DeleteObjects: 0.027100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 213.954900 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f77c18b4a2fc0f1df71668a791c9b6a6') in 0.179067 seconds
-  Import took 0.189425 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.925763 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eef322b2792039eac0ecc045e77331f4') in 0.019180 seconds
-  Import took 0.027251 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.976255 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02c2878247ec96f6390374ce81286711') in 0.021498 seconds
-  Import took 0.030434 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 40.480887 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '844e5e372e43e61dd294b6f4044e0ce5') in 0.021789 seconds
-  Import took 0.031157 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.211129 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b0f62aeff2f220c65fef374f04fa30d') in 0.025602 seconds
-  Import took 0.033295 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004134 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.21 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.612 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.29 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 220.8 MB.
-System memory in use after: 221.3 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5691.
-Total: 5.927200 ms (FindLiveObjects: 0.496400 ms CreateObjectMapping: 0.206600 ms MarkObjects: 5.179200 ms  DeleteObjects: 0.043800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 42.577684 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d6e3b4c985182beed7cc0a9c7b83299') in 0.171119 seconds
-  Import took 0.182678 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006098 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.61 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.767 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.39 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 221.1 MB.
-System memory in use after: 221.5 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5814.
-Total: 8.028700 ms (FindLiveObjects: 0.883400 ms CreateObjectMapping: 0.433000 ms MarkObjects: 6.673900 ms  DeleteObjects: 0.036400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 29.228161 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09bc2cf2f644fb8128c52517e226e2f6') in 0.248202 seconds
-  Import took 0.259839 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.036917 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7df46f5596765a2d33d73367de9faba1') in 0.027230 seconds
-  Import took 0.036627 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.689059 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7dcf959ea5865ff761cde791b1ca658') in 0.024214 seconds
-  Import took 0.032855 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003936 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.61 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.858 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.13 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 221.2 MB.
-System memory in use after: 221.7 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 5937.
-Total: 22.270900 ms (FindLiveObjects: 2.521700 ms CreateObjectMapping: 2.577300 ms MarkObjects: 17.133900 ms  DeleteObjects: 0.035100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 45.417456 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4325e89a7b9ff046c2e46259f7b7ff17') in 0.192885 seconds
-  Import took 0.203396 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 21.524370 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ff4358161c8c913a72544f70e93605f') in 0.023153 seconds
-  Import took 0.031531 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.834705 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a176ac6e148c71313b02b2722677158') in 0.024368 seconds
-  Import took 0.032387 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 98.196242 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cc0dc3797b850f819602aee103ea9ad') in 0.029014 seconds
-  Import took 0.036923 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.160773 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3bb448e2b4538c18fd3db266e2ff8de5') in 0.024379 seconds
-  Import took 0.033388 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.820619 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41d96613182f817a70eb493561db7124') in 0.022412 seconds
-  Import took 0.032841 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.183963 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e053354db9d36f107e25f1a051f35dd0') in 0.020530 seconds
-  Import took 0.030415 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.023641 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06ba5c9cd5268ccfa5f07b86254f6573') in 0.019416 seconds
-  Import took 0.030733 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.543710 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '146bdc639f63ef827f732cbae18b0aff') in 0.018743 seconds
-  Import took 0.027872 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.168004 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7431afd3d80fc441abe096f937b72339') in 0.020015 seconds
-  Import took 0.029331 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.040472 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c20d5401d9593328f9bb22b18ee6dcf') in 0.028777 seconds
-  Import took 0.037121 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.385702 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3dc4ec058bfd32ca9b68f9ba4274198') in 0.036963 seconds
-  Import took 0.046027 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.688031 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb3c4b27a7dc4b924f29e10f34bc4aa4') in 0.023356 seconds
-  Import took 0.032012 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.783397 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc4989c7dc6ab4b6ee04f4afc6bbbbb9') in 0.023206 seconds
-  Import took 0.030868 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.191409 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4aad82505192e3512966ac17b111587b') in 0.024412 seconds
-  Import took 0.033215 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.439891 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd985dfedfb5dc4e525bbf653226d8ed6') in 0.019606 seconds
-  Import took 0.027664 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.253257 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0e138cc3101c6c4ac024183610ced9b') in 0.021508 seconds
-  Import took 0.029711 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.191670 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f2663ffb698cf0a3ca191d3447a0715') in 0.039230 seconds
-  Import took 0.048925 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.180318 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1750ef8d71b4ce0c17bd4f8c32c5955d') in 0.019307 seconds
-  Import took 0.027716 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.599123 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '797e9f6a2f3e1c1032c2b1cd79615b51') in 0.024955 seconds
-  Import took 0.034930 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.985053 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fe6088b493ffa208b9b1c3ae506897d') in 0.051656 seconds
-  Import took 0.068040 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.443687 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bbdc4849ee042450d2002b75fc79611') in 0.020093 seconds
-  Import took 0.029319 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.983585 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d5d1e847d16398e715b7d80da746e66') in 0.018904 seconds
-  Import took 0.027261 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.005253 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f42f3591c160f5dcb31bb31dcdf68214') in 0.022364 seconds
-  Import took 0.031343 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.195739 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cb82c0dc50e64e8b048a196d3b89e8a') in 0.019746 seconds
-  Import took 0.029343 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.196669 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83ea1e772f18ea4d91900b665349ac73') in 0.032229 seconds
-  Import took 0.041211 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.574518 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd82752480eca1cc012d21519ff9cbb16') in 0.025221 seconds
-  Import took 0.035309 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.586486 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4c27cff57db5d9e1a4eb9b60c5dcf35') in 0.018959 seconds
-  Import took 0.027355 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.182636 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6d9c80aed07d71043553b65005ca44c') in 0.023410 seconds
-  Import took 0.032980 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 35.214235 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '480b58ab5f38242e388658ae794548d6') in 0.029834 seconds
-  Import took 0.040111 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.407291 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cec3cd411d0fa09ec3bbe363a7fcb36e') in 0.021203 seconds
-  Import took 0.029381 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004323 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.15 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.340 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.84 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 221.4 MB.
-System memory in use after: 221.9 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 6060.
-Total: 6.627200 ms (FindLiveObjects: 0.678200 ms CreateObjectMapping: 0.240400 ms MarkObjects: 5.655500 ms  DeleteObjects: 0.051800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003895 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.04 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.310 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.19 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 221.5 MB.
-System memory in use after: 221.9 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 6063.
-Total: 6.770300 ms (FindLiveObjects: 0.721700 ms CreateObjectMapping: 0.361300 ms MarkObjects: 5.656800 ms  DeleteObjects: 0.028100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 159.892933 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81b869a0b99db4c39c045806dd7163d1') in 0.171793 seconds
-  Import took 0.183493 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.097420 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16215cf16aeed08be057f7a674c672ea') in 0.021947 seconds
-  Import took 0.031959 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004483 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.04 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.330 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.14 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 221.6 MB.
-System memory in use after: 222.1 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 6186.
-Total: 4.746000 ms (FindLiveObjects: 0.547300 ms CreateObjectMapping: 0.197600 ms MarkObjects: 3.968100 ms  DeleteObjects: 0.031500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 62.890730 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e424fe640d1075027067e55447294ee') in 0.155186 seconds
-  Import took 0.165045 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.466183 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e424fe640d1075027067e55447294ee') in 0.020949 seconds
-  Import took 0.029476 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003551 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.32 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.431 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.19 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 221.8 MB.
-System memory in use after: 222.3 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 6309.
-Total: 5.744600 ms (FindLiveObjects: 0.729000 ms CreateObjectMapping: 0.735200 ms MarkObjects: 4.217100 ms  DeleteObjects: 0.061900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 50.647070 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f011a5cd4025926bf91fc3cd4984ebb6') in 0.157065 seconds
-  Import took 0.166994 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.515843 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d37cfb8c886d8727453aaf844eafa0c') in 0.029014 seconds
-  Import took 0.037881 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.944006 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02d59d4613921202ba55dd680d40c661') in 0.018280 seconds
-  Import took 0.027793 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.791302 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9120c68f71f4ddbc01ce9ff190510e28') in 0.025651 seconds
-  Import took 0.035847 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.415970 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85c45458bba23a979ff12d2dad5cad24') in 0.024053 seconds
-  Import took 0.032723 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.396997 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fffdabd1e9dadcde458086b4201606e') in 0.026751 seconds
-  Import took 0.035570 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.618220 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8e3e7a6160f995edf3e50d9b752df9d') in 0.019913 seconds
-  Import took 0.029688 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.992626 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9c19c63eefdd6fdc9bb175c1eafb029') in 0.024373 seconds
-  Import took 0.033905 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.795287 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42eb967d34fa9525c5363149670ff9a7') in 0.024774 seconds
-  Import took 0.035165 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.591010 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4dc727c6611c72480b73f70efcdef44') in 0.029734 seconds
-  Import took 0.040628 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.576606 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d31f477fafff0e5a7583dac125895b6') in 0.026378 seconds
-  Import took 0.035493 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.781018 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdd5661795c5d150694c945d75ccddd6') in 0.029361 seconds
-  Import took 0.038426 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.204185 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b783c7fdbc55543c0229fc01d2143c45') in 0.029481 seconds
-  Import took 0.039189 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003878 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.06 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.535 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.14 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 222.1 MB.
-System memory in use after: 222.6 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 6432.
-Total: 6.573800 ms (FindLiveObjects: 0.723000 ms CreateObjectMapping: 0.340700 ms MarkObjects: 5.465300 ms  DeleteObjects: 0.043600 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 60.175743 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fc022eb52ae489acf5622e0dd1575a0') in 0.169238 seconds
-  Import took 0.179536 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.164270 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e381fec49b1474132b9ed87382c574a') in 0.023473 seconds
-  Import took 0.032842 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.226768 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc259f807bc27785d127bdd91a715565') in 0.022896 seconds
-  Import took 0.032211 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.015408 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc259f807bc27785d127bdd91a715565') in 0.018372 seconds
-  Import took 0.028621 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.830187 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '198ad1792dae3c3a337f5501f8c624c4') in 0.026002 seconds
-  Import took 0.034316 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.055456 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4152ea8065b2c0c226129880f57523b') in 0.031182 seconds
-  Import took 0.041063 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.432539 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c4c78935d3f1fcadf44a74756e501ff') in 0.021274 seconds
-  Import took 0.029915 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.825864 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dfacd495642cd7f86785f3691e91bf3') in 0.022155 seconds
-  Import took 0.031677 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.442388 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77a6a0470bbbf550d48d8a19b5b5a165') in 0.031194 seconds
-  Import took 0.041376 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.998513 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bf6958317ebed56d89001d10702127a') in 0.024802 seconds
-  Import took 0.035864 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.017843 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '393729f659de63675e862f2922dc4ddd') in 0.033621 seconds
-  Import took 0.044812 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 16.913559 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58c6486d73c9e1a294ab14e24da08997') in 0.038191 seconds
-  Import took 0.047174 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.397665 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6acc6f6efb0a94fe08754c3ebc3794f0') in 0.026731 seconds
-  Import took 0.036233 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.502268 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6489bed3c8d9b5a023c26b533f6119c2') in 0.027738 seconds
-  Import took 0.038092 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.412432 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b092eff903b72206880b37a511a24e3') in 0.025220 seconds
-  Import took 0.034561 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003730 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.23 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.596 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.24 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 222.3 MB.
-System memory in use after: 222.8 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 6555.
-Total: 8.921500 ms (FindLiveObjects: 0.641300 ms CreateObjectMapping: 0.269600 ms MarkObjects: 7.964500 ms  DeleteObjects: 0.044500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 223.584207 seconds.
-  path: Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab
-  artifactKey: Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ancient-Dungeon-BuiltInRP/Prefabs/AD_Stair_A_01.prefab using Guid(293dbd69a556d2f4bb91fbd645f4714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f162bf37e32a915df616b97cb1fde731') in 0.179246 seconds
-  Import took 0.190064 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005535 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.51 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.856 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.28 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 222.5 MB.
-System memory in use after: 223.0 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 6678.
-Total: 9.874200 ms (FindLiveObjects: 0.992300 ms CreateObjectMapping: 0.832400 ms MarkObjects: 8.004600 ms  DeleteObjects: 0.043100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 102.712017 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5e9f1af5986f66ac97e16ad5fc72687') in 0.172530 seconds
-  Import took 0.183605 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.745559 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e443eeb4bd27acff1901b50e62cddd7') in 0.073193 seconds
-  Import took 0.082803 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005627 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.67 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.772 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.20 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 222.7 MB.
-System memory in use after: 223.2 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 6801.
-Total: 9.709900 ms (FindLiveObjects: 1.169300 ms CreateObjectMapping: 0.473600 ms MarkObjects: 8.026900 ms  DeleteObjects: 0.038200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 371.720495 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2112206fec62184edd93b6c80066b2d8') in 0.241127 seconds
-  Import took 0.255299 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 24.130107 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6ca7e96b572d7ef71e01ef0ca033c27') in 0.048326 seconds
-  Import took 0.058779 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.226725 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d5facfcdd4977c951b875585bcb6aeb') in 0.044949 seconds
-  Import took 0.055817 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.875167 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e74d00dec7c42f96ab0fe1448092365a') in 0.038362 seconds
-  Import took 0.047462 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 26.610959 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4f8078273b798b07d7b0399aa86053e') in 0.041192 seconds
-  Import took 0.050829 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.382999 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '515b96dd04060bec497bc217d9f6206f') in 0.044631 seconds
-  Import took 0.054063 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.996853 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f94f3f87daa32a28f8c7b67810ecf2f') in 0.036318 seconds
-  Import took 0.046205 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.441136 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'deb351a90cd1b9d3d6ab3858e7d278b6') in 0.034708 seconds
-  Import took 0.045323 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.776080 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c2a4f1b00ffedd4b1713b9925c7da25') in 0.035439 seconds
-  Import took 0.044596 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 28.812122 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81b59489099cc5290c8e3c68dd4b3db6') in 0.032594 seconds
-  Import took 0.041241 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.057327 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed5c6b582278f27d3c95b1d15373596f') in 0.035033 seconds
-  Import took 0.044141 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.561382 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e462533ee7a69a8da9b222e1f4e5c53') in 0.039982 seconds
-  Import took 0.051539 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.985367 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccc158d7591c627782dc10a35356b2d6') in 0.034841 seconds
-  Import took 0.044029 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.583768 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6d75d628c7116d933039461667345ab') in 0.036088 seconds
-  Import took 0.045518 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.584261 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87ba7f72466e72f79696f48ff07a54c4') in 0.037434 seconds
-  Import took 0.047469 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.560188 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '324a49c3cf75983f2bef3f62845d8e53') in 0.033675 seconds
-  Import took 0.044192 seconds .
-
-========================================================================
 Received Import Request.
-  Time since last request: 2.585829 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af05b0d51203079d71471012acf0b324') in 0.038037 seconds
-  Import took 0.048805 seconds .
+  path: Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_2.fbx
+  artifactKey: Guid(2b9bba6706eed9042bb0bc0e4ae0489e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_2.fbx using Guid(2b9bba6706eed9042bb0bc0e4ae0489e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4ae7de436fb23e73991535275cc8f46') in 0.440711 seconds
+  Import took 0.451142 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.016226 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa7ab7f0bca1536fa10f30e9fa3e6954') in 0.040500 seconds
-  Import took 0.052008 seconds .
+  Time since last request: 0.000737 seconds.
+  path: Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_3.fbx
+  artifactKey: Guid(ed38faaed6a8ada4faf9cc1638882d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_3.fbx using Guid(ed38faaed6a8ada4faf9cc1638882d83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45190cbae51fb86dd3d1fdf4f15026e4') in 0.049694 seconds
+  Import took 0.058537 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 9.640960 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2a128146b0ef73a2c7d9189e1062568') in 0.043438 seconds
-  Import took 0.052537 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.268064 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e216059930c4db2d02f6db437f8c1702') in 0.039376 seconds
-  Import took 0.051130 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.174196 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35d2c2ef0a3cc8f6240d2e992f5f469e') in 0.038801 seconds
-  Import took 0.048465 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.034544 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab9d3e4174231b1a26672036129b37a9') in 0.038509 seconds
-  Import took 0.049833 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.792135 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1874fc8c4fa2ecc627610913e2fc51c') in 0.044309 seconds
-  Import took 0.054400 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.214510 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '232266ccc052948ee40f46540b0444d9') in 0.034702 seconds
-  Import took 0.044920 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.377464 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ce45d3f1273c350ad3ee08eb046b16a') in 0.048264 seconds
-  Import took 0.060327 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.993875 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '195513986c18bf2e5016771d41f22736') in 0.038074 seconds
-  Import took 0.048314 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.669246 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70bf9490bec4715ef5a52ab47a8b767c') in 0.036447 seconds
-  Import took 0.046511 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.005261 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57bdba40e56b8fd314a63515fae6127e') in 0.039980 seconds
-  Import took 0.049765 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.251336 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea90d8a7a6ab889b039dfd47b6c21174') in 0.042763 seconds
-  Import took 0.052768 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.886909 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '049ad9afb5c77331571d7c5ac3f8b9a1') in 0.038480 seconds
-  Import took 0.048523 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.394742 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53eb468defb2a2d85062cb59733ff852') in 0.036721 seconds
-  Import took 0.046984 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.908205 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a56dca3cec847528e069d497aa27d7a') in 0.041156 seconds
-  Import took 0.050172 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.488888 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'accfc3d8bce1009fd530e09acc8d59e1') in 0.036422 seconds
-  Import took 0.047069 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.583256 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5594814e41a0089ae1ad3dceab9124d9') in 0.036400 seconds
-  Import took 0.047012 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.415366 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '935d44fb6aeed864d53c42a4529d6756') in 0.035784 seconds
-  Import took 0.044716 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.785099 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8df49935bfb91e15b9b10ae6c4206693') in 0.035324 seconds
-  Import took 0.045139 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.786778 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17cd324c6a99ac10e86ec9ccc282909c') in 0.039168 seconds
-  Import took 0.050618 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.990306 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b23f1d751da369f2c17869109764338') in 0.045475 seconds
-  Import took 0.057574 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003934 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.20 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.384 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.13 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 223.2 MB.
-System memory in use after: 223.6 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 6924.
-Total: 7.834500 ms (FindLiveObjects: 1.255200 ms CreateObjectMapping: 0.596000 ms MarkObjects: 5.942800 ms  DeleteObjects: 0.039300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003851 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.75 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.622 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.57 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 223.2 MB.
-System memory in use after: 223.7 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 6927.
-Total: 6.796900 ms (FindLiveObjects: 0.935300 ms CreateObjectMapping: 0.535200 ms MarkObjects: 5.279300 ms  DeleteObjects: 0.045500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 4874.877901 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3892781be5bddb64ab06fc6073e778a4') in 0.417904 seconds
-  Import took 0.536720 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 40.452430 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab
-  artifactKey: Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Tiles/Hall Slope.prefab using Guid(f5778dea15a9e0948adaa059fa742916) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87d2c31d9bd98db9d66163200849056f') in 0.045519 seconds
-  Import took 0.055701 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004928 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.22 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.770 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.13 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 223.3 MB.
-System memory in use after: 223.8 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 7050.
-Total: 6.169600 ms (FindLiveObjects: 0.625800 ms CreateObjectMapping: 0.199800 ms MarkObjects: 5.215800 ms  DeleteObjects: 0.126700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003924 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.22 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.451 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.05 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 223.3 MB.
-System memory in use after: 223.8 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 7053.
-Total: 7.159600 ms (FindLiveObjects: 0.701700 ms CreateObjectMapping: 0.237100 ms MarkObjects: 6.191300 ms  DeleteObjects: 0.028200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003516 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.13 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.507 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.22 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 223.4 MB.
-System memory in use after: 223.8 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 7056.
-Total: 7.866800 ms (FindLiveObjects: 0.893900 ms CreateObjectMapping: 0.238800 ms MarkObjects: 6.701600 ms  DeleteObjects: 0.030800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004729 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.23 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.447 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.08 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 223.4 MB.
-System memory in use after: 223.9 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 7059.
-Total: 7.073200 ms (FindLiveObjects: 1.206600 ms CreateObjectMapping: 0.436800 ms MarkObjects: 5.397100 ms  DeleteObjects: 0.030700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004570 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 3.10 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.851 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.29 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 223.4 MB.
-System memory in use after: 223.9 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 7062.
-Total: 8.317700 ms (FindLiveObjects: 0.782000 ms CreateObjectMapping: 0.382700 ms MarkObjects: 7.105400 ms  DeleteObjects: 0.045200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005603 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.84 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.581 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.75 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 223.4 MB.
-System memory in use after: 223.9 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 7065.
-Total: 8.602600 ms (FindLiveObjects: 1.248300 ms CreateObjectMapping: 0.518600 ms MarkObjects: 6.802900 ms  DeleteObjects: 0.031200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003651 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.09 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.362 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.05 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 223.4 MB.
-System memory in use after: 223.9 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 7068.
-Total: 6.309700 ms (FindLiveObjects: 0.683400 ms CreateObjectMapping: 0.277100 ms MarkObjects: 5.318500 ms  DeleteObjects: 0.029600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006118 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.13 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.422 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.21 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 223.4 MB.
-System memory in use after: 223.9 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 7071.
-Total: 8.284500 ms (FindLiveObjects: 0.908100 ms CreateObjectMapping: 0.477500 ms MarkObjects: 6.864600 ms  DeleteObjects: 0.032400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003769 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.16 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.379 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.78 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 223.4 MB.
-System memory in use after: 223.9 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 7074.
-Total: 9.909400 ms (FindLiveObjects: 1.717300 ms CreateObjectMapping: 0.661500 ms MarkObjects: 7.479700 ms  DeleteObjects: 0.047900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 5143.620516 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Starting Rooms/Room Cap.fancy.prefab
-  artifactKey: Guid(d9b58493395c62e4eac7f4634c0e5cae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Starting Rooms/Room Cap.fancy.prefab using Guid(d9b58493395c62e4eac7f4634c0e5cae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '415d78f7e4c9b100e09de409bb4875e3') in 0.448849 seconds
-  Import took 0.602237 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000347 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Starting Rooms/Room Cap.soft.prefab
-  artifactKey: Guid(a3c39e53a1d147047975f687e69f668b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Starting Rooms/Room Cap.soft.prefab using Guid(a3c39e53a1d147047975f687e69f668b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ac803911d63d8bdb91a5613a8546d93') in 0.015725 seconds
-  Import took 0.025115 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000264 seconds.
-  path: Assets/Prefabs/Procedural Dungeon/Starting Rooms/Room Cap.prefab
-  artifactKey: Guid(ca3c17b63ec60a346b8a6a7e2e0d792b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Procedural Dungeon/Starting Rooms/Room Cap.prefab using Guid(ca3c17b63ec60a346b8a6a7e2e0d792b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01d88bbcfa2876a7587fc18475f60cef') in 0.015077 seconds
-  Import took 0.024253 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003782 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.50 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.090 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.20 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 223.6 MB.
-System memory in use after: 224.1 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 7197.
-Total: 10.249900 ms (FindLiveObjects: 0.943500 ms CreateObjectMapping: 0.522400 ms MarkObjects: 8.738900 ms  DeleteObjects: 0.043200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004205 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.22 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.813 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.86 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 223.6 MB.
-System memory in use after: 224.1 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 7200.
-Total: 8.636600 ms (FindLiveObjects: 0.780700 ms CreateObjectMapping: 0.251700 ms MarkObjects: 7.560100 ms  DeleteObjects: 0.042600 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 164.889102 seconds.
-  path: Assets/Animations/Third person starter/StarterAssetsThirdPerson.controller
-  artifactKey: Guid(40db3173a05ae3242b1c182a09b0a183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Third person starter/StarterAssetsThirdPerson.controller using Guid(40db3173a05ae3242b1c182a09b0a183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2ef019f6f24374b870b8732566e5a0d') in 0.164829 seconds
-  Import took 0.178655 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 342.184701 seconds.
-  path: Assets/Animations/Third person starter/StarterAssetsThirdPerson.controller
-  artifactKey: Guid(40db3173a05ae3242b1c182a09b0a183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Third person starter/StarterAssetsThirdPerson.controller using Guid(40db3173a05ae3242b1c182a09b0a183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aded9a2317c80a422cbfd3c99a9eb6b1') in 0.125111 seconds
-  Import took 0.137710 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003478 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.25 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.394 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.65 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 223.6 MB.
-System memory in use after: 224.1 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 7203.
-Total: 7.738500 ms (FindLiveObjects: 0.705500 ms CreateObjectMapping: 0.226600 ms MarkObjects: 6.768000 ms  DeleteObjects: 0.037200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 340.911568 seconds.
-  path: Assets/Animations/Third person starter/StarterAssetsThirdPerson.controller
-  artifactKey: Guid(40db3173a05ae3242b1c182a09b0a183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Third person starter/StarterAssetsThirdPerson.controller using Guid(40db3173a05ae3242b1c182a09b0a183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5df3f4e5bf2368eb9bc9d031f9868af') in 0.120146 seconds
-  Import took 0.130339 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003624 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.42 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.391 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 223.6 MB.
-System memory in use after: 224.1 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 7206.
-Total: 7.327600 ms (FindLiveObjects: 0.661300 ms CreateObjectMapping: 0.560000 ms MarkObjects: 6.075100 ms  DeleteObjects: 0.029900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003700 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.19 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.775 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.36 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 223.6 MB.
-System memory in use after: 224.1 MB.
-
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 7209.
-Total: 6.036100 ms (FindLiveObjects: 0.672900 ms CreateObjectMapping: 0.262300 ms MarkObjects: 5.074400 ms  DeleteObjects: 0.025400 ms)
+  Time since last request: 12.483241 seconds.
+  path: Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_2_Inst.anim
+  artifactKey: Guid(26376f6d7af9bbb4c9c482b0a61f02a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_2_Inst.anim using Guid(26376f6d7af9bbb4c9c482b0a61f02a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '994c96c1994415fea7c4d2b0b12c02a0') in 0.039599 seconds
+  Import took 0.049758 seconds .
 
 ========================================================================
 Received Prepare
@@ -2138,27 +102,351 @@ Registered in 0.003620 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.10 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.401 seconds
+- Completed reload, in  1.521 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.34 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4686 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 251.3 MB.
+System memory in use after: 251.7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 5587.
+Total: 5.602100 ms (FindLiveObjects: 0.783000 ms CreateObjectMapping: 0.581200 ms MarkObjects: 4.139800 ms  DeleteObjects: 0.096600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 68.401043 seconds.
+  path: Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_2.anim
+  artifactKey: Guid(b7bb840905bfd924da724b0c620e5c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_2.anim using Guid(b7bb840905bfd924da724b0c620e5c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f42e5295c44ec7bba8710bfc4e00497d') in 0.023172 seconds
+  Import took 0.036370 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.745271 seconds.
+  path: Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_2_Inplace_Inst.anim
+  artifactKey: Guid(b7bb840905bfd924da724b0c620e5c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_2_Inplace_Inst.anim using Guid(b7bb840905bfd924da724b0c620e5c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '695713629febbc8e5609427d194954ee') in 0.015822 seconds
+  Import took 0.025245 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.072071 seconds.
+  path: Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_2_RM_Inst.anim
+  artifactKey: Guid(b7bb840905bfd924da724b0c620e5c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_2_RM_Inst.anim using Guid(b7bb840905bfd924da724b0c620e5c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e34107fbfb650aa04428f8a72bb29f1') in 0.017177 seconds
+  Import took 0.027624 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 37.346869 seconds.
+  path: Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_2_IP_Inst.anim
+  artifactKey: Guid(26376f6d7af9bbb4c9c482b0a61f02a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_2_IP_Inst.anim using Guid(26376f6d7af9bbb4c9c482b0a61f02a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9754f5426783c0d051d8986ae1bac97') in 0.025638 seconds
+  Import took 0.035725 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.784109 seconds.
+  path: Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_3.anim
+  artifactKey: Guid(32e791fcd31b393409ee5ee70b0d7c86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_3.anim using Guid(32e791fcd31b393409ee5ee70b0d7c86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8feb0c9bf45332ad0530866c8abb2b63') in 0.029791 seconds
+  Import took 0.040806 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.098177 seconds.
+  path: Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_3_RM_Inst.anim
+  artifactKey: Guid(32e791fcd31b393409ee5ee70b0d7c86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_3_RM_Inst.anim using Guid(32e791fcd31b393409ee5ee70b0d7c86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a630843f3144df6052464baa32a85c5') in 0.036033 seconds
+  Import took 0.046079 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.570488 seconds.
+  path: Assets/Animations/Third person starter/StarterAssetsThirdPerson.controller
+  artifactKey: Guid(40db3173a05ae3242b1c182a09b0a183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Third person starter/StarterAssetsThirdPerson.controller using Guid(40db3173a05ae3242b1c182a09b0a183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4a1e01eeceea4ed92b32c733f9fb7e7') in 0.098182 seconds
+  Import took 0.108845 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.770300 seconds.
+  path: Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_3_RM_Inst.anim
+  artifactKey: Guid(32e791fcd31b393409ee5ee70b0d7c86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_3_RM_Inst.anim using Guid(32e791fcd31b393409ee5ee70b0d7c86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fecc04e33052472ef7c157cb624b4e2') in 0.031905 seconds
+  Import took 0.042135 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003918 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.19 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.584 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.21 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4686 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 251.4 MB.
+System memory in use after: 251.8 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 5590.
+Total: 4.121200 ms (FindLiveObjects: 0.482300 ms CreateObjectMapping: 0.248800 ms MarkObjects: 3.289800 ms  DeleteObjects: 0.099000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006652 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.73 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.418 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.68 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4686 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 251.4 MB.
+System memory in use after: 251.8 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 5593.
+Total: 10.138600 ms (FindLiveObjects: 0.815200 ms CreateObjectMapping: 0.527000 ms MarkObjects: 8.641500 ms  DeleteObjects: 0.153300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 243.935525 seconds.
+  path: Assets/Animations/Third person starter/ShirleyAnimator.controller
+  artifactKey: Guid(40db3173a05ae3242b1c182a09b0a183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Third person starter/ShirleyAnimator.controller using Guid(40db3173a05ae3242b1c182a09b0a183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56b2ef18768ad2edd0b3c545c212935a') in 0.112097 seconds
+  Import took 0.122630 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004612 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.55 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.556 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.17 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4686 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 251.4 MB.
+System memory in use after: 251.9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 5596.
+Total: 3.840000 ms (FindLiveObjects: 0.650500 ms CreateObjectMapping: 0.202100 ms MarkObjects: 2.894300 ms  DeleteObjects: 0.091600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 333.968931 seconds.
+  path: Assets/Imported Assets/StarterAssets/ThirdPersonController/Scripts/ThirdPersonController.cs
+  artifactKey: Guid(26e54e5a728a9234ab24fcf1460ed8a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imported Assets/StarterAssets/ThirdPersonController/Scripts/ThirdPersonController.cs using Guid(26e54e5a728a9234ab24fcf1460ed8a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b97d0fc831b3ce04e2a843c5d64b8bc') in 0.026823 seconds
+  Import took 0.038162 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003653 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.689 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.19 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4686 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 251.3 MB.
+System memory in use after: 251.7 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 5599.
+Total: 5.703000 ms (FindLiveObjects: 1.001800 ms CreateObjectMapping: 0.269700 ms MarkObjects: 4.288600 ms  DeleteObjects: 0.130900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 283.404555 seconds.
+  path: Assets/Imported Assets/StarterAssets/ThirdPersonController/Scripts/ThirdPersonController.cs
+  artifactKey: Guid(26e54e5a728a9234ab24fcf1460ed8a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imported Assets/StarterAssets/ThirdPersonController/Scripts/ThirdPersonController.cs using Guid(26e54e5a728a9234ab24fcf1460ed8a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '487fe1cc2f7edfbc42230c7d8116b9bb') in 0.011122 seconds
+  Import took 0.021298 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.498735 seconds.
+  path: Assets/Imported Assets/StarterAssets/ThirdPersonController/Scripts/ThirdPersonController.cs
+  artifactKey: Guid(26e54e5a728a9234ab24fcf1460ed8a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imported Assets/StarterAssets/ThirdPersonController/Scripts/ThirdPersonController.cs using Guid(26e54e5a728a9234ab24fcf1460ed8a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '487fe1cc2f7edfbc42230c7d8116b9bb') in 0.001622 seconds
+  Import took 0.010561 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004733 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 2.29 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.823 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.13 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4686 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 251.5 MB.
+System memory in use after: 251.9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 5602.
+Total: 22.329500 ms (FindLiveObjects: 0.825900 ms CreateObjectMapping: 0.399000 ms MarkObjects: 20.955600 ms  DeleteObjects: 0.147100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003579 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.22 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.461 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Refreshing native plugins compatible for Editor in 1.18 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 223.7 MB.
-System memory in use after: 224.1 MB.
+Unloading 4686 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 251.5 MB.
+System memory in use after: 251.9 MB.
 
-Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 7212.
-Total: 8.883700 ms (FindLiveObjects: 0.913000 ms CreateObjectMapping: 0.368800 ms MarkObjects: 7.571800 ms  DeleteObjects: 0.028900 ms)
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 5605.
+Total: 5.258600 ms (FindLiveObjects: 1.059200 ms CreateObjectMapping: 0.583800 ms MarkObjects: 3.502100 ms  DeleteObjects: 0.111800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003795 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.59 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.559 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.17 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4686 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 251.5 MB.
+System memory in use after: 251.9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 5608.
+Total: 4.473200 ms (FindLiveObjects: 0.472400 ms CreateObjectMapping: 0.207500 ms MarkObjects: 3.691500 ms  DeleteObjects: 0.100900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004490 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.25 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.618 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.24 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4686 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 251.5 MB.
+System memory in use after: 251.9 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 5611.
+Total: 5.322300 ms (FindLiveObjects: 1.027200 ms CreateObjectMapping: 0.589200 ms MarkObjects: 3.601200 ms  DeleteObjects: 0.103200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003684 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.13 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.459 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.16 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4686 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 251.4 MB.
+System memory in use after: 251.8 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 5614.
+Total: 4.083500 ms (FindLiveObjects: 0.512600 ms CreateObjectMapping: 0.223400 ms MarkObjects: 3.236800 ms  DeleteObjects: 0.109400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003802 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.20 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.425 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.50 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4686 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 251.5 MB.
+System memory in use after: 252.0 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 5617.
+Total: 3.859700 ms (FindLiveObjects: 0.470900 ms CreateObjectMapping: 0.213500 ms MarkObjects: 3.081800 ms  DeleteObjects: 0.091900 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 220.068982 seconds.
-  path: Assets/Animations/Third person starter/StarterAssetsThirdPerson.controller
+  Time since last request: 630.369593 seconds.
+  path: Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_2_RM_Inst.anim
+  artifactKey: Guid(b7bb840905bfd924da724b0c620e5c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Girl_GreatSword_AnimSet/Animation/Humanoid/Combo_01_2_RM_Inst.anim using Guid(b7bb840905bfd924da724b0c620e5c31) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18d15e8b9d3c0060451888bc126bc159') in 0.039619 seconds
+  Import took 0.048943 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 307.726470 seconds.
+  path: Assets/Animations/Third person starter/ShirleyAnimator.controller
   artifactKey: Guid(40db3173a05ae3242b1c182a09b0a183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Third person starter/StarterAssetsThirdPerson.controller using Guid(40db3173a05ae3242b1c182a09b0a183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cebb34690f8f0872d3dc3c1d9ac6252a') in 0.124708 seconds
-  Import took 0.134794 seconds .
+Start importing Assets/Animations/Third person starter/ShirleyAnimator.controller using Guid(40db3173a05ae3242b1c182a09b0a183) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58d935dcdb76058622a686c40dee9225') in 0.149437 seconds
+  Import took 0.161104 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
