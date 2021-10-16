@@ -9,9 +9,15 @@ public class EnterLocoMotionState : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         //Debug.Log("On loco motion state");
+        DisableRootMotion(animator);
         EnableTPSMovement(animator);
     }
 
+    private void DisableRootMotion(Animator animator)
+    {
+        animator.applyRootMotion = false;
+    }
+    
     private void EnableTPSMovement(Animator animator)
     {
         if (!tpsController)

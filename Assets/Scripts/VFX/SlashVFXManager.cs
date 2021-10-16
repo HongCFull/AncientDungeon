@@ -6,9 +6,10 @@ public class SlashVFXManager : MonoBehaviour
 {
     [SerializeField] private ParticleSystem[] slashEffect;
 
-    public void SpawnSlashEffect(int vfxIndex) 
+    public void SpawnSlashEffect(int vfxIndex,bool moveWithPlayer)
     {
-        ParticleSystem vfx = Instantiate<ParticleSystem>(slashEffect[vfxIndex], slashEffect[vfxIndex].gameObject.transform.position, slashEffect[vfxIndex].gameObject.transform.rotation);
+        Transform transformHolder = moveWithPlayer ? transform : null;
+        ParticleSystem vfx = Instantiate<ParticleSystem>(slashEffect[vfxIndex], slashEffect[vfxIndex].gameObject.transform.position, slashEffect[vfxIndex].gameObject.transform.rotation,transformHolder);
         vfx.gameObject.SetActive(true);
         
         ParticleSystem.MainModule vfxMainModule = vfx.main;
