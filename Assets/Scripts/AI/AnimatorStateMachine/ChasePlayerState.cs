@@ -7,30 +7,38 @@ using UnityEngine.PlayerLoop;
 public class ChasePlayerState : StateMachineBehaviour
 {
     private NavMeshAgent navMeshAgent;
+    private AICharacter aiCharacter;
     
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         CacheReferences(animator);
+        LookAtPlayer(animator);
     }
     
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
         ChasePlayer(animator);
+        
+        if(aiCharacter.PlayerIsInsideAttackArea())
+            StopChasing();
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
-        StopChasing();
     }
 
     private void CacheReferences(Animator animator)
     {
-        if(!navMeshAgent)
-            navMeshAgent = animator.gameObject.GetComponent<NavMeshAgent>();
-        Debug.Log("cache navmesh agent ");
+        navMeshAgent = animator.gameObject.GetComponent<NavMeshAgent>();
+        aiCharacter = animator.gameObject.GetComponent<AICharacter>();
+    }
+
+    private void LookAtPlayer(Animator animator)
+    {
+        navMeshAgent.transform.LookAt(PlayerCharacter.Instance.GetPlayerWorldPosition());
     }
     
     void ChasePlayer(Animator animator)
@@ -45,4 +53,5 @@ public class ChasePlayerState : StateMachineBehaviour
     {
         navMeshAgent.SetDestination(navMeshAgent.transform.position);
     }
+    
 }

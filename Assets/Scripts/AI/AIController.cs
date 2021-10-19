@@ -31,6 +31,7 @@ public class AIController : MonoBehaviour
     [Header("Debug settings")]
     //Debug Settings
     [SerializeField] private bool displayForceHatredDistance;
+    [SerializeField] private Color displayForceHatredDistanceColor; 
     
     // Start is called before the first frame update
     void Awake()
@@ -111,8 +112,9 @@ public class AIController : MonoBehaviour
 #if UNITY_EDITOR
     private void OnDrawGizmos()
     {
-        if (displayForceHatredDistance) {
-            Gizmos.color = Color.red;
+        if (displayForceHatredDistance)
+        {
+            Gizmos.color = displayForceHatredDistanceColor;
             Gizmos.DrawWireSphere(transform.position,forceHatredDistance);
         }
     }
