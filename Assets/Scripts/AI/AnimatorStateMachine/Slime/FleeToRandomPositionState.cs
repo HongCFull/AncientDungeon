@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Animations;
 
+/// <summary>
+/// 
+/// </summary>
 public class FleeToRandomPositionState : StateMachineBehaviour
 {
     [SerializeField] private float tolerance ;
