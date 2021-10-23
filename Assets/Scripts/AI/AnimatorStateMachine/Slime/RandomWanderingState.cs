@@ -7,7 +7,7 @@ using UnityEngine.Animations;
 /// <summary>
 /// 
 /// </summary>
-public class FleeToRandomPositionState : StateMachineBehaviour
+public class RandomWanderingState : StateMachineBehaviour
 {
     [SerializeField] private float tolerance ;
     
@@ -17,7 +17,7 @@ public class FleeToRandomPositionState : StateMachineBehaviour
     [ReadOnly] private float distError;
         
     //AnimID
-    [ReadOnly] private int hasReachedFleePosAnimID;
+    [ReadOnly] private int hasReachedRandWanderingPosAnimID;
     
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -41,7 +41,7 @@ public class FleeToRandomPositionState : StateMachineBehaviour
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
-        animator.SetBool(hasReachedFleePosAnimID, false);
+        animator.SetBool(hasReachedRandWanderingPosAnimID, false);
         StopNavmeshAgent();
     }
 
@@ -51,7 +51,7 @@ public class FleeToRandomPositionState : StateMachineBehaviour
 
         slimeCharacter = animator.gameObject.GetComponent<SlimeCharacter>();
 
-        hasReachedFleePosAnimID = Animator.StringToHash("hasReachedFleePos");
+        hasReachedRandWanderingPosAnimID = Animator.StringToHash("hasReachedRandWanderingPos");
     }
 
     void GoToRandPosition()
@@ -74,7 +74,7 @@ public class FleeToRandomPositionState : StateMachineBehaviour
     
     void UpdateAnimatorHasReachedFleePosition(Animator animator)
     {
-        animator.SetBool(hasReachedFleePosAnimID, HasReachedFleePosition());
+        animator.SetBool(hasReachedRandWanderingPosAnimID, HasReachedFleePosition());
     }
     
     void StopNavmeshAgent()

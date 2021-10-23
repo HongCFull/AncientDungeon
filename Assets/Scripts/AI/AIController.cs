@@ -62,7 +62,8 @@ public class AIController : MonoBehaviour
 
     void UpdateAnimatorWalkSpeed()
     {
-        animator.SetFloat(currentSpeedAnimID,navMeshAgent.speed);
+        Vector2 horizontalVel = navMeshAgent.velocity;
+        animator.SetFloat(currentSpeedAnimID,horizontalVel.magnitude);
     }
 
     void UpdateAnimatorCanAttackPlayer()
