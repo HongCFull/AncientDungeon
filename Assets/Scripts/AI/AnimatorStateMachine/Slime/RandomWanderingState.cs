@@ -9,7 +9,7 @@ using UnityEngine.Animations;
 /// </summary>
 public class RandomWanderingState : StateMachineBehaviour
 {
-    [SerializeField] private float tolerance ;
+    [SerializeField] private float tolerance=0.5f;
     
     private NavMeshAgent navMeshAgent;
     private SlimeCharacter slimeCharacter;
@@ -31,11 +31,7 @@ public class RandomWanderingState : StateMachineBehaviour
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
         UpdateAnimatorHasReachedFleePosition(animator);
-
-        if (HasReachedFleePosition()) {
-            StopNavmeshAgent();
-        }
-
+        
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -65,16 +61,11 @@ public class RandomWanderingState : StateMachineBehaviour
         destination = hit.position;
         navMeshAgent.SetDestination(destination);    
     }
-
-    bool HasReachedFleePosition()
-    {
-        distError = (navMeshAgent.transform.position - destination).magnitude;
-        return distError <= tolerance;
-    }
     
     void UpdateAnimatorHasReachedFleePosition(Animator animator)
     {
-        animator.SetBool(hasReachedRandWanderingPosAnimID, HasReachedFleePosition());
+        bool hasReachedFleePosition = AIPredicateHelper.HasReachedPosition(navMeshAgent.transform.position,destination,tolerance);
+        animator.SetBool(hasReachedRandWanderingPosAnimID, hasReachedFleePosition);
     }
     
     void StopNavmeshAgent()

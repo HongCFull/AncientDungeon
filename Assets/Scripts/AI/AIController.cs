@@ -23,7 +23,7 @@ public class AIController : MonoBehaviour
     private int canAttackAnimID;
     
     //Hatred Variables
-    private bool isHatred = false;
+    public bool isHatred { get; private set; } = false;
     private float lossSightTimer;
     private const float wanderTimeAfterLossSight = 5f;
     [SerializeField] private float forceHatredDistance;

@@ -8,14 +8,16 @@ public abstract class AICharacter : MonoBehaviour
 {
     [SerializeField] private AIVision vision;
     [SerializeField] private float attackDistance;
-
-
+    
     [Header("Debug Settings")] 
     [SerializeField] private bool showAttackDistance;
     [SerializeField] private Color attackDistanceColor;
 
-    protected void Start()
+    public Vector3 initPosition { get; private set; }
+
+    private void Awake()
     {
+        initPosition = transform.position;
     }
 
     public float GetAttackDistance()

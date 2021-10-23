@@ -9,11 +9,16 @@ public class ChasePlayerState : StateMachineBehaviour
     private NavMeshAgent navMeshAgent;
     private AICharacter aiCharacter;
     
+    //Anim id
+    private int hasBeenResetAnimID;
+
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         CacheReferences(animator);
         LookAtPlayer(animator);
+        
+        animator.SetBool(hasBeenResetAnimID,false);
     }
     
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -34,6 +39,8 @@ public class ChasePlayerState : StateMachineBehaviour
     {
         navMeshAgent = animator.gameObject.GetComponent<NavMeshAgent>();
         aiCharacter = animator.gameObject.GetComponent<AICharacter>();
+
+        hasBeenResetAnimID = Animator.StringToHash("hasBeenReset");
     }
 
     private void LookAtPlayer(Animator animator)
