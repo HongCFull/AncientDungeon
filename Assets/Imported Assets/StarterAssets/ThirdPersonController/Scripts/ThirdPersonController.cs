@@ -83,7 +83,7 @@ namespace TPSTemplate
 		private float _cinemachineTargetPitch;
 
 		//object references
-		public SlashVFXManager slashVFXManager;
+		//public SlashVFXManager slashVFXManager;
 
 		// player
 		private bool enableMovement = true;

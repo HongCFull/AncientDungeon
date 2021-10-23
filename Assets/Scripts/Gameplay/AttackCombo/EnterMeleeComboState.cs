@@ -33,12 +33,15 @@ public class EnterMeleeComboState : StateMachineBehaviour
     }
 
     void SpawnSlashVFX(Animator animator) {
+        /*
         if(!tpsController )
             tpsController = animator.GetComponent<ThirdPersonController>(); 
         
         for (int i = 0; i<slashVFXIndexs.Length; i++)
             tpsController.slashVFXManager.SpawnSlashEffect(slashVFXIndexs[i],vfxMoveWithPlayer);
-       
+       */
+        for (int i = 0; i<slashVFXIndexs.Length; i++)
+            PlayerCharacter.Instance.GetSlashVFXManager().SpawnSlashEffect(slashVFXIndexs[i],vfxMoveWithPlayer);
 
     }
 }
