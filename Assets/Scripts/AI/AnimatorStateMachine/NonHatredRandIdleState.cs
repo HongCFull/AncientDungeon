@@ -5,9 +5,15 @@ using UnityEngine.Animations;
 
 public class NonHatredRandIdleState : StateMachineBehaviour
 {
+    [Header("Random Wandering Setting")]
     [SerializeField] [Range(0, 10)] private float randWanderingPeriod;
     [SerializeField] [Range(0, 5)] private float randWanderingPeriodOffset;
-    private int isHatredAnimID;
+
+    [Header("Random Idle Animation Setting")] 
+    
+    [Tooltip("How many idle animation clips are there in this state")]
+    [SerializeField] [Range(0, 20)] private int totalIdleAnimClips;
+    
     private int idleIndexAnimID;
     private int nonHatredRandWanderingAnimID;
     
@@ -16,8 +22,8 @@ public class NonHatredRandIdleState : StateMachineBehaviour
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-
         CacheReferences(animator);
+        SetRandomIdleIndexAnimID(animator);
         GetRandWanderingDelay();
     }
 
@@ -41,7 +47,6 @@ public class NonHatredRandIdleState : StateMachineBehaviour
 
     void CacheReferences(Animator animator)
     {
-        isHatredAnimID = Animator.StringToHash("isHatred");
         idleIndexAnimID = Animator.StringToHash("idleIndex");
         nonHatredRandWanderingAnimID = Animator.StringToHash("nonHatredRandWandering");
     }
@@ -50,6 +55,10 @@ public class NonHatredRandIdleState : StateMachineBehaviour
     {
         randWanderingDelay = randWanderingPeriod + Random.Range(0, randWanderingPeriodOffset);
     }
-    
+
+    void SetRandomIdleIndexAnimID(Animator animator)
+    {
+        animator.SetInteger(idleIndexAnimID,Random.Range(0,totalIdleAnimClips));
+    }
     
 }
