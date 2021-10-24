@@ -18,6 +18,7 @@ public abstract class AICharacter : MonoBehaviour
     private void Awake()
     {
         initPosition = transform.position;
+        DisableAllAttackColliders();
     }
 
     public float GetAttackDistance()
@@ -39,6 +40,11 @@ public abstract class AICharacter : MonoBehaviour
         return transform.position;
     }
 
+    protected abstract void DisableAllAttackColliders();
+    protected abstract void EnableAttackCollider(int i);
+    protected abstract void DisableAttackCollider(int i);
+
+    
 #if UNITY_EDITOR
     private void OnDrawGizmos()
     {
