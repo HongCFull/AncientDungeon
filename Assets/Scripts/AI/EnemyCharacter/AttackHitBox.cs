@@ -9,7 +9,7 @@ using Combat;
 [RequireComponent(typeof(Collider))]
 public class AttackHitBox : MonoBehaviour
 {
-    [SerializeField] private List<HitBoxTag> canDamageObjectsWithTag;
+    [SerializeField] private List<HitBoxTag> canDamageHitBoxWithTag;
     [SerializeField] private float damage;
     
     private Collider attackCollider;
@@ -27,8 +27,8 @@ public class AttackHitBox : MonoBehaviour
         if (!combatCharacterHitBoxComp) 
             return;
 
-        HitBoxTag targetTag = combatCharacterHitBoxComp.GetSelfHitBoxTag();
-        foreach (HitBoxTag tag in canDamageObjectsWithTag) {
+        HitBoxTag targetTag = combatCharacterHitBoxComp.GetHitBoxTag();
+        foreach (HitBoxTag tag in canDamageHitBoxWithTag) {
             if (targetTag == tag) {
                 combatCharacterHitBoxComp.TakeDamageBy(damage);
             }

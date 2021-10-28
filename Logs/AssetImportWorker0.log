@@ -15,11 +15,11 @@ D:/Unity GameProject/Comp4971C
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61896
+63720
 Successfully changed project path to: D:/Unity GameProject/Comp4971C
 D:/Unity GameProject/Comp4971C
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 118.97 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 133.38 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.4f1 (0abb6314276a)
 [Subsystems] Discovering subsystems at path D:/Unity/2020.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -36,54 +36,131 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2020.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2020.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/2020.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56388
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56008
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2020.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/Unity/2020.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001246 seconds.
+Registered in 0.001115 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 177.96 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 135.08 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.577 seconds
+- Completed reload, in  1.735 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006462 seconds.
+Registered in 0.004462 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 136.94 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 151.05 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.141 seconds
+- Completed reload, in  2.029 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
-Refreshing native plugins compatible for Editor in 2.22 ms, found 1 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
+Refreshing native plugins compatible for Editor in 1.17 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4980 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 242.5 MB.
-System memory in use after: 242.4 MB.
+Unloading 4984 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 243.7 MB.
+System memory in use after: 243.8 MB.
 
-Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 5431.
-Total: 4.659400 ms (FindLiveObjects: 0.669400 ms CreateObjectMapping: 0.257800 ms MarkObjects: 3.319900 ms  DeleteObjects: 0.410700 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Scripts/Gameplay/PlayerCharacter.cs
-  artifactKey: Guid(0592393659cba934bafd333f760110ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Gameplay/PlayerCharacter.cs using Guid(0592393659cba934bafd333f760110ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8586c1aca8e0153a96a3556ae62c294') in 0.073605 seconds
-  Import took 0.087022 seconds .
+Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 5435.
+Total: 3.911700 ms (FindLiveObjects: 0.421800 ms CreateObjectMapping: 0.213300 ms MarkObjects: 2.717400 ms  DeleteObjects: 0.558000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000261 seconds.
-  path: Assets/Scripts/Gameplay/Combat/Damageable.cs
-  artifactKey: Guid(3bd92d239009e75438ed2067b68e18ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Gameplay/Combat/Damageable.cs using Guid(3bd92d239009e75438ed2067b68e18ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '575f866e05e12b5adfc42e0c9023bbf9') in 0.008100 seconds
-  Import took 0.019928 seconds .
+  path: Assets/Prefabs/Player Character SetUp.prefab
+  artifactKey: Guid(61d13b4a9aa729943bd0ad2c2d4e2c70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player Character SetUp.prefab using Guid(61d13b4a9aa729943bd0ad2c2d4e2c70) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Asset 'ShirleyAnimator': Transition 'AnyState -> Death' in state 'AnyState' doesn't have an Exit Time or any condition, transition will be ignored
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.EditorUtility:Internal_InstantiateRemoveAllNonAnimationComponentsSingle (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateRemoveAllNonAnimationComponents (UnityEngine.Object,UnityEngine.Vector3,UnityEngine.Quaternion)
+UnityEditor.EditorUtility:InstantiateForAnimatorPreview (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:UpdateGameObject (UnityEngine.Object)
+UnityEditor.GameObjectInspector/PreviewData:.ctor (UnityEngine.Object)
+UnityEditor.GameObjectInspector:GetPreviewData ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Editor/Src/Animation/StateMachine.cpp line 1847]
+
+ -> (artifact id: 'cecaac1fa1727d591a6537459cdf6c13') in 0.557195 seconds
+  Import took 0.573429 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 216.464641 seconds.
+  path: Assets/Animations/SDUnity-chan_Adventure_Action_Pack/Animations/Humanoid_only/anim/carry_heavy_stand@loop.anim
+  artifactKey: Guid(20b74b90dd348474699058840411925d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/SDUnity-chan_Adventure_Action_Pack/Animations/Humanoid_only/anim/carry_heavy_stand@loop.anim using Guid(20b74b90dd348474699058840411925d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1672b5f21d593f71799ad7a193de439') in 0.015657 seconds
+  Import took 0.027915 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.691827 seconds.
+  path: Assets/Animations/SDUnity-chan_Adventure_Action_Pack/Animations/Humanoid_only/anim/carry_heavy_throw.anim
+  artifactKey: Guid(e717e0cb5a2aed8449aab6116a21cc38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/SDUnity-chan_Adventure_Action_Pack/Animations/Humanoid_only/anim/carry_heavy_throw.anim using Guid(e717e0cb5a2aed8449aab6116a21cc38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b090fc50f9ad1048c9538539b5ccbde3') in 0.018499 seconds
+  Import took 0.028964 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.013202 seconds.
+  path: Assets/Animations/SDUnity-chan_Adventure_Action_Pack/Animations/Humanoid_only/anim/carry_heavy_throw.anim
+  artifactKey: Guid(e717e0cb5a2aed8449aab6116a21cc38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/SDUnity-chan_Adventure_Action_Pack/Animations/Humanoid_only/anim/carry_heavy_throw.anim using Guid(e717e0cb5a2aed8449aab6116a21cc38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b090fc50f9ad1048c9538539b5ccbde3') in 0.014505 seconds
+  Import took 0.025312 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.397435 seconds.
+  path: Assets/Animations/SDUnity-chan_Adventure_Action_Pack/Animations/Humanoid_only/anim/climb_hold_B@loop.anim
+  artifactKey: Guid(72302937af946b74a92b03a71a040923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/SDUnity-chan_Adventure_Action_Pack/Animations/Humanoid_only/anim/climb_hold_B@loop.anim using Guid(72302937af946b74a92b03a71a040923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bab12499371ca6742f863fe3d906c48') in 0.011380 seconds
+  Import took 0.022369 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001584 seconds.
+  path: Assets/Animations/SDUnity-chan_Adventure_Action_Pack/Animations/Humanoid_only/anim/climb_hold_B@loop.anim
+  artifactKey: Guid(72302937af946b74a92b03a71a040923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/SDUnity-chan_Adventure_Action_Pack/Animations/Humanoid_only/anim/climb_hold_B@loop.anim using Guid(72302937af946b74a92b03a71a040923) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bab12499371ca6742f863fe3d906c48') in 0.005244 seconds
+  Import took 0.016257 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.626408 seconds.
+  path: Assets/Animations/SDUnity-chan_Adventure_Action_Pack/Animations/Humanoid_only/anim/climb_mount@unlock.anim
+  artifactKey: Guid(c8964218bfe39674aad24b220ef838b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/SDUnity-chan_Adventure_Action_Pack/Animations/Humanoid_only/anim/climb_mount@unlock.anim using Guid(c8964218bfe39674aad24b220ef838b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ce6e2c60be96a0b52773abd7ed75a71') in 0.018439 seconds
+  Import took 0.029592 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.545695 seconds.
+  path: Assets/Animations/SDUnity-chan_Adventure_Action_Pack/Animations/Humanoid_only/anim/dash_ToStand.anim
+  artifactKey: Guid(16d2c33f616f356499e23241d0e9e1b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/SDUnity-chan_Adventure_Action_Pack/Animations/Humanoid_only/anim/dash_ToStand.anim using Guid(16d2c33f616f356499e23241d0e9e1b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '520a41594f99700e12e0a1f6b8d400d3') in 0.012066 seconds
+  Import took 0.022481 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001452 seconds.
+  path: Assets/Animations/SDUnity-chan_Adventure_Action_Pack/Animations/Humanoid_only/anim/dash_ToStand.anim
+  artifactKey: Guid(16d2c33f616f356499e23241d0e9e1b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/SDUnity-chan_Adventure_Action_Pack/Animations/Humanoid_only/anim/dash_ToStand.anim using Guid(16d2c33f616f356499e23241d0e9e1b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '520a41594f99700e12e0a1f6b8d400d3') in 0.008176 seconds
+  Import took 0.020062 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.575052 seconds.
+  path: Assets/Animations/SDUnity-chan_Adventure_Action_Pack/Animations/Humanoid_only/anim/emotion_Clap@loop.anim
+  artifactKey: Guid(deb7d2238b0a9a14b920dbfe939abf15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/SDUnity-chan_Adventure_Action_Pack/Animations/Humanoid_only/anim/emotion_Clap@loop.anim using Guid(deb7d2238b0a9a14b920dbfe939abf15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56bc61a31d3489ae07738849e477c6e9') in 0.049945 seconds
+  Import took 0.060084 seconds .
 

@@ -6,25 +6,28 @@ using UnityEngine.AI;
 
 /// <summary>
 /// Look at the player instantly or through interpolation.
-/// Note that this manipulates the root motion option of animator internally  
+/// Note that this manipulates the root motion option of animator internally or set rotation won't work
 /// </summary>
 public class LookAtPlayerState : StateMachineBehaviour
 {
-    private NavMeshAgent navMeshAgent;
-    private bool originalRMOption;
-
-    
     [SerializeField] private bool turnInstantly;
     
     [Header("Instant turning settings")]
     [Tooltip("Only usable when turnInstantly is true. The delay time percentage of this state to focus on player")]
     [SerializeField][Range(0,1)] private float delayTimePercentage;
-    private float delayCounter = 0f;
-    private float calculatedDelayTime ;
-    private bool finishedLookAtPlayerOnce = false;
-
+    
     [Header("Smooth turning settings")]
     [SerializeField] private float turningSpeed;
+    
+    private NavMeshAgent navMeshAgent;
+    private bool originalRMOption;
+    private float originalAgentSpeed;
+    private bool finishedLookAtPlayerOnce = false;
+
+    //Smoothing variable
+    private float delayCounter = 0f;
+    private float calculatedDelayTime ;
+   
     
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -33,7 +36,8 @@ public class LookAtPlayerState : StateMachineBehaviour
         CacheReferences(animator);
         CalculateDelayTime(stateInfo);
         DisableRootMotion(animator);
-
+        SetNavMeshAgentSpeedTo(0);
+       // SetNavMeshAgentDestination(navMeshAgent.gameObject.transform.position);
     }
     
 
@@ -52,12 +56,15 @@ public class LookAtPlayerState : StateMachineBehaviour
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
         animator.applyRootMotion = originalRMOption;
+        SetNavMeshAgentSpeedTo(originalAgentSpeed);
     }
 
     private void CacheReferences(Animator animator)
     {
         navMeshAgent = animator.gameObject.GetComponent<NavMeshAgent>();
         originalRMOption = animator.applyRootMotion;
+        originalAgentSpeed = navMeshAgent.speed;
+
     }
 
     void CalculateDelayTime(AnimatorStateInfo stateInfo)
@@ -96,6 +103,10 @@ public class LookAtPlayerState : StateMachineBehaviour
         navMeshAgent.transform.rotation = Quaternion.Lerp(currentRotation,targetRotation,turningSpeed * Time.deltaTime);
     }
 
-
+    void SetNavMeshAgentSpeedTo(float speed)
+    {
+        navMeshAgent.speed = speed;
+    }
+    
     
 }

@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Combat;
 
+[RequireComponent(typeof(Collider))]
 public abstract class HitBox : MonoBehaviour
 {
+    [Header("Generic HitBox Settings")]
     [Tooltip("The tag of this damageable gameObject")]
-    [SerializeField] private HitBoxTag selfHitBoxTag;
+    [SerializeField] private HitBoxTag hitBoxTag;
 
-    public HitBoxTag GetSelfHitBoxTag() => selfHitBoxTag;
+    public HitBoxTag GetHitBoxTag() => hitBoxTag;
 
     public abstract void TakeDamageBy(float damage);
 }

@@ -13,6 +13,7 @@ public abstract class CombatCharacter : MonoBehaviour
     [SerializeField] private UnityEvent whenItIsDamaged;
     
     [SerializeField] private UnityEvent whenItIsDead;
+    
     public bool IsDead() => currentHealth <= 0;
 
     
