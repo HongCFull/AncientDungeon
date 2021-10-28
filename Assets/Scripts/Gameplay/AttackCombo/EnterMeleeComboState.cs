@@ -19,7 +19,7 @@ public class EnterMeleeComboState : StateMachineBehaviour
         EnableRootMotion(animator);
         ResetMeleeAttack(animator);
         SpawnSlashVFX(animator);
-        Debug.Log("Enter melee combo state");
+       // Debug.Log("Enter melee combo state");
     }
 
     private void EnableRootMotion(Animator animator)

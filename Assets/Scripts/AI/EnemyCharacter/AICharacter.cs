@@ -4,23 +4,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public abstract class AICharacter : MonoBehaviour
+[RequireComponent(typeof(Animator))]
+public abstract class AICharacter : Damageable
 {
+    
+    [Header("Perception Settings")]
     [SerializeField] private AIVision vision;
+
+    [Header("Attack Settings")] 
     [SerializeField] private float attackDistance;
+    [SerializeField] private List<AttackHitBox> attackHitBoxes;
     
     [Header("Debug Settings")] 
     [SerializeField] private bool showAttackDistance;
     [SerializeField] private Color attackDistanceColor;
-
+    
+    //Animation
+    private Animator animator;
+    private int isDamagedAnimID;
+    
     public Vector3 initPosition { get; private set; }
 
-    private void Awake()
+    protected override void Awake()
     {
-        initPosition = transform.position;
-        DisableAllAttackColliders();
+        base.Awake();
+        //Debug.Log("AICharacter Awake");
+        
+        
+        //DisableAllAttackHitBoxes();
     }
 
+    void InitializeVariables()
+    {
+        initPosition = transform.position;
+        animator = GetComponent<Animator>();
+        isDamagedAnimID = Animator.StringToHash("IsDamaged");
+    }
+    
     public float GetAttackDistance()
     {
         return attackDistance;
@@ -40,10 +60,34 @@ public abstract class AICharacter : MonoBehaviour
         return transform.position;
     }
 
-    protected abstract void DisableAllAttackColliders();
-    protected abstract void EnableAttackCollider(int i);
-    protected abstract void DisableAttackCollider(int i);
+    protected void DisableAllAttackHitBoxes()
+    {
+        foreach (AttackHitBox attackHitBox in attackHitBoxes) {
+            attackHitBox.DisableAttackCollider();
+        }
+    }
+    
+    protected void EnableAttackHitBox(int i)
+    {
+        if (i < 0 || i >= attackHitBoxes.Count)
+            return;
+        
+        attackHitBoxes[i].EnableAttackCollider();
+    }
+    
+    protected void DisableAttackHitBox(int i)
+    {
+        if (i < 0 || i >= attackHitBoxes.Count)
+            return;
+        
+        attackHitBoxes[i].DisableAttackCollider();
+    }
 
+    public void SetAnimationTriggerIsDamaged()
+    {
+        animator.SetTrigger(isDamagedAnimID);
+    }
+    
     
 #if UNITY_EDITOR
     private void OnDrawGizmos()
