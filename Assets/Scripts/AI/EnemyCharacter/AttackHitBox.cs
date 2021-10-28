@@ -9,7 +9,7 @@ using Combat;
 [RequireComponent(typeof(Collider))]
 public class AttackHitBox : MonoBehaviour
 {
-    [SerializeField] private List<DamageableTag> canDamageObjectsWithTag;
+    [SerializeField] private List<HitBoxTag> canDamageObjectsWithTag;
     [SerializeField] private float damage;
     
     private Collider attackCollider;
@@ -23,15 +23,14 @@ public class AttackHitBox : MonoBehaviour
     //BUG: When player attacks the AI, it wont damage the AI properly. As the damageable script and the hit box of the enemy aren't attached in the same gameobject. 
     private void OnTriggerEnter(Collider other)
     {
-        Damageable damageableComp = other.gameObject.GetComponent<Damageable>();
-        if (!damageableComp) 
+        CombatCharacterHitBox combatCharacterHitBoxComp = other.gameObject.GetComponent<CombatCharacterHitBox>();
+        if (!combatCharacterHitBoxComp) 
             return;
 
-        DamageableTag targetTag = damageableComp.GetDamageableTag();
-        Debug.Log(targetTag);
-        foreach (DamageableTag tag in canDamageObjectsWithTag) {
+        HitBoxTag targetTag = combatCharacterHitBoxComp.GetSelfHitBoxTag();
+        foreach (HitBoxTag tag in canDamageObjectsWithTag) {
             if (targetTag == tag) {
-                damageableComp.TakeDamageBy(damage);
+                combatCharacterHitBoxComp.TakeDamageBy(damage);
             }
         }
     }

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(Animator))]
-public abstract class AICharacter : Damageable
+public abstract class AICharacter : CombatCharacter
 {
     
     [Header("Perception Settings")]
@@ -29,8 +29,8 @@ public abstract class AICharacter : Damageable
     {
         base.Awake();
         //Debug.Log("AICharacter Awake");
-        
-        
+        InitializeVariables();
+
         //DisableAllAttackHitBoxes();
     }
 
@@ -38,7 +38,7 @@ public abstract class AICharacter : Damageable
     {
         initPosition = transform.position;
         animator = GetComponent<Animator>();
-        isDamagedAnimID = Animator.StringToHash("IsDamaged");
+        isDamagedAnimID = Animator.StringToHash("isDamaged");
     }
     
     public float GetAttackDistance()

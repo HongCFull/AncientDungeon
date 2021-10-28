@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(Animator))]
-public class PlayerCharacter : Damageable
+public class PlayerCharacter : CombatCharacter
 {
     [SerializeField] private AttackHitBox weaponHitBox;
     [SerializeField] private SlashVFXManager slashVFXManager;

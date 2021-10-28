@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Combat
 {
-    public enum DamageableTag
+    public enum HitBoxTag
     {
         PLAYER, AI_CHARACTER, DECORATION      
     }

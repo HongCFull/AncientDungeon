@@ -1,18 +1,11 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using Combat;
 using UnityEngine;
 using UnityEngine.Events;
 
-
-[RequireComponent(typeof(Collider))]
-public class Damageable : MonoBehaviour
+public abstract class CombatCharacter : MonoBehaviour
 {
-    [Header("Damageable Settings")] 
     
-    [Tooltip("The tag of this damageable gameObject")]
-    [SerializeField] private DamageableTag damageableTag;
     [SerializeField] private float currentHealth;
     [SerializeField] private float maxHealth;
     
@@ -20,11 +13,9 @@ public class Damageable : MonoBehaviour
     [SerializeField] private UnityEvent whenItIsDamaged;
     
     [SerializeField] private UnityEvent whenItIsDead;
-    
-
     public bool IsDead() => currentHealth <= 0;
-    public DamageableTag GetDamageableTag() => damageableTag;
 
+    
     protected virtual void Awake()
     {
         //Debug.Log("Damageable::Awake");
@@ -46,5 +37,4 @@ public class Damageable : MonoBehaviour
             whenItIsDamaged.Invoke();
         }
     }
-
 }
