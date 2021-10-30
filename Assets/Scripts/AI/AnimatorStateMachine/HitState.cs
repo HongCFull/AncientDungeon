@@ -16,13 +16,13 @@ public class HitState : StateMachineBehaviour
         InitializeVariables(animator);
         //animator.ResetTrigger(isDamagedAnimID);
         
-        tpsController.DisableCharacterMovement();
+        tpsController.DisableCharacterWalking();
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
-        tpsController.EnableCharacterMovement();
+        tpsController.EnableCharacterWalking();
 
     }
 

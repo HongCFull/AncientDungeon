@@ -24,7 +24,7 @@ public class MeleeComboHandler : MonoBehaviour
 
     private void InitializeComboSetting() {
         ResetCanTriggerNextCombo();
-        thirdPersonController.DisableCharacterMovement();
+        thirdPersonController.DisableCharacterWalking();
     }
     /*
     private void AllowNextComboTransition() {

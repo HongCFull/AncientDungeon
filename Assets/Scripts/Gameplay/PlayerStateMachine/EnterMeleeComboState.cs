@@ -10,16 +10,35 @@ public class EnterMeleeComboState : StateMachineBehaviour
 
     [SerializeField] private bool enableRootMotion;
     [SerializeField] private bool vfxMoveWithPlayer;
-    private ThirdPersonController tpsController = null;
-    
 
+    private PlayerCharacter playerCharacter;
+    
+    //Animation IDs
+    private int animIDIsInComboState;
+    
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
+
+        CacheComponents(animator);
+        
+        animator.SetBool(animIDIsInComboState,true);
         EnableRootMotion(animator);
-        ResetMeleeAttack(animator);
         SpawnSlashVFX(animator);
-       // Debug.Log("Enter melee combo state");
+    }
+
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        base.OnStateExit(animator, stateInfo, layerIndex);
+        animator.SetBool(animIDIsInComboState,false);
+        playerCharacter.DisableAttackHitBoxOfWeapon();
+    }
+
+    private void CacheComponents(Animator animator)
+    {
+        playerCharacter = animator.gameObject.GetComponent<PlayerCharacter>();
+        animIDIsInComboState = Animator.StringToHash("IsInComboState");
+
     }
 
     private void EnableRootMotion(Animator animator)
@@ -27,19 +46,8 @@ public class EnterMeleeComboState : StateMachineBehaviour
         animator.applyRootMotion = enableRootMotion;
     }
     
-    void ResetMeleeAttack(Animator animator) {
-        animator.ResetTrigger("MeleeAttack");
-        //Debug.Log("Reset MeleeAttack");   
-    }
-
+   
     void SpawnSlashVFX(Animator animator) {
-        /*
-        if(!tpsController )
-            tpsController = animator.GetComponent<ThirdPersonController>(); 
-        
-        for (int i = 0; i<slashVFXIndexs.Length; i++)
-            tpsController.slashVFXManager.SpawnSlashEffect(slashVFXIndexs[i],vfxMoveWithPlayer);
-       */
         for (int i = 0; i<slashVFXIndexs.Length; i++)
             PlayerCharacter.Instance.GetSlashVFXManager().SpawnSlashEffect(slashVFXIndexs[i],vfxMoveWithPlayer);
 

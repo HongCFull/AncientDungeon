@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Runtime.Remoting.Messaging;
 using Unity.Collections;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
@@ -55,6 +57,9 @@ namespace TPSTemplate
 		[Tooltip("Time required to pass before entering the fall state. Useful for walking down stairs")]
 		public float FallTimeout = 0.15f;
 
+		[Tooltip("Reset Dash animation trigger parameter, if dash is not performed in this amount of time")]
+		public float DashTimeout = 0.4f;
+		
 		[Header("Player Grounded")]
 		[Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
 		public bool Grounded = true;
@@ -86,7 +91,7 @@ namespace TPSTemplate
 		//public SlashVFXManager slashVFXManager;
 
 		// player
-		private bool enableMovement = true;
+		private bool enableWaling = true;
 		private float _speed;
 		private float _animationBlend;
 		private float _targetRotation = 0.0f;
@@ -105,6 +110,9 @@ namespace TPSTemplate
 		private int _animIDFreeFall;
 		private int _animIDMotionSpeed;
 		private int _animIDMeleeAttack;
+		private int _animIDIsInComboState;
+		private int _animIDDash;
+		private int _animIDTurningAngle;
 
 		private Animator _animator;
 		private CharacterController _controller;
@@ -112,8 +120,10 @@ namespace TPSTemplate
 		private GameObject _mainCamera;
 
 		private const float _threshold = 0.01f;
+		
+		//
+		private IEnumerator resetDashTriggerOperation;
 
-		//private bool _hasAnimator;
 
 		private void Awake()
 		{
@@ -137,14 +147,14 @@ namespace TPSTemplate
 
 		private void Update()
 		{
-			if (enableMovement) {
-				JumpAndGravity();
+			HandleInputInComboState();
+			if (enableWaling) {
 				Move();
 			}
 			else {
 				ResetAnimatorMovementPara();
 			}
-
+			JumpAndGravity();
 //			_controller.Move(_animator.deltaPosition);
 			GroundedCheck();
 			HandleAttack();
@@ -163,12 +173,12 @@ namespace TPSTemplate
 		/// <summary>
 		/// In the animation transition, the enable character movement is enabled before transiting to any other state.
 		/// </summary>
-		public void EnableCharacterMovement() {
-			enableMovement = true;
+		public void EnableCharacterWalking() {
+			enableWaling = true;
 		}  	
 
-		public void DisableCharacterMovement() {
-			enableMovement = false;
+		public void DisableCharacterWalking() {
+			enableWaling = false;
 		}  	
 		
 ///====================================================================================================================================================================================================================================================================================
@@ -181,6 +191,7 @@ namespace TPSTemplate
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
 			_speed = MoveSpeed;
+			resetDashTriggerOperation = ResetAnimTriggerDash(DashTimeout);
 		}
 		
 		private void AssignAnimationIDs()
@@ -191,6 +202,10 @@ namespace TPSTemplate
 			_animIDFreeFall = Animator.StringToHash("FreeFall");
 			_animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
 			_animIDMeleeAttack = Animator.StringToHash("MeleeAttack");
+			_animIDDash = Animator.StringToHash("Dash");
+			_animIDIsInComboState = Animator.StringToHash("IsInComboState");
+			_animIDTurningAngle = Animator.StringToHash("TurningAngle");
+			
 		}
 
 		private void GroundedCheck()
@@ -227,9 +242,10 @@ namespace TPSTemplate
 			float targetSpeed;
 			if (_input.move == Vector2.zero) 
 				targetSpeed = 0.0f;
-			else 
+			else {
 				targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
-			
+			}
+
 			float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
 			//Debug.Log("speed = " + currentHorizontalSpeed);
 			ApplyRotationSmoothTimeOnGround(currentHorizontalSpeed);
@@ -254,7 +270,7 @@ namespace TPSTemplate
 			_animationBlend = Mathf.Lerp(_animationBlend, targetSpeed, Time.deltaTime * SpeedChangeRate);
 
 			// normalise input direction
-			Vector3 inputDirection = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
+			Vector3 inputDirection = GetNormalizedInputVector();
 
 			// note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
 			// if there is a move input rotate player when the player is moving
@@ -267,9 +283,8 @@ namespace TPSTemplate
 				transform.rotation = Quaternion.Euler(0.0f, rotation, 0.0f);
 			}
 
-
 			Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
-
+			
 			// move the player
 			_controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 
@@ -295,7 +310,7 @@ namespace TPSTemplate
 
 				// Jump
 
-				if (_input.jump && _jumpTimeoutDelta <= 0.0f && enableMovement) {
+				if (_input.jump && _jumpTimeoutDelta <= 0.0f ) {
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
 
@@ -364,7 +379,51 @@ namespace TPSTemplate
 			}
 		}
 
+		private void HandleInputInComboState()
+		{
+			if(!_animator.GetBool(_animIDIsInComboState))
+				return;
+			if (_input.sprint){
+				StopCoroutine(resetDashTriggerOperation);
+				_animator.SetTrigger(_animIDDash);
+				StartCoroutine(resetDashTriggerOperation);
+			}
 
+			UpdateAnimatorTurningAngle(GetNormalizedInputVectorInCameraSpace());
+
+		}
+
+		IEnumerator ResetAnimTriggerDash(float delay)
+		{
+			yield return new WaitForSeconds(delay);
+			_animator.ResetTrigger(_animIDDash);
+		}
+
+		private Vector3 GetNormalizedInputVector()
+		{
+			return new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
+		}
+		
+		private Vector3 GetNormalizedInputVectorInCameraSpace()
+		{
+			Vector3 inputVector = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
+			Quaternion shiftVector = Quaternion.FromToRotation(Vector3.forward, _mainCamera.transform.forward);
+			return (shiftVector * inputVector).normalized;
+		}
+
+		private void UpdateAnimatorTurningAngle(Vector3 inputVectorInCameraSpace)
+		{
+			if (inputVectorInCameraSpace == Vector3.zero)
+			{
+				_animator.SetFloat(_animIDTurningAngle,0f);
+				return;
+			}
+			bool isTurningRight = Vector3.Cross(transform.forward,inputVectorInCameraSpace).y< 0;
+			float angle = Mathf.Acos(Vector3.Dot(transform.forward, inputVectorInCameraSpace))/Mathf.PI*180f;
+			angle = isTurningRight ? -angle : angle;
+			_animator.SetFloat(_animIDTurningAngle,angle);
+		}
+		
 #if  UNITY_EDITOR
 		private void OnDrawGizmosSelected()
 		{
