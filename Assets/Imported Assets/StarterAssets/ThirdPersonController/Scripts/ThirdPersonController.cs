@@ -383,13 +383,15 @@ namespace TPSTemplate
 		{
 			if(!_animator.GetBool(_animIDIsInComboState))
 				return;
+			
+			UpdateAnimatorTurningAngle(GetNormalizedInputVectorInCameraSpace());
+			
 			if (_input.sprint){
 				StopCoroutine(resetDashTriggerOperation);
 				_animator.SetTrigger(_animIDDash);
 				StartCoroutine(resetDashTriggerOperation);
 			}
 
-			UpdateAnimatorTurningAngle(GetNormalizedInputVectorInCameraSpace());
 
 		}
 
@@ -407,8 +409,13 @@ namespace TPSTemplate
 		private Vector3 GetNormalizedInputVectorInCameraSpace()
 		{
 			Vector3 inputVector = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
-			Quaternion shiftVector = Quaternion.FromToRotation(Vector3.forward, _mainCamera.transform.forward);
-			return (shiftVector * inputVector).normalized;
+			Vector3 cameraForwardVector = _mainCamera.transform.forward;
+			cameraForwardVector.y = 0;
+			
+			Quaternion shiftVector = Quaternion.FromToRotation(Vector3.forward, cameraForwardVector.normalized);
+			Vector3 result = (shiftVector * inputVector);
+			result.y = 0;
+			return result.normalized;
 		}
 
 		private void UpdateAnimatorTurningAngle(Vector3 inputVectorInCameraSpace)
@@ -418,8 +425,8 @@ namespace TPSTemplate
 				_animator.SetFloat(_animIDTurningAngle,0f);
 				return;
 			}
-			bool isTurningRight = Vector3.Cross(transform.forward,inputVectorInCameraSpace).y< 0;
-			float angle = Mathf.Acos(Vector3.Dot(transform.forward, inputVectorInCameraSpace))/Mathf.PI*180f;
+			bool isTurningRight = Vector3.Cross(transform.forward.normalized,inputVectorInCameraSpace).y< 0;
+			float angle = Mathf.Acos(Vector3.Dot(transform.forward.normalized, inputVectorInCameraSpace))/Mathf.PI*180f;
 			angle = isTurningRight ? -angle : angle;
 			_animator.SetFloat(_animIDTurningAngle,angle);
 		}
