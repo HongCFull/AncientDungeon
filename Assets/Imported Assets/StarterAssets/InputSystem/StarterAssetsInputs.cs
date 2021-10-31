@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
@@ -5,6 +6,7 @@ using UnityEngine.InputSystem;
 
 namespace TPSTemplate
 {
+	[RequireComponent(typeof(ThirdPersonController))]
 	public class StarterAssetsInputs : MonoBehaviour
 	{
 		[Header("Default Character Input Values")]
@@ -16,47 +18,68 @@ namespace TPSTemplate
 		
 		[Header("Movement Settings")]
 		public bool analogMovement;
-
-#if !UNITY_IOS || !UNITY_ANDROID
+		[SerializeField] [Range(0f,10f)]private float dashCoolDownTime; 
+		
+	#if !UNITY_IOS || !UNITY_ANDROID
 		[Header("Mouse Cursor Settings")]
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
-#endif
-		//jumping internal constraints;
-		private const float maxJumpHoldingTime = 0.03f;
-		private float jumpHoldingTimer =0f;
+	#endif
 		
-#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
-		public void OnMove(InputValue value)
+		private ThirdPersonController tpsController;
+		
+		//Dash Variables
+		private float dashCoolDownTimer = 0f;
+		private bool canTriggerDash = true;
+		
+#if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED 
+
+		private void Awake()
 		{
-			MoveInput(value.Get<Vector2>());
+			tpsController = GetComponent<ThirdPersonController>();
 		}
 
-		public void OnLook(InputValue value)
+		private void Update()
 		{
-			if(cursorInputForLook)
-			{
-				LookInput(value.Get<Vector2>());
+			if (!canTriggerDash) {
+				dashCoolDownTimer += Time.deltaTime;
+				if (dashCoolDownTimer >= dashCoolDownTime) {
+					dashCoolDownTimer = 0f;
+					canTriggerDash = true;
+				}
 			}
 		}
 
-		public void OnJump(InputValue value)
+		//Invoke event method
+		public void OnMove(InputAction.CallbackContext callbackContext)
 		{
-			JumpInput(value.isPressed);
-			
+			MoveInput(callbackContext.ReadValue<Vector2>());
 		}
 
-		public void OnSprint(InputValue value)
+		public void OnLook(InputAction.CallbackContext callbackContext)
 		{
-			SprintInput(value.isPressed);
+			if(cursorInputForLook) {
+				LookInput(callbackContext.ReadValue<Vector2>());
+			}
+		}
+		public void OnJump(InputAction.CallbackContext callbackContext)
+		{
+			JumpInput(callbackContext.ReadValueAsButton());
+		}
+
+		public void OnDash(InputAction.CallbackContext callbackContext)
+		{
+			if (canTriggerDash && callbackContext.performed) {
+				canTriggerDash = false;
+				tpsController.TriggerDash();
+			}
 		}
 		
-		public void OnMeleeAttack(InputValue value) {
-			//Debug.Log("OnMeleeAttack is called!");
-			MeleeAttackInput(value.isPressed);
+		public void OnMeleeAttack(InputAction.CallbackContext callbackContext)
+		{
+			MeleeAttackInput(callbackContext.ReadValueAsButton());
 		}
-#else
-	// old input sys if we do decide to have it (most likely wont)...
+
 #endif
 
 
@@ -96,10 +119,43 @@ namespace TPSTemplate
 			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
 		}
 		
-
-
 #endif
 
 	}
 	
 }
+
+/* Obsolete
+// Send MSG method
+		
+		public void OnMove(InputValue value)
+		{
+			MoveInput(value.Get<Vector2>());
+		}
+
+		public void OnLook(InputValue value)
+		{
+			if(cursorInputForLook)
+			{
+				LookInput(value.Get<Vector2>());
+			}
+		}
+
+		public void OnJump(InputValue value)
+		{
+			JumpInput(value.isPressed);
+			
+		}
+
+		public void OnSprint(InputValue value)
+		{
+			SprintInput(value.isPressed);
+		}
+		
+		public void OnMeleeAttack(InputValue value) {
+			//Debug.Log("OnMeleeAttack is called!");
+			MeleeAttackInput(value.isPressed);
+		}
+		
+
+*/

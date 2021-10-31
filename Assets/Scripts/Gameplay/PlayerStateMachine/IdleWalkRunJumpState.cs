@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TPSTemplate;
 using UnityEngine;
 
-public class EnterLocoMotionState : StateMachineBehaviour
+public class IdleWalkRunJumpState : StateMachineBehaviour
 {
     private ThirdPersonController tpsController = null;
 
@@ -11,6 +11,7 @@ public class EnterLocoMotionState : StateMachineBehaviour
         base.OnStateEnter(animator, stateInfo, layerIndex);
         DisableRootMotion(animator);
         EnableCharacterWalking(animator);
+        Debug.Log("enter IdleWalkRunJump State");
     }
     
 

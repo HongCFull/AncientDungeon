@@ -83,15 +83,15 @@ namespace TPSTemplate
 		[Tooltip("For locking the camera position on all axis")]
 		public bool LockCameraPosition = false;
 
+		//
+		
 		// cinemachine
 		private float _cinemachineTargetYaw;
 		private float _cinemachineTargetPitch;
-
-		//object references
-		//public SlashVFXManager slashVFXManager;
-
+		
 		// player
 		private bool enableWaling = true;
+		private bool enableGravity = true;
 		private float _speed;
 		private float _animationBlend;
 		private float _targetRotation = 0.0f;
@@ -148,17 +148,17 @@ namespace TPSTemplate
 		private void Update()
 		{
 			HandleInputInComboState();
+			UpdateAnimatorTurningAngle(GetNormalizedInputVectorInCameraSpace());
+
 			if (enableWaling) {
 				Move();
 			}
 			else {
 				ResetAnimatorMovementPara();
 			}
-			JumpAndGravity();
-//			_controller.Move(_animator.deltaPosition);
+			JumpAndGravityCalculation();
 			GroundedCheck();
-			HandleAttack();
-
+			HandleMeleeAttackInput();
 		}
 
 		private void LateUpdate()
@@ -173,13 +173,31 @@ namespace TPSTemplate
 		/// <summary>
 		/// In the animation transition, the enable character movement is enabled before transiting to any other state.
 		/// </summary>
-		public void EnableCharacterWalking() {
+		public void EnableCharacterWalking() 
+		{
 			enableWaling = true;
 		}  	
 
-		public void DisableCharacterWalking() {
+		public void DisableCharacterWalking() 
+		{
 			enableWaling = false;
-		}  	
+		}
+
+		public void EnableGravity()
+		{
+			enableGravity = true;
+		}
+		
+		public void DisableGravity()
+		{
+			enableGravity = false;
+		}
+		
+		public void TriggerDash()
+		{
+			_animator.SetTrigger(_animIDDash);
+		}
+		
 		
 ///====================================================================================================================================================================================================================================================================================
 /// private functions
@@ -243,12 +261,13 @@ namespace TPSTemplate
 			if (_input.move == Vector2.zero) 
 				targetSpeed = 0.0f;
 			else {
-				targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
+				//targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
+				targetSpeed = SprintSpeed;
 			}
 
 			float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
 			//Debug.Log("speed = " + currentHorizontalSpeed);
-			ApplyRotationSmoothTimeOnGround(currentHorizontalSpeed);
+			//ApplyRotationSmoothTimeOnGround(currentHorizontalSpeed);
 			
 			float speedOffset = 0.1f;
 			float inputMagnitude = _input.analogMovement ? _input.move.magnitude : 1f;
@@ -284,16 +303,25 @@ namespace TPSTemplate
 			}
 
 			Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
+
+			Vector3 movementVector;
+			if (enableGravity)
+				movementVector = targetDirection.normalized * (_speed * Time.deltaTime) +
+				                 new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime;
+			else
+				movementVector = targetDirection.normalized * (_speed * Time.deltaTime);
 			
 			// move the player
-			_controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+			//_controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+			_controller.Move(movementVector);
+
 
 			_animator.SetFloat(_animIDSpeed, _animationBlend);
 			_animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
 
 		}
 
-		private void JumpAndGravity()
+		private void JumpAndGravityCalculation()
 		{
 
 			if (Grounded) {
@@ -340,26 +368,22 @@ namespace TPSTemplate
 				_input.jump = false;
 			}
 
+			CalculateGravity();
+
+		}
+
+		private void CalculateGravity()
+		{
 			// apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
 			if (_verticalVelocity < _terminalVelocity) {
 				_verticalVelocity += Gravity * Time.deltaTime;
 			}
 		}
-
 		private void ResetAnimatorMovementPara() {
 			_animator.SetFloat(_animIDSpeed, 0);
 			_animator.SetFloat(_animIDMotionSpeed, 0);
 		}
-		
-		private void HandleAttack() 
-		{
-			_animator.ResetTrigger(_animIDMeleeAttack);
-			if (_input.meleeAttack) {
-				_input.meleeAttack = false;
-				_animator.SetTrigger(_animIDMeleeAttack);
-			}
-		}
-		
+
 		private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
 		{
 			if (lfAngle < -360f) lfAngle += 360f;
@@ -379,19 +403,23 @@ namespace TPSTemplate
 			}
 		}
 
+		private void HandleMeleeAttackInput() 
+		{
+			if (_input.meleeAttack) {
+				_input.meleeAttack = false;
+				_animator.SetTrigger(_animIDMeleeAttack);
+			}
+			else {
+				_animator.ResetTrigger(_animIDMeleeAttack);
+			}
+		}
+		
 		private void HandleInputInComboState()
 		{
 			if(!_animator.GetBool(_animIDIsInComboState))
 				return;
-			
-			UpdateAnimatorTurningAngle(GetNormalizedInputVectorInCameraSpace());
-			
-			if (_input.sprint){
-				StopCoroutine(resetDashTriggerOperation);
-				_animator.SetTrigger(_animIDDash);
-				StartCoroutine(resetDashTriggerOperation);
-			}
 		}
+		
 
 		IEnumerator ResetAnimTriggerDash(float delay)
 		{

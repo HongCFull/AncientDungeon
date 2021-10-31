@@ -11,9 +11,14 @@ public class PlayerMeleeComboState : StateMachineBehaviour
     [SerializeField] private bool enableRootMotion;
     [SerializeField] private bool vfxMoveWithPlayer;
 
+    [Header("VFX move with player settings")] 
+    [SerializeField] [Range(-0.1f,5f)] private float appendDuration;
+    
     private PlayerCharacter playerCharacter;
     private bool originalRMOption;
-    private bool hasRotated=false;
+    private bool hasRotated;
+    private bool hasExited;
+    
     //Animation IDs
     private int animIDIsInComboState;
     
@@ -22,16 +27,19 @@ public class PlayerMeleeComboState : StateMachineBehaviour
         base.OnStateEnter(animator, stateInfo, layerIndex);
 
         CacheComponents(animator);
-//        RotatePlayerFocus(animator);
-
         SetRootMotionTo(animator,enableRootMotion);
         animator.SetBool(animIDIsInComboState,true);
         SpawnSlashVFX(animator);
+
     }
 
     
     public override void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        //State move will still be called after the state has exit!
+        if (hasExited) 
+            return;
+        
         base.OnStateMove(animator, stateInfo, layerIndex);
         if (!hasRotated) {
             RotatePlayerFocus(animator);
@@ -46,10 +54,11 @@ public class PlayerMeleeComboState : StateMachineBehaviour
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
+        hasExited = true;
         animator.SetBool(animIDIsInComboState,false);
         animator.applyRootMotion = originalRMOption;
-        hasRotated = false;
         playerCharacter.DisableAttackHitBoxOfWeapon();
+        hasRotated = false;
     }
 
     private void CacheComponents(Animator animator)
@@ -57,6 +66,9 @@ public class PlayerMeleeComboState : StateMachineBehaviour
         playerCharacter = animator.gameObject.GetComponent<PlayerCharacter>();
         animIDIsInComboState = Animator.StringToHash("IsInComboState");
         originalRMOption = animator.applyRootMotion;
+        
+        hasRotated = false;
+        hasExited = false;
     }
 
     private void RotatePlayerFocus(Animator animator)
@@ -74,6 +86,10 @@ public class PlayerMeleeComboState : StateMachineBehaviour
    
     void SpawnSlashVFX(Animator animator) {
         for (int i = 0; i<slashVFXIndexs.Length; i++)
-            PlayerCharacter.Instance.GetSlashVFXManager().SpawnSlashEffect(slashVFXIndexs[i],vfxMoveWithPlayer);
+            if(!vfxMoveWithPlayer)
+                PlayerCharacter.Instance.GetSlashVFXManager().SpawnSlashEffect(slashVFXIndexs[i]);
+            else
+                PlayerCharacter.Instance.GetSlashVFXManager().SpawnSlashEffectThatFollowsPlayer(slashVFXIndexs[i],appendDuration);
+
     }
 }
