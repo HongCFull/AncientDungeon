@@ -391,8 +391,6 @@ namespace TPSTemplate
 				_animator.SetTrigger(_animIDDash);
 				StartCoroutine(resetDashTriggerOperation);
 			}
-
-
 		}
 
 		IEnumerator ResetAnimTriggerDash(float delay)

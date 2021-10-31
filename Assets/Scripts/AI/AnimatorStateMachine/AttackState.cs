@@ -8,7 +8,9 @@ public class AttackState : StateMachineBehaviour
     [SerializeField] private int numOfAttack;
     
     private NavMeshAgent navMeshAgent;
+    private AICharacter aiCharacter;
     private int animIDAttackIndex;
+    private int randAttackIndex;
     
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -17,11 +19,21 @@ public class AttackState : StateMachineBehaviour
         StopNavmeshAgent();
         SetAnimatorIntAttackIndex(animator);
     }
+    
 
     void CacheReferences(Animator animator)
     {
         navMeshAgent = animator.gameObject.GetComponent<NavMeshAgent>();
+        aiCharacter = animator.gameObject.GetComponent<AICharacter>();
         animIDAttackIndex = Animator.StringToHash("attackIndex");
+    }
+
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        base.OnStateExit(animator, stateInfo, layerIndex);
+        
+        //To prevent the reset in animation event is not being called
+        aiCharacter.DisableAttackHitBox(randAttackIndex);
     }
 
     void StopNavmeshAgent()
@@ -31,6 +43,7 @@ public class AttackState : StateMachineBehaviour
 
     void SetAnimatorIntAttackIndex(Animator animator)
     {
-        animator.SetInteger(animIDAttackIndex,Random.Range(0,numOfAttack));
+        randAttackIndex = Random.Range(0, numOfAttack);
+        animator.SetInteger(animIDAttackIndex,randAttackIndex);
     }
 }

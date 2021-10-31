@@ -60,14 +60,14 @@ public abstract class AICharacter : CombatCharacter
         return transform.position;
     }
 
-    protected void DisableAllAttackHitBoxes()
+    public void DisableAllAttackHitBoxes()
     {
         foreach (AttackHitBox attackHitBox in attackHitBoxes) {
             attackHitBox.DisableAttackCollider();
         }
     }
     
-    protected void EnableAttackHitBox(int i)
+    public void EnableAttackHitBox(int i)
     {
         if (i < 0 || i >= attackHitBoxes.Count)
             return;
@@ -75,7 +75,7 @@ public abstract class AICharacter : CombatCharacter
         attackHitBoxes[i].EnableAttackCollider();
     }
     
-    protected void DisableAttackHitBox(int i)
+    public void DisableAttackHitBox(int i)
     {
         if (i < 0 || i >= attackHitBoxes.Count)
             return;
