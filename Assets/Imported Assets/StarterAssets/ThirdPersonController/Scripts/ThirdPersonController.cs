@@ -120,10 +120,6 @@ namespace TPSTemplate
 		private GameObject _mainCamera;
 
 		private const float _threshold = 0.01f;
-		
-		//
-		private IEnumerator resetDashTriggerOperation;
-
 
 		private void Awake()
 		{
@@ -198,7 +194,6 @@ namespace TPSTemplate
 			_animator.SetTrigger(_animIDDash);
 		}
 		
-		
 ///====================================================================================================================================================================================================================================================================================
 /// private functions
 ///====================================================================================================================================================================================================================================================================================
@@ -209,7 +204,6 @@ namespace TPSTemplate
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
 			_speed = MoveSpeed;
-			resetDashTriggerOperation = ResetAnimTriggerDash(DashTimeout);
 		}
 		
 		private void AssignAnimationIDs()
@@ -419,13 +413,6 @@ namespace TPSTemplate
 			if(!_animator.GetBool(_animIDIsInComboState))
 				return;
 		}
-		
-
-		IEnumerator ResetAnimTriggerDash(float delay)
-		{
-			yield return new WaitForSeconds(delay);
-			_animator.ResetTrigger(_animIDDash);
-		}
 
 		private Vector3 GetNormalizedInputVector()
 		{
@@ -457,6 +444,7 @@ namespace TPSTemplate
 			_animator.SetFloat(_animIDTurningAngle,angle);
 		}
 		
+		
 #if  UNITY_EDITOR
 		private void OnDrawGizmosSelected()
 		{
@@ -472,3 +460,30 @@ namespace TPSTemplate
 #endif
 	}
 }
+
+//OBSOLETE FUNCTIONS:
+/*
+ 
+
+private IEnumerator MoveForwardSmoothly(float distance,float duration)
+		{
+			if(duration<=0)
+				yield break;
+			
+			float stepTimer = 0f;
+			
+			Vector3 forwardDir = transform.forward;
+			forwardDir.y = 0;
+			forwardDir = forwardDir.normalized;
+
+			Vector3 initPosition = transform.position;
+			
+			Vector3 destination = transform.position + distance * forwardDir;
+			while (stepTimer<duration) {
+				transform.position = Vector3.Lerp(initPosition,destination,stepTimer/duration);
+				yield return null;
+				stepTimer += Time.deltaTime;
+			}
+		}
+		
+*/

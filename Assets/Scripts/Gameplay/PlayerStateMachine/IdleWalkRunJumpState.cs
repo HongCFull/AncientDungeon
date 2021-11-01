@@ -11,7 +11,8 @@ public class IdleWalkRunJumpState : StateMachineBehaviour
         base.OnStateEnter(animator, stateInfo, layerIndex);
         DisableRootMotion(animator);
         EnableCharacterWalking(animator);
-        Debug.Log("enter IdleWalkRunJump State");
+        //Debug.Log("enter IdleWalkRunJump State");
+
     }
     
 

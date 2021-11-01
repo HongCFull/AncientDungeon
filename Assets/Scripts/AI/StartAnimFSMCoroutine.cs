@@ -5,12 +5,18 @@ using UnityEngine;
 public class StartAnimFSMCoroutine : MonoBehaviour
 {
     private IEnumerator coroutineToExecute;
-    private float delay;
+
+
+    public StartAnimFSMCoroutine(IEnumerator coroutineToExecute)
+    {
+        if (coroutineToExecute != null)
+            StartCoroutine(coroutineToExecute);
+    }
     
     public StartAnimFSMCoroutine(IEnumerator coroutineToExecute, float delay)
     {
         this.coroutineToExecute = coroutineToExecute;
-        StartCoroutine(ExecuteCoroutine());
+        StartCoroutine(ExecuteCoroutineWithDelay(delay));
     }
 
     public void StopAssignedCoroutine()
@@ -19,7 +25,7 @@ public class StartAnimFSMCoroutine : MonoBehaviour
         coroutineToExecute = null;
     }
     
-    IEnumerator ExecuteCoroutine()
+    IEnumerator ExecuteCoroutineWithDelay(float delay)
     {
         if(coroutineToExecute== null)
             yield break;
