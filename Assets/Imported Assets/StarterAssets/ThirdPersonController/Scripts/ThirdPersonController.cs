@@ -462,28 +462,3 @@ namespace TPSTemplate
 }
 
 //OBSOLETE FUNCTIONS:
-/*
- 
-
-private IEnumerator MoveForwardSmoothly(float distance,float duration)
-		{
-			if(duration<=0)
-				yield break;
-			
-			float stepTimer = 0f;
-			
-			Vector3 forwardDir = transform.forward;
-			forwardDir.y = 0;
-			forwardDir = forwardDir.normalized;
-
-			Vector3 initPosition = transform.position;
-			
-			Vector3 destination = transform.position + distance * forwardDir;
-			while (stepTimer<duration) {
-				transform.position = Vector3.Lerp(initPosition,destination,stepTimer/duration);
-				yield return null;
-				stepTimer += Time.deltaTime;
-			}
-		}
-		
-*/

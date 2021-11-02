@@ -10,6 +10,8 @@ public class DashInAirState : StateMachineBehaviour
     [SerializeField] private float dashDistance;
     
     private ThirdPersonController tpsController;
+    private CharacterController characterController;
+    
     private bool originalRMOption;
     private bool hasExited;
 
@@ -26,7 +28,6 @@ public class DashInAirState : StateMachineBehaviour
         tpsController.DisableCharacterWalking();
         tpsController.DisableGravity();
         animator.applyRootMotion = true;
-        //tpsController.MoveForwardSmoothlyWrapper(dashDistance, stateInfo.length);
 
     }
 
@@ -36,8 +37,9 @@ public class DashInAirState : StateMachineBehaviour
 
         if (hasExited)
             return;
-        
-        animator.transform.position += Time.deltaTime * dashVelocity * dashDirection;
+
+        characterController.Move(Time.deltaTime * dashVelocity * dashDirection);
+        //animator.transform.position += Time.deltaTime * dashVelocity * dashDirection;
 
     }
 
@@ -55,6 +57,7 @@ public class DashInAirState : StateMachineBehaviour
     void InitializeVariables(Animator animator,AnimatorStateInfo stateInfo)
     {
         tpsController = animator.GetComponent<ThirdPersonController>();
+        characterController = animator.GetComponent<CharacterController>();
         
         hasExited = false;
         originalRMOption = animator.applyRootMotion;
