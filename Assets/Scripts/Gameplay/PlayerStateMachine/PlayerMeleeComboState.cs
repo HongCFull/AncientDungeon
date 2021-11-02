@@ -17,9 +17,9 @@ public class PlayerMeleeComboState : StateMachineBehaviour
     private PlayerCharacter playerCharacter;
     private CharacterController characterController;
     private ThirdPersonController thirdPersonController;
-    private Vector3 previousPos;
     private bool originalRMOption;
     private bool hasRotated;
+
     private bool hasExited;
     
     //Animation IDs
@@ -49,13 +49,8 @@ public class PlayerMeleeComboState : StateMachineBehaviour
             RotatePlayerFocus(animator);
             SetRootMotionTo(animator,enableRootMotion);
         }
-        else
-        {
-            //Vector3 testing = animator.rootPosition;
-            
-            animator.gameObject.transform.position = animator.rootPosition;
-         //   characterController.Move((animator.rootPosition - previousPos).normalized*Time.deltaTime);
-         //   previousPos = animator.rootPosition;
+        else {
+            animator.ApplyBuiltinRootMotion();
         }
 
     }
@@ -82,7 +77,6 @@ public class PlayerMeleeComboState : StateMachineBehaviour
         
         animIDIsInComboState = Animator.StringToHash("IsInComboState");
 
-        previousPos = animator.rootPosition;
         
         originalRMOption = animator.applyRootMotion;
         

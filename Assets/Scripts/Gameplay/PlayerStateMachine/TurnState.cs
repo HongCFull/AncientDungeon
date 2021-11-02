@@ -1,43 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
+
+using TPSTemplate;
 using UnityEngine;
 
-//BUG: EnterLocoMotionState which is the parent StateMachine will disable RM option
 public class TurnState : StateMachineBehaviour
 {
-  private bool originalRMOption;
-  private int animIDIsTurning;
-  private int animIDAngle;
-  private int animIDCachedTurningAngle;
-  
-  private float cachedTurningAngle;
-  
-  public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-  {
-    base.OnStateEnter(animator, stateInfo, layerIndex);
-    InitializeVariables(animator);
-    animator.applyRootMotion=true;
-    animator.SetBool(animIDIsTurning,true);
-    animator.SetFloat(animIDCachedTurningAngle,cachedTurningAngle);
 
-  }
+    private PlayerCharacter playerCharacter;
+    private ThirdPersonController thirdPersonController;
+    private bool originalRMOption;
+    private bool hasRotated;
+    
 
-  public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-  {
-    base.OnStateExit(animator, stateInfo, layerIndex);
-    animator.applyRootMotion=originalRMOption;
-    animator.SetBool(animIDIsTurning,false);
-    animator.SetFloat(animIDCachedTurningAngle,0);
+    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        base.OnStateEnter(animator, stateInfo, layerIndex);
+        CacheComponents(animator);
 
-  }
+        thirdPersonController.DisableCharacterWalking();
+        
+        animator.applyRootMotion = false;
+        RotatePlayerFocus(animator);
+        
+    }
 
-  void InitializeVariables(Animator animator)
-  {
-    animIDIsTurning = Animator.StringToHash("IsTurning");
-    animIDAngle = Animator.StringToHash("Angle");
-    animIDCachedTurningAngle = Animator.StringToHash("CachedTurningAngle");
+    
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        base.OnStateExit(animator, stateInfo, layerIndex);
+        
+        animator.applyRootMotion = originalRMOption;
+        thirdPersonController.EnableCharacterWalking();
 
-    originalRMOption = animator.applyRootMotion;
-    cachedTurningAngle = animator.GetFloat(animIDAngle);
-  }
+    }
+
+    private void CacheComponents(Animator animator)
+    {
+        playerCharacter = animator.GetComponent<PlayerCharacter>();
+        thirdPersonController = animator.GetComponent<ThirdPersonController>();
+        
+        originalRMOption = animator.applyRootMotion;
+        
+    }
+
+    private void RotatePlayerFocus(Animator animator)
+    {
+        playerCharacter.transform.LookAt(playerCharacter.GetPlayerWorldPosition()+PlayerCamera.Instance.GetUnitForwardVectorInXZPlane());
+    }
+    
+    
+
 }
