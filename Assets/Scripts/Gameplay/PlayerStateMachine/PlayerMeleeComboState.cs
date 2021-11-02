@@ -15,22 +15,26 @@ public class PlayerMeleeComboState : StateMachineBehaviour
     [SerializeField] [Range(-0.1f,5f)] private float appendDuration;
     
     private PlayerCharacter playerCharacter;
+    private CharacterController characterController;
+    private ThirdPersonController thirdPersonController;
+    private Vector3 previousPos;
     private bool originalRMOption;
     private bool hasRotated;
     private bool hasExited;
     
     //Animation IDs
     private int animIDIsInComboState;
-    
+
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-
-        CacheComponents(animator);
-        SetRootMotionTo(animator,enableRootMotion);
         animator.SetBool(animIDIsInComboState,true);
+        CacheComponents(animator);
+        
+        thirdPersonController.DisableCharacterWalking();
+        
+        SetRootMotionTo(animator,enableRootMotion);
         SpawnSlashVFX(animator);
-
     }
 
     
@@ -45,8 +49,13 @@ public class PlayerMeleeComboState : StateMachineBehaviour
             RotatePlayerFocus(animator);
             SetRootMotionTo(animator,enableRootMotion);
         }
-        else {
+        else
+        {
+            //Vector3 testing = animator.rootPosition;
+            
             animator.gameObject.transform.position = animator.rootPosition;
+         //   characterController.Move((animator.rootPosition - previousPos).normalized*Time.deltaTime);
+         //   previousPos = animator.rootPosition;
         }
 
     }
@@ -54,17 +63,27 @@ public class PlayerMeleeComboState : StateMachineBehaviour
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
+        
         hasExited = true;
         animator.SetBool(animIDIsInComboState,false);
+        
         animator.applyRootMotion = originalRMOption;
         playerCharacter.DisableAttackHitBoxOfWeapon();
+        thirdPersonController.EnableCharacterWalking();
+
         hasRotated = false;
     }
 
     private void CacheComponents(Animator animator)
     {
-        playerCharacter = animator.gameObject.GetComponent<PlayerCharacter>();
+        playerCharacter = animator.GetComponent<PlayerCharacter>();
+        characterController = animator.GetComponent<CharacterController>();
+        thirdPersonController = animator.GetComponent<ThirdPersonController>();
+        
         animIDIsInComboState = Animator.StringToHash("IsInComboState");
+
+        previousPos = animator.rootPosition;
+        
         originalRMOption = animator.applyRootMotion;
         
         hasRotated = false;

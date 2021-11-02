@@ -46,9 +46,7 @@ namespace TPSTemplate
 
 		
 		[Space(10)]
-		[Tooltip("The height the player can jump")]
 		public float JumpHeight = 1.2f;
-		[Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
 		public float Gravity = -15.0f;
 
 		[Space(10)]
@@ -56,20 +54,22 @@ namespace TPSTemplate
 		public float JumpTimeout = 0.50f;
 		[Tooltip("Time required to pass before entering the fall state. Useful for walking down stairs")]
 		public float FallTimeout = 0.15f;
-
-		[Tooltip("Reset Dash animation trigger parameter, if dash is not performed in this amount of time")]
-		public float DashTimeout = 0.4f;
 		
-		[Header("Player Grounded")]
-		[Tooltip("If the character is grounded or not. Not part of the CharacterController built in grounded check")]
-		public bool Grounded = true;
+		
+		[Header("Player Grounded Settings")]
+		
 		[Tooltip("Useful for rough ground")]
 		public float GroundedOffset = -0.14f;
+		
 		[Tooltip("The radius of the grounded check. Should match the radius of the CharacterController")]
 		public float GroundedRadius = 0.28f;
+		
 		[Tooltip("What layers the character uses as ground")]
 		public LayerMask GroundLayers;
-
+		
+		[Tooltip("Slope limit for sliding")] 
+		[SerializeField] private float slopeLimit;	
+		
 		//Cinemachine
 		[Header("Cinemachine")]
 		[Tooltip("The follow target set in the Cinemachine Virtual Camera that the camera will follow")]
@@ -90,14 +90,19 @@ namespace TPSTemplate
 		private float _cinemachineTargetPitch;
 		
 		// player
+		private bool grounded = true;
+		private bool isSliding = false;
 		private bool enableWaling = true;
 		private bool enableGravity = true;
+		
 		private float _speed;
 		private float _animationBlend;
 		private float _targetRotation = 0.0f;
 		private float _rotationVelocity;
 		private float _verticalVelocity;
 		private float _terminalVelocity = 53.0f;
+		private Vector3 groundHitNormal;
+		
 		
 		// timeout deltatime
 		private float _jumpTimeoutDelta;
@@ -152,8 +157,10 @@ namespace TPSTemplate
 			else {
 				ResetAnimatorMovementPara();
 			}
-			JumpAndGravityCalculation();
+			
+			JumpAndGravity();
 			GroundedCheck();
+			CheckSliding();
 			HandleMeleeAttackInput();
 		}
 
@@ -162,6 +169,10 @@ namespace TPSTemplate
 			CameraRotation();
 		}
 
+		void OnControllerColliderHit (ControllerColliderHit hit) {
+			groundHitNormal = hit.normal;
+		}
+		
 ///========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
 /// public functions
 ///========================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
@@ -217,16 +228,6 @@ namespace TPSTemplate
 			_animIDDash = Animator.StringToHash("Dash");
 			_animIDIsInComboState = Animator.StringToHash("IsInComboState");
 			_animIDTurningAngle = Animator.StringToHash("TurningAngle");
-			
-		}
-
-		private void GroundedCheck()
-		{
-			// set sphere position, with offset
-			Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
-			Grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
-
-			_animator.SetBool(_animIDGrounded, Grounded);
 			
 		}
 
@@ -287,8 +288,7 @@ namespace TPSTemplate
 
 			// note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
 			// if there is a move input rotate player when the player is moving
-			if (_input.move != Vector2.zero)
-			{
+			if (_input.move != Vector2.zero) {
 				_targetRotation = Mathf.Atan2(inputDirection.x, inputDirection.z) * Mathf.Rad2Deg + _mainCamera.transform.eulerAngles.y;
 				float rotation = Mathf.SmoothDampAngle(transform.eulerAngles.y, _targetRotation, ref _rotationVelocity, RotationSmoothTime);
 
@@ -299,26 +299,33 @@ namespace TPSTemplate
 			Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
 
 			Vector3 movementVector;
-			if (enableGravity)
+			if (enableGravity) {
 				movementVector = targetDirection.normalized * (_speed * Time.deltaTime) +
 				                 new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime;
+				
+				if (isSliding) {
+					float slideFriction = 0.01f;
+					float slideSpeed = 10f;
+					movementVector =slideSpeed * new Vector3(Time.deltaTime*(1f - groundHitNormal.y) * groundHitNormal.x * (1f - slideFriction)
+												, 0
+												, Time.deltaTime*(1f - groundHitNormal.y) * groundHitNormal.z * (1f - slideFriction))+
+					                 new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime;
+				}
+			}
+			
 			else
 				movementVector = targetDirection.normalized * (_speed * Time.deltaTime);
 			
-			// move the player
-			//_controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 			_controller.Move(movementVector);
-
-
+			
 			_animator.SetFloat(_animIDSpeed, _animationBlend);
 			_animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
 
 		}
 
-		private void JumpAndGravityCalculation()
+		private void JumpAndGravity()
 		{
-
-			if (Grounded) {
+			if (grounded) {
 				// reset the fall timeout timer
 				_fallTimeoutDelta = FallTimeout;
 
@@ -362,17 +369,40 @@ namespace TPSTemplate
 				_input.jump = false;
 			}
 
-			CalculateGravity();
+			ApplyGravity();
 
 		}
+		
 
-		private void CalculateGravity()
+		private void ApplyGravity()
 		{
 			// apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
 			if (_verticalVelocity < _terminalVelocity) {
 				_verticalVelocity += Gravity * Time.deltaTime;
 			}
 		}
+
+		private void GroundedCheck()
+		{
+			// set sphere position, with offset
+			Vector3 spherePosition = new Vector3(transform.position.x, transform.position.y - GroundedOffset, transform.position.z);
+			grounded = Physics.CheckSphere(spherePosition, GroundedRadius, GroundLayers, QueryTriggerInteraction.Ignore);
+			_animator.SetBool(_animIDGrounded, grounded);
+			
+		}
+		private void CheckSliding()
+		{
+			if (!grounded) {
+				isSliding = false;
+				return;
+			}
+
+			float angle = Vector3.Angle(Vector3.up, groundHitNormal);
+			isSliding = angle >= slopeLimit;
+			//Debug.Log("Angle = "+angle+" isSliding = "+isSliding);
+			
+		}
+		
 		private void ResetAnimatorMovementPara() {
 			_animator.SetFloat(_animIDSpeed, 0);
 			_animator.SetFloat(_animIDMotionSpeed, 0);
@@ -385,17 +415,7 @@ namespace TPSTemplate
 			return Mathf.Clamp(lfAngle, lfMin, lfMax);
 		}
 
-		private void ApplyRotationSmoothTimeOnGround(float currentHorizontalSpeed ) 
-		{
-			//if the player is jumping, dont adjust the rotation smooth time
-			if (!Grounded) return;
-			if (currentHorizontalSpeed>=Mathf.Epsilon && currentHorizontalSpeed<= moveSpeedThreshold) {
-				RotationSmoothTime = 0.015f;
-			}
-			else {
-				RotationSmoothTime = 0.07f;
-			}
-		}
+
 
 		private void HandleMeleeAttackInput() 
 		{
@@ -451,7 +471,7 @@ namespace TPSTemplate
 			Color transparentGreen = new Color(0.0f, 1.0f, 0.0f, 0.35f);
 			Color transparentRed = new Color(1.0f, 0.0f, 0.0f, 0.35f);
 
-			if (Grounded) Gizmos.color = transparentGreen;
+			if (grounded) Gizmos.color = transparentGreen;
 			else Gizmos.color = transparentRed;
 			
 			// when selected, draw a gizmo in the position of, and matching radius of, the grounded collider
@@ -462,3 +482,16 @@ namespace TPSTemplate
 }
 
 //OBSOLETE FUNCTIONS:
+/*
+private void ApplyRotationSmoothTimeOnGround(float currentHorizontalSpeed ) 
+{
+	//if the player is jumping, dont adjust the rotation smooth time
+	if (!grounded) return;
+	if (currentHorizontalSpeed>=Mathf.Epsilon && currentHorizontalSpeed<= moveSpeedThreshold) {
+		RotationSmoothTime = 0.015f;
+	}
+	else {
+		RotationSmoothTime = 0.07f;
+	}
+}
+*/
