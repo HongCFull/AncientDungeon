@@ -89,7 +89,7 @@ public class DungeonTile : MonoBehaviour
         if(!boundingBox)
             boundingBox = GetComponent<BoxCollider>();
 
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.black;
         Gizmos.DrawWireCube(GetGlobalCollisionBoxCenter(),2*GetScaledCollisionBoxHalfExtend());
     }
 

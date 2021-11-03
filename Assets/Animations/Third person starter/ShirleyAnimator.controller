@@ -122,7 +122,7 @@ AnimatorState:
   m_StateMachineBehaviours:
   - {fileID: -1781632652017556919}
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
+  m_IKOnFeet: 1
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0
@@ -657,7 +657,7 @@ AnimatorStateMachine:
     m_Position: {x: 580, y: 50, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 3306645809493807642}
-    m_Position: {x: 450, y: 550, z: 0}
+    m_Position: {x: 440, y: 540, z: 0}
   m_AnyStateTransitions:
   - {fileID: -553923534063090467}
   - {fileID: 7917652143018621832}
@@ -1487,9 +1487,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a9e85965bf26b44691f434f66b4df01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slashVFXIndexs: 00000000
   enableRootMotion: 0
-  vfxMoveWithPlayer: 0
+  startingRMFrame: 0
+  slashVFXIndexs: 00000000
+  vfxMoveWithPlayer: 1
   appendDuration: 0
 --- !u!1101 &-2507836780631152671
 AnimatorStateTransition:
@@ -1646,8 +1647,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a9e85965bf26b44691f434f66b4df01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slashVFXIndexs: 02000000
   enableRootMotion: 1
+  startingRMFrame: 0
+  slashVFXIndexs: 02000000
   vfxMoveWithPlayer: 1
   appendDuration: 0.21
 --- !u!206 &-1773741311036702396
@@ -1703,7 +1705,7 @@ AnimatorState:
   - {fileID: 7861607346017985774}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
+  m_IKOnFeet: 1
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0
@@ -1807,7 +1809,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0
+  m_TransitionDuration: 0.1
   m_TransitionOffset: 0
   m_ExitTime: 0.37500006
   m_HasExitTime: 0
@@ -1975,8 +1977,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a9e85965bf26b44691f434f66b4df01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slashVFXIndexs: 01000000
   enableRootMotion: 1
+  startingRMFrame: 0
+  slashVFXIndexs: 01000000
   vfxMoveWithPlayer: 1
   appendDuration: 0.15
 --- !u!1101 &-257612999206070335
@@ -2342,8 +2345,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a9e85965bf26b44691f434f66b4df01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slashVFXIndexs: 0300000004000000
   enableRootMotion: 1
+  startingRMFrame: 21
+  slashVFXIndexs: 0300000004000000
   vfxMoveWithPlayer: 1
   appendDuration: 0.29
 --- !u!114 &824113517543567902
@@ -3818,7 +3822,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0.1
   m_TransitionOffset: 0
   m_ExitTime: 0.39948252
   m_HasExitTime: 0
