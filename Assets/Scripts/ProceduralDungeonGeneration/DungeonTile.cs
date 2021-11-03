@@ -69,17 +69,17 @@ public class DungeonTile : MonoBehaviour
     }
 
     public Vector3 GetGlobalCollisionBoxCenter() {
-        Vector3 centerOffset = transform.right * boundingBox.center.x *scaleVector.x+
-                               transform.up * boundingBox.center.y *scaleVector.y+
-                               transform.forward * boundingBox.center.z*scaleVector.z;
-        return transform.position + centerOffset;
+
+        return transform.TransformPoint(boundingBox.center);
     }
 
     public Vector3 GetScaledCollisionBoxHalfExtend() {
-        Vector3 originalBoxHalfExtents = boundingBox.bounds.extents;
-        Vector3 scaledBoxHalfExtents = new Vector3(
-            scaleVector.x * originalBoxHalfExtents.x , scaleVector.y * originalBoxHalfExtents.y, scaleVector.z * originalBoxHalfExtents.z
-        );
+
+        Vector3 scaledBoxHalfExtents = transform.TransformVector(boundingBox.size*0.5f);
+        scaledBoxHalfExtents.x = Mathf.Abs(scaledBoxHalfExtents.x);
+        scaledBoxHalfExtents.y = Mathf.Abs(scaledBoxHalfExtents.y);
+        scaledBoxHalfExtents.z = Mathf.Abs(scaledBoxHalfExtents.z);
+
         return scaledBoxHalfExtents;
     }
     
@@ -90,7 +90,7 @@ public class DungeonTile : MonoBehaviour
             boundingBox = GetComponent<BoxCollider>();
 
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(GetGlobalCollisionBoxCenter(),GetScaledCollisionBoxHalfExtend());
+        Gizmos.DrawWireCube(GetGlobalCollisionBoxCenter(),2*GetScaledCollisionBoxHalfExtend());
     }
 
 #endif
