@@ -1,26 +1,40 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
-[RequireComponent(typeof(BoxCollider))]
+[RequireComponent(typeof(BoxCollider),typeof(NavMeshSurface))]
 public class DungeonTile : MonoBehaviour
 {
+    [Tooltip("Connectors")]
     [SerializeField] private List<Connector> corridorConnector;
     [SerializeField] private List<Connector> connectedConnectors = new List<Connector>();   //should be read only
+
+    [Tooltip("Enemies")] 
+    [SerializeField] private AICharacter[] aiCharacters;
     
     [HideInInspector] public Connector parentConnector = null;
     [ReadOnly] public DungeonTile parentTile = null;
     [ReadOnly] public GameObject pathHolder;
     [ReadOnly] public List<Collider> collidesHit;
+    
     public BoxCollider boundingBox { get; private set; }
+    private NavMeshSurface navMeshSurface;
     private Connector latestPopedConnector;
     private Vector3 scaleVector;
+    
+    
     private void Awake() {
         //cache boundingBox
         boundingBox = GetComponent<BoxCollider>();
+        navMeshSurface = GetComponent<NavMeshSurface>();
+        navMeshSurface.BuildNavMesh();
         scaleVector = transform.localScale;
+
+        SpawnAIEnemies();
     }
     
     /// <summary>
@@ -81,6 +95,14 @@ public class DungeonTile : MonoBehaviour
         scaledBoxHalfExtents.z = Mathf.Abs(scaledBoxHalfExtents.z);
 
         return scaledBoxHalfExtents;
+    }
+
+    private void SpawnAIEnemies()
+    {
+        if (aiCharacters.Length <= 0)
+            return;
+        Vector3 worldPos = transform.TransformPoint(Vector3.zero);
+        Instantiate(aiCharacters[Random.Range(0, aiCharacters.Length)], worldPos, quaternion.identity);
     }
     
 #if UNITY_EDITOR

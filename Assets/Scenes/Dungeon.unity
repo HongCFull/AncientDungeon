@@ -174,9 +174,9 @@ MonoBehaviour:
   doorPrefabs: []
   generationDelay: 0
   retryMaxCount: 10
-  dungeonDepth: 18
-  totalBranches: 8
-  branchDepth: 5
+  dungeonDepth: 9
+  totalBranches: 0
+  branchDepth: 4
   useRandomDepthForBranches: 0
   doorPercentage: 0
   generatedTiles: []
@@ -573,10 +573,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3124140674871090730, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
-      propertyPath: JumpTimeout
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 3846047569234263005, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -624,34 +620,6 @@ PrefabInstance:
     - target: {fileID: 5158963284894588648, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
       propertyPath: m_Name
       value: Player Character SetUp
-      objectReference: {fileID: 0}
-    - target: {fileID: 7267855251028111885, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
-      propertyPath: m_HDR
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7267855251028111885, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
-      propertyPath: m_AllowMSAA
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7267855251028111885, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
-      propertyPath: orthographic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7267855251028111885, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
-      propertyPath: field of view
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 7267855251028111885, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
-      propertyPath: orthographic size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7501823718080732633, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
-      propertyPath: m_Antialiasing
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7501823718080732633, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}

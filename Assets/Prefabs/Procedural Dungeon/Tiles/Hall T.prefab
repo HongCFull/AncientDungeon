@@ -249,6 +249,7 @@ GameObject:
   - component: {fileID: 7545290618584873197}
   - component: {fileID: 7548762569196026622}
   - component: {fileID: 2923557857188113021}
+  - component: {fileID: -6191532600318695386}
   m_Layer: 6
   m_Name: Hall T
   m_TagString: Untagged
@@ -358,6 +359,8 @@ MonoBehaviour:
   - {fileID: 8660648909324134050}
   - {fileID: 4052373493382089504}
   connectedConnectors: []
+  aiCharacters:
+  - {fileID: 6508980981969963372, guid: c8f385ccef4fe00419c80c5459cb8d72, type: 3}
   parentConnector: {fileID: 0}
   parentTile: {fileID: 0}
   pathHolder: {fileID: 0}
@@ -375,6 +378,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 14, y: 5, z: 7}
   m_Center: {x: 0, y: 2.5, z: -1.5}
+--- !u!114 &-6191532600318695386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4370958241814706684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!1 &5800931234617197271
 GameObject:
   m_ObjectHideFlags: 0
