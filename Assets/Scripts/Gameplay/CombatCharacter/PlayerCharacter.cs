@@ -49,6 +49,11 @@ public class PlayerCharacter : CombatCharacter
         weaponHitBox.EnableAttackCollider();
     }
     
+    public void EnableAttackHitBoxOfWeaponWithPower(float skillPower)
+    {
+        weaponHitBox.EnableAttackColliderWithSkillPower(skillPower);
+    }
+    
     public void DisableAttackHitBoxOfWeapon()
     {
         weaponHitBox.DisableAttackCollider();

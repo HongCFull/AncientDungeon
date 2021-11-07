@@ -2,15 +2,19 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net;
+using Combat;
 using UnityEngine;
 
-using Combat;
+using HitBoxDefinition;
 
 [RequireComponent(typeof(Collider))]
 public class AttackHitBox : MonoBehaviour
 {
+    [SerializeField] private CombatCharacter owner;
     [SerializeField] private List<HitBoxTag> canDamageHitBoxWithTag;
-    [SerializeField] private float damage;
+    
+    [Tooltip("This can be updated by the animation event")]
+    [SerializeField] private float skillPower;
     
     private Collider attackCollider;
     private float originalDamage;
@@ -23,14 +27,15 @@ public class AttackHitBox : MonoBehaviour
     //BUG: When player attacks the AI, it wont damage the AI properly. As the damageable script and the hit box of the enemy aren't attached in the same gameobject. 
     private void OnTriggerEnter(Collider other)
     {
-        CombatCharacterHitBox combatCharacterHitBoxComp = other.gameObject.GetComponent<CombatCharacterHitBox>();
-        if (!combatCharacterHitBoxComp) 
+        ReceiveHitBox receiveHitBoxComp = other.gameObject.GetComponent<ReceiveHitBox>();
+        if (!receiveHitBoxComp) 
             return;
 
-        HitBoxTag targetTag = combatCharacterHitBoxComp.GetHitBoxTag();
+        HitBoxTag targetTag = receiveHitBoxComp.GetHitBoxTag();
         foreach (HitBoxTag tag in canDamageHitBoxWithTag) {
             if (targetTag == tag) {
-                combatCharacterHitBoxComp.TakeDamageBy(damage);
+                CombatDamageManager.DealDamageTo(owner,receiveHitBoxComp.GetCombatCharacterOwner(),skillPower);
+                //combatCharacterHitBoxComp.TakeDamageBy(skillPower);
             }
         }
     }
@@ -41,10 +46,10 @@ public class AttackHitBox : MonoBehaviour
         attackCollider.enabled = true;
     }
     
-    public void EnableAttackColliderWithDamage(float damage)
+    public void EnableAttackColliderWithSkillPower(float skillPower)
     {
         attackCollider.enabled = true;
-        this.damage = damage;
+        this.skillPower = skillPower;
     }
     
     /// <summary>
@@ -54,7 +59,7 @@ public class AttackHitBox : MonoBehaviour
     public void DisableAttackCollider()
     {
         attackCollider.enabled = false;
-        damage = originalDamage;
+        skillPower = originalDamage;
     }
     
     

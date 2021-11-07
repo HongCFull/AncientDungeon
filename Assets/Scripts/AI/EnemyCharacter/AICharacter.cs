@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+using HitBoxDefinition;
 [RequireComponent(typeof(Animator))]
 public abstract class AICharacter : CombatCharacter
 {
@@ -18,10 +19,19 @@ public abstract class AICharacter : CombatCharacter
     [Header("Debug Settings")] 
     [SerializeField] private bool showAttackDistance;
     [SerializeField] private Color attackDistanceColor;
+
+    [Header("Animation Settings")]
+    [SerializeField] private float deathDelay;
+
+    [Header("Mesh")] 
+    [SerializeField] private SkinnedMeshRenderer skinnedMeshRenderer;
     
     //Animation
     private Animator animator;
-    private int isDamagedAnimID;
+    private int animID_isDamaged;
+    private int animID_isDead;
+    private int animID_isInvulnerable;
+    
     
     public Vector3 initPosition { get; private set; }
 
@@ -29,8 +39,8 @@ public abstract class AICharacter : CombatCharacter
     {
         base.Awake();
         //Debug.Log("AICharacter Awake");
+        
         InitializeVariables();
-
         //DisableAllAttackHitBoxes();
     }
 
@@ -38,7 +48,10 @@ public abstract class AICharacter : CombatCharacter
     {
         initPosition = transform.position;
         animator = GetComponent<Animator>();
-        isDamagedAnimID = Animator.StringToHash("isDamaged");
+        
+        animID_isDamaged = Animator.StringToHash("isDamaged");
+        animID_isDead = Animator.StringToHash("isDead");
+        animID_isInvulnerable = Animator.StringToHash("isInvulnerable");
     }
     
     public float GetAttackDistance()
@@ -85,7 +98,28 @@ public abstract class AICharacter : CombatCharacter
 
     public void SetAnimationTriggerIsDamaged()
     {
-        animator.SetTrigger(isDamagedAnimID);
+        if(!animator.GetBool(animID_isInvulnerable))
+            animator.SetTrigger(animID_isDamaged);
+    }
+
+    public void OperationWhenItIsDead()
+    {
+        DisableAllReceiveHitBoxes();
+        SetAnimationTriggerIsDead();
+        //Destroy(gameObject,deathDelay);
+    }
+
+
+    private void DisableAllReceiveHitBoxes()
+    {
+        foreach (ReceiveHitBox receiveHitBox in registeredHitBoxes) {
+            receiveHitBox.EnableHitBox(false);
+        }    
+    }
+    
+    void SetAnimationTriggerIsDead()
+    {
+        animator.SetTrigger(animID_isDead);
     }
     
     

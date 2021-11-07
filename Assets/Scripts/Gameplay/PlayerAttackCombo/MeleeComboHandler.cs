@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using TPSTemplate;
+using Player;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator), typeof(ThirdPersonController))]

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 #endif
 
-namespace TPSTemplate
+namespace Player
 {
 	[RequireComponent(typeof(ThirdPersonController),typeof(Animator))]
 	public class StarterAssetsInputs : MonoBehaviour

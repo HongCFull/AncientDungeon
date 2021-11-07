@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AttackState : StateMachineBehaviour
+public class AIAttackStateMachine : StateMachineBehaviour
 {
     [SerializeField] private int numOfAttack;
     
@@ -33,7 +33,9 @@ public class AttackState : StateMachineBehaviour
         base.OnStateExit(animator, stateInfo, layerIndex);
         
         //To prevent the reset in animation event is not being called
-        aiCharacter.DisableAttackHitBox(randAttackIndex);
+        //Debug.Log("clear attack index = "+randAttackIndex);
+        //aiCharacter.DisableAttackHitBox(randAttackIndex);
+        aiCharacter.DisableAllAttackHitBoxes();
     }
 
     void StopNavmeshAgent()
@@ -45,5 +47,6 @@ public class AttackState : StateMachineBehaviour
     {
         randAttackIndex = Random.Range(0, numOfAttack);
         animator.SetInteger(animIDAttackIndex,randAttackIndex);
+        //Debug.Log("enter attack index = "+randAttackIndex);
     }
 }

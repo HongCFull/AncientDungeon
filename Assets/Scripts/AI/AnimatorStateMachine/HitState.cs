@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using TPSTemplate;
+using Player;
 using UnityEngine;
 
 public class HitState : StateMachineBehaviour

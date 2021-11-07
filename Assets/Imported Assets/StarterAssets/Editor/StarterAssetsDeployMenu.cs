@@ -5,7 +5,7 @@ using UnityEngine;
 using Cinemachine;
 #endif
 
-namespace TPSTemplate
+namespace Player
 {
     // This class needs to be a scriptable object to support dynamic determination of StarterAssets install path
     public partial class StarterAssetsDeployMenu : ScriptableObject

@@ -1,6 +1,6 @@
 ﻿using UnityEditor;
 
-namespace TPSTemplate
+namespace Player
 {
     public static class ScriptingDefineUtils
     {
