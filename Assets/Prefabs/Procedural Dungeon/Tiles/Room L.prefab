@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7610194510989156630}
   - component: {fileID: 4205793112759414746}
   - component: {fileID: 855816638582100617}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Ground (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 1732437572055457859}
   - component: {fileID: 836453469607341065}
   - component: {fileID: 8720355000819383856}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Ground (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 8048931652221981076}
   - component: {fileID: 6542924152518365829}
   - component: {fileID: 4362749805671703969}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Ground (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -500,7 +500,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3796533768321793203}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
   m_Name: 
@@ -511,8 +511,8 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
+    m_Bits: 4096
+  m_UseGeometry: 1
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
   m_IgnoreNavMeshObstacle: 1
@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 6585767156366012227}
   - component: {fileID: 6868299518793775278}
   - component: {fileID: 3847824080263613701}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Ground (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -705,7 +705,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8321370173105295260}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Grounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,7 +740,7 @@ GameObject:
   - component: {fileID: 1680225112661381828}
   - component: {fileID: 4114228631798457600}
   - component: {fileID: 7351227400983800105}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Ground (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -821,7 +821,7 @@ GameObject:
   - component: {fileID: 4155827599299219847}
   - component: {fileID: 2821774680178562380}
   - component: {fileID: 5941099353508599554}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Ground (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -900,7 +900,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9073405615526768744}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Grounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2965,6 +2965,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -8572956717992521664}
     - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
+      propertyPath: blockingPrefab
+      value: 
+      objectReference: {fileID: 5513274501101022694, guid: 015436990ccef834d85a7f8459ac6fcc, type: 3}
+    - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
       propertyPath: corridorSize.x
       value: 8
       objectReference: {fileID: 0}
@@ -3451,6 +3455,10 @@ PrefabInstance:
       propertyPath: tileOwner
       value: 
       objectReference: {fileID: -8572956717992521664}
+    - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
+      propertyPath: blockingPrefab
+      value: 
+      objectReference: {fileID: 5513274501101022694, guid: 015436990ccef834d85a7f8459ac6fcc, type: 3}
     - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
       propertyPath: corridorSize.x
       value: 8

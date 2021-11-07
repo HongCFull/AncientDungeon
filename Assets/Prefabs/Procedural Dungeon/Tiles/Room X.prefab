@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 5781833941965674903}
   - component: {fileID: 7883384938499278782}
   - component: {fileID: 6878174990218059886}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Ground (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 8528675926960640275}
   - component: {fileID: 6634848055921735213}
   - component: {fileID: 5627621815460148832}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Ground (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 7859548344173331962}
   - component: {fileID: 4726158341437692310}
   - component: {fileID: 6702045160968480031}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Ground (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -422,7 +422,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 296888043186036582}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Grounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -459,7 +459,7 @@ GameObject:
   - component: {fileID: 7501244170372012782}
   - component: {fileID: 4449120409104587708}
   - component: {fileID: 3283080690055269899}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Ground (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -540,7 +540,7 @@ GameObject:
   - component: {fileID: 1577497683190337442}
   - component: {fileID: 986969014316260101}
   - component: {fileID: 7556951375853358938}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Ground (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -730,7 +730,7 @@ GameObject:
   - component: {fileID: 6510113892710120149}
   - component: {fileID: 8471357605144187165}
   - component: {fileID: 5600975304430188269}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Ground (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -811,7 +811,7 @@ GameObject:
   - component: {fileID: 1948442820626039311}
   - component: {fileID: 259892692084353245}
   - component: {fileID: 1060680719345251228}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Ground (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -892,7 +892,7 @@ GameObject:
   - component: {fileID: 6353694674397691561}
   - component: {fileID: 6295695152932682306}
   - component: {fileID: 755591584875804635}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Ground (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1121,7 +1121,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6434516483264212451}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
   m_Name: 
@@ -1132,8 +1132,8 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
+    m_Bits: 4096
+  m_UseGeometry: 1
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
   m_IgnoreNavMeshObstacle: 1
@@ -1208,7 +1208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2980076535189919999}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Grounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1642,6 +1642,10 @@ PrefabInstance:
       propertyPath: tileOwner
       value: 
       objectReference: {fileID: 637166533661810689}
+    - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
+      propertyPath: blockingPrefab
+      value: 
+      objectReference: {fileID: 5513274501101022694, guid: 015436990ccef834d85a7f8459ac6fcc, type: 3}
     - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
       propertyPath: corridorSize.x
       value: 8
@@ -2205,6 +2209,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 637166533661810689}
     - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
+      propertyPath: blockingPrefab
+      value: 
+      objectReference: {fileID: 5513274501101022694, guid: 015436990ccef834d85a7f8459ac6fcc, type: 3}
+    - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
       propertyPath: corridorSize.x
       value: 8
       objectReference: {fileID: 0}
@@ -2524,6 +2532,10 @@ PrefabInstance:
       propertyPath: tileOwner
       value: 
       objectReference: {fileID: 637166533661810689}
+    - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
+      propertyPath: blockingPrefab
+      value: 
+      objectReference: {fileID: 5513274501101022694, guid: 015436990ccef834d85a7f8459ac6fcc, type: 3}
     - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
       propertyPath: corridorSize.x
       value: 8
@@ -3168,6 +3180,10 @@ PrefabInstance:
       propertyPath: tileOwner
       value: 
       objectReference: {fileID: 637166533661810689}
+    - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
+      propertyPath: blockingPrefab
+      value: 
+      objectReference: {fileID: 5513274501101022694, guid: 015436990ccef834d85a7f8459ac6fcc, type: 3}
     - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
       propertyPath: corridorSize.x
       value: 8

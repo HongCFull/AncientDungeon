@@ -83,7 +83,6 @@ namespace TPSTemplate
 		[Tooltip("For locking the camera position on all axis")]
 		public bool LockCameraPosition = false;
 
-		//
 		
 		// cinemachine
 		private float _cinemachineTargetYaw;
@@ -114,8 +113,7 @@ namespace TPSTemplate
 		private int _animIDJump;
 		private int _animIDFreeFall;
 		private int _animIDMotionSpeed;
-		private int _animIDMeleeAttack;
-		private int _animIDIsInComboState;
+		//private int _animIDMeleeAttack;
 		private int _animIDDash;
 		private int _animIDTurningAngle;
 
@@ -148,7 +146,6 @@ namespace TPSTemplate
 
 		private void Update()
 		{
-			HandleInputInComboState();
 			UpdateAnimatorTurningAngle(GetNormalizedInputVectorInCameraSpace());
 
 			if (enableWaling) {
@@ -157,11 +154,10 @@ namespace TPSTemplate
 			else {
 				ResetAnimatorMovementPara();
 			}
-			
 			JumpAndGravity();
 			GroundedCheck();
 			CheckSliding();
-			HandleMeleeAttackInput();
+			
 		}
 
 		private void LateUpdate()
@@ -224,9 +220,7 @@ namespace TPSTemplate
 			_animIDJump = Animator.StringToHash("Jump");
 			_animIDFreeFall = Animator.StringToHash("FreeFall");
 			_animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
-			_animIDMeleeAttack = Animator.StringToHash("MeleeAttack");
 			_animIDDash = Animator.StringToHash("Dash");
-			_animIDIsInComboState = Animator.StringToHash("IsInComboState");
 			_animIDTurningAngle = Animator.StringToHash("TurningAngle");
 			
 		}
@@ -413,25 +407,6 @@ namespace TPSTemplate
 			if (lfAngle < -360f) lfAngle += 360f;
 			if (lfAngle > 360f) lfAngle -= 360f;
 			return Mathf.Clamp(lfAngle, lfMin, lfMax);
-		}
-
-
-
-		private void HandleMeleeAttackInput() 
-		{
-			if (_input.meleeAttack) {
-				_input.meleeAttack = false;
-				_animator.SetTrigger(_animIDMeleeAttack);
-			}
-			else {
-				_animator.ResetTrigger(_animIDMeleeAttack);
-			}
-		}
-		
-		private void HandleInputInComboState()
-		{
-			if(!_animator.GetBool(_animIDIsInComboState))
-				return;
 		}
 
 		private Vector3 GetNormalizedInputVector()

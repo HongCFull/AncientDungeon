@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using TPSTemplate;
 using UnityEngine;
 
-public class PlayerMeleeComboState : StateMachineBehaviour
+public class PlayerAttackState : StateMachineBehaviour
 {
 
     [Header("RootMotion Settings")]
     [SerializeField] private bool enableRootMotion;
 
+    [SerializeField] private bool applyGravityInRM;
     [Tooltip("The frame that starts playing root motion in this state")]
     [SerializeField] [Range(0,100)]private int startingRMFrame; 
 
@@ -31,20 +32,20 @@ public class PlayerMeleeComboState : StateMachineBehaviour
     private AnimatorClipInfo[] animClipInfo;
     
     //Animation IDs
-    private int animIDIsInComboState;
+   // private int animIDIsInComboState;
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log("enter ");
+//        Debug.Log("enter ");
         base.OnStateEnter(animator, stateInfo, layerIndex);
         
         CacheComponents(animator);
-        animator.SetBool(animIDIsInComboState,true);
+     //   animator.SetBool(animIDIsInComboState,true);
         
         thirdPersonController.DisableCharacterWalking();
         
         SetRootMotionTo(animator,enableRootMotion);
-        SpawnSlashVFX(animator);
+        SpawnSlashVFX();
     }
 
     
@@ -64,7 +65,7 @@ public class PlayerMeleeComboState : StateMachineBehaviour
         else {
             animator.ApplyBuiltinRootMotion();
 
-            if (GetCurrentFrame(stateInfo) >= startingRMFrame) {
+            if (applyGravityInRM && GetCurrentFrame(stateInfo) >= startingRMFrame) {
                 characterController.Move(new Vector3(0, -15f, 0f) * Time.deltaTime);
             }
         }
@@ -73,11 +74,11 @@ public class PlayerMeleeComboState : StateMachineBehaviour
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Debug.Log("exit");
+  //      Debug.Log("exit");
 
         base.OnStateExit(animator, stateInfo, layerIndex);
         
-        animator.SetBool(animIDIsInComboState,false);
+       // animator.SetBool(animIDIsInComboState,false);
         
         animator.applyRootMotion = originalRMOption;
         playerCharacter.DisableAttackHitBoxOfWeapon();
@@ -94,7 +95,7 @@ public class PlayerMeleeComboState : StateMachineBehaviour
         characterController = animator.GetComponent<CharacterController>();
         thirdPersonController = animator.GetComponent<ThirdPersonController>();
         
-        animIDIsInComboState = Animator.StringToHash("IsInComboState");
+      //  animIDIsInComboState = Animator.StringToHash("IsInComboState");
         
         animClipInfo = animator.GetCurrentAnimatorClipInfo(0);
 
@@ -118,7 +119,7 @@ public class PlayerMeleeComboState : StateMachineBehaviour
     }
     
    
-    void SpawnSlashVFX(Animator animator) {
+    void SpawnSlashVFX() {
         for (int i = 0; i<slashVFXIndexs.Length; i++)
             if(!vfxMoveWithPlayer)
                 PlayerCharacter.Instance.GetSlashVFXManager().SpawnSlashEffect(slashVFXIndexs[i]);

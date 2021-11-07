@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1769472120485083212}
   - component: {fileID: 7469588263042147607}
   - component: {fileID: 8504002808486360555}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Ground (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 6081523938992934215}
   - component: {fileID: 400189084737804713}
   - component: {fileID: 6132132738124220077}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Ground (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 5989886593940480006}
   - component: {fileID: 5804367892752988607}
   - component: {fileID: 2925127702256927584}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Ground (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 288058957767878177}
   - component: {fileID: 3922844355620412812}
   - component: {fileID: 4450100195314530747}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Ground (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450,7 +450,7 @@ GameObject:
   - component: {fileID: 8963626813624015410}
   - component: {fileID: 6500361386567664442}
   - component: {fileID: 5413359810336503052}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Ground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -665,7 +665,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7816814947589006772}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
   m_Name: 
@@ -676,8 +676,8 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
+    m_Bits: 4096
+  m_UseGeometry: 1
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
   m_IgnoreNavMeshObstacle: 1
@@ -696,7 +696,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7227291537688402253}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -780,7 +780,7 @@ GameObject:
   - component: {fileID: 6878787100648266148}
   - component: {fileID: 3205266182700503683}
   - component: {fileID: 799168064463224609}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Ground (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1115,6 +1115,10 @@ PrefabInstance:
       propertyPath: tileOwner
       value: 
       objectReference: {fileID: -4852945424426744004}
+    - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
+      propertyPath: blockingPrefab
+      value: 
+      objectReference: {fileID: 5513274501101022694, guid: 015436990ccef834d85a7f8459ac6fcc, type: 3}
     - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
       propertyPath: corridorSize.x
       value: 8
@@ -1840,6 +1844,10 @@ PrefabInstance:
       propertyPath: tileOwner
       value: 
       objectReference: {fileID: -4852945424426744004}
+    - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
+      propertyPath: blockingPrefab
+      value: 
+      objectReference: {fileID: 5513274501101022694, guid: 015436990ccef834d85a7f8459ac6fcc, type: 3}
     - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
       propertyPath: corridorSize.x
       value: 8
@@ -3408,6 +3416,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -4852945424426744004}
     - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
+      propertyPath: blockingPrefab
+      value: 
+      objectReference: {fileID: 5513274501101022694, guid: 015436990ccef834d85a7f8459ac6fcc, type: 3}
+    - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
       propertyPath: corridorSize.x
       value: 8
       objectReference: {fileID: 0}
@@ -3882,6 +3894,10 @@ PrefabInstance:
       propertyPath: tileOwner
       value: 
       objectReference: {fileID: -4852945424426744004}
+    - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
+      propertyPath: blockingPrefab
+      value: 
+      objectReference: {fileID: 5513274501101022694, guid: 015436990ccef834d85a7f8459ac6fcc, type: 3}
     - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
       propertyPath: corridorSize.x
       value: 8

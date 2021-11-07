@@ -10,17 +10,17 @@ namespace TPSTemplate
 
         public void VirtualMoveInput(Vector2 virtualMoveDirection)
         {
-            starterAssetsInputs.MoveInput(virtualMoveDirection);
+            starterAssetsInputs.HandleMoveInput(virtualMoveDirection);
         }
 
         public void VirtualLookInput(Vector2 virtualLookDirection)
         {
-            starterAssetsInputs.LookInput(virtualLookDirection);
+            starterAssetsInputs.HandleLookInput(virtualLookDirection);
         }
 
         public void VirtualJumpInput(bool virtualJumpState)
         {
-            starterAssetsInputs.JumpInput(virtualJumpState);
+            starterAssetsInputs.HandleJumpInput(virtualJumpState);
         }
 
         public void VirtualSprintInput(bool virtualSprintState)

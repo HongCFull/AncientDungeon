@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
-[RequireComponent(typeof(BoxCollider),typeof(NavMeshSurface))]
+[RequireComponent(typeof(BoxCollider))]
 public class DungeonTile : MonoBehaviour
 {
     [Tooltip("Connectors")]
@@ -22,7 +22,6 @@ public class DungeonTile : MonoBehaviour
     [ReadOnly] public List<Collider> collidesHit;
     
     public BoxCollider boundingBox { get; private set; }
-    private NavMeshSurface navMeshSurface;
     private Connector latestPopedConnector;
     private Vector3 scaleVector;
     
@@ -30,12 +29,21 @@ public class DungeonTile : MonoBehaviour
     private void Awake() {
         //cache boundingBox
         boundingBox = GetComponent<BoxCollider>();
-        navMeshSurface = GetComponent<NavMeshSurface>();
-        navMeshSurface.BuildNavMesh();
         scaleVector = transform.localScale;
 
-        SpawnAIEnemies();
     }
+    
+    /// <summary>
+    /// When Player Enter This Tile
+    /// </summary>
+    /// <param name="other"></param>
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag.Equals("Player")) {
+            SpawnAIEnemies();
+        }
+    }
+
     
     /// <summary>
     /// Pop and assume the connector is connected 
@@ -96,12 +104,14 @@ public class DungeonTile : MonoBehaviour
 
         return scaledBoxHalfExtents;
     }
-
+    
+    
     private void SpawnAIEnemies()
     {
         if (aiCharacters.Length <= 0)
             return;
-        Vector3 worldPos = transform.TransformPoint(Vector3.zero);
+        //Vector3 worldPos = transform.TransformPoint(Vector3.zero);
+        Vector3 worldPos = transform.position;
         Instantiate(aiCharacters[Random.Range(0, aiCharacters.Length)], worldPos, quaternion.identity);
     }
     

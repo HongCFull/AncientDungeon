@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 
 namespace TPSTemplate
 {
-	[RequireComponent(typeof(ThirdPersonController))]
+	[RequireComponent(typeof(ThirdPersonController),typeof(Animator))]
 	public class StarterAssetsInputs : MonoBehaviour
 	{
 		[Header("Default Character Input Values")]
@@ -27,6 +27,15 @@ namespace TPSTemplate
 	#endif
 		
 		private ThirdPersonController tpsController;
+		private Animator animator;
+		private int animLayer = 0;
+		
+		//Anim Hash
+		private int animIDMeleeAttack;
+		private int animIDGrounded;
+		private int stateIDSpecialAttack1;
+		private int stateIDSpecialAttack2;
+		
 		
 		//Dash Variables
 		private float dashCoolDownTimer = 0f;
@@ -37,6 +46,13 @@ namespace TPSTemplate
 		private void Awake()
 		{
 			tpsController = GetComponent<ThirdPersonController>();
+			animator = GetComponent<Animator>();
+			
+			animIDMeleeAttack = Animator.StringToHash("MeleeAttack");
+			animIDGrounded = Animator.StringToHash("Grounded");
+			stateIDSpecialAttack1 = Animator.StringToHash("SpecialAttack1");
+			stateIDSpecialAttack2 = Animator.StringToHash("SpecialAttack2");
+
 		}
 
 		private void Update()
@@ -53,18 +69,18 @@ namespace TPSTemplate
 		//Invoke event method
 		public void OnMove(InputAction.CallbackContext callbackContext)
 		{
-			MoveInput(callbackContext.ReadValue<Vector2>());
+			HandleMoveInput(callbackContext.ReadValue<Vector2>());
 		}
 
 		public void OnLook(InputAction.CallbackContext callbackContext)
 		{
 			if(cursorInputForLook) {
-				LookInput(callbackContext.ReadValue<Vector2>());
+				HandleLookInput(callbackContext.ReadValue<Vector2>());
 			}
 		}
 		public void OnJump(InputAction.CallbackContext callbackContext)
 		{
-			JumpInput(callbackContext.ReadValueAsButton());
+			HandleJumpInput(callbackContext.ReadValueAsButton());
 		}
 
 		public void OnDash(InputAction.CallbackContext callbackContext)
@@ -77,23 +93,32 @@ namespace TPSTemplate
 		
 		public void OnMeleeAttack(InputAction.CallbackContext callbackContext)
 		{
-			MeleeAttackInput(callbackContext.ReadValueAsButton());
+			HandleMeleeAttackInput(callbackContext.ReadValueAsButton());
+		}
+
+		public void OnSpecialAttack1(InputAction.CallbackContext callbackContext)
+		{
+			HandleSpecialAttack1Input(callbackContext.ReadValueAsButton());
+		}
+		
+		public void OnSpecialAttack2(InputAction.CallbackContext callbackContext)
+		{
+			HandleSpecialAttack2Input(callbackContext.ReadValueAsButton());
 		}
 
 #endif
 
-
-		public void MoveInput(Vector2 newMoveDirection)
+		public void HandleMoveInput(Vector2 newMoveDirection)
 		{
 			move = newMoveDirection;
 		} 
 
-		public void LookInput(Vector2 newLookDirection)
+		public void HandleLookInput(Vector2 newLookDirection)
 		{
 			look = newLookDirection;
 		}
 
-		public void JumpInput(bool newJumpState)
+		public void HandleJumpInput(bool newJumpState)
 		{
 			jump = newJumpState;
 		}
@@ -103,8 +128,35 @@ namespace TPSTemplate
 			sprint = newSprintState;
 		}
 
-		private void MeleeAttackInput(bool newAttackState) {
-			meleeAttack = newAttackState;
+		private void HandleMeleeAttackInput(bool isClicked) {
+			if (isClicked && animator.GetBool(animIDGrounded)) {
+				animator.SetTrigger(animIDMeleeAttack);
+			}
+			else if (!isClicked) {
+				animator.ResetTrigger(animIDMeleeAttack);
+			}
+		}
+
+		private void HandleSpecialAttack1Input(bool isClicked)
+		{
+			if (isClicked && animator.GetBool(animIDGrounded)) {
+				animator.Play(stateIDSpecialAttack1,animLayer );
+				//animator.SetTrigger(animIDDoSpecialAttack1);
+			}
+			else if (!isClicked) {
+				//animator.ResetTrigger(animIDDoSpecialAttack1);
+			}
+		}
+		
+		private void HandleSpecialAttack2Input(bool isClicked)
+		{
+			if (isClicked && animator.GetBool(animIDGrounded)) {
+				animator.Play(stateIDSpecialAttack2,animLayer );
+				//animator.SetTrigger(animIDDoSpecialAttack2);
+			}
+			else if (!isClicked) {
+				//animator.ResetTrigger(animIDDoSpecialAttack2);
+			}
 		}
 		
 #if !UNITY_IOS || !UNITY_ANDROID

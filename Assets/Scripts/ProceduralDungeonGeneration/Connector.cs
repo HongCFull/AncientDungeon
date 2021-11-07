@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.WSA;
 
@@ -9,10 +10,11 @@ using UnityEngine.WSA;
 /// </summary>
 public class Connector : MonoBehaviour
 {
+    [SerializeField] private GameObject blockingPrefab;
     [SerializeField] private DungeonTile tileOwner;
     [SerializeField] private Vector2 corridorSize;
     [ReadOnly] public bool isConnected = false;
-
+    
     public DungeonTile GetTileOwner() {
         return tileOwner;
     }
@@ -46,5 +48,13 @@ public class Connector : MonoBehaviour
         Gizmos.DrawLine(leftUp, rightDown);
         Gizmos.DrawLine(rightUp, leftDown);
 
+    }
+
+    public void BlockConnector()
+    {
+        GameObject blockObj =
+            Instantiate(blockingPrefab,  gameObject.transform);
+        blockObj.transform.localScale=Vector3.one;
+       // blockObj.transform.Rotate(0f,90f,0f);
     }
 }

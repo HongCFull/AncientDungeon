@@ -39,8 +39,24 @@
                 },
                 {
                     "name": "MeleeAttack",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "70c9bb61-ab60-4741-81df-d98c0311b116",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "SpecialAttack1",
+                    "type": "Button",
+                    "id": "ed5925d7-4592-488c-97ae-19f278cf9854",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "SpecialAttack2",
+                    "type": "Button",
+                    "id": "daa32852-522b-4050-9ef3-5ff241069017",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -231,6 +247,28 @@
                     "processors": "",
                     "groups": "KeyboardMouse",
                     "action": "MeleeAttack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7ff80ce7-4517-4a68-9c10-60ca028dd00f",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "SpecialAttack1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "22a8d6b6-ad05-4e84-a9c8-fc53b2a6198e",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "SpecialAttack2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
