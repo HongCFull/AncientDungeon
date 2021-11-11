@@ -17,17 +17,22 @@ public class AIVision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag.Equals("Player")) {
-            if (VisionIsOccluded())
-                canSeePlayer = false;
-            else
-                canSeePlayer = true;
-        }
+        if (!other.gameObject.tag.Equals("Player"))
+            return;
+        
+        if (VisionIsOccluded())
+            canSeePlayer = false;
+        else
+            canSeePlayer = true;
+        
         //Debug.Log("Enter ai vision");
     }
 
     private void OnTriggerStay(Collider other)
     {
+        if (!other.gameObject.tag.Equals("Player"))
+            return;
+        
         timer += Time.deltaTime;
         if (timer >= occlusionScanPeriod) {
             timer = 0f;
@@ -43,15 +48,14 @@ public class AIVision : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag.Equals("Player")) {
-            if (VisionIsOccluded())
-                canSeePlayer = false;
-            else
-                canSeePlayer = true;
-        }
-        else {
+        if (!other.gameObject.tag.Equals("Player"))
+            return;
+    
+        if (VisionIsOccluded())
             canSeePlayer = false;
-        }
+        else
+            canSeePlayer = true;
+    
         // Debug.Log("exit ai vision");
 
     }

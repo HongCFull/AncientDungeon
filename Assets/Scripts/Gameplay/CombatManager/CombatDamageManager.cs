@@ -19,7 +19,7 @@ namespace Combat
 
             float damage = elementBuffFactor * skillPower * attacker.GetAttack() / receiver.GetDefense();
            
-            Debug.Log(attacker.name+" dealed "+damage+" damage to "+receiver.name);
+//            Debug.Log(attacker.name+" dealed "+damage+" damage to "+receiver.name);
             receiver.TakeDamageBy(damage);
         }
         

@@ -20,7 +20,8 @@ public abstract class CombatCharacter : MonoBehaviour
     
     [SerializeField] private UnityEvent whenItIsDead;
     [ReadOnly] public List<ReceiveHitBox> registeredHitBoxes;
-    
+
+    private bool diedOnce = false;
     
     protected virtual void Awake()
     {
@@ -44,8 +45,13 @@ public abstract class CombatCharacter : MonoBehaviour
     /// <param name="damage"></param>
     public void TakeDamageBy(float damage)
     {
+        if(diedOnce)
+            return;
+        
         currentHealth -= damage;
-        if (currentHealth <= 0) {
+        
+        if (currentHealth <= 0 ) {
+            diedOnce = true;
             whenItIsDead.Invoke();
         }
         else {

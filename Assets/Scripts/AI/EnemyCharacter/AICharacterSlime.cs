@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlimeCharacter : AICharacter
+public class AICharacterSlime : AICharacter
 {
     
     [Header("Flee Setting")]

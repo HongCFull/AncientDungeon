@@ -57,8 +57,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fcd443cb5d9f69499e4c11dd33fa83b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 6508980981969963372}
   canDamageHitBoxWithTag: 00000000
-  damage: 10
+  skillPower: 30
 --- !u!1 &1160850851
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,8 +117,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fcd443cb5d9f69499e4c11dd33fa83b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 6508980981969963372}
   canDamageHitBoxWithTag: 00000000
-  damage: 10
+  skillPower: 20
 --- !u!1 &1322948974
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,8 +177,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fcd443cb5d9f69499e4c11dd33fa83b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 6508980981969963372}
   canDamageHitBoxWithTag: 00000000
-  damage: 10
+  skillPower: 20
 --- !u!1 &1028569066122016055
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,8 +673,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b628b0cdcfa098e4d9b6e75416ebe0c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 100
-  maxHealth: 100
+  attack: 30
+  defense: 20
+  currentHealth: 200
+  maxHealth: 200
+  elementType: 2
   whenItIsDamaged:
     m_PersistentCalls:
       m_Calls:
@@ -689,7 +695,20 @@ MonoBehaviour:
         m_CallState: 2
   whenItIsDead:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6508980981969963372}
+        m_TargetAssemblyTypeName: AICharacter, Assembly-CSharp
+        m_MethodName: WrappedOperationWhenItIsDead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  registeredHitBoxes: []
   vision: {fileID: 6239141787830889977}
   attackDistance: 1.42
   attackHitBoxes:
@@ -698,6 +717,9 @@ MonoBehaviour:
   - {fileID: 356760026}
   showAttackDistance: 1
   attackDistanceColor: {r: 1, g: 0, b: 0, a: 1}
+  skinnedMeshRenderer: {fileID: 7686611535262814619}
+  dissolveDuration: 2
+  dissolveDelay: 1
   fleeDistance: 5
 --- !u!54 &6508980982772430952
 Rigidbody:

@@ -21,10 +21,11 @@ public abstract class AICharacter : CombatCharacter
     [SerializeField] private Color attackDistanceColor;
 
     [Header("Animation Settings")]
-    [SerializeField] private float deathDelay;
 
-    [Header("Mesh")] 
+    [Header("Mesh and effects")] 
     [SerializeField] private SkinnedMeshRenderer skinnedMeshRenderer;
+    [SerializeField] private float dissolveDuration;
+    [SerializeField] private float dissolveDelay;
     
     //Animation
     private Animator animator;
@@ -32,6 +33,8 @@ public abstract class AICharacter : CombatCharacter
     private int animID_isDead;
     private int animID_isInvulnerable;
     
+    //Mesh 
+    private Material dissolveMaterial;
     
     public Vector3 initPosition { get; private set; }
 
@@ -52,6 +55,8 @@ public abstract class AICharacter : CombatCharacter
         animID_isDamaged = Animator.StringToHash("isDamaged");
         animID_isDead = Animator.StringToHash("isDead");
         animID_isInvulnerable = Animator.StringToHash("isInvulnerable");
+
+        dissolveMaterial = skinnedMeshRenderer.material;
     }
     
     public float GetAttackDistance()
@@ -102,11 +107,17 @@ public abstract class AICharacter : CombatCharacter
             animator.SetTrigger(animID_isDamaged);
     }
 
-    public void OperationWhenItIsDead()
+    public void WrappedOperationWhenItIsDead()
+    {
+        StartCoroutine(OperationWhenItIsDead());
+    }
+    
+    IEnumerator OperationWhenItIsDead()
     {
         DisableAllReceiveHitBoxes();
         SetAnimationTriggerIsDead();
-        //Destroy(gameObject,deathDelay);
+        yield return StartCoroutine(Dissolve());
+        Destroy(gameObject);
     }
 
 
@@ -121,7 +132,20 @@ public abstract class AICharacter : CombatCharacter
     {
         animator.SetTrigger(animID_isDead);
     }
-    
+
+
+    IEnumerator Dissolve()
+    {
+        yield return new WaitForSeconds(dissolveDelay);
+        float timer = 0;
+        int dissolveID = Shader.PropertyToID("Vector1_a7ed521b31bd49a3aff17f95fd88251b");
+
+        while (timer<dissolveDuration) {
+            timer += Time.deltaTime;
+            dissolveMaterial.SetFloat(dissolveID,Mathf.Clamp01(timer/dissolveDuration));
+            yield return null;
+        }
+    }
     
 #if UNITY_EDITOR
     private void OnDrawGizmos()

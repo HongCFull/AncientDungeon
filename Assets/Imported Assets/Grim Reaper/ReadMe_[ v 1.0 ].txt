@@ -2,7 +2,7 @@
 
 =====================================================
 
-Grim Reaper [3D Model]   < Ver 1.0 >
+FallenAngel03 [3D Model]   < Ver 1.0 >
 
 =====================================================
 
@@ -12,7 +12,7 @@ Grim Reaper [3D Model]   < Ver 1.0 >
 
 
 ----------------------------------------------------
-Includes 13 Animations
+Includes 14 Animations
 ----------------------------------------------------
 
 
@@ -23,15 +23,15 @@ Includes 13 Animations
 > Idle03
 
 
-
 > Run
+
 
 > Dash
 
+> Attack01
 
 > Attack01
 
-> Attack02
 
 
 > Skill01
@@ -39,6 +39,8 @@ Includes 13 Animations
 > Skill02
 
 > Skill03
+
+> Skill04
 
 
 
@@ -64,9 +66,9 @@ instructions
 ===================================================
 
 
-1.click to the  [File] > [Open Project] > [Grim Reaper] folder
+1.click to the  [File] > [Open Project] > [FallenAngel03] folder
 
-2.Dubble click [Demo_scene] and Use Prefap file in the [Prefaps] folder
+2.Dubble click [Demo_scene] and Use Prefab file in the [Prefabs] folder
 
 3.you can use the model file ~  Too easy~~~
 

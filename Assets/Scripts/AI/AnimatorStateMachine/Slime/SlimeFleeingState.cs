@@ -7,17 +7,17 @@ using UnityEngine.Animations;
 /// <summary>
 /// 
 /// </summary>
-public class RandomWanderingState : StateMachineBehaviour
+public class SlimeFleeingState : StateMachineBehaviour
 {
     [SerializeField] private float tolerance=0.5f;
     
     private NavMeshAgent navMeshAgent;
-    private SlimeCharacter slimeCharacter;
+    private AICharacterSlime _aiCharacterSlime;
     private Vector3 destination;
     [ReadOnly] private float distError;
         
     //AnimID
-    [ReadOnly] private int hasReachedRandWanderingPosAnimID;
+    private int hasReachedRandWanderingPosAnimID;
     
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -45,17 +45,17 @@ public class RandomWanderingState : StateMachineBehaviour
     {
         navMeshAgent = animator.gameObject.GetComponent<NavMeshAgent>();
 
-        slimeCharacter = animator.gameObject.GetComponent<SlimeCharacter>();
+        _aiCharacterSlime = animator.gameObject.GetComponent<AICharacterSlime>();
 
         hasReachedRandWanderingPosAnimID = Animator.StringToHash("hasReachedRandWanderingPos");
     }
 
     void GoToRandPosition()
     {
-        float fleeDistance = slimeCharacter.GetFleeDistance();
+        float fleeDistance = _aiCharacterSlime.GetFleeDistance();
         Vector3 randomDistanceVec = Random.insideUnitSphere * fleeDistance;
 
-        Vector3 targetPos = slimeCharacter.GetAICharacterWorldPosition() + randomDistanceVec;
+        Vector3 targetPos = _aiCharacterSlime.GetAICharacterWorldPosition() + randomDistanceVec;
         NavMeshHit hit;
         NavMesh.SamplePosition(targetPos, out hit,fleeDistance,1);
         destination = hit.position;
