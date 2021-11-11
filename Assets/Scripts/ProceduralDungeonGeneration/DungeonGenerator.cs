@@ -20,7 +20,7 @@ public class DungeonGenerator : MonoBehaviour
     [Header("Dungeon Prefabs")]
     [SerializeField] private DungeonTile[] tilePrefabs;
     [SerializeField] private DungeonTile[] startingRoomPrefabs;
-    [SerializeField] private DungeonTile[] exitRoomPrefabs;
+    [SerializeField] private DungeonTile[] endingRoomPrefabs;
     [SerializeField] private GameObject[] blockingPrefabs;
     [SerializeField] private GameObject[] doorPrefabs;
 
@@ -178,7 +178,7 @@ public class DungeonGenerator : MonoBehaviour
     DungeonTile GenerateEndingRoom() 
     {
         int index = Random.Range(0, startingRoomPrefabs.Length);
-        DungeonTile tile = Instantiate(startingRoomPrefabs[index], transform.position, Quaternion.identity, transform);
+        DungeonTile tile = Instantiate(endingRoomPrefabs[index], transform.position, Quaternion.identity, transform);
         tile.name = "Ending Room";
         generatedTiles.Add(tile);
         

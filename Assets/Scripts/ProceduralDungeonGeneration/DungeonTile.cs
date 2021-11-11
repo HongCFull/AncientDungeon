@@ -9,13 +9,16 @@ using Random = UnityEngine.Random;
 [RequireComponent(typeof(BoxCollider))]
 public class DungeonTile : MonoBehaviour
 {
-    [Tooltip("Connectors")]
+    [Header("Connectors")]
     [SerializeField] private List<Connector> corridorConnector;
     [SerializeField] private List<Connector> connectedConnectors = new List<Connector>();   //should be read only
 
-    [Tooltip("Enemies")] 
+    [Header("Enemies")] 
+    [SerializeField] private bool canSpawnEnemy;
     [SerializeField] private AICharacter[] aiCharacters;
     
+    [Space]
+    [Header("Debug")]
     [HideInInspector] public Connector parentConnector = null;
     [ReadOnly] public DungeonTile parentTile = null;
     [ReadOnly] public GameObject pathHolder;
@@ -24,7 +27,7 @@ public class DungeonTile : MonoBehaviour
     public BoxCollider boundingBox { get; private set; }
     private Connector latestPopedConnector;
     private Vector3 scaleVector;
-    
+    private bool hasSpawnedEnemies = false;
     
     private void Awake() {
         //cache boundingBox
@@ -39,7 +42,8 @@ public class DungeonTile : MonoBehaviour
     /// <param name="other"></param>
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag.Equals("Player")) {
+        if (  canSpawnEnemy && !hasSpawnedEnemies && other.gameObject.tag.Equals("Player")) {
+            hasSpawnedEnemies = true;
             SpawnAIEnemies();
         }
     }

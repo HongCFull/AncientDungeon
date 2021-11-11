@@ -168,16 +168,18 @@ MonoBehaviour:
   - {fileID: -1412493138797289101, guid: d9b58493395c62e4eac7f4634c0e5cae, type: 3}
   - {fileID: -1137114287413855715, guid: ca3c17b63ec60a346b8a6a7e2e0d792b, type: 3}
   - {fileID: 6544990160904954178, guid: a3c39e53a1d147047975f687e69f668b, type: 3}
-  exitRoomPrefabs:
-  - {fileID: 0}
+  endingRoomPrefabs:
+  - {fileID: -1412493138797289101, guid: 721a4e4cecb063140b79f5f8f10029a6, type: 3}
+  - {fileID: -1137114287413855715, guid: 2f702c24c7f2804458e0e9d7a41fc367, type: 3}
+  - {fileID: 6544990160904954178, guid: 8b3d96859ef1e944facaa1069ac61fb7, type: 3}
   blockingPrefabs:
   - {fileID: 5513274501101022694, guid: 015436990ccef834d85a7f8459ac6fcc, type: 3}
   doorPrefabs: []
   generationDelay: 0
   retryMaxCount: 10
-  dungeonDepth: 14
-  totalBranches: 8
-  branchDepth: 4
+  dungeonDepth: 9
+  totalBranches: 5
+  branchDepth: 3
   useRandomDepthForBranches: 0
   doorPercentage: 0
   generatedTiles: []
@@ -607,6 +609,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0.40200043
       objectReference: {fileID: 0}
+    - target: {fileID: 306621507873462565, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1450001
+      objectReference: {fileID: 0}
     - target: {fileID: 3846047569234263005, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -658,6 +664,10 @@ PrefabInstance:
     - target: {fileID: 7267855251028111882, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.40200043
+      objectReference: {fileID: 0}
+    - target: {fileID: 7267855251028111882, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1450001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}

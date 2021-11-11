@@ -146,7 +146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1322948974}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.000000007350083, y: 0.1538462, z: -0.24647626}
+  m_LocalPosition: {x: -0, y: 0.154, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7126946643071932407}
@@ -163,7 +163,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5, z: 0.9}
+  m_Size: {x: 0.5, y: 0.87, z: 0.57}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1322948976
 MonoBehaviour:
@@ -204,8 +204,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1028569066122016055}
-  m_LocalRotation: {x: 0, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.0000000068474098, z: 0.085}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.0000000068474098, z: 0.085}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 507164724483356182}
@@ -468,7 +468,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2214023577122021168}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8964349750738797257}
@@ -680,18 +680,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  receiveHitBoxes: []
+  receiveHitBoxes:
+  - {fileID: 5872237619725520024}
   attackHitBoxes:
   - {fileID: 1322948976}
   - {fileID: 1160850853}
   - {fileID: 356760026}
+  showAttackDistance: 1
+  attackDistanceColor: {r: 1, g: 0, b: 0, a: 1}
   vision: {fileID: 6239141787830889977}
   attackDistance: 1.42
   skinnedMeshRenderer: {fileID: 7686611535262814619}
   dissolveDuration: 2
   dissolveDelay: 1
-  showAttackDistance: 1
-  attackDistanceColor: {r: 1, g: 0, b: 0, a: 1}
   fleeDistance: 5
 --- !u!54 &6508980982772430952
 Rigidbody:
@@ -947,6 +948,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9043754355607638525}
     m_Modifications:
+    - target: {fileID: 1981559750924187733, guid: b82ea449147227f45b071acbf5858cfc, type: 3}
+      propertyPath: hitBoxTag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981559750924187733, guid: b82ea449147227f45b071acbf5858cfc, type: 3}
+      propertyPath: parentCombatCharacter
+      value: 
+      objectReference: {fileID: 6508980981969963372}
     - target: {fileID: 3919907949333788164, guid: b82ea449147227f45b071acbf5858cfc, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -961,7 +970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3919907949333788164, guid: b82ea449147227f45b071acbf5858cfc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.21
       objectReference: {fileID: 0}
     - target: {fileID: 3919907949333788164, guid: b82ea449147227f45b071acbf5858cfc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -995,8 +1004,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: ReceiveHitBox
       objectReference: {fileID: 0}
+    - target: {fileID: 7583970631040843610, guid: b82ea449147227f45b071acbf5858cfc, type: 3}
+      propertyPath: m_Height
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7583970631040843610, guid: b82ea449147227f45b071acbf5858cfc, type: 3}
+      propertyPath: m_Radius
+      value: 0.35
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b82ea449147227f45b071acbf5858cfc, type: 3}
+--- !u!114 &5872237619725520024 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1981559750924187733, guid: b82ea449147227f45b071acbf5858cfc, type: 3}
+  m_PrefabInstance: {fileID: 5332696371384349901}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd92d239009e75438ed2067b68e18ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8964349750738797257 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3919907949333788164, guid: b82ea449147227f45b071acbf5858cfc, type: 3}
