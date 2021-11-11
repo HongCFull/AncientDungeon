@@ -13,11 +13,7 @@ namespace HitBoxDefinition
         [SerializeField] private CombatCharacter parentCombatCharacter;
 
         public CombatCharacter GetCombatCharacterOwner() => parentCombatCharacter;
-
-        private void Awake()
-        {
-            parentCombatCharacter.RegisterAsHitBox(this);
-        }
+        
 
         public void EnableHitBox(bool enable)
         {

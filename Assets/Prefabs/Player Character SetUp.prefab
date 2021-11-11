@@ -528,7 +528,8 @@ MonoBehaviour:
   whenItIsDead:
     m_PersistentCalls:
       m_Calls: []
-  registeredHitBoxes: []
+  receiveHitBoxes: []
+  attackHitBoxes: []
   weaponHitBox: {fileID: 262270388}
   slashVFXManager: {fileID: 1397624862}
 --- !u!114 &12366952
@@ -5996,11 +5997,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3486765669871635671, guid: 30ba36232d8e24e4ab59b1fd195dd2e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.03851223
+      value: 0.16148779
       objectReference: {fileID: 0}
     - target: {fileID: 3486765669871635671, guid: 30ba36232d8e24e4ab59b1fd195dd2e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.313
+      value: 1.0129999
       objectReference: {fileID: 0}
     - target: {fileID: 3486765669871635671, guid: 30ba36232d8e24e4ab59b1fd195dd2e5, type: 3}
       propertyPath: m_LocalPosition.z

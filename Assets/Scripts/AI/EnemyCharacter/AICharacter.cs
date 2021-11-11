@@ -8,24 +8,25 @@ using HitBoxDefinition;
 [RequireComponent(typeof(Animator))]
 public abstract class AICharacter : CombatCharacter
 {
-    
-    [Header("Perception Settings")]
-    [SerializeField] private AIVision vision;
-
-    [Header("Attack Settings")] 
-    [SerializeField] private float attackDistance;
-    [SerializeField] private List<AttackHitBox> attackHitBoxes;
-    
+    [Space]
     [Header("Debug Settings")] 
     [SerializeField] private bool showAttackDistance;
     [SerializeField] private Color attackDistanceColor;
+    
+    [Space]
+    [Header("Perception Settings")]
+    [SerializeField] private AIVision vision;
 
-    [Header("Animation Settings")]
-
+    [Space]
+    [Header("Attack Settings")] 
+    [SerializeField] private float attackDistance;
+    
+    [Space]
     [Header("Mesh and effects")] 
     [SerializeField] private SkinnedMeshRenderer skinnedMeshRenderer;
     [SerializeField] private float dissolveDuration;
     [SerializeField] private float dissolveDelay;
+    
     
     //Animation
     private Animator animator;
@@ -77,29 +78,7 @@ public abstract class AICharacter : CombatCharacter
     {
         return transform.position;
     }
-
-    public void DisableAllAttackHitBoxes()
-    {
-        foreach (AttackHitBox attackHitBox in attackHitBoxes) {
-            attackHitBox.DisableAttackCollider();
-        }
-    }
     
-    public void EnableAttackHitBox(int i)
-    {
-        if (i < 0 || i >= attackHitBoxes.Count)
-            return;
-        
-        attackHitBoxes[i].EnableAttackCollider();
-    }
-    
-    public void DisableAttackHitBox(int i)
-    {
-        if (i < 0 || i >= attackHitBoxes.Count)
-            return;
-        
-        attackHitBoxes[i].DisableAttackCollider();
-    }
 
     public void SetAnimationTriggerIsDamaged()
     {
@@ -123,7 +102,7 @@ public abstract class AICharacter : CombatCharacter
 
     private void DisableAllReceiveHitBoxes()
     {
-        foreach (ReceiveHitBox receiveHitBox in registeredHitBoxes) {
+        foreach (ReceiveHitBox receiveHitBox in receiveHitBoxes) {
             receiveHitBox.EnableHitBox(false);
         }    
     }

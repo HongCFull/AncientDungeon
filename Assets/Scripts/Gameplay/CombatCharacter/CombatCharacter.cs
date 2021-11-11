@@ -19,7 +19,10 @@ public abstract class CombatCharacter : MonoBehaviour
     [SerializeField] private UnityEvent whenItIsDamaged;
     
     [SerializeField] private UnityEvent whenItIsDead;
-    [ReadOnly] public List<ReceiveHitBox> registeredHitBoxes;
+
+    [Header("HitBoxes")]
+    [SerializeField] protected List<ReceiveHitBox> receiveHitBoxes;
+    [SerializeField] protected List<AttackHitBox> attackHitBoxes;
 
     private bool diedOnce = false;
     
@@ -37,7 +40,28 @@ public abstract class CombatCharacter : MonoBehaviour
     public float GetCurrentHealth() =>currentHealth;
     public float GetMaxHealth() => maxHealth;
     
+    public void DisableAllAttackHitBoxes()
+    {
+        foreach (AttackHitBox attackHitBox in attackHitBoxes) {
+            attackHitBox.DisableAttackCollider();
+        }
+    }
     
+    protected void EnableAttackHitBox(int i)
+    {
+        if (i < 0 || i >= attackHitBoxes.Count)
+            return;
+        
+        attackHitBoxes[i].EnableAttackCollider();
+    }
+    
+    protected void DisableAttackHitBox(int i)
+    {
+        if (i < 0 || i >= attackHitBoxes.Count)
+            return;
+        
+        attackHitBoxes[i].DisableAttackCollider();
+    }
     /// <summary>
     /// Deal damage to this damageable gameObject.
     /// Invoke events when it is damaged or dead.
@@ -57,11 +81,6 @@ public abstract class CombatCharacter : MonoBehaviour
         else {
             whenItIsDamaged.Invoke();
         }
-    }
-
-    public void RegisterAsHitBox(ReceiveHitBox receiveHitBox)
-    {
-        registeredHitBoxes.Add(receiveHitBox);
     }
     
 }

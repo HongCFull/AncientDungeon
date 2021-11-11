@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class AICharacterFallenAngel : AICharacter
 {
-    // Start is called before the first frame update
-    void Start()
+    [Space]
+    [Header("Unique AttackHitBox")]
+    [SerializeField] private AttackHitBox leftWeaponHitBox;
+    [SerializeField] private AttackHitBox rightWeaponHitBox;
+
+    public void EnableLeftWeaponHitBoxWithPower(float power)
     {
-        
+        leftWeaponHitBox.EnableAttackColliderWithSkillPower(power);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DisableLeftWeaponHitBox()
     {
-        
+        leftWeaponHitBox.DisableAttackCollider();
+    }
+
+    public void EnableRightWeaponHitBoxWithPower(float power)
+    {
+        rightWeaponHitBox.EnableAttackColliderWithSkillPower(power);
+    }
+
+    public void DisableRightWeaponHitBox()
+    {
+        rightWeaponHitBox.DisableAttackCollider();
     }
 }
