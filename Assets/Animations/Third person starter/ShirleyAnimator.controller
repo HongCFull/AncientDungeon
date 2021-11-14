@@ -609,6 +609,25 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1107 &-6323397983346272823
+AnimatorStateMachine:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Layer
+  m_ChildStates: []
+  m_ChildStateMachines: []
+  m_AnyStateTransitions: []
+  m_EntryTransitions: []
+  m_StateMachineTransitions: {}
+  m_StateMachineBehaviours: []
+  m_AnyStatePosition: {x: 50, y: 20, z: 0}
+  m_EntryPosition: {x: 50, y: 120, z: 0}
+  m_ExitPosition: {x: 800, y: 120, z: 0}
+  m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
+  m_DefaultState: {fileID: 0}
 --- !u!1102 &-5844633025860878434
 AnimatorState:
   serializedVersion: 6
@@ -1133,7 +1152,7 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 10, y: -60, z: 0}
-  m_EntryPosition: {x: 330, y: -170, z: 0}
+  m_EntryPosition: {x: 320, y: -170, z: 0}
   m_ExitPosition: {x: 10, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 590, y: 20, z: 0}
   m_DefaultState: {fileID: -4363094521043883551}
@@ -1977,7 +1996,7 @@ AnimatorState:
   m_StateMachineBehaviours:
   - {fileID: 5031064081785032302}
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
+  m_IKOnFeet: 1
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0
@@ -2473,9 +2492,15 @@ AnimatorController:
     m_Controller: {fileID: 9100000}
   - serializedVersion: 5
     m_Name: New Layer
-    m_StateMachine: {fileID: 6251036108056876671}
+    m_StateMachine: {fileID: -6323397983346272823}
     m_Mask: {fileID: 0}
-    m_Motions: []
+    m_Motions:
+    - serializedVersion: 2
+      m_State: {fileID: -1439523973963914469}
+      m_Motion: {fileID: 8993902097722301239, guid: 7fdf7b91782bc9d47857405a5af1dd32, type: 3}
+    - serializedVersion: 2
+      m_State: {fileID: -5664250466238760664}
+      m_Motion: {fileID: 8993902097722301239, guid: 74f833269003da14a8dd7e305def6c08, type: 3}
     m_Behaviours: []
     m_BlendingMode: 0
     m_SyncedLayerIndex: 0
@@ -3618,7 +3643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableRootMotion: 1
-  applyGravityInRM: 1
+  applyGravityInRM: 0
   startingRMFrame: 0
   slashVFXIndexs: 
   vfxMoveWithPlayer: 0
@@ -3858,9 +3883,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.1
+  m_TransitionDuration: 0.25
   m_TransitionOffset: 0
-  m_ExitTime: 0.9
+  m_ExitTime: 0.7
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -4359,7 +4384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableRootMotion: 1
-  applyGravityInRM: 1
+  applyGravityInRM: 0
   startingRMFrame: 0
   slashVFXIndexs: 
   vfxMoveWithPlayer: 0
