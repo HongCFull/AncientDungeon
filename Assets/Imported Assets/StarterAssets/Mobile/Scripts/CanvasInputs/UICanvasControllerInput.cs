@@ -23,11 +23,11 @@ namespace Player
             starterAssetsInputs.HandleJumpInput(virtualJumpState);
         }
 
-        public void VirtualSprintInput(bool virtualSprintState)
-        {
-            starterAssetsInputs.SprintInput(virtualSprintState);
-        }
-        
+        // public void VirtualSprintInput(bool virtualSprintState)
+        // {
+        //     starterAssetsInputs.SprintInput(virtualSprintState);
+        // }
+        //
     }
 
 }

@@ -12,7 +12,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
-//Bug = tiles in retry generation no collision checking? 
+//Bug: when the scale vector is not uniform = collision checking not accurate?
 
 public class DungeonGenerator : MonoBehaviour
 {

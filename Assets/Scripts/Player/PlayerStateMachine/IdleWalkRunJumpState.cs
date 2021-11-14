@@ -14,7 +14,6 @@ public class IdleWalkRunJumpState : StateMachineBehaviour
         //Debug.Log("enter IdleWalkRunJump State");
 
     }
-    
 
     private void DisableRootMotion(Animator animator)
     {

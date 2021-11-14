@@ -18,11 +18,14 @@ namespace Player
 		//Player
 		[Header("Player")] 
 		
-		[Tooltip("Move speed of the character in m/s")]
-		public float MoveSpeed = 2.0f;
+		[Tooltip("Walk speed of the character in m/s")]
+		public float WalkSpeed = 2.0f;
 		
-		[Tooltip("Sprint speed of the character in m/s")]
-		public float SprintSpeed = 5.335f;
+		[Tooltip("Normal Sprint speed of the character in m/s")]
+		public float NormalSprintSpeed = 5.335f;
+		
+		[Tooltip("Fast Sprint speed of the character in m/s")]
+		public float FastSprintSpeed = 7f;
 		
 		[Tooltip("How fast the character turns to face movement direction")]
 		[Range(0.0f, 0.3f)]
@@ -91,7 +94,8 @@ namespace Player
 		private bool enableWaling = true;
 		private bool enableGravity = true;
 		
-		private float _speed;
+		private float _targetSpeed;	//the desired moving speed of the character 
+		private float _speed;	//the actual speed that the character is walking 
 		private float _animationBlend;
 		private float _targetRotation = 0.0f;
 		private float _rotationVelocity;
@@ -151,10 +155,10 @@ namespace Player
 			else {
 				ResetAnimatorMovementPara();
 			}
+			
 			JumpAndGravity();
 			GroundedCheck();
 			CheckSliding();
-			
 		}
 
 		private void LateUpdate()
@@ -197,7 +201,26 @@ namespace Player
 		{
 			_animator.SetTrigger(_animIDDash);
 		}
-		
+
+		public void ApplyIdleMovingSpeed()
+		{
+			_targetSpeed = 0f;
+		}
+
+		public void ApplyWalkSpeed()
+		{
+			_targetSpeed = WalkSpeed;
+		}
+
+		public void ApplyNormalSprintSpeed()
+		{
+			_targetSpeed = NormalSprintSpeed;
+		}
+
+		public void ApplyFastSprintSpeed()
+		{
+			_targetSpeed = FastSprintSpeed;
+		}
 ///====================================================================================================================================================================================================================================================================================
 /// private functions
 ///====================================================================================================================================================================================================================================================================================
@@ -207,7 +230,7 @@ namespace Player
 			_animator = GetComponent<Animator>();
 			_controller = GetComponent<CharacterController>();
 			_input = GetComponent<StarterAssetsInputs>();
-			_speed = MoveSpeed;
+			_speed = WalkSpeed;
 		}
 		
 		private void AssignAnimationIDs()
@@ -219,7 +242,6 @@ namespace Player
 			_animIDMotionSpeed = Animator.StringToHash("MotionSpeed");
 			_animIDDash = Animator.StringToHash("Dash");
 			_animIDTurningAngle = Animator.StringToHash("TurningAngle");
-			
 		}
 
 		private void CameraRotation()
@@ -239,16 +261,12 @@ namespace Player
 		}
 		
 
-		//TODO: when the player is not moving e.g. speed ~= 0 -> make the rotation smooth time to 0.01. Else make it 0.07
 		private void Move()
 		{
-
-			float targetSpeed;
 			if (_input.move == Vector2.zero) 
-				targetSpeed = 0.0f;
+				_targetSpeed = 0.0f;
 			else {
-				//targetSpeed = _input.sprint ? SprintSpeed : MoveSpeed;
-				targetSpeed = SprintSpeed;
+				_targetSpeed = _input.sprint ? FastSprintSpeed : NormalSprintSpeed;
 			}
 
 			float currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
@@ -259,20 +277,20 @@ namespace Player
 			float inputMagnitude = _input.analogMovement ? _input.move.magnitude : 1f;
 
 			// accelerate or decelerate to target speed
-			if (currentHorizontalSpeed < targetSpeed - speedOffset || currentHorizontalSpeed > targetSpeed + speedOffset)
+			if (currentHorizontalSpeed < _targetSpeed - speedOffset || currentHorizontalSpeed > _targetSpeed + speedOffset)
 			{
 				// creates curved result rather than a linear one giving a more organic speed change
 				// note T in Lerp is clamped, so we don't need to clamp our speed
-				_speed = Mathf.Lerp(currentHorizontalSpeed, targetSpeed * inputMagnitude, Time.deltaTime * SpeedChangeRate);
+				_speed = Mathf.Lerp(currentHorizontalSpeed, _targetSpeed * inputMagnitude, Time.deltaTime * SpeedChangeRate);
 
 				// round speed to 3 decimal places
 				_speed = Mathf.Round(_speed * 1000f) / 1000f;
 			}
 			else
 			{
-				_speed = targetSpeed;
+				_speed = _targetSpeed;
 			}
-			_animationBlend = Mathf.Lerp(_animationBlend, targetSpeed, Time.deltaTime * SpeedChangeRate);
+			_animationBlend = Mathf.Lerp(_animationBlend, _targetSpeed, Time.deltaTime * SpeedChangeRate);
 
 			// normalise input direction
 			Vector3 inputDirection = GetNormalizedInputVector();
@@ -364,7 +382,6 @@ namespace Player
 
 		}
 		
-
 		private void ApplyGravity()
 		{
 			// apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
@@ -381,6 +398,7 @@ namespace Player
 			_animator.SetBool(_animIDGrounded, grounded);
 			
 		}
+		
 		private void CheckSliding()
 		{
 			if (!grounded) {
