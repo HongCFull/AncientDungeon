@@ -3,17 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Animator),typeof(AudioSource))]
 public class PlayerCharacter : CombatCharacter
 {
     [SerializeField] private AttackHitBox weaponHitBox;
     [SerializeField] private SlashVFXManager slashVFXManager;
-    public static PlayerCharacter Instance { get; private set; }
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip[] combo1Clips;
+    [SerializeField] private AudioClip[] combo2Clips;
+    [SerializeField] private AudioClip[] combo3Clips;
+    [SerializeField] private AudioClip[] combo4Clips;
+    
+    //Audio
+    private AudioSource audioSource;
+    
     //Animations
     private Animator animator;
     private int isDamagedAnimID;
     
+    public static PlayerCharacter Instance { get; private set; }
     public SlashVFXManager GetSlashVFXManager() => slashVFXManager;
     
     
@@ -30,6 +39,7 @@ public class PlayerCharacter : CombatCharacter
             Instance = this;
 
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         isDamagedAnimID = Animator.StringToHash("IsDamaged");
     }
     
@@ -58,6 +68,30 @@ public class PlayerCharacter : CombatCharacter
     {
         weaponHitBox.DisableAttackCollider();
     }
-    
-    
+
+    public void PlayAttackAudioOfCombo(int index)
+    {
+        AudioClip[] atkAudioClips = null;
+        switch (index) {
+            case 1:
+                atkAudioClips = combo1Clips;
+                break;
+            case 2:
+                atkAudioClips = combo2Clips;
+                break;
+            case 3:
+                atkAudioClips = combo3Clips;
+                break;
+            case 4:
+                atkAudioClips = combo4Clips;
+                break;
+            default:
+                break;
+        }
+        audioSource.Stop();
+        if(atkAudioClips!=null)
+            audioSource.PlayOneShot(atkAudioClips[Random.Range(0, atkAudioClips.Length)]);
+
+    }
+
 }
