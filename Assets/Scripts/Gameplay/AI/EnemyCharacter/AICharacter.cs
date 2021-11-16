@@ -32,7 +32,7 @@ public abstract class AICharacter : CombatCharacter
     private Animator animator;
     private int animID_isDamaged;
     private int animID_isDead;
-    private int animID_isInvulnerable;
+    private int animID_stateCanBeInterrupted;
     
     //Mesh 
     private Material dissolveMaterial;
@@ -55,7 +55,7 @@ public abstract class AICharacter : CombatCharacter
         
         animID_isDamaged = Animator.StringToHash("isDamaged");
         animID_isDead = Animator.StringToHash("isDead");
-        animID_isInvulnerable = Animator.StringToHash("isInvulnerable");
+        animID_stateCanBeInterrupted = Animator.StringToHash("stateCanBeInterrupted");
 
         dissolveMaterial = skinnedMeshRenderer.material;
     }
@@ -82,7 +82,7 @@ public abstract class AICharacter : CombatCharacter
 
     public void SetAnimationTriggerIsDamaged()
     {
-        if(!animator.GetBool(animID_isInvulnerable))
+        if(animator.GetBool(animID_stateCanBeInterrupted))
             animator.SetTrigger(animID_isDamaged);
     }
 

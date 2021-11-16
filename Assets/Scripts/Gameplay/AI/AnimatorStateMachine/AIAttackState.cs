@@ -6,20 +6,20 @@ public class AIAttackState : StateMachineBehaviour
 {
 
     [SerializeField] private bool canBeInterrupted;
-    private bool originalIsInvulnerableState;
-    private int animID_isInvulnerable;
+    private bool orginalInterruptableState;
+    private int animIDStateCanBeInterrupted;
     
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        animID_isInvulnerable = Animator.StringToHash("isInvulnerable");
-        originalIsInvulnerableState = animator.GetBool(animID_isInvulnerable);
-        animator.SetBool(animID_isInvulnerable,!canBeInterrupted);
+        animIDStateCanBeInterrupted = Animator.StringToHash("stateCanBeInterrupted");
+        orginalInterruptableState = animator.GetBool(animIDStateCanBeInterrupted);
+        animator.SetBool(animIDStateCanBeInterrupted,canBeInterrupted);
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
-        animator.SetBool(animID_isInvulnerable,originalIsInvulnerableState);
+        animator.SetBool(animIDStateCanBeInterrupted,orginalInterruptableState);
     }
 }

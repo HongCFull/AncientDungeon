@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using Player;
 using UnityEngine;
 
-public class PlayerAttackState : StateMachineBehaviour
+public class PlayerAttackState : ArtificialGravityState
 {
 
     [Header("RootMotion Settings")]
     [SerializeField] private bool enableRootMotion;
 
-    [SerializeField] private bool applyGravityInRM;
+   // [SerializeField] private bool applyGravityInRM;
     [Tooltip("The frame that starts playing root motion in this state")]
     [SerializeField] [Range(0,100)]private int startingRMFrame; 
 
@@ -20,7 +20,7 @@ public class PlayerAttackState : StateMachineBehaviour
     [SerializeField] [Range(-0.1f,5f)] private float appendDuration;
     
     private PlayerCharacter playerCharacter;
-    private CharacterController characterController;
+    //private CharacterController characterController;
     private ThirdPersonController thirdPersonController;
     
     private bool originalRMOption;
@@ -36,7 +36,6 @@ public class PlayerAttackState : StateMachineBehaviour
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-//        Debug.Log("enter ");
         base.OnStateEnter(animator, stateInfo, layerIndex);
         
         CacheComponents(animator);
@@ -52,11 +51,8 @@ public class PlayerAttackState : StateMachineBehaviour
     public override void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         //State move will still be called after the state has exit!
-        if (hasExited||!hasEnter) 
+        if (hasExited) 
             return;
-        
-        //Debug.Log("Move");
-        base.OnStateMove(animator, stateInfo, layerIndex);
         
         if (!hasRotated) {
             RotatePlayerFocus(animator);
@@ -65,17 +61,16 @@ public class PlayerAttackState : StateMachineBehaviour
         else {
             animator.ApplyBuiltinRootMotion();
 
-            if (applyGravityInRM && GetCurrentFrame(stateInfo) >= startingRMFrame) {
-                characterController.Move(new Vector3(0, -15f, 0f) * Time.deltaTime);
-            }
+//            if (applyGravityInRM && GetCurrentFrame(stateInfo) >= startingRMFrame) {
+  //              characterController.Move(new Vector3(0, -15f, 0f) * Time.deltaTime);
+            if (GetCurrentFrame(stateInfo) >= startingRMFrame)
+                base.OnStateMove(animator, stateInfo, layerIndex);
         }
 
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-  //      Debug.Log("exit");
-
         base.OnStateExit(animator, stateInfo, layerIndex);
         
        // animator.SetBool(animIDIsInComboState,false);
@@ -92,7 +87,7 @@ public class PlayerAttackState : StateMachineBehaviour
     private void CacheComponents(Animator animator)
     {
         playerCharacter = animator.GetComponent<PlayerCharacter>();
-        characterController = animator.GetComponent<CharacterController>();
+//        characterController = animator.GetComponent<CharacterController>();
         thirdPersonController = animator.GetComponent<ThirdPersonController>();
         
       //  animIDIsInComboState = Animator.StringToHash("IsInComboState");
@@ -119,13 +114,13 @@ public class PlayerAttackState : StateMachineBehaviour
     }
     
    
-    void SpawnSlashVFX() {
+    void SpawnSlashVFX() 
+    {
         for (int i = 0; i<slashVFXIndexs.Length; i++)
             if(!vfxMoveWithPlayer)
                 PlayerCharacter.Instance.GetSlashVFXManager().SpawnSlashEffect(slashVFXIndexs[i]);
             else
                 PlayerCharacter.Instance.GetSlashVFXManager().SpawnSlashEffectThatFollowsPlayer(slashVFXIndexs[i],appendDuration);
-
     }
 
     int GetCurrentFrame(AnimatorStateInfo stateInfo)

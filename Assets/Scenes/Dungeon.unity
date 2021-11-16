@@ -693,6 +693,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e087ecce43ebbff45a1b360637807d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doubleTapTimeInterval: 0
+  doubleTapCoolDown: 0
+  wKeyDoubleTapAction: {fileID: 0}
+  aKeyDoubleTapAction: {fileID: 0}
+  sKeyDoubleTapAction: {fileID: 0}
+  dKeyDoubleTapAction: {fileID: 0}
   move: {x: 0, y: 0}
   look: {x: 0, y: 0}
   jump: 0
@@ -1043,8 +1049,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e54e5a728a9234ab24fcf1460ed8a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 4
-  SprintSpeed: 20
+  WalkSpeed: 2
+  NormalSprintSpeed: 5.335
+  FastSprintSpeed: 7
   RotationSmoothTime: 0.07
   SpeedChangeRate: 10
   moveSpeedThreshold: 0.9

@@ -18,7 +18,6 @@ public abstract class ArtificialGravityState : StateMachineBehaviour
         base.OnStateMove(animator, stateInfo, layerIndex);
         if(applyArtificialGravity)
             characterController.Move(new Vector3(0, -15f, 0f) * Time.deltaTime);
-
     }
 
     public new virtual void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

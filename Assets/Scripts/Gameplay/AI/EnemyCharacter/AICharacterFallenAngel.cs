@@ -8,7 +8,8 @@ public class AICharacterFallenAngel : AICharacter
     [Header("Unique AttackHitBox")]
     [SerializeField] private AttackHitBox leftWeaponHitBox;
     [SerializeField] private AttackHitBox rightWeaponHitBox;
-
+    [SerializeField] private AttackHitBox attack02HitBox;
+    
     public void EnableLeftWeaponHitBoxWithPower(float power)
     {
         leftWeaponHitBox.EnableAttackColliderWithSkillPower(power);
@@ -27,5 +28,15 @@ public class AICharacterFallenAngel : AICharacter
     public void DisableRightWeaponHitBox()
     {
         rightWeaponHitBox.DisableAttackCollider();
+    }
+
+    public void EnableAttack02HitBoxWithPower(float power)
+    {
+        attack02HitBox.EnableAttackColliderWithSkillPower(power);
+    }
+
+    public void DisableAttack02HitBox()
+    {
+        attack02HitBox.DisableAttackCollider();
     }
 }
