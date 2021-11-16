@@ -264,6 +264,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: isDamaged
     m_EventTreshold: 0
+  - m_ConditionMode: 1
+    m_ConditionEvent: canSeePlayer
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3938514751080428764}
   m_Solo: 0
@@ -847,12 +850,12 @@ AnimatorStateMachine:
   - {fileID: -3593047286731926005}
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: 1174624408680711178}
-    second:
-    - {fileID: -4552269990908365855}
   - first: {fileID: 3737290662455111125}
     second:
     - {fileID: -5127161100058791513}
+  - first: {fileID: 1174624408680711178}
+    second:
+    - {fileID: -4552269990908365855}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -440, y: 410, z: 0}
   m_EntryPosition: {x: 20, y: 20, z: 0}
