@@ -18,7 +18,7 @@ public class TurnState : StateMachineBehaviour
         base.OnStateEnter(animator, stateInfo, layerIndex);
         CacheComponents(animator);
 
-        thirdPersonController.DisableCharacterWalking();
+        thirdPersonController.ForceDisableCharacterWalking();
         
         animator.applyRootMotion = false;
         RotatePlayerFocus(animator);
@@ -31,7 +31,7 @@ public class TurnState : StateMachineBehaviour
         base.OnStateExit(animator, stateInfo, layerIndex);
         
         animator.applyRootMotion = originalRMOption;
-        thirdPersonController.EnableCharacterWalking();
+        thirdPersonController.ForceEnableCharacterWalking();
 
     }
 

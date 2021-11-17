@@ -20,7 +20,7 @@ public class DashState : StateMachineBehaviour
  
         animator.SetFloat(animIDCachedDashAngle,animator.GetFloat(animIDTurningAngle));
         animator.applyRootMotion = true;
-        tpsController.DisableCharacterWalking();
+        tpsController.ForceDisableCharacterWalking();
 
         //Debug.Log("enter dash state with rm: "+animator.applyRootMotion);
         
@@ -39,7 +39,7 @@ public class DashState : StateMachineBehaviour
         base.OnStateExit(animator, stateInfo, layerIndex);
        // Debug.Log("exit dash state with rm"+animator.applyRootMotion);
         
-        tpsController.EnableCharacterWalking();
+        tpsController.ForceEnableCharacterWalking();
         animator.applyRootMotion = originalRMOption;
         animator.SetFloat(animIDCachedDashAngle,0f); 
 

@@ -6,21 +6,17 @@ using UnityEngine;
 public class PlayerAttackState : ArtificialGravityState
 {
 
+    [Header("Choosing the Layer" )]
+    [Tooltip("When the attack status of the player, prevent invoking this state from different layers at the same time ")]
+    [SerializeField] private PlayerAttackStatus playerAttackStatus;
+   
     [Header("RootMotion Settings")]
     [SerializeField] private bool enableRootMotion;
 
-   // [SerializeField] private bool applyGravityInRM;
     [Tooltip("The frame that starts playing root motion in this state")]
-    [SerializeField] [Range(0,100)]private int startingRMFrame; 
-
-    [Header("VFX settings")] 
-    [Tooltip("It can trigger multiple vfx in one state")]
-    [SerializeField] private int[] slashVFXIndexs;
-    [SerializeField] private bool vfxMoveWithPlayer;
-    [SerializeField] [Range(-0.1f,5f)] private float appendDuration;
+    [SerializeField] [Range(0,100)] private int startingRMFrame; 
     
     private PlayerCharacter playerCharacter;
-    //private CharacterController characterController;
     private ThirdPersonController thirdPersonController;
     
     private bool originalRMOption;
@@ -28,25 +24,34 @@ public class PlayerAttackState : ArtificialGravityState
     private bool hasExited;
     private bool hasEnter = false;
 
-    //Animation frame calculations
-    private AnimatorClipInfo[] animClipInfo;
+    private const int awakenLayerIndex = 1; 
     
-    //Animation IDs
+    //Animation frame calculations
+    //private AnimatorClipInfo[] animClipInfo;
+    
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        CacheComponents(animator,layerIndex);
+        
+        if (!IsInCalledInTheRightLayer(animator))
+            return;
+            
+        // Debug.Log( "status at " + playerAttackStatus+" with length = "+ stateInfo.length);
+
         base.OnStateEnter(animator, stateInfo, layerIndex);
         
-        CacheComponents(animator,layerIndex);
-        thirdPersonController.DisableCharacterWalking();
+        thirdPersonController.DisableCharacterWalkingForBaseLayer();
         
         SetRootMotionTo(animator,enableRootMotion);
-        SpawnSlashVFX();
     }
 
     
     public override void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (!IsInCalledInTheRightLayer(animator))
+            return;
+        
         //State move will still be called after the state has exit!
         if (hasExited) 
             return;
@@ -58,22 +63,24 @@ public class PlayerAttackState : ArtificialGravityState
         else {
             animator.ApplyBuiltinRootMotion();
 
-            if (GetCurrentFrame(stateInfo) >= startingRMFrame)
-                base.OnStateMove(animator, stateInfo, layerIndex);
+         //   if (GetCurrentFrame(stateInfo) >= startingRMFrame)
+            base.OnStateMove(animator, stateInfo, layerIndex);
         }
 
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (!IsInCalledInTheRightLayer(animator))
+            return;
+        
         base.OnStateExit(animator, stateInfo, layerIndex);
         
        // animator.SetBool(animIDIsInComboState,false);
-        
-        animator.applyRootMotion = originalRMOption;
-        playerCharacter.DisableAttackHitBoxOfWeapon();
-        thirdPersonController.EnableCharacterWalking();
-
+       
+       // animator.applyRootMotion = originalRMOption;
+        playerCharacter.ForceDisableAttackHitBoxOfWeapon();
+       // thirdPersonController.ForceEnableCharacterWalking();
         hasExited = true;
         hasRotated = false;
         hasEnter = false;
@@ -81,11 +88,10 @@ public class PlayerAttackState : ArtificialGravityState
 
     private void CacheComponents(Animator animator,int layerIndex)
     {
+        //Debug.Log("Enter attack state with layer index = "+layerIndex);
         playerCharacter = animator.GetComponent<PlayerCharacter>();
-//        characterController = animator.GetComponent<CharacterController>();
         thirdPersonController = animator.GetComponent<ThirdPersonController>();
-        Debug.Log("Enter attack state with layer index = "+layerIndex);
-        animClipInfo = animator.GetCurrentAnimatorClipInfo(layerIndex);
+        //animClipInfo = animator.GetCurrentAnimatorClipInfo(layerIndex);
 
         originalRMOption = animator.applyRootMotion;
         
@@ -106,16 +112,19 @@ public class PlayerAttackState : ArtificialGravityState
         animator.applyRootMotion = applyRM;
     }
     
-   
-    void SpawnSlashVFX() 
+    bool IsInCalledInTheRightLayer(Animator animator)
     {
-        for (int i = 0; i<slashVFXIndexs.Length; i++)
-            if(!vfxMoveWithPlayer)
-                PlayerCharacter.Instance.GetSlashVFXManager().SpawnSlashEffect(slashVFXIndexs[i]);
-            else
-                PlayerCharacter.Instance.GetSlashVFXManager().SpawnSlashEffectThatFollowsPlayer(slashVFXIndexs[i],appendDuration);
-    }
+        
+        if (playerCharacter.AwakenLayerIsActive() && playerAttackStatus == PlayerAttackStatus.AWAKEN)
+            return true;
 
+        if (!playerCharacter.AwakenLayerIsActive() && playerAttackStatus == PlayerAttackStatus.NORMAL)
+            return true;
+        
+        return false;
+    }
+}
+/*
     int GetCurrentFrame(AnimatorStateInfo stateInfo)
     {
         if (animClipInfo.Length <= 0)
@@ -123,4 +132,4 @@ public class PlayerAttackState : ArtificialGravityState
         float frame= animClipInfo[0].clip.length * (stateInfo.normalizedTime % 1) * animClipInfo[0].clip.frameRate;
         return (int) frame;
     }
-}
+*/

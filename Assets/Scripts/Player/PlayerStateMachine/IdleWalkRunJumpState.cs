@@ -24,6 +24,6 @@ public class IdleWalkRunJumpState : StateMachineBehaviour
     {
         if (!tpsController)
             tpsController = animator.GetComponent<ThirdPersonController>();
-        tpsController.EnableCharacterWalking();
+        tpsController.ForceEnableCharacterWalking();
     }
 }

@@ -159,7 +159,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Combo_01_3
+  m_Name: Slash03
   m_Speed: 1.1
   m_CycleOffset: 0
   m_Transitions:
@@ -500,6 +500,22 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &-7464478780015358818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a9e85965bf26b44691f434f66b4df01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applyArtificialGravity: 1
+  playerAttackStatus: 1
+  enableRootMotion: 1
+  startingRMFrame: 0
 --- !u!1101 &-7424110804631563445
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1131,6 +1147,22 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &-4460642258764539396
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a9e85965bf26b44691f434f66b4df01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applyArtificialGravity: 1
+  playerAttackStatus: 1
+  enableRootMotion: 1
+  startingRMFrame: 0
 --- !u!1102 &-4363094521043883551
 AnimatorState:
   serializedVersion: 6
@@ -1138,7 +1170,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Combo_01_1
+  m_Name: Slash01
   m_Speed: 1.2
   m_CycleOffset: 0
   m_Transitions:
@@ -1635,10 +1667,10 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -6828476648224032526}
-    m_Position: {x: 400, y: -50, z: 0}
+    m_Position: {x: 470, y: -50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7904879244743014323}
-    m_Position: {x: 340, y: 140, z: 0}
+    m_Position: {x: 340, y: 130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7110230739041299925}
     m_Position: {x: 480, y: 300, z: 0}
@@ -1838,11 +1870,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyArtificialGravity: 0
+  playerAttackStatus: 0
   enableRootMotion: 0
   startingRMFrame: 0
-  slashVFXIndexs: 00000000
-  vfxMoveWithPlayer: 1
-  appendDuration: 0.06
 --- !u!1101 &-2523736675114920066
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -2043,11 +2073,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyArtificialGravity: 1
+  playerAttackStatus: 0
   enableRootMotion: 1
   startingRMFrame: 0
-  slashVFXIndexs: 02000000
-  vfxMoveWithPlayer: 1
-  appendDuration: 0.21
 --- !u!206 &-1773741311036702396
 BlendTree:
   m_ObjectHideFlags: 1
@@ -2493,11 +2521,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyArtificialGravity: 1
+  playerAttackStatus: 0
   enableRootMotion: 1
   startingRMFrame: 0
-  slashVFXIndexs: 01000000
-  vfxMoveWithPlayer: 1
-  appendDuration: 0.15
 --- !u!1101 &-257612999206070335
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -2732,20 +2758,38 @@ AnimatorController:
       m_Motion: {fileID: 8993902097722301239, guid: 74f833269003da14a8dd7e305def6c08, type: 3}
     - serializedVersion: 2
       m_State: {fileID: -4363094521043883551}
-      m_Motion: {fileID: 7400000, guid: fd7a03db86f31e843b7771b6aaf1aafe, type: 3}
+      m_Motion: {fileID: 7400000, guid: bdf39ea5859aca94f923fd782279067b, type: 2}
     - serializedVersion: 2
       m_State: {fileID: 185469602867190871}
-      m_Motion: {fileID: 7400000, guid: c07d95172401f88438970cc71b267db2, type: 3}
+      m_Motion: {fileID: 7400000, guid: 26376f6d7af9bbb4c9c482b0a61f02a3, type: 2}
     - serializedVersion: 2
       m_State: {fileID: -8406850239478626986}
-      m_Motion: {fileID: 7400000, guid: 94e1828762574c44784597010a1be2b4, type: 3}
+      m_Motion: {fileID: 7400000, guid: 7ca20296ca539d54ab82c7c71da305fd, type: 2}
     - serializedVersion: 2
       m_State: {fileID: 4553282558031357932}
-      m_Motion: {fileID: 7400000, guid: 480a70e8554715148bc938254a0b4421, type: 3}
-    m_Behaviours: []
+      m_Motion: {fileID: 7400000, guid: f2077ce4cd3163b4f8c99a82b6a9e597, type: 2}
+    m_Behaviours:
+    - m_State: {fileID: -4363094521043883551}
+      m_StateMachineBehaviours:
+      - {fileID: 2034506103273216351}
+    - m_State: {fileID: 185469602867190871}
+      m_StateMachineBehaviours:
+      - {fileID: 7619342469700904924}
+    - m_State: {fileID: -8406850239478626986}
+      m_StateMachineBehaviours:
+      - {fileID: 4165253878735138889}
+    - m_State: {fileID: 4553282558031357932}
+      m_StateMachineBehaviours:
+      - {fileID: -4460642258764539396}
+    - m_State: {fileID: -5664250466238760664}
+      m_StateMachineBehaviours:
+      - {fileID: -7464478780015358818}
+    - m_State: {fileID: -1439523973963914469}
+      m_StateMachineBehaviours:
+      - {fileID: 7265853608058812207}
     m_BlendingMode: 0
     m_SyncedLayerIndex: 0
-    m_DefaultWeight: 0
+    m_DefaultWeight: 1
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
@@ -2768,7 +2812,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Combo_01_2
+  m_Name: Slash02
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2787,7 +2831,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 26376f6d7af9bbb4c9c482b0a61f02a3, type: 2}
+  m_Motion: {fileID: 7400000, guid: 17d46b93c9a2c8146a3423c25594fa20, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -2974,11 +3018,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyArtificialGravity: 0
+  playerAttackStatus: 0
   enableRootMotion: 1
-  startingRMFrame: 21
-  slashVFXIndexs: 0300000004000000
-  vfxMoveWithPlayer: 1
-  appendDuration: 0.29
+  startingRMFrame: 0
 --- !u!1101 &835817757743697731
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -3266,6 +3308,22 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &2034506103273216351
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a9e85965bf26b44691f434f66b4df01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applyArtificialGravity: 0
+  playerAttackStatus: 1
+  enableRootMotion: 1
+  startingRMFrame: 0
 --- !u!1101 &2074282462617576740
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -3775,6 +3833,22 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &4165253878735138889
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a9e85965bf26b44691f434f66b4df01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applyArtificialGravity: 0
+  playerAttackStatus: 1
+  enableRootMotion: 1
+  startingRMFrame: 0
 --- !u!1101 &4192891831713549212
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -3844,7 +3918,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Combo_01_4
+  m_Name: Slash04
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -3987,11 +4061,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyArtificialGravity: 1
+  playerAttackStatus: 0
   enableRootMotion: 1
   startingRMFrame: 0
-  slashVFXIndexs: 
-  vfxMoveWithPlayer: 0
-  appendDuration: 0
 --- !u!1101 &5185278855704465556
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -4576,6 +4648,22 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &7265853608058812207
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a9e85965bf26b44691f434f66b4df01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applyArtificialGravity: 1
+  playerAttackStatus: 1
+  enableRootMotion: 1
+  startingRMFrame: 0
 --- !u!1109 &7522606068683017842
 AnimatorTransition:
   m_ObjectHideFlags: 1
@@ -4618,6 +4706,22 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &7619342469700904924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a9e85965bf26b44691f434f66b4df01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applyArtificialGravity: 0
+  playerAttackStatus: 1
+  enableRootMotion: 1
+  startingRMFrame: 0
 --- !u!1102 &7656269547644677562
 AnimatorState:
   serializedVersion: 6
@@ -4754,11 +4858,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyArtificialGravity: 1
+  playerAttackStatus: 0
   enableRootMotion: 1
   startingRMFrame: 0
-  slashVFXIndexs: 
-  vfxMoveWithPlayer: 0
-  appendDuration: 0
 --- !u!114 &7946427319438399393
 MonoBehaviour:
   m_ObjectHideFlags: 1

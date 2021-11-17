@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Combo_01_4_Inst
+  m_Name: NormalSlash04
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -92518,49 +92518,63 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: InitializeComboSetting
+    functionName: InitComboSettingForBaseLayer
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.26666668
-    functionName: EnableAttackHitBoxOfWeaponWithPower
+    functionName: EnableNormalAttackHitBoxOfWeaponWithPower
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 25
     intParameter: 0
     messageOptions: 0
   - time: 0.26666668
-    functionName: PlayAttackAudioOfCombo
+    functionName: PlayNormalAttackAudioOfCombo4
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 4
     messageOptions: 0
+  - time: 0.3
+    functionName: SpawnNormalCombo4Part1VFX
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.53333336
-    functionName: DisableAttackHitBoxOfWeapon
+    functionName: DisableNormalAttackHitBoxOfWeapon
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.8333333
-    functionName: EnableAttackHitBoxOfWeaponWithPower
+    functionName: EnableNormalAttackHitBoxOfWeaponWithPower
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 50
     intParameter: 0
     messageOptions: 0
+  - time: 0.8333333
+    functionName: SpawnNormalCombo4Part2VFX
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.9
-    functionName: DisableAttackHitBoxOfWeapon
+    functionName: DisableNormalAttackHitBoxOfWeapon
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.4
-    functionName: EnableCharacterWalking
+    functionName: EnableCharacterWalkingForBaseLayer
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

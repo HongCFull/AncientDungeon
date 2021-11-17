@@ -25,7 +25,7 @@ public class DashInAirState : StateMachineBehaviour
 
         InitializeVariables(animator,stateInfo);
 
-        tpsController.DisableCharacterWalking();
+        tpsController.ForceDisableCharacterWalking();
         tpsController.DisableGravity();
         animator.applyRootMotion = true;
 
@@ -50,7 +50,7 @@ public class DashInAirState : StateMachineBehaviour
         
         animator.applyRootMotion = originalRMOption;
         
-        tpsController.EnableCharacterWalking();
+        tpsController.ForceEnableCharacterWalking();
         tpsController.EnableGravity();
     }
 

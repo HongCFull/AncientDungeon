@@ -18,14 +18,14 @@ public class PlayerDamagedStatemachine : StateMachineBehaviour
 
         InitializeVariables(animator);
         ResetInputTriggers(animator);
-        tpsController.DisableCharacterWalking();
+        tpsController.ForceDisableCharacterWalking();
 
     }
 
     public override void OnStateMachineExit(Animator animator, int stateMachinePathHash, AnimatorControllerPlayable controller)
     {
         base.OnStateMachineExit(animator, stateMachinePathHash, controller);
-        tpsController.EnableCharacterWalking();
+        tpsController.ForceEnableCharacterWalking();
 
 //        Debug.Log("Exit");
     }

@@ -177,16 +177,50 @@ namespace Player
 		/// <summary>
 		/// In the animation transition, the enable character movement is enabled before transiting to any other state.
 		/// </summary>
-		public void EnableCharacterWalking() 
+		public void EnableCharacterWalkingForBaseLayer() 
 		{
-			enableWaling = true;
+			if (!PlayerCharacter.Instance.AwakenLayerIsActive()) {
+				Debug.Log("EnableCharacterWalkingForBaseLayer");
+				enableWaling = true;
+			}
 		}  	
 
-		public void DisableCharacterWalking() 
+		public void EnableCharacterWalkingForAwakenLayer() 
 		{
-			enableWaling = false;
+			if (PlayerCharacter.Instance.AwakenLayerIsActive()) {
+				Debug.Log("EnableCharacterWalkingForAwakenLayer");
+				enableWaling = true;
+			}
 		}
 
+		public void ForceEnableCharacterWalking()
+		{
+			Debug.Log("ForceEnableCharacterWalking");
+			enableWaling = true;
+		}
+		
+		public void DisableCharacterWalkingForBaseLayer() 
+		{
+			if (!PlayerCharacter.Instance.AwakenLayerIsActive()) {
+				Debug.Log("DisableCharacterWalkingForBaseLayer");
+				enableWaling = false;
+			}
+		}
+		
+		public void DisableCharacterWalkingForAwakenLayer() 
+		{
+			if (PlayerCharacter.Instance.AwakenLayerIsActive()) {
+				Debug.Log("DisableCharacterWalkingForAwakenLayer");
+				enableWaling = false;
+			}
+		}
+
+		public void ForceDisableCharacterWalking()
+		{
+			Debug.Log("ForceDisableCharacterWalking");
+			enableWaling = false;
+		}
+		
 		public void EnableGravity()
 		{
 			enableGravity = true;
