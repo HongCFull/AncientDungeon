@@ -2,17 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Player;
+using UnityEngine.Animations;
 
 public class PlayerDamagedStatemachine : StateMachineBehaviour
 {
     private ThirdPersonController tpsController;
+    private int animID_Dash;
+    private int animID_MeleeAttack;
+    private int animID_CanAttack;
     
 
     public override void OnStateMachineEnter(Animator animator, int stateMachinePathHash)
     {
         base.OnStateMachineEnter(animator, stateMachinePathHash);
-        tpsController = animator.gameObject.GetComponent<ThirdPersonController>();
+
+        InitializeVariables(animator);
+        ResetInputTriggers(animator);
         tpsController.DisableCharacterWalking();
+
     }
-    
+
+    public override void OnStateMachineExit(Animator animator, int stateMachinePathHash, AnimatorControllerPlayable controller)
+    {
+        base.OnStateMachineExit(animator, stateMachinePathHash, controller);
+        tpsController.EnableCharacterWalking();
+
+//        Debug.Log("Exit");
+    }
+
+    void InitializeVariables(Animator animator)
+    {
+        tpsController = animator.gameObject.GetComponent<ThirdPersonController>();
+        animID_Dash = Animator.StringToHash("Dash");
+        animID_MeleeAttack = Animator.StringToHash("MeleeAttack");
+        animID_CanAttack = Animator.StringToHash("CanAttack");
+    }
+
+    void ResetInputTriggers(Animator animator)
+    {
+        animator.ResetTrigger(animID_Dash);
+        animator.ResetTrigger(animID_CanAttack);
+        animator.ResetTrigger(animID_MeleeAttack);
+    }
 }

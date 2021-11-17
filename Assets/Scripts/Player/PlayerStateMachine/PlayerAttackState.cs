@@ -32,15 +32,12 @@ public class PlayerAttackState : ArtificialGravityState
     private AnimatorClipInfo[] animClipInfo;
     
     //Animation IDs
-   // private int animIDIsInComboState;
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         
-        CacheComponents(animator);
-     //   animator.SetBool(animIDIsInComboState,true);
-        
+        CacheComponents(animator,layerIndex);
         thirdPersonController.DisableCharacterWalking();
         
         SetRootMotionTo(animator,enableRootMotion);
@@ -61,8 +58,6 @@ public class PlayerAttackState : ArtificialGravityState
         else {
             animator.ApplyBuiltinRootMotion();
 
-//            if (applyGravityInRM && GetCurrentFrame(stateInfo) >= startingRMFrame) {
-  //              characterController.Move(new Vector3(0, -15f, 0f) * Time.deltaTime);
             if (GetCurrentFrame(stateInfo) >= startingRMFrame)
                 base.OnStateMove(animator, stateInfo, layerIndex);
         }
@@ -84,15 +79,13 @@ public class PlayerAttackState : ArtificialGravityState
         hasEnter = false;
     }
 
-    private void CacheComponents(Animator animator)
+    private void CacheComponents(Animator animator,int layerIndex)
     {
         playerCharacter = animator.GetComponent<PlayerCharacter>();
 //        characterController = animator.GetComponent<CharacterController>();
         thirdPersonController = animator.GetComponent<ThirdPersonController>();
-        
-      //  animIDIsInComboState = Animator.StringToHash("IsInComboState");
-        
-        animClipInfo = animator.GetCurrentAnimatorClipInfo(0);
+        Debug.Log("Enter attack state with layer index = "+layerIndex);
+        animClipInfo = animator.GetCurrentAnimatorClipInfo(layerIndex);
 
         originalRMOption = animator.applyRootMotion;
         
