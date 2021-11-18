@@ -231,22 +231,30 @@ public class PlayerCharacter : CombatCharacter
             if (AwakenLayerIsActive())
                 slashVFXManager.SpawnAwakenSlashEffect(1);
         }
-        private void SpawnAwakenCombo3VFX()
+        
+        private void SpawnAwakenCombo3Part1VFX()
         {
             if (AwakenLayerIsActive())
                 slashVFXManager.SpawnAwakenSlashEffect(2);
         }
 
-        private void SpawnAwakenCombo4VFXPart1()
+    
+        private void SpawnAwakenCombo3Part2VFX()
         {
             if (AwakenLayerIsActive())
                 slashVFXManager.SpawnAwakenSlashEffect(3);
+        }
+
+        private void SpawnAwakenCombo4VFXPart1()
+        {
+            if (AwakenLayerIsActive())
+                slashVFXManager.SpawnAwakenSlashEffect(4);
         }
         
         private void SpawnAwakenCombo4VFXPart2()
         {
             if (AwakenLayerIsActive())
-                slashVFXManager.SpawnAwakenSlashEffect(4);
+                slashVFXManager.SpawnAwakenSlashEffect(5);
         }
         
     #endregion

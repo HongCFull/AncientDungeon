@@ -180,7 +180,7 @@ namespace Player
 		public void EnableCharacterWalkingForBaseLayer() 
 		{
 			if (!PlayerCharacter.Instance.AwakenLayerIsActive()) {
-				Debug.Log("EnableCharacterWalkingForBaseLayer");
+				//Debug.Log("EnableCharacterWalkingForBaseLayer");
 				enableWaling = true;
 			}
 		}  	
@@ -188,21 +188,21 @@ namespace Player
 		public void EnableCharacterWalkingForAwakenLayer() 
 		{
 			if (PlayerCharacter.Instance.AwakenLayerIsActive()) {
-				Debug.Log("EnableCharacterWalkingForAwakenLayer");
+				//Debug.Log("EnableCharacterWalkingForAwakenLayer");
 				enableWaling = true;
 			}
 		}
 
 		public void ForceEnableCharacterWalking()
 		{
-			Debug.Log("ForceEnableCharacterWalking");
+			//Debug.Log("ForceEnableCharacterWalking");
 			enableWaling = true;
 		}
 		
 		public void DisableCharacterWalkingForBaseLayer() 
 		{
 			if (!PlayerCharacter.Instance.AwakenLayerIsActive()) {
-				Debug.Log("DisableCharacterWalkingForBaseLayer");
+				//Debug.Log("DisableCharacterWalkingForBaseLayer");
 				enableWaling = false;
 			}
 		}
@@ -210,14 +210,14 @@ namespace Player
 		public void DisableCharacterWalkingForAwakenLayer() 
 		{
 			if (PlayerCharacter.Instance.AwakenLayerIsActive()) {
-				Debug.Log("DisableCharacterWalkingForAwakenLayer");
+				//Debug.Log("DisableCharacterWalkingForAwakenLayer");
 				enableWaling = false;
 			}
 		}
 
 		public void ForceDisableCharacterWalking()
 		{
-			Debug.Log("ForceDisableCharacterWalking");
+			//Debug.Log("ForceDisableCharacterWalking");
 			enableWaling = false;
 		}
 		
