@@ -7,10 +7,12 @@ using UnityEngine.InputSystem;
 
 namespace Player
 {
-	[RequireComponent(typeof(ThirdPersonController),typeof(Animator))]
+	[RequireComponent(typeof(ThirdPersonController),typeof(Animator),typeof(PlayerCharacter))]
 	public class StarterAssetsInputs : MonoBehaviour
 	{
 		[Header("Custom Input Settings")] 
+		[SerializeField] private bool enableLookInput = true;
+		
 		[Tooltip("The time that allows you to trigger double tap after tapping one key")]
 		[SerializeField][Range(0,10)] private float doubleTapTimeInterval;
 		
@@ -21,14 +23,6 @@ namespace Player
 		[SerializeField] private InputActionReference aKeyDoubleTapAction;
 		[SerializeField] private InputActionReference sKeyDoubleTapAction;
 		[SerializeField] private InputActionReference dKeyDoubleTapAction;
-
-		[Header("Events")] 
-		// [SerializeField] private UnityEvent whenNoMovementKeyIsPressed;
-		// [SerializeField] private UnityEvent whenWKeyIsDoubleTapped;
-		// [SerializeField] private UnityEvent whenAKeyIsDoubleTapped;
-		// [SerializeField] private UnityEvent whenSKeyIsDoubleTapped;
-		// [SerializeField] private UnityEvent whenDKeyIsDoubleTapped;
-		
 
 		[Header("Default Character Input Values")]
 		public Vector2 move;
@@ -49,14 +43,15 @@ namespace Player
 		
 		private ThirdPersonController tpsController;
 		private Animator animator;
-		private int animLayer = 0;
+		private PlayerCharacter playerCharacter;
+		private int activeAnimLayer = 0;
 		
 		//Hashed anim ID
 		private int animIDMeleeAttack;
 		private int animIDGrounded;
 		private int stateIDSpecialAttack1;
 		private int stateIDSpecialAttack2;
-		
+
 		//Dash Variables
 		private float dashCoolDownTimer = 0f;
 		private bool canTriggerDash = true;
@@ -85,7 +80,8 @@ namespace Player
 		{
 			tpsController = GetComponent<ThirdPersonController>();
 			animator = GetComponent<Animator>();
-
+			playerCharacter = GetComponent<PlayerCharacter>();
+			
 			HashAnimID();
 			AssignDoubleTapActionCallback();
 		}
@@ -100,46 +96,6 @@ namespace Player
 				}
 			}
 		}
-
-		//Invoke event method
-		public void OnMove(InputAction.CallbackContext callbackContext)
-		{
-			HandleMoveInput(callbackContext.ReadValue<Vector2>());
-		}
-
-		public void OnLook(InputAction.CallbackContext callbackContext)
-		{
-			if(cursorInputForLook) {
-				HandleLookInput(callbackContext.ReadValue<Vector2>());
-			}
-		}
-		
-		public void OnJump(InputAction.CallbackContext callbackContext)
-		{
-			HandleJumpInput(callbackContext.ReadValueAsButton());
-		}
-
-		public void OnDash(InputAction.CallbackContext callbackContext)
-		{
-			HandleDashInput(callbackContext);
-		}
-
-		public void OnMeleeAttack(InputAction.CallbackContext callbackContext)
-		{
-			HandleMeleeAttackInput(callbackContext.ReadValueAsButton());
-		}
-
-		public void OnSpecialAttack1(InputAction.CallbackContext callbackContext)
-		{
-			HandleSpecialAttack1Input(callbackContext.ReadValueAsButton());
-		}
-		
-		public void OnSpecialAttack2(InputAction.CallbackContext callbackContext)
-		{
-			HandleSpecialAttack2Input(callbackContext.ReadValueAsButton());
-		}
-
-#endif
 		
 		private void HashAnimID()
 		{
@@ -148,157 +104,227 @@ namespace Player
 			stateIDSpecialAttack1 = Animator.StringToHash("SpecialAttack1");
 			stateIDSpecialAttack2 = Animator.StringToHash("SpecialAttack2");
 		}
+
+		public void EnableLookInput()
+		{
+			enableLookInput = true;
+		}
+
+		public void DisableLookInput()
+		{
+			enableLookInput = false;
+		}
 		
-		#region DoubleTap
-		
-			private void AssignDoubleTapActionCallback()
+		#region Input Callback events
+
+		//Invoke event method
+			public void OnMove(InputAction.CallbackContext callbackContext)
 			{
-				wKeyDoubleTapAction.action.performed += context => DetectWKeyDoubleTap();
-				aKeyDoubleTapAction.action.performed += context => DetectAKeyDoubleTap();
-				sKeyDoubleTapAction.action.performed += context => DetectSKeyDoubleTap();
-				dKeyDoubleTapAction.action.performed += context => DetectDKeyDoubleTap();
+				HandleMoveInput(callbackContext.ReadValue<Vector2>());
 			}
 
-			private void DetectWKeyDoubleTap()
+			public void OnLook(InputAction.CallbackContext callbackContext)
 			{
-				if (!enableWKeyDoubleTab)
-					return;
-				
-				if ( Time.time - wKeylastTapTime < doubleTapTimeInterval) {
-					wKeylastTapTime = 0;	//reset timer
-					enableWKeyDoubleTab = false;
-					sprint = true;
-					Invoke(nameof(EnableWKeyDoubleTap),doubleTapCoolDown);
+				if(cursorInputForLook && enableLookInput) {
+					HandleLookInput(callbackContext.ReadValue<Vector2>());
 				}
-
-				wKeylastTapTime = Time.time;
-			}
-			private void EnableWKeyDoubleTap()
-			{
-				enableWKeyDoubleTab = true;
 			}
 			
-			private void DetectAKeyDoubleTap()
+			public void OnJump(InputAction.CallbackContext callbackContext)
 			{
-				if (!enableAKeyDoubleTab)
-					return;
-
-				if (Time.time - aKeylastTapTime < doubleTapTimeInterval) {
-					aKeylastTapTime = 0;	//reset timer
-					enableAKeyDoubleTab = false;
-					sprint = true;
-					Invoke(nameof(EnableAKeyDoubleTap),doubleTapCoolDown);
-				}
-
-				aKeylastTapTime = Time.time;
+				HandleJumpInput(callbackContext.ReadValueAsButton());
 			}
-			private void EnableAKeyDoubleTap()
+
+			public void OnDash(InputAction.CallbackContext callbackContext)
 			{
-				enableAKeyDoubleTab = true;
+				HandleDashInput(callbackContext);
 			}
-			
-			private void DetectSKeyDoubleTap()
+
+			public void OnMeleeAttack(InputAction.CallbackContext callbackContext)
 			{
-				if (!enableSKeyDoubleTab)
-					return;
-
-				if (Time.time - sKeylastTapTime < doubleTapTimeInterval) {
-					sKeylastTapTime = 0;	//reset timer
-					enableSKeyDoubleTab = false;
-					sprint = true;
-					Invoke(nameof(EnableSKeyDoubleTap),doubleTapCoolDown);
-
-				}
-
-				sKeylastTapTime = Time.time;
+				HandleMeleeAttackInput(callbackContext.ReadValueAsButton());
 			}
-			private void EnableSKeyDoubleTap()
+
+			public void OnSpecialAttack1(InputAction.CallbackContext callbackContext)
 			{
-				enableSKeyDoubleTab = true;
+				HandleSpecialAttack1Input(callbackContext.ReadValueAsButton());
 			}
 			
-			private void DetectDKeyDoubleTap()
+			public void OnSpecialAttack2(InputAction.CallbackContext callbackContext)
 			{
-				if (!enableDKeyDoubleTab)
-					return;
-
-				if (Time.time - dKeylastTapTime < doubleTapTimeInterval) {
-					dKeylastTapTime = 0;	//reset timer
-					enableDKeyDoubleTab = false;
-					sprint = true;
-					Invoke(nameof(EnableDKeyDoubleTap),doubleTapCoolDown);
-
-				}
-
-				dKeylastTapTime = Time.time;
-			}
-			private void EnableDKeyDoubleTap()
-			{
-				enableDKeyDoubleTab = true;
+				HandleSpecialAttack2Input(callbackContext.ReadValueAsButton());
 			}
 
+			public void OnCharacterAwake(InputAction.CallbackContext callbackContext)
+			{
+				HandleCharacterAwakeInput(callbackContext.ReadValueAsButton());
+			}
 		#endregion
 
-		public void HandleMoveInput(Vector2 newMoveDirection)
-		{
-			if (newMoveDirection == Vector2.zero)
-				sprint = false;
-			move = newMoveDirection;
-		} 
+#endif
 
-		public void HandleLookInput(Vector2 newLookDirection)
-		{
-			look = newLookDirection;
-		}
+		#region Handle callback logic
 
-		public void HandleJumpInput(bool newJumpState)
-		{
-			jump = newJumpState;
-		}
-		
-		private void HandleMeleeAttackInput(bool isClicked) 
-		{
-			if (isClicked && animator.GetBool(animIDGrounded)) {
-				sprint = false;
-				animator.SetTrigger(animIDMeleeAttack);
-			}
-			else if (!isClicked) {
-				animator.ResetTrigger(animIDMeleeAttack);
-			}
-		}
+			#region DoubleTap
+			
+				private void AssignDoubleTapActionCallback()
+				{
+					wKeyDoubleTapAction.action.performed += context => DetectWKeyDoubleTap();
+					aKeyDoubleTapAction.action.performed += context => DetectAKeyDoubleTap();
+					sKeyDoubleTapAction.action.performed += context => DetectSKeyDoubleTap();
+					dKeyDoubleTapAction.action.performed += context => DetectDKeyDoubleTap();
+				}
 
-		private void HandleDashInput(InputAction.CallbackContext callbackContext)
-		{
-			if (canTriggerDash && callbackContext.performed) {
-				sprint = false;
-				canTriggerDash = false;
-				tpsController.TriggerDash();
+				private void DetectWKeyDoubleTap()
+				{
+					if (!enableWKeyDoubleTab)
+						return;
+					
+					if ( Time.time - wKeylastTapTime < doubleTapTimeInterval) {
+						wKeylastTapTime = 0;	//reset timer
+						enableWKeyDoubleTab = false;
+						sprint = true;
+						Invoke(nameof(EnableWKeyDoubleTap),doubleTapCoolDown);
+					}
+
+					wKeylastTapTime = Time.time;
+				}
+				private void EnableWKeyDoubleTap()
+				{
+					enableWKeyDoubleTab = true;
+				}
+				
+				private void DetectAKeyDoubleTap()
+				{
+					if (!enableAKeyDoubleTab)
+						return;
+
+					if (Time.time - aKeylastTapTime < doubleTapTimeInterval) {
+						aKeylastTapTime = 0;	//reset timer
+						enableAKeyDoubleTab = false;
+						sprint = true;
+						Invoke(nameof(EnableAKeyDoubleTap),doubleTapCoolDown);
+					}
+
+					aKeylastTapTime = Time.time;
+				}
+				private void EnableAKeyDoubleTap()
+				{
+					enableAKeyDoubleTab = true;
+				}
+				
+				private void DetectSKeyDoubleTap()
+				{
+					if (!enableSKeyDoubleTab)
+						return;
+
+					if (Time.time - sKeylastTapTime < doubleTapTimeInterval) {
+						sKeylastTapTime = 0;	//reset timer
+						enableSKeyDoubleTab = false;
+						sprint = true;
+						Invoke(nameof(EnableSKeyDoubleTap),doubleTapCoolDown);
+					}
+
+					sKeylastTapTime = Time.time;
+				}
+				private void EnableSKeyDoubleTap()
+				{
+					enableSKeyDoubleTab = true;
+				}
+				
+				private void DetectDKeyDoubleTap()
+				{
+					if (!enableDKeyDoubleTab)
+						return;
+
+					if (Time.time - dKeylastTapTime < doubleTapTimeInterval) {
+						dKeylastTapTime = 0;	//reset timer
+						enableDKeyDoubleTab = false;
+						sprint = true;
+						Invoke(nameof(EnableDKeyDoubleTap),doubleTapCoolDown);
+
+					}
+
+					dKeylastTapTime = Time.time;
+				}
+				private void EnableDKeyDoubleTap()
+				{
+					enableDKeyDoubleTab = true;
+				}
+
+			#endregion
+			
+			public void HandleMoveInput(Vector2 newMoveDirection)
+			{
+				if (newMoveDirection == Vector2.zero)
+					sprint = false;
+				move = newMoveDirection;
+			} 
+
+			public void HandleLookInput(Vector2 newLookDirection)
+			{
+				look = newLookDirection;
 			}
-		}
+
+			public void HandleJumpInput(bool newJumpState)
+			{
+				jump = newJumpState;
+			}
 		
-		private void HandleSpecialAttack1Input(bool isClicked)
-		{
-			if (isClicked && animator.GetBool(animIDGrounded)) {
-				sprint = false;
-				animator.Play(stateIDSpecialAttack1,animLayer );
-				//animator.SetTrigger(animIDDoSpecialAttack1);
+			private void HandleMeleeAttackInput(bool isClicked) 
+			{
+				if (isClicked && animator.GetBool(animIDGrounded)) {
+					sprint = false;
+					animator.SetTrigger(animIDMeleeAttack);
+				}
+				else if (!isClicked) {
+					animator.ResetTrigger(animIDMeleeAttack);
+				}
 			}
-			else if (!isClicked) {
-				//animator.ResetTrigger(animIDDoSpecialAttack1);
+
+			private void HandleDashInput(InputAction.CallbackContext callbackContext)
+			{
+				if (canTriggerDash && callbackContext.performed) {
+					sprint = false;
+					canTriggerDash = false;
+					tpsController.TriggerDash();
+				}
 			}
-		}
 		
-		private void HandleSpecialAttack2Input(bool isClicked)
-		{
-			if (isClicked && animator.GetBool(animIDGrounded)) {
-				sprint = false;
-				animator.Play(stateIDSpecialAttack2,animLayer );
-				//animator.SetTrigger(animIDDoSpecialAttack2);
+			private void HandleSpecialAttack1Input(bool isClicked)
+			{
+				if (isClicked && animator.GetBool(animIDGrounded)) {
+					sprint = false;
+					animator.Play(stateIDSpecialAttack1,activeAnimLayer );
+					//animator.SetTrigger(animIDDoSpecialAttack1);
+				}
+				else if (!isClicked) {
+					//animator.ResetTrigger(animIDDoSpecialAttack1);
+				}
 			}
-			else if (!isClicked) {
-				//animator.ResetTrigger(animIDDoSpecialAttack2);
+		
+			private void HandleSpecialAttack2Input(bool isClicked)
+			{
+				if (isClicked && animator.GetBool(animIDGrounded)) {
+					sprint = false;
+					animator.Play(stateIDSpecialAttack2,activeAnimLayer );
+					//animator.SetTrigger(animIDDoSpecialAttack2);
+				}
+				else if (!isClicked) {
+					//animator.ResetTrigger(animIDDoSpecialAttack2);
+				}
 			}
-		}
+		
+			private void HandleCharacterAwakeInput(bool isClicked)
+			{
+				if (isClicked && animator.GetBool(animIDGrounded) && playerCharacter.playerAttackMode == PlayerAttackMode.NORMAL) {
+					playerCharacter.SetCharacterToAwakeMode();
+				}
+			}
+		#endregion
+		
+		
+		
 		
 #if !UNITY_IOS || !UNITY_ANDROID
 

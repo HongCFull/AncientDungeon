@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using Player;
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.Serialization;
 
 
-public enum PlayerAttackStatus
+public enum PlayerAttackMode
 {
     NORMAL, AWAKEN
 }
@@ -20,23 +22,29 @@ public class PlayerCharacter : CombatCharacter
     [SerializeField] private AudioClip[] combo2Clips;
     [SerializeField] private AudioClip[] combo3Clips;
     [SerializeField] private AudioClip[] combo4Clips;
+    [SerializeField] private AudioClip[] awakeClips;
+    
+    [Header("VFX")]
+    [SerializeField] private ParticleSystem[] awakeModeVFXs;
 
-    public PlayerAttackStatus playerAttackStatus;
+    [Header("Timeline")] 
+    [SerializeField] private PlayableDirector characterAwakeDirector;
     
     //Audio
     private AudioSource audioSource;
     
     //Animations
     private Animator animator;
+    private const int AwakenLayerIndex = 1;
     private int animID_IsDamaged;
     private int animID_CanTriggerNextCombo;
-    private const int AwakenLayerIndex = 1;
+    private int animID_Awake;
     
     //TPS controller
     private ThirdPersonController thirdPersonController;
 
-    
     public static PlayerCharacter Instance { get; private set; }
+    public PlayerAttackMode playerAttackMode { get; private set; }
     public SlashVFXManager GetSlashVFXManager() => slashVFXManager;
     
     
@@ -58,6 +66,7 @@ public class PlayerCharacter : CombatCharacter
 
         animID_CanTriggerNextCombo = Animator.StringToHash("CanTriggerNextCombo");
         animID_IsDamaged = Animator.StringToHash("IsDamaged");
+        animID_Awake = Animator.StringToHash("Awake");
     }
     
     public Vector3 GetPlayerWorldPosition()
@@ -65,11 +74,39 @@ public class PlayerCharacter : CombatCharacter
         return transform.position;
     }
 
-    public void SetAnimationTriggerIsDamaged()
-    {
-        animator.SetTrigger(animID_IsDamaged);
-        //Debug.Log("Trigger is damaged");
-    }
+    #region PlayerStateHandling
+        public void SetAnimationTriggerIsDamaged()
+        {
+            animator.SetTrigger(animID_IsDamaged);
+            //Debug.Log("Trigger is damaged");
+        }
+
+        public void SetCharacterToAwakeMode()
+        {
+            animator.Play(animID_Awake,0);
+            animator.SetLayerWeight(AwakenLayerIndex,1);
+
+            PlayCharacterAwakeAudio();
+            foreach (ParticleSystem vfx in awakeModeVFXs) {
+                vfx.Play();
+            }
+            
+            playerAttackMode = PlayerAttackMode.AWAKEN;
+            
+            characterAwakeDirector.Play();
+        }
+        
+        public void SetCharacterToNormalMode()
+        {
+            foreach (ParticleSystem vfx in awakeModeVFXs) {
+                vfx.Stop();
+            }
+            playerAttackMode = PlayerAttackMode.NORMAL;
+            animator.SetLayerWeight(AwakenLayerIndex,0);
+        }
+    
+
+    #endregion
 
     #region ComboHandling
 
@@ -238,7 +275,6 @@ public class PlayerCharacter : CombatCharacter
                 slashVFXManager.SpawnAwakenSlashEffect(2);
         }
 
-    
         private void SpawnAwakenCombo3Part2VFX()
         {
             if (AwakenLayerIsActive())
@@ -260,7 +296,18 @@ public class PlayerCharacter : CombatCharacter
     #endregion
     
     #region Audio
-        //Normal
+        //Awake Audio
+        private void PlayCharacterAwakeAudio()
+        {
+            if(awakeClips==null)
+                return;
+            
+            audioSource.Stop();
+            audioSource.PlayOneShot(awakeClips[Random.Range(0, awakeClips.Length)]);
+        }
+    
+    
+        //Normal Combo
         public void PlayNormalAttackAudioOfCombo1( )
         {
             if (AwakenLayerIsActive())
@@ -297,7 +344,7 @@ public class PlayerCharacter : CombatCharacter
             audioSource.PlayOneShot(combo4Clips[Random.Range(0, combo4Clips.Length)]);
         }
     
-        //Awaken
+        //Awaken Combo
         public void PlayAwakenAttackAudioOfCombo1( )
         {
             if (!AwakenLayerIsActive())
@@ -333,6 +380,8 @@ public class PlayerCharacter : CombatCharacter
             audioSource.Stop();
             audioSource.PlayOneShot(combo4Clips[Random.Range(0, combo4Clips.Length)]);
         }
+        
+    
     #endregion
 
 }

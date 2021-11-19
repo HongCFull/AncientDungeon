@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using Player;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerAttackState : ArtificialGravityState
 {
 
+    [FormerlySerializedAs("playerAttackStatus")]
     [Header("Choosing the Layer" )]
     [Tooltip("When the attack status of the player, prevent invoking this state from different layers at the same time ")]
-    [SerializeField] private PlayerAttackStatus playerAttackStatus;
+    [SerializeField] private PlayerAttackMode playerAttackMode;
    
     [Header("RootMotion Settings")]
     [SerializeField] private bool enableRootMotion;
@@ -115,10 +117,10 @@ public class PlayerAttackState : ArtificialGravityState
     bool IsInCalledInTheRightLayer(Animator animator)
     {
         
-        if (playerCharacter.AwakenLayerIsActive() && playerAttackStatus == PlayerAttackStatus.AWAKEN)
+        if (playerCharacter.AwakenLayerIsActive() && playerAttackMode == PlayerAttackMode.AWAKEN)
             return true;
 
-        if (!playerCharacter.AwakenLayerIsActive() && playerAttackStatus == PlayerAttackStatus.NORMAL)
+        if (!playerCharacter.AwakenLayerIsActive() && playerAttackMode == PlayerAttackMode.NORMAL)
             return true;
         
         return false;

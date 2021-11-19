@@ -6,6 +6,6 @@ using UnityEngine;
 [Serializable]
 public class PlayerComboAnimationEventParameter
 {
-    public PlayerAttackStatus playerAttackStatus;
+    public PlayerAttackMode playerAttackMode;
     public int index;
 }

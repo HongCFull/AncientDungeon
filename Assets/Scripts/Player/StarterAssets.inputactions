@@ -92,6 +92,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press"
+                },
+                {
+                    "name": "Awake",
+                    "type": "Button",
+                    "id": "fa33c4ee-94f2-48a9-9814-b799891e3dd9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
@@ -301,6 +309,17 @@
                     "processors": "StickDeadzone",
                     "groups": "Gamepad",
                     "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b6057e3d-8178-4e1f-9b03-e222090f6ebf",
+                    "path": "<Keyboard>/ctrl",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Awake",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

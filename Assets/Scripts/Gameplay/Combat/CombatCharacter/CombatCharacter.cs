@@ -14,7 +14,8 @@ public abstract class CombatCharacter : MonoBehaviour
     [SerializeField] private float currentHealth;
     [SerializeField] private float maxHealth;
     [SerializeField] private ElementType elementType;
-
+    public bool canBeDamaged = true;
+    
     [Tooltip("when it is damaged and survived afterward")]
     [SerializeField] private UnityEvent whenItIsDamaged;
     
@@ -69,9 +70,9 @@ public abstract class CombatCharacter : MonoBehaviour
     /// <param name="damage"></param>
     public void TakeDamageBy(float damage)
     {
-        if(diedOnce)
+        if( diedOnce || !canBeDamaged )
             return;
-        
+
         currentHealth -= damage;
         
         if (currentHealth <= 0 ) {

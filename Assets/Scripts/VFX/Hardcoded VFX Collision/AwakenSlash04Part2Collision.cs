@@ -26,61 +26,61 @@ public class AwakenSlash04Part2Collision : MonoBehaviour
         if (operationIndex ==0 && particleSystem.time>0.13f)
         {
             operationIndex++;
-            Debug.Log(" slash1.EnableAttackCollider");
+           // Debug.Log(" slash1.EnableAttackCollider");
             slash1.EnableAttackCollider();
         }
         else if (operationIndex ==1 && particleSystem.time> 0.23f)
         {            
             operationIndex++;
-            Debug.Log(" slash2.EnableAttackCollider");
+            //Debug.Log(" slash2.EnableAttackCollider");
             slash2.EnableAttackCollider();
         }
         else if (operationIndex ==2 && particleSystem.time> 0.26f)
         {
             operationIndex++;
-            Debug.Log(" slash1.DisableAttackCollider");
+           // Debug.Log(" slash1.DisableAttackCollider");
             slash1.DisableAttackCollider();
         }
         else if (operationIndex ==3 && particleSystem.time> 0.3f)
         {
             operationIndex++;
-            Debug.Log(" slash3.EnableAttackCollider");
+           // Debug.Log(" slash3.EnableAttackCollider");
             slash3.EnableAttackCollider();
         }
         else if (operationIndex ==4 && particleSystem.time> 0.36f)
         {
             operationIndex++;
-            Debug.Log(" slash2.DisableAttackCollider");
+           // Debug.Log(" slash2.DisableAttackCollider");
             slash2.DisableAttackCollider();
         }
         else if (operationIndex ==5 && particleSystem.time> 0.39f)
         {
             operationIndex++;
-            Debug.Log(" slash4.EnableAttackCollider");
+           // Debug.Log(" slash4.EnableAttackCollider");
             slash4.EnableAttackCollider();
         }
         else if (operationIndex ==6 && particleSystem.time> 0.43f)
         {
             operationIndex++;
-            Debug.Log(" slash3.DisableAttackCollider");
+           // Debug.Log(" slash3.DisableAttackCollider");
             slash3.DisableAttackCollider();
         }
         else if (operationIndex ==7 && particleSystem.time> 0.45f)
         {
             operationIndex++;
-            Debug.Log(" slash5.EnableAttackCollider");
+           // Debug.Log(" slash5.EnableAttackCollider");
             slash5.EnableAttackCollider();
         }
         else if (operationIndex ==8 && particleSystem.time> 0.53f)
         {
             operationIndex++;
-            Debug.Log("slash4.DisableAttackCollider");
+            //Debug.Log("slash4.DisableAttackCollider");
             slash4.DisableAttackCollider();
         }
         else if (operationIndex ==9 && particleSystem.time> 0.63f)
         {
             operationIndex++;
-            Debug.Log("slash5.DisableAttackCollider");
+           // Debug.Log("slash5.DisableAttackCollider");
             slash5.DisableAttackCollider();
         }
 

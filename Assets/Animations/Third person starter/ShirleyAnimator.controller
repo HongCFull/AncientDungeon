@@ -513,7 +513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyArtificialGravity: 1
-  playerAttackStatus: 1
+  playerAttackMode: 1
   enableRootMotion: 1
   startingRMFrame: 0
 --- !u!1101 &-7424110804631563445
@@ -671,6 +671,28 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1101 &-6646103672801118712
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: -3272804765335618728}
+  m_DstState: {fileID: 0}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0.1
+  m_TransitionOffset: 0
+  m_ExitTime: 0.8
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1102 &-6486544969196288105
 AnimatorState:
   serializedVersion: 6
@@ -830,6 +852,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: -7887100081484989276}
     m_Position: {x: 290, y: 140, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 5299071909819959}
+    m_Position: {x: -80, y: 390, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: -3941426268958634974}
@@ -842,7 +867,7 @@ AnimatorStateMachine:
     m_Position: {x: 580, y: 50, z: 0}
   - serializedVersion: 1
     m_StateMachine: {fileID: 3306645809493807642}
-    m_Position: {x: 440, y: 540, z: 0}
+    m_Position: {x: 460, y: 540, z: 0}
   m_AnyStateTransitions:
   - {fileID: -553923534063090467}
   - {fileID: 7917652143018621832}
@@ -1160,7 +1185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyArtificialGravity: 1
-  playerAttackStatus: 1
+  playerAttackMode: 1
   enableRootMotion: 1
   startingRMFrame: 0
 --- !u!1102 &-4363094521043883551
@@ -1870,7 +1895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyArtificialGravity: 0
-  playerAttackStatus: 0
+  playerAttackMode: 0
   enableRootMotion: 0
   startingRMFrame: 0
 --- !u!1101 &-2523736675114920066
@@ -2073,7 +2098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyArtificialGravity: 1
-  playerAttackStatus: 0
+  playerAttackMode: 0
   enableRootMotion: 1
   startingRMFrame: 0
 --- !u!206 &-1773741311036702396
@@ -2521,7 +2546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyArtificialGravity: 1
-  playerAttackStatus: 0
+  playerAttackMode: 0
   enableRootMotion: 1
   startingRMFrame: 0
 --- !u!1101 &-257612999206070335
@@ -2635,103 +2660,103 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Grounded
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: FreeFall
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: MotionSpeed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: MeleeAttack
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: CanTriggerNextCombo
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Jump
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: IsDamaged
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Dash
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: TurningAngle
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: CachedDashAngle
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: DoSpecialAttack1
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: DoSpecialAttack2
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: IsDead
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: stateCanBeInterrupted
+    m_Controller: {fileID: 0}
+  - m_Name: StateCanBeInterrupted
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: IsInDamagedState
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: CanAttack
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -2789,10 +2814,38 @@ AnimatorController:
       - {fileID: 7265853608058812207}
     m_BlendingMode: 0
     m_SyncedLayerIndex: 0
-    m_DefaultWeight: 1
+    m_DefaultWeight: 0
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!1102 &5299071909819959
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Awake
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: -6646103672801118712}
+  m_StateMachineBehaviours:
+  - {fileID: 5546829946927798650}
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: dcf273365e86c6644847f3b0f24263aa, type: 3}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!114 &143654717146100095
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3018,7 +3071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyArtificialGravity: 0
-  playerAttackStatus: 0
+  playerAttackMode: 0
   enableRootMotion: 1
   startingRMFrame: 0
 --- !u!1101 &835817757743697731
@@ -3321,7 +3374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyArtificialGravity: 0
-  playerAttackStatus: 1
+  playerAttackMode: 1
   enableRootMotion: 1
   startingRMFrame: 0
 --- !u!1101 &2074282462617576740
@@ -3846,7 +3899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyArtificialGravity: 0
-  playerAttackStatus: 1
+  playerAttackMode: 1
   enableRootMotion: 1
   startingRMFrame: 0
 --- !u!1101 &4192891831713549212
@@ -4061,7 +4114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyArtificialGravity: 1
-  playerAttackStatus: 0
+  playerAttackMode: 0
   enableRootMotion: 1
   startingRMFrame: 0
 --- !u!1101 &5185278855704465556
@@ -4221,6 +4274,18 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &5546829946927798650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a6715f86033c6e4cb7b27bbda2198bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1102 &5620164339193652830
 AnimatorState:
   serializedVersion: 6
@@ -4661,7 +4726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyArtificialGravity: 1
-  playerAttackStatus: 1
+  playerAttackMode: 1
   enableRootMotion: 1
   startingRMFrame: 0
 --- !u!1109 &7522606068683017842
@@ -4719,7 +4784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyArtificialGravity: 0
-  playerAttackStatus: 1
+  playerAttackMode: 1
   enableRootMotion: 1
   startingRMFrame: 0
 --- !u!1102 &7656269547644677562
@@ -4858,7 +4923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyArtificialGravity: 1
-  playerAttackStatus: 0
+  playerAttackMode: 0
   enableRootMotion: 1
   startingRMFrame: 0
 --- !u!114 &7946427319438399393
