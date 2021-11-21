@@ -3,6 +3,7 @@ using System.Collections;
 using System.Runtime.Remoting.Messaging;
 using Unity.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
 #endif
@@ -48,6 +49,7 @@ namespace Player
 		[Space(10)]
 		public float JumpHeight = 1.2f;
 		public float Gravity = -15.0f;
+		[SerializeField] private UnityEvent OnJump;
 
 		[Space(10)]
 		[Tooltip("Time required to pass before being able to jump again. Set to 0f to instantly jump again")]
@@ -122,7 +124,7 @@ namespace Player
 		private CharacterController _controller;
 		private StarterAssetsInputs _input;
 		private GameObject _mainCamera;
-
+		
 		private const float _threshold = 0.01f;
 
 		private void Awake()
@@ -385,10 +387,8 @@ namespace Player
 				if (_input.jump && _jumpTimeoutDelta <= 0.0f ) {
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
-
-					// update animator if using character
+					
 					_animator.SetBool(_animIDJump,true);
-					//Debug.Log("physically jumped");
 				}
 
 				// jump timeout
