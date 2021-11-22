@@ -133,15 +133,15 @@ PrefabInstance:
     - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
       propertyPath: combo1WeaponClip
       value: 
-      objectReference: {fileID: 8300000, guid: 39c61c5430b984397a395e53e24e82a0, type: 3}
+      objectReference: {fileID: 8300000, guid: d959f8614400d7e4abf6292d83dacf22, type: 3}
     - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
       propertyPath: combo2WeaponClip
       value: 
-      objectReference: {fileID: 8300000, guid: 2eb8c0bc5a19f45528b382c3c14f6b9a, type: 3}
+      objectReference: {fileID: 8300000, guid: 624b9082784a68246aa3b9f041b0488f, type: 3}
     - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
       propertyPath: combo3WeaponClip
       value: 
-      objectReference: {fileID: 8300000, guid: 551c3a543645e41bdafdf0be2d17fe1c, type: 3}
+      objectReference: {fileID: 8300000, guid: 87e183c5f86fa4f4ebb0ec7aa66b43d6, type: 3}
     - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
       propertyPath: combo4WeaponClip
       value: 
@@ -155,6 +155,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: aa60482e516d24a8ea063f677a703b55, type: 3}
     - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: damagedClips.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
       propertyPath: jumpClips.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 1d2e3b7b069a25a41833281cda67a29b, type: 3}
@@ -162,6 +166,74 @@ PrefabInstance:
       propertyPath: jumpClips.Array.data[1]
       value: 
       objectReference: {fileID: 8300000, guid: 76a4f0d9de469d340b72531586f97ac0, type: 3}
+    - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: damagedClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 74844bbb7c648474f9ff4911cf43b038, type: 3}
+    - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: damagedClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: cf53990d4e12ae648bae384e38a3cfa9, type: 3}
+    - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: damagedClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: cdaef4d4a4379b34e91ed568feb09934, type: 3}
+    - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: damagedClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: e79032d33ffb2e548b779468904b496a, type: 3}
+    - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: damagedClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: f4578c9fc9027374eb038c477699a41f, type: 3}
+    - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: weakDamagedClips.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: strongDamagedClips.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: weakDamagedClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 74844bbb7c648474f9ff4911cf43b038, type: 3}
+    - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: weakDamagedClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: cf53990d4e12ae648bae384e38a3cfa9, type: 3}
+    - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: weakDamagedClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: cdaef4d4a4379b34e91ed568feb09934, type: 3}
+    - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: weakDamagedClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: e79032d33ffb2e548b779468904b496a, type: 3}
+    - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: weakDamagedClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: f4578c9fc9027374eb038c477699a41f, type: 3}
+    - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: strongDamagedClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 311cc51bc39626d438ae8e3b232020d0, type: 3}
+    - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: strongDamagedClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3e5162ef685928c419f315ae9beff394, type: 3}
+    - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: strongDamagedClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4e733151b030ad949872ae0f188ac873, type: 3}
+    - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: strongDamagedClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: f00643db983cb2e468daba0fc1a3a40e, type: 3}
+    - target: {fileID: 1421078141, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: strongDamagedClips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 9b09fae4c09c40a46a3b9d444f1644e7, type: 3}
     - target: {fileID: 306621507873462565, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.40199992

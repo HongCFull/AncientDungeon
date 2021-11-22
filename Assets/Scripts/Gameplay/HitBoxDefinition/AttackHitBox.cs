@@ -6,12 +6,14 @@ using Combat;
 using UnityEngine;
 
 using HitBoxDefinition;
+using Unity.Mathematics;
 
 [RequireComponent(typeof(Collider))]
 public class AttackHitBox : MonoBehaviour
 {
     [SerializeField] private CombatCharacter owner;
     [SerializeField] private List<HitBoxTag> canDamageHitBoxWithTag;
+    [SerializeField] private ParticleSystem hitVFX;
     
     [Tooltip("This can be updated by the animation event")]
     [SerializeField] private float skillPower;
@@ -61,6 +63,12 @@ public class AttackHitBox : MonoBehaviour
         attackCollider.enabled = false;
         skillPower = originalDamage;
     }
-    
+
+    private void ShowHitVFX(Vector3 position)
+    {
+        if (!hitVFX)
+            return;
+        Instantiate(hitVFX, position, quaternion.identity);
+    }
     
 }

@@ -14,11 +14,13 @@ public enum PlayerAttackMode
 [RequireComponent(typeof(ThirdPersonController),typeof(Animator),typeof(AudioSource))]
 public class PlayerCharacter : CombatCharacter
 {
+    [Header("Special HitBox")]
     [SerializeField] private AttackHitBox weaponHitBox;
-    [SerializeField] private SlashVFXManager slashVFXManager;
 
     [Header("Audio")] 
     [SerializeField] private AudioClip[] jumpClips;
+    [SerializeField] private AudioClip[] weakDamagedClips;
+    [SerializeField] private AudioClip[] strongDamagedClips;
     [SerializeField] private AudioClip[] awakeClips;
     [SerializeField] private AudioClip[] combo1Clips;
     [SerializeField] private AudioClip[] combo2Clips;
@@ -28,9 +30,11 @@ public class PlayerCharacter : CombatCharacter
     [SerializeField] private AudioClip combo2WeaponClip;
     [SerializeField] private AudioClip combo3WeaponClip;
     [SerializeField] private AudioClip combo4Part1WeaponClip;
+    [SerializeField] private AudioClip combo4Part2WeaponClip;
 
     
     [Header("VFX")]
+    [SerializeField] private SlashVFXManager slashVFXManager;
     [SerializeField] private ParticleSystem[] awakeModeVFXs;
 
     [Header("Timeline")] 
@@ -89,6 +93,24 @@ public class PlayerCharacter : CombatCharacter
             audioSource.Stop();
             audioSource.PlayOneShot(jumpClips[Random.Range(0, jumpClips.Length)]);
         }
+
+        public void PlayerCharacterWeakDamagedAudio()
+        {
+            if(weakDamagedClips==null)
+                return;
+            
+            audioSource.Stop();
+            audioSource.PlayOneShot(weakDamagedClips[Random.Range(0, weakDamagedClips.Length)]);
+        }
+        
+        public void PlayerCharacterStrongDamagedAudio()
+        {
+            if(strongDamagedClips==null)
+                return;
+            
+            audioSource.Stop();
+            audioSource.PlayOneShot(strongDamagedClips[Random.Range(0, strongDamagedClips.Length)]);
+        }
         
         private void PlayCharacterAwakeAudio()
         {
@@ -127,6 +149,13 @@ public class PlayerCharacter : CombatCharacter
                 return;
             audioSource.PlayOneShot(combo4Part1WeaponClip);
         }
+        private void PlayNormalAttackCombo4Part2WeaponAudio()
+        {
+            if (AwakenLayerIsActive())
+                return;
+            audioSource.PlayOneShot(combo4Part2WeaponClip);
+        }
+
 
         public void PlayNormalAttackAudioOfCombo1( )
         {
