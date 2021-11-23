@@ -25,26 +25,27 @@ public class AttackHitBox : MonoBehaviour
     {
         attackCollider = GetComponent<Collider>();
     }
-
-    private void OnCollisionEnter(Collision other)
+    
+    private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("trigger");
+    
         ReceiveHitBox receiveHitBoxComp = other.gameObject.GetComponent<ReceiveHitBox>();
         if (!receiveHitBoxComp)
         {
-           // Debug.Log("No receiver and return");
+            Debug.Log("exit");
             return;
         }
-
+    
         HitBoxTag targetTag = receiveHitBoxComp.GetHitBoxTag();
         foreach (HitBoxTag tag in canDamageHitBoxWithTag) {
             if (targetTag == tag) {
                 CombatDamageManager.DealDamageTo(owner,receiveHitBoxComp.GetCombatCharacterOwner(),skillPower);
-                ShowHitVFX(other.GetContact(0));
+                ShowHitVFX(attackCollider.ClosestPointOnBounds(other.transform.position));
             }
         }
     }
-
-
+    
     public void EnableAttackCollider()
     {
         attackCollider.enabled = true;
@@ -75,14 +76,22 @@ public class AttackHitBox : MonoBehaviour
         Quaternion rotation = Quaternion.FromToRotation(position, position + contactPoint.normal);
         Instantiate(hitVFX, position, rotation);
     }
+    
+    private void ShowHitVFX(Vector3 pos)
+    {
+        if (!hitVFX)
+            return;
 
-    // private void OnTriggerEnter(Collider other)
+        Instantiate(hitVFX, pos, quaternion.identity);
+    }
+
+    
+    // private void OnCollisionEnter(Collision other)
     // {
-    //     Debug.Log("trigger");
-    //
     //     ReceiveHitBox receiveHitBoxComp = other.gameObject.GetComponent<ReceiveHitBox>();
     //     if (!receiveHitBoxComp)
     //     {
+    //        // Debug.Log("No receiver and return");
     //         return;
     //     }
     //
@@ -90,11 +99,9 @@ public class AttackHitBox : MonoBehaviour
     //     foreach (HitBoxTag tag in canDamageHitBoxWithTag) {
     //         if (targetTag == tag) {
     //             CombatDamageManager.DealDamageTo(owner,receiveHitBoxComp.GetCombatCharacterOwner(),skillPower);
-    //             RaycastHit hit;
-    //             if (Physics.Raycast(transform.position, transform.forward, out hit)) {
-    //                 ShowHitVFX(hit.point);
-    //             }
+    //             ShowHitVFX(other.GetContact(0));
     //         }
     //     }
     // }
+
 }
