@@ -26,7 +26,7 @@ public class ChasePlayerState : StateMachineBehaviour
         base.OnStateUpdate(animator, stateInfo, layerIndex);
         ChasePlayer(animator);
         
-        if(aiCharacter.PlayerIsInsideAttackArea())
+        if(aiCharacter.PlayerIsInsideAttackArea() )
             StopChasing();
     }
 

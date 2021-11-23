@@ -67,8 +67,13 @@ public abstract class AICharacter : CombatCharacter
 
     public bool PlayerIsInsideAttackArea()
     {
-        return (PlayerCharacter.Instance.GetPlayerWorldPosition() - transform.position).magnitude  <= attackDistance;
+        Vector3 projectedDistance = (PlayerCharacter.Instance.GetPlayerWorldPosition() - transform.position);
+        float verticalDist = Mathf.Abs(projectedDistance.y);
+        
+        projectedDistance.y = 0f;
+        return projectedDistance.magnitude  <= attackDistance && verticalDist<= attackDistance;        
     }
+    
 
     public bool CanSeePlayer()
     {

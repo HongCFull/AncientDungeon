@@ -27,7 +27,6 @@ public class PlayerDamagedStatemachine : StateMachineBehaviour
         base.OnStateMachineExit(animator, stateMachinePathHash, controller);
         tpsController.ForceEnableCharacterWalking();
 
-//        Debug.Log("Exit");
     }
 
     void InitializeVariables(Animator animator)

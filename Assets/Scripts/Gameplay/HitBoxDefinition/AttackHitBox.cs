@@ -26,22 +26,24 @@ public class AttackHitBox : MonoBehaviour
         attackCollider = GetComponent<Collider>();
     }
 
-    //BUG: When player attacks the AI, it wont damage the AI properly. As the damageable script and the hit box of the enemy aren't attached in the same gameobject. 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         ReceiveHitBox receiveHitBoxComp = other.gameObject.GetComponent<ReceiveHitBox>();
-        if (!receiveHitBoxComp) 
+        if (!receiveHitBoxComp)
+        {
+           // Debug.Log("No receiver and return");
             return;
+        }
 
         HitBoxTag targetTag = receiveHitBoxComp.GetHitBoxTag();
         foreach (HitBoxTag tag in canDamageHitBoxWithTag) {
             if (targetTag == tag) {
                 CombatDamageManager.DealDamageTo(owner,receiveHitBoxComp.GetCombatCharacterOwner(),skillPower);
-                //combatCharacterHitBoxComp.TakeDamageBy(skillPower);
+                ShowHitVFX(other.GetContact(0));
             }
         }
     }
-    
+
 
     public void EnableAttackCollider()
     {
@@ -64,11 +66,35 @@ public class AttackHitBox : MonoBehaviour
         skillPower = originalDamage;
     }
 
-    private void ShowHitVFX(Vector3 position)
+    private void ShowHitVFX(ContactPoint contactPoint)
     {
         if (!hitVFX)
             return;
-        Instantiate(hitVFX, position, quaternion.identity);
+
+        Vector3 position = contactPoint.point;
+        Quaternion rotation = Quaternion.FromToRotation(position, position + contactPoint.normal);
+        Instantiate(hitVFX, position, rotation);
     }
-    
+
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     Debug.Log("trigger");
+    //
+    //     ReceiveHitBox receiveHitBoxComp = other.gameObject.GetComponent<ReceiveHitBox>();
+    //     if (!receiveHitBoxComp)
+    //     {
+    //         return;
+    //     }
+    //
+    //     HitBoxTag targetTag = receiveHitBoxComp.GetHitBoxTag();
+    //     foreach (HitBoxTag tag in canDamageHitBoxWithTag) {
+    //         if (targetTag == tag) {
+    //             CombatDamageManager.DealDamageTo(owner,receiveHitBoxComp.GetCombatCharacterOwner(),skillPower);
+    //             RaycastHit hit;
+    //             if (Physics.Raycast(transform.position, transform.forward, out hit)) {
+    //                 ShowHitVFX(hit.point);
+    //             }
+    //         }
+    //     }
+    // }
 }
