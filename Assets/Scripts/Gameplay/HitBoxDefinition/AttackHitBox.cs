@@ -28,12 +28,8 @@ public class AttackHitBox : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("trigger");
-    
         ReceiveHitBox receiveHitBoxComp = other.gameObject.GetComponent<ReceiveHitBox>();
-        if (!receiveHitBoxComp)
-        {
-            Debug.Log("exit");
+        if (!receiveHitBoxComp) {
             return;
         }
     

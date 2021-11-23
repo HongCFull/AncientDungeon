@@ -26,7 +26,9 @@ public class AIDamagedState : StateMachineBehaviour
             return;
         
         base.OnStateMove(animator, stateInfo, layerIndex);
-        Vector3 movement = -1 * navMeshAgent.transform.forward.normalized * knockBackDistance + Vector3.down*-15f;
+        Vector3 movementDir = (navMeshAgent.transform.position - PlayerCharacter.Instance.GetPlayerWorldPosition())
+            .normalized;
+        Vector3 movement = movementDir * knockBackDistance + Vector3.down*-15f;
         
         navMeshAgent.Move(movement*Time.deltaTime);
     }
