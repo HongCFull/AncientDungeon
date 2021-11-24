@@ -96,7 +96,7 @@ public class DungeonGenerator : MonoBehaviour
             if (i >= connectableTilesForBranching.Count) break;  //catch when remaining < totalBranches  
 
             DungeonTile tileForExtension = connectableTilesForBranching[i];
-            GameObject branchHolder =GeneratePathHolderObject("Branch " + (i+1),  connectableTilesForBranching[i].transform.position);
+            GameObject branchHolder = GeneratePathHolderObject("Branch " + (i+1),  connectableTilesForBranching[i].transform.position);
            
             int depth = useRandomDepthForBranches? Random.Range(1, branchDepth + 1) : branchDepth ;
             yield return StartCoroutine(ExpandPathFromTile(tileForExtension, depth, branchHolder.transform));
