@@ -44,6 +44,8 @@ public class AttackHitBox : MonoBehaviour
     
     public void EnableAttackCollider()
     {
+        if(!attackCollider)
+            attackCollider = GetComponent<Collider>();
         attackCollider.enabled = true;
     }
     
