@@ -14,6 +14,9 @@ public enum PlayerAttackMode
 [RequireComponent(typeof(ThirdPersonController),typeof(Animator),typeof(AudioSource))]
 public class PlayerCharacter : CombatCharacter
 {
+    [Header("Player Stats Settings")]
+    [SerializeField] [Range(0,Mathf.Infinity)] private float awakenDuration;
+    
     [Header("Special HitBox")]
     [SerializeField] private AttackHitBox weaponHitBox;
 
@@ -31,7 +34,6 @@ public class PlayerCharacter : CombatCharacter
     [SerializeField] private AudioClip combo3WeaponClip;
     [SerializeField] private AudioClip combo4Part1WeaponClip;
     [SerializeField] private AudioClip combo4Part2WeaponClip;
-
     
     [Header("VFX")]
     [SerializeField] private SlashVFXManager slashVFXManager;
@@ -249,10 +251,9 @@ public class PlayerCharacter : CombatCharacter
             foreach (ParticleSystem vfx in awakeModeVFXs) {
                 vfx.Play();
             }
-            
             playerAttackMode = PlayerAttackMode.AWAKEN;
-            
             characterAwakeDirector.Play();
+            Invoke(nameof(SetCharacterToNormalMode),awakenDuration);
         }
         
         public void SetCharacterToNormalMode()

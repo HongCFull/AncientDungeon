@@ -11,6 +11,7 @@ public class DashInAirState : StateMachineBehaviour
     
     private ThirdPersonController tpsController;
     private CharacterController characterController;
+    private PlayerCharacter playerCharacter;
     
     private bool originalRMOption;
     private bool hasExited;
@@ -28,6 +29,7 @@ public class DashInAirState : StateMachineBehaviour
         tpsController.ForceDisableCharacterWalking();
         tpsController.DisableGravity();
         animator.applyRootMotion = true;
+        playerCharacter.canBeDamaged = false;
 
     }
 
@@ -52,12 +54,14 @@ public class DashInAirState : StateMachineBehaviour
         
         tpsController.ForceEnableCharacterWalking();
         tpsController.EnableGravity();
+        playerCharacter.canBeDamaged = true;
     }
 
     void InitializeVariables(Animator animator,AnimatorStateInfo stateInfo)
     {
         tpsController = animator.GetComponent<ThirdPersonController>();
         characterController = animator.GetComponent<CharacterController>();
+        playerCharacter = animator.GetComponent<PlayerCharacter>();
         
         hasExited = false;
         originalRMOption = animator.applyRootMotion;

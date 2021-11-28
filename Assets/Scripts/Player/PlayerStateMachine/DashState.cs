@@ -11,6 +11,7 @@ public class DashState : StateMachineBehaviour
     private int animIDTurningAngle;
     private ThirdPersonController tpsController;
     private CharacterController characterController;
+    private PlayerCharacter playerCharacter;
 
      public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -21,9 +22,9 @@ public class DashState : StateMachineBehaviour
         animator.SetFloat(animIDCachedDashAngle,animator.GetFloat(animIDTurningAngle));
         animator.applyRootMotion = true;
         tpsController.ForceDisableCharacterWalking();
-
+        playerCharacter.canBeDamaged = false;
         //Debug.Log("enter dash state with rm: "+animator.applyRootMotion);
-        
+
     }
 
      public override void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -40,6 +41,7 @@ public class DashState : StateMachineBehaviour
        // Debug.Log("exit dash state with rm"+animator.applyRootMotion);
         
         tpsController.ForceEnableCharacterWalking();
+        playerCharacter.canBeDamaged = true;
         animator.applyRootMotion = originalRMOption;
         animator.SetFloat(animIDCachedDashAngle,0f); 
 
@@ -49,6 +51,7 @@ public class DashState : StateMachineBehaviour
      {
          tpsController = animator.GetComponent<ThirdPersonController>();
          characterController = animator.GetComponent<CharacterController>();
+         playerCharacter = animator.GetComponent<PlayerCharacter>();
          
          animIDCachedDashAngle = Animator.StringToHash("CachedDashAngle");
          animIDTurningAngle = Animator.StringToHash("TurningAngle");

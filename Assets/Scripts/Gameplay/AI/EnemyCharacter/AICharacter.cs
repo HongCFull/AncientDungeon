@@ -93,10 +93,10 @@ public abstract class AICharacter : CombatCharacter
 
     public void WrappedOperationWhenItIsDead()
     {
-        StartCoroutine(OperationWhenItIsDead());
+        StartCoroutine(OperationOnDeath());
     }
     
-    IEnumerator OperationWhenItIsDead()
+    IEnumerator OperationOnDeath()
     {
         DisableAllReceiveHitBoxes();
         SetAnimationTriggerIsDead();
