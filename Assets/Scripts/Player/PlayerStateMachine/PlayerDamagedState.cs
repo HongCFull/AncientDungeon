@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerDamagedState : ArtificialGravityState
 {
+    
     [SerializeField] private bool stateCanBeInterrupted =true;
     private ThirdPersonController tpsController;
     private int animID_StateCanBeInterrupted;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Player;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Playables;
 using UnityEngine.Serialization;
 
@@ -20,6 +21,10 @@ public class PlayerCharacter : CombatCharacter
     [Header("Special HitBox")]
     [SerializeField] private AttackHitBox weaponHitBox;
 
+    [Header("Battle State Change")]
+    [SerializeField] private UnityEvent OnAwakeAttackMode;
+    [SerializeField] private UnityEvent OnNormalAttackMode;
+    
     [Header("Audio")] 
     [SerializeField] private AudioClip[] jumpClips;
     [SerializeField] private AudioClip[] weakDamagedClips;
@@ -34,7 +39,11 @@ public class PlayerCharacter : CombatCharacter
     [SerializeField] private AudioClip combo3WeaponClip;
     [SerializeField] private AudioClip combo4Part1WeaponClip;
     [SerializeField] private AudioClip combo4Part2WeaponClip;
-    
+    [SerializeField] private AudioClip awakenCombo3Part1WeaponClip;
+    [SerializeField] private AudioClip awakenCombo3Part2WeaponClip;
+    [SerializeField] private AudioClip awakenCombo4Part1WeaponClip;
+    [SerializeField] private AudioClip awakenCombo4Part2WeaponClip;
+
     [Header("VFX")]
     [SerializeField] private SlashVFXManager slashVFXManager;
     [SerializeField] private ParticleSystem[] awakeModeVFXs;
@@ -86,6 +95,43 @@ public class PlayerCharacter : CombatCharacter
         return transform.position;
     }
     
+    
+    #region PlayerStateHandling
+        public void SetAnimationTriggerIsDamaged()
+        {
+            animator.SetTrigger(animID_IsDamaged);
+            //Debug.Log("Trigger is damaged");
+        }
+
+        public void SetCharacterToAwakeMode()
+        {
+            animator.Play(animID_Awake,0);
+            animator.SetLayerWeight(AwakenLayerIndex,1);
+
+            PlayCharacterAwakeAudio();
+            foreach (ParticleSystem vfx in awakeModeVFXs) {
+                vfx.Play();
+            }
+            playerAttackMode = PlayerAttackMode.AWAKEN;
+            
+            //characterAwakeDirector.Play();
+            Invoke(nameof(SetCharacterToNormalMode),awakenDuration);
+            OnAwakeAttackMode.Invoke();
+        }
+        
+        public void SetCharacterToNormalMode()
+        {
+            foreach (ParticleSystem vfx in awakeModeVFXs) {
+                vfx.Stop();
+            }
+            playerAttackMode = PlayerAttackMode.NORMAL;
+            animator.SetLayerWeight(AwakenLayerIndex,0);
+            OnNormalAttackMode.Invoke();
+        }
+    
+
+    #endregion
+
     #region Audio
         public void PlayCharacterJumpAudio()
         {
@@ -164,7 +210,7 @@ public class PlayerCharacter : CombatCharacter
             if (AwakenLayerIsActive())
                 return;
             
-            audioSource.Stop();
+            //audioSource.Stop();
             audioSource.PlayOneShot(combo1Clips[Random.Range(0, combo1Clips.Length)]);
         }
         
@@ -173,7 +219,7 @@ public class PlayerCharacter : CombatCharacter
             if (AwakenLayerIsActive())
                 return;
             
-            audioSource.Stop();
+            // audioSource.Stop();
             audioSource.PlayOneShot(combo2Clips[Random.Range(0, combo2Clips.Length)]);
         }
         
@@ -182,7 +228,7 @@ public class PlayerCharacter : CombatCharacter
             if (AwakenLayerIsActive())
                 return;
             
-            audioSource.Stop();
+            //audioSource.Stop();
             audioSource.PlayOneShot(combo3Clips[Random.Range(0, combo3Clips.Length)]);
         }
         
@@ -191,83 +237,100 @@ public class PlayerCharacter : CombatCharacter
             if (AwakenLayerIsActive())
                 return;
             
-            audioSource.Stop();
+            //audioSource.Stop();
             audioSource.PlayOneShot(combo4Clips[Random.Range(0, combo4Clips.Length)]);
         }
     
         //Awaken Combo
-        public void PlayAwakenAttackAudioOfCombo1( )
+        public void PlayAwakenAttackCombo1WeaponAudio()
         {
             if (!AwakenLayerIsActive())
                 return;
             
-            audioSource.Stop();
+            //audioSource.Stop();
+            audioSource.PlayOneShot(combo1WeaponClip);
+        }
+        
+        public void PlayAwakenAttackCombo2WeaponAudio()
+        {
+            if (!AwakenLayerIsActive())
+                return;
+            
+            //audioSource.Stop();
+            audioSource.PlayOneShot(combo2WeaponClip);
+        }
+        public void PlayAwakenAttackCombo3Part1WeaponAudio()
+        {
+            if (!AwakenLayerIsActive())
+                return;
+            
+            //audioSource.Stop();
+            audioSource.PlayOneShot(awakenCombo3Part1WeaponClip);
+        }
+        public void PlayAwakenAttackCombo3Part2WeaponAudio()
+        {
+            if (!AwakenLayerIsActive())
+                return;
+            
+            //audioSource.Stop();
+            audioSource.PlayOneShot(awakenCombo3Part2WeaponClip);
+        }
+        public void PlayAwakenAttackCombo4Part1WeaponAudio()
+        {
+            if (!AwakenLayerIsActive())
+                return;
+            
+            //audioSource.Stop();
+            audioSource.PlayOneShot(awakenCombo4Part1WeaponClip);
+        }
+        public void PlayAwakenAttackCombo4Part2WeaponAudio()
+        {
+            if (!AwakenLayerIsActive())
+                return;
+            
+            //audioSource.Stop();
+            audioSource.PlayOneShot(awakenCombo4Part2WeaponClip);
+        }
+        
+        public void PlayAwakenAttackAudioOfCombo1()
+        {
+            if (!AwakenLayerIsActive())
+                return;
+            
+            //audioSource.Stop();
             audioSource.PlayOneShot(combo1Clips[Random.Range(0, combo1Clips.Length)]);
         }
         
-        public void PlayAwakenAttackAudioOfCombo2( )
+        public void PlayAwakenAttackAudioOfCombo2()
         {
             if (!AwakenLayerIsActive())
                 return;
             
-            audioSource.Stop();
+            //audioSource.Stop();
             audioSource.PlayOneShot(combo2Clips[Random.Range(0, combo2Clips.Length)]);
         }
         
-        public void PlayAwakenAttackAudioOfCombo3( )
+        public void PlayAwakenAttackAudioOfCombo3()
         {
             if (!AwakenLayerIsActive())
                 return;
             
-            audioSource.Stop();
+            //audioSource.Stop();
             audioSource.PlayOneShot(combo3Clips[Random.Range(0, combo3Clips.Length)]);
         }
         
-        public void PlayAwakenAttackAudioOfCombo4( )
+        public void PlayAwakenAttackAudioOfCombo4()
         {
             if (!AwakenLayerIsActive())
                 return;
             
-            audioSource.Stop();
+            //audioSource.Stop();
             audioSource.PlayOneShot(combo4Clips[Random.Range(0, combo4Clips.Length)]);
         }
         
     
     #endregion
     
-    #region PlayerStateHandling
-        public void SetAnimationTriggerIsDamaged()
-        {
-            animator.SetTrigger(animID_IsDamaged);
-            //Debug.Log("Trigger is damaged");
-        }
-
-        public void SetCharacterToAwakeMode()
-        {
-            animator.Play(animID_Awake,0);
-            animator.SetLayerWeight(AwakenLayerIndex,1);
-
-            PlayCharacterAwakeAudio();
-            foreach (ParticleSystem vfx in awakeModeVFXs) {
-                vfx.Play();
-            }
-            playerAttackMode = PlayerAttackMode.AWAKEN;
-            characterAwakeDirector.Play();
-            Invoke(nameof(SetCharacterToNormalMode),awakenDuration);
-        }
-        
-        public void SetCharacterToNormalMode()
-        {
-            foreach (ParticleSystem vfx in awakeModeVFXs) {
-                vfx.Stop();
-            }
-            playerAttackMode = PlayerAttackMode.NORMAL;
-            animator.SetLayerWeight(AwakenLayerIndex,0);
-        }
-    
-
-    #endregion
-
     #region ComboHandling
 
     /// <summary>

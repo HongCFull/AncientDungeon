@@ -6,18 +6,18 @@ public abstract class ArtificialGravityState : StateMachineBehaviour
 {
     [SerializeField] private bool applyArtificialGravity;
     private CharacterController characterController;
-    private bool hasExited = false;
+    private bool stateHasExited = false;
     
     public new virtual void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         characterController = animator.GetComponent<CharacterController>();
-        hasExited = false;
+        stateHasExited = false;
     }
 
     public new virtual void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (hasExited)
+        if (stateHasExited)
             return;
         
         base.OnStateMove(animator, stateInfo, layerIndex);
@@ -28,6 +28,6 @@ public abstract class ArtificialGravityState : StateMachineBehaviour
     public new virtual void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
-        hasExited = true;
+        stateHasExited = true;
     }
 }
