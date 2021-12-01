@@ -24,7 +24,6 @@ public class PlayerAttackState : ArtificialGravityState
     private bool originalRMOption;
     private bool hasRotated;
     private bool hasExited;
-    private bool hasEnter = false;
 
     private const int awakenLayerIndex = 1; 
     
@@ -85,7 +84,6 @@ public class PlayerAttackState : ArtificialGravityState
        // thirdPersonController.ForceEnableCharacterWalking();
         hasExited = true;
         hasRotated = false;
-        hasEnter = false;
     }
 
     private void CacheComponents(Animator animator,int layerIndex)
@@ -99,7 +97,6 @@ public class PlayerAttackState : ArtificialGravityState
         
         hasRotated = false;
         hasExited = false;
-        hasEnter = true;
     }
 
     private void RotatePlayerFocus(Animator animator)

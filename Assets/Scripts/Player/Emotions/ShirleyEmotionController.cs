@@ -8,8 +8,9 @@ public class ShirleyEmotionController : MonoBehaviour
     [SerializeField] private ShirleyNormalBlinkingState normalBlinkingState;
     [SerializeField] private ShirleyDamagedEmotionState damagedEmotionState;
     [SerializeField] private ShirleyAwakenBlinkingState awakenBlinkingState;
-
-    [HideInInspector] public bool exitCurrentStateIsTriggered = false;
+    [SerializeField] private ShirleyNormalToAwakeEmotion normalToAwakeEmotionState;
+    [SerializeField] private ShirleyAwakeToNormalEmotionState awakeToNormalEmotionState;
+    [HideInInspector] private bool exitCurrentStateIsTriggered = false;
         
     private ShirleyEmotionStateBase currentState;
     private ShirleyEmotionStateBase defaultState;
@@ -32,6 +33,11 @@ public class ShirleyEmotionController : MonoBehaviour
         
     }
 
+    public void TriggerCurrentStateExit()
+    {
+        exitCurrentStateIsTriggered = true;
+    }
+    
     public void SetNormalBlinkingToDefaultState()
     {
         defaultState = normalBlinkingState;
@@ -69,6 +75,19 @@ public class ShirleyEmotionController : MonoBehaviour
         currentState = damagedEmotionState;
         currentState.OnStateEnter();
     }
+
+    public void TransitFromNormalToAwakeEmotion()
+    {
+        currentState.OnStateExit();
+        currentState = normalToAwakeEmotionState;
+        currentState.OnStateEnter();
+    }
     
+    public void TransitFromAwakeToNormalEmotion()
+    {
+        currentState.OnStateExit();
+        currentState = awakeToNormalEmotionState;
+        currentState.OnStateEnter();
+    }
     
 }

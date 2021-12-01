@@ -10,7 +10,7 @@ public abstract class ShirleyEmotionStateBase : MonoBehaviour
     public abstract void TickUpdate();
     public abstract void OnStateExit();
 
-    void Start() 
+    protected virtual void Start() 
     {
         skinnedMeshRenderer = GetComponent<SkinnedMeshRenderer>();
     }

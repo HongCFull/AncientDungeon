@@ -12,11 +12,19 @@ public class ShirleyNormalBlinkingState : ShirleyEmotionStateBase
     [ReadOnly] private const int EyeCloseBlendShapeIndex = 35;
     private float blinkTimer;
     private bool isBlinking = false;
-    
-    
+
+    private IEnumerator progress;
+
+    protected override void Start()
+    {
+        base.Start();
+        progress = BlinkOnce();
+
+    }
+
     public override void OnStateEnter()
     {
-        
+        progress = BlinkOnce();
     }
 
     public override void TickUpdate()
@@ -27,12 +35,13 @@ public class ShirleyNormalBlinkingState : ShirleyEmotionStateBase
         blinkTimer -= Time.deltaTime;
         if (blinkTimer <= 0) {
             blinkTimer = blinkPeriod;
-            StartCoroutine(BlinkOnce());
+            StartCoroutine(progress);
         }
     }
 
     public override void OnStateExit()
     {
+        StopCoroutine(progress);
         ResetBlendShapeValue();
     }
     

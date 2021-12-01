@@ -19,9 +19,18 @@ public class ShirleyAwakenBlinkingState : ShirleyEmotionStateBase
 
     private float blinkTimer;
     private bool isBlinking = false;
-    
+
+    private IEnumerator progress;
+
+    protected override void Start()
+    {
+        base.Start();
+        progress = BlinkOnce();
+    }
+
     public override void OnStateEnter()
     {
+        progress = BlinkOnce();
         skinnedMeshRenderer.SetBlendShapeWeight(ALLAngryBlendShapeIndex, ALLAngryBlendShapeValue);
     }
 
@@ -33,12 +42,13 @@ public class ShirleyAwakenBlinkingState : ShirleyEmotionStateBase
         blinkTimer -= Time.deltaTime;
         if (blinkTimer <= 0) {
             blinkTimer = blinkPeriod;
-            StartCoroutine(BlinkOnce());
+            StartCoroutine(progress);
         }
     }
 
     public override void OnStateExit()
     {
+        StopCoroutine(progress);
         ResetBlendShapeValue();
     }
     

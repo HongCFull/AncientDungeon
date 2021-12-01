@@ -20,10 +20,20 @@ public class ShirleyDamagedEmotionState : ShirleyEmotionStateBase
    
     [ReadOnly] private const int MTHOBlendShapeIndex = 53;
     [SerializeField] [Range(0,100)] private float MTHOValue;
-    
+
+    private IEnumerator progress;
+
+
+    protected override void Start()
+    {
+        base.Start();
+        progress = ActDamagedFaceOnce();
+    }
+
     public override void OnStateEnter()
     {
-        StartCoroutine(ActDamagedFaceOnce());
+        progress = ActDamagedFaceOnce();
+        StartCoroutine(progress);
     }
 
     public override void TickUpdate()
@@ -32,12 +42,12 @@ public class ShirleyDamagedEmotionState : ShirleyEmotionStateBase
 
     public override void OnStateExit()
     {
-        ResetBlendShape();
+        StopCoroutine(progress);
+        //ResetBlendShape();
     }
     
     IEnumerator ActDamagedFaceOnce()
     {
-        //Debug.Log("Start acting damaged face");
         float durationProgress=0f;
         while (durationProgress <= damagedFaceDuration/ 2)
         {
@@ -58,7 +68,7 @@ public class ShirleyDamagedEmotionState : ShirleyEmotionStateBase
             yield return null;
         }
 
-        emotionController.exitCurrentStateIsTriggered = true;
+        emotionController.TriggerCurrentStateExit();
     }
 
     void ResetBlendShape()
