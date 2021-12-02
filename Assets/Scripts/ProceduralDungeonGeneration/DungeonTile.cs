@@ -100,15 +100,6 @@ public class DungeonTile : MonoBehaviour
     }
 
     public Vector3 GetScaledCollisionBoxHalfExtend() {
-
-        //Vector3 scaledBoxHalfExtents = transform.TransformVector(boundingBox.size*0.5f);
-        // Vector3 scaledBoxHalfExtents = (boundingBox.size*0.5f);
-        //
-        // scaledBoxHalfExtents.x = Mathf.Abs(scaledBoxHalfExtents.x);
-        // scaledBoxHalfExtents.y = Mathf.Abs(scaledBoxHalfExtents.y);
-        // scaledBoxHalfExtents.z = Mathf.Abs(scaledBoxHalfExtents.z);
-        //
-        // return scaledBoxHalfExtents;
         return boundingBox.GetScaledCollisionBoxHalfExtend();
     }
 
@@ -130,20 +121,5 @@ public class DungeonTile : MonoBehaviour
         Vector3 worldPos = transform.position;
         Instantiate(aiCharacters[Random.Range(0, aiCharacters.Length)], worldPos, quaternion.identity);
     }
-//     
-// #if UNITY_EDITOR
-//     private void OnDrawGizmos() 
-//     {
-//         if(!boundingBox)
-//             boundingBox = GetComponent<BoxCollider>();
-//
-//         Gizmos.matrix = transform.localToWorldMatrix;
-//         Gizmos.color = Color.yellow;
-//         //BUG: Orientation problem will skew the box, need to use gizmos matrix  
-//         Gizmos.DrawWireCube(boundingBox.center,2*GetScaledCollisionBoxHalfExtend());
-//         
-//     }
-//
-// #endif
-
- }
+    
+}
