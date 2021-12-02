@@ -301,21 +301,34 @@ public class DungeonGenerator : MonoBehaviour
     /// <returns></returns>
     bool HaveCollisionOnNewlyConnectedTiles() 
     {
-
+//BUG: Orientation problem will skew the box  
         List<Collider> collidersHit = Physics
-            .OverlapBox(tileTo.GetGlobalCollisionBoxCenter(), tileTo.GetScaledCollisionBoxHalfExtend(), Quaternion.identity, LayerMask.GetMask("Tile")).ToList();
+            .OverlapBox(tileTo.GetGlobalCollisionBoxCenter(), tileTo.GetScaledCollisionBoxHalfExtend(), tileTo.GetRotationOfCollisionBox(), LayerMask.GetMask("Tile")).ToList();
         tileTo.collidesHit = collidersHit;
-        
+        Debug.Log(tileTo.name + " center: "+tileTo.GetGlobalCollisionBoxCenter()+" HalfExtend: "+tileTo.GetScaledCollisionBoxHalfExtend()+" Rotation: "+tileTo.GetRotationOfCollisionBox().eulerAngles);
         if (collidersHit.Count > 0) {   //if overlapped some thing
             
             //This lambda expression check if the collider collides with colliders that are not tileFrom and tileTo  
-            Predicate<Collider> hasOverlappedPredicate =
-            (Collider x) => {
-                return (x.transform != tileFrom.gameObject.transform) &&
-                       (x.transform != tileTo.gameObject.transform);
+            // Predicate<Collider> hasOverlappedPredicate =
+            // (Collider x) => {
+            //     return (x.transform != tileFrom.gameObject.transform) &&
+            //            (x.transform != tileTo.gameObject.transform);
+            // };
+            foreach (var VARIABLE in collidersHit)
+            {
+                Debug.Log(tileTo.name+" collide with "+VARIABLE.name);
+                
+            }
+            Predicate<Collider> hasOverlappedPredicate = (Collider x) => 
+            {
+                return (x.transform != tileFrom.GetCollisionBoxTransform()) &&
+                       (x.transform != tileTo.GetCollisionBoxTransform()) &&
+                       //It MUST be the "Dungeon Tile Collision Box" which is a Box Collider
+                       x.GetType()==typeof(BoxCollider);    
             };
-
+            
             if (collidersHit.Exists(hasOverlappedPredicate)) {
+                Debug.Log(tileTo.name+" has collision");
                 return true;
             }
             else {

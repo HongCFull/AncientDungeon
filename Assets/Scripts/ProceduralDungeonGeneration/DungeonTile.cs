@@ -6,9 +6,11 @@ using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
-[RequireComponent(typeof(BoxCollider))]
 public class DungeonTile : MonoBehaviour
 {
+    [Header("Hit Box")]
+    [SerializeField] private DungeonTileCollisionBox boundingBox;
+    
     [Header("Connectors")]
     [SerializeField] private List<Connector> corridorConnector;
     [SerializeField] private List<Connector> connectedConnectors = new List<Connector>();   //should be read only
@@ -23,17 +25,16 @@ public class DungeonTile : MonoBehaviour
     [ReadOnly] public DungeonTile parentTile = null;
     [ReadOnly] public GameObject pathHolder;
     [ReadOnly] public List<Collider> collidesHit;
-    
-    public BoxCollider boundingBox { get; private set; }
+
+    //public BoxCollider boundingBox { get; private set; }
     private Connector latestPopedConnector;
     private Vector3 scaleVector;
     private bool hasSpawnedEnemies = false;
     
     private void Awake() {
         //cache boundingBox
-        boundingBox = GetComponent<BoxCollider>();
+        //boundingBox = GetComponent<BoxCollider>();
         scaleVector = transform.localScale;
-
     }
     
     /// <summary>
@@ -47,7 +48,6 @@ public class DungeonTile : MonoBehaviour
             SpawnAIEnemies();
         }
     }
-
     
     /// <summary>
     /// Pop and assume the connector is connected 
@@ -94,21 +94,33 @@ public class DungeonTile : MonoBehaviour
         return connectedConnectors.Count == 0;
     }
 
-    public Vector3 GetGlobalCollisionBoxCenter() {
-
-        return transform.TransformPoint(boundingBox.center);
+    public Vector3 GetGlobalCollisionBoxCenter()
+    {
+        return boundingBox.GetGlobalCollisionBoxCenter();
     }
 
     public Vector3 GetScaledCollisionBoxHalfExtend() {
 
-        Vector3 scaledBoxHalfExtents = transform.TransformVector(boundingBox.size*0.5f);
-        scaledBoxHalfExtents.x = Mathf.Abs(scaledBoxHalfExtents.x);
-        scaledBoxHalfExtents.y = Mathf.Abs(scaledBoxHalfExtents.y);
-        scaledBoxHalfExtents.z = Mathf.Abs(scaledBoxHalfExtents.z);
-
-        return scaledBoxHalfExtents;
+        //Vector3 scaledBoxHalfExtents = transform.TransformVector(boundingBox.size*0.5f);
+        // Vector3 scaledBoxHalfExtents = (boundingBox.size*0.5f);
+        //
+        // scaledBoxHalfExtents.x = Mathf.Abs(scaledBoxHalfExtents.x);
+        // scaledBoxHalfExtents.y = Mathf.Abs(scaledBoxHalfExtents.y);
+        // scaledBoxHalfExtents.z = Mathf.Abs(scaledBoxHalfExtents.z);
+        //
+        // return scaledBoxHalfExtents;
+        return boundingBox.GetScaledCollisionBoxHalfExtend();
     }
-    
+
+    public Quaternion GetRotationOfCollisionBox()
+    {
+        return boundingBox.GetRotation();
+    }
+
+    public Transform GetCollisionBoxTransform()
+    {
+        return boundingBox.transform;
+    }
     
     private void SpawnAIEnemies()
     {
@@ -118,16 +130,20 @@ public class DungeonTile : MonoBehaviour
         Vector3 worldPos = transform.position;
         Instantiate(aiCharacters[Random.Range(0, aiCharacters.Length)], worldPos, quaternion.identity);
     }
-    
-#if UNITY_EDITOR
-    private void OnDrawGizmos() 
-    {
-        if(!boundingBox)
-            boundingBox = GetComponent<BoxCollider>();
+//     
+// #if UNITY_EDITOR
+//     private void OnDrawGizmos() 
+//     {
+//         if(!boundingBox)
+//             boundingBox = GetComponent<BoxCollider>();
+//
+//         Gizmos.matrix = transform.localToWorldMatrix;
+//         Gizmos.color = Color.yellow;
+//         //BUG: Orientation problem will skew the box, need to use gizmos matrix  
+//         Gizmos.DrawWireCube(boundingBox.center,2*GetScaledCollisionBoxHalfExtend());
+//         
+//     }
+//
+// #endif
 
-        Gizmos.color = Color.black;
-        Gizmos.DrawWireCube(GetGlobalCollisionBoxCenter(),2*GetScaledCollisionBoxHalfExtend());
-    }
-
-#endif
-}
+ }

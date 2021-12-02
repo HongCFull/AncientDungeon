@@ -555,8 +555,6 @@ GameObject:
   - component: {fileID: 6508980981969963369}
   - component: {fileID: 6508980981969963375}
   - component: {fileID: 6508980981969963372}
-  - component: {fileID: 6508980982772430952}
-  - component: {fileID: 1719352519}
   m_Layer: 9
   m_Name: Slime AIEnemy
   m_TagString: Untagged
@@ -623,7 +621,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 3521549444923572140}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1
+  m_Radius: 0.82
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -698,36 +696,6 @@ MonoBehaviour:
   dissolveDuration: 2
   dissolveDelay: 1
   fleeDistance: 5
---- !u!54 &6508980982772430952
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3521549444923572140}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
---- !u!136 &1719352519
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3521549444923572140}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.6
-  m_Height: 0.8
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.46, z: 0}
 --- !u!1 &5039057722412128213
 GameObject:
   m_ObjectHideFlags: 0
