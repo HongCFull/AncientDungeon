@@ -156,7 +156,6 @@ MonoBehaviour:
   tilePrefabs:
   - {fileID: 7635851356170719842, guid: e67a5726fb749ef468a5cf13a45c658d, type: 3}
   - {fileID: 1436106548650286294, guid: 4b201f22a04420f4a951e96961cab7ae, type: 3}
-  - {fileID: 432387138392696968, guid: abf93af835b43894b8a240ca4122b041, type: 3}
   - {fileID: 272713650659156207, guid: ba5ac244f4bffef418c84436542d0439, type: 3}
   - {fileID: 6148275891744533374, guid: fa6ee8c9a50a68c469e597e5b70c9b4c, type: 3}
   - {fileID: 4610178353231594812, guid: b21851e87ca64264ab0ae97817b9d71f, type: 3}
@@ -217,7 +216,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 4161
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
@@ -242,6 +241,14 @@ PrefabInstance:
     - target: {fileID: 306621507873462565, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.1450001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3124140674871090731, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: m_SlopeLimit
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3124140674871090731, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
+      propertyPath: m_StepOffset
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 3846047569234263005, guid: 61d13b4a9aa729943bd0ad2c2d4e2c70, type: 3}
       propertyPath: m_RootOrder
