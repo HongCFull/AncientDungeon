@@ -2,21 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.Win32;
 using Unity.Mathematics;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
-
-//Bug: when the scale vector is not uniform = collision checking not accurate?
 
 public class DungeonGenerator : MonoBehaviour
 {
-
     [Header("Dungeon Prefabs")]
     [SerializeField] private DungeonTile[] tilePrefabs;
     [SerializeField] private DungeonTile[] startingRoomPrefabs;
@@ -223,7 +216,7 @@ public class DungeonGenerator : MonoBehaviour
     bool ConnectTiles(bool isIntermediate,Transform pathObject =null, int attempt =0) 
     {
         if (tileFrom == null || tileTo == null) {
-            Debug.Log("one of the tiles is null");
+            //Debug.Log("one of the tiles is null");
             return false;
         }
         
@@ -244,7 +237,7 @@ public class DungeonGenerator : MonoBehaviour
         GlueTileToAndTileFromInto(pathObject);
 
         if (HaveCollisionOnNewlyConnectedTiles()) {
- 
+        
             tileFrom.RestorePreviousPoppedConnector();
             CullOutTileTo();
             
@@ -256,7 +249,7 @@ public class DungeonGenerator : MonoBehaviour
                 tileTo.name = "retry : ending room";
             }
             return ConnectTiles(isIntermediate,pathObject,++attempt);
-
+        
         }
 
         return true;
@@ -295,10 +288,7 @@ public class DungeonGenerator : MonoBehaviour
         tileTo.pathHolder = pathHolder.gameObject;
     }
 
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <returns></returns>
+
     bool HaveCollisionOnNewlyConnectedTiles() 
     {
         List<Collider> collidersHit = Physics
@@ -315,7 +305,7 @@ public class DungeonGenerator : MonoBehaviour
             };
             
             if (collidersHit.Exists(hasOverlappedPredicate)) {
-                Debug.Log(tileTo.name+" has collision");
+               // Debug.Log(tileTo.name+" has collision");
                 return true;
             }
             else {
@@ -334,7 +324,6 @@ public class DungeonGenerator : MonoBehaviour
         generatedTiles.Remove(tileTo);
         DestroyImmediate(tileTo.gameObject);
         tileTo = null;
-        
     }
 
     /// <summary>
@@ -346,7 +335,6 @@ public class DungeonGenerator : MonoBehaviour
         connectableTilesForBranching.Remove(lastTile);
         generatedTiles.Remove(lastTile);
         DestroyImmediate(lastTile.gameObject);
-
     }
 
     /// <summary>
@@ -354,7 +342,7 @@ public class DungeonGenerator : MonoBehaviour
     /// </summary>
     void ForceSpawningEndRoomInMainPath() 
     {
-        while (endTile==null) {
+        while (!endTile) {
             //ending room is not spawned
             DungeonTile lastTile = generatedTiles.Last();
             
@@ -368,7 +356,6 @@ public class DungeonGenerator : MonoBehaviour
             if (ConnectTiles(false, pathHolderList.First().transform)) {
                 endTile = tileTo;
             }
-       
         }
         
     }

@@ -11,7 +11,6 @@ public class PlayerDamagedStatemachine : StateMachineBehaviour
     private int animID_MeleeAttack;
     private int animID_CanAttack;
     
-
     public override void OnStateMachineEnter(Animator animator, int stateMachinePathHash)
     {
         base.OnStateMachineEnter(animator, stateMachinePathHash);

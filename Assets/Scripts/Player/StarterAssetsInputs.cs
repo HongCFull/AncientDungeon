@@ -44,7 +44,7 @@ namespace Player
 		private ThirdPersonController tpsController;
 		private Animator animator;
 		private PlayerCharacter playerCharacter;
-		private int activeAnimLayer = 0;
+		private  int activeAnimLayer = 0;
 		
 		//Hashed anim ID
 		private int animIDMeleeAttack;
@@ -158,6 +158,11 @@ namespace Player
 			public void OnCharacterAwake(InputAction.CallbackContext callbackContext)
 			{
 				HandleCharacterAwakeInput(callbackContext.ReadValueAsButton());
+			}
+
+			public void OnZoomCamera(InputAction.CallbackContext callbackContext)
+			{
+				Debug.Log(callbackContext.ReadValue<Vector2>());
 			}
 		#endregion
 

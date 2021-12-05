@@ -43,6 +43,7 @@ public class ShirleyAwakenBlinkingState : ShirleyEmotionStateBase
         if (blinkTimer <= 0) {
             blinkTimer = blinkPeriod;
             StartCoroutine(progress);
+            progress = BlinkOnce();
         }
     }
 

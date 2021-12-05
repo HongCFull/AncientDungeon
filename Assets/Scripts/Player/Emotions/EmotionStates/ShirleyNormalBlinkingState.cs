@@ -36,6 +36,7 @@ public class ShirleyNormalBlinkingState : ShirleyEmotionStateBase
         if (blinkTimer <= 0) {
             blinkTimer = blinkPeriod;
             StartCoroutine(progress);
+            progress = BlinkOnce();
         }
     }
 
@@ -47,7 +48,6 @@ public class ShirleyNormalBlinkingState : ShirleyEmotionStateBase
     
     IEnumerator BlinkOnce()
     {
-        //Debug.Log("Start Blink");
         isBlinking = true;
         float durationProgress = 0;
             

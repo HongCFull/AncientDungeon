@@ -24,13 +24,7 @@ public class Connector : MonoBehaviour
         //Draw forward vector at the centroid of the corridor
         Gizmos.color = Color.green;
         Gizmos.DrawLine(transform.position + transform.up*corridorSize.y/2, transform.position + transform.up*corridorSize.y/2 + transform.forward);
-        
-        //Draw Boarders
-//        Vector3 leftUp = transform.position - transform.right * corridorSize.x / 2 + transform.up * corridorSize.y / 2;
-//        Vector3 leftDown = transform.position - transform.right * corridorSize.x / 2 - transform.up * corridorSize.y / 2;
 
-//        Vector3 rightUp = transform.position + transform.right * corridorSize.x / 2 + transform.up * corridorSize.y / 2;
-//        Vector3 rightDown = transform.position + transform.right * corridorSize.x / 2 - transform.up * corridorSize.y / 2;
         Vector3 leftUp = transform.position - transform.right * corridorSize.x / 2 + transform.up * corridorSize.y;
         Vector3 leftDown = transform.position - transform.right * corridorSize.x / 2 ;
 
@@ -54,7 +48,8 @@ public class Connector : MonoBehaviour
     {
         GameObject blockObj =
             Instantiate(blockingPrefab,  gameObject.transform);
-        blockObj.transform.localScale=Vector3.one;
+        //blockObj.transform.localScale=Vector3.one;
+        blockObj.SetActive(true);
        // blockObj.transform.Rotate(0f,90f,0f);
     }
 }

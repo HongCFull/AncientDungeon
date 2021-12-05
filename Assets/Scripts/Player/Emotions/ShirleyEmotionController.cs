@@ -10,7 +10,7 @@ public class ShirleyEmotionController : MonoBehaviour
     [SerializeField] private ShirleyAwakenBlinkingState awakenBlinkingState;
     [SerializeField] private ShirleyNormalToAwakeEmotion normalToAwakeEmotionState;
     [SerializeField] private ShirleyAwakeToNormalEmotionState awakeToNormalEmotionState;
-    [HideInInspector] private bool exitCurrentStateIsTriggered = false;
+    private bool exitCurrentStateIsTriggered = false;
         
     private ShirleyEmotionStateBase currentState;
     private ShirleyEmotionStateBase defaultState;
@@ -20,6 +20,7 @@ public class ShirleyEmotionController : MonoBehaviour
     {
         defaultState = normalBlinkingState;
         currentState = normalBlinkingState;
+        currentState .OnStateEnter();
     }
 
     // Update is called once per frame

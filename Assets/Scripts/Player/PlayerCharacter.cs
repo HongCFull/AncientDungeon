@@ -12,6 +12,11 @@ public enum PlayerAttackMode
     NORMAL, AWAKEN
 }
 
+/// <summary>
+/// This is bad, dumb, error prone code.
+/// Animation events in another inactive layer is called...
+/// Animation event callback function signature is bad :( 
+/// </summary>
 [RequireComponent(typeof(ThirdPersonController),typeof(Animator),typeof(AudioSource))]
 public class PlayerCharacter : CombatCharacter
 {
