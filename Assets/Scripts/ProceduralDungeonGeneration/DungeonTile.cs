@@ -37,13 +37,9 @@ public class DungeonTile : MonoBehaviour
         scaleVector = transform.localScale;
     }
     
-    /// <summary>
-    /// When Player Enter This Tile
-    /// </summary>
-    /// <param name="other"></param>
-    private void OnTriggerEnter(Collider other)
+    public void SpawnEnemyOnTrigger(Collider other)
     {
-        if (  canSpawnEnemy && !hasSpawnedEnemies && other.gameObject.tag.Equals("Player")) {
+        if (canSpawnEnemy && !hasSpawnedEnemies && other.gameObject.tag.Equals("Player")) {
             hasSpawnedEnemies = true;
             SpawnAIEnemies();
         }

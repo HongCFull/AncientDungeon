@@ -102,7 +102,7 @@ public class PlayerAttackState : ArtificialGravityState
     private void RotatePlayerFocus(Animator animator)
     {
         SetRootMotionTo(animator, false);
-        playerCharacter.transform.LookAt(playerCharacter.GetPlayerWorldPosition()+PlayerCamera.Instance.GetUnitForwardVectorInXZPlane());
+        playerCharacter.transform.LookAt(playerCharacter.GetPlayerWorldPosition()+PlayerMainCamera.Instance.GetUnitForwardVectorInXZPlane());
         hasRotated = true;
     }
 

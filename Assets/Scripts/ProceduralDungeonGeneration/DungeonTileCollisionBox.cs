@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,12 @@ public class DungeonTileCollisionBox : MonoBehaviour
     [SerializeField] private DungeonTile tile;
     [SerializeField] private BoxCollider boundingBox;
     // Start is called before the first frame update
-    
+
+    private void OnTriggerEnter(Collider other)
+    {
+        tile.SpawnEnemyOnTrigger(other);
+    }
+
     public Vector3 GetGlobalCollisionBoxCenter() {
 
         return transform.TransformPoint(boundingBox.center);

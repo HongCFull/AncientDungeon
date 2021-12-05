@@ -14,6 +14,7 @@ public abstract class CombatCharacter : MonoBehaviour
     [SerializeField] private float currentHealth;
     [SerializeField] private float maxHealth;
     [SerializeField] private ElementType elementType;
+    
     public bool canBeDamaged = true;
     
     [Tooltip("when it is damaged and survived afterward")]
@@ -29,10 +30,20 @@ public abstract class CombatCharacter : MonoBehaviour
     
     protected virtual void Awake()
     {
-        //Debug.Log("Damageable::Awake");
+        ValidateData();
         currentHealth = Mathf.Clamp(currentHealth,0,maxHealth);
     }
     
+    void ValidateData()
+    {
+        if (Mathf.Approximately(GetMaxHealth(), 0f)) 
+            throw new System.Exception(name+" has max health of 0!");
+        
+        if(GetCurrentHealth()>GetMaxHealth()) 
+            throw new System.Exception(name+"'s current health is greater than its max health");
+        
+    }
+
     public bool IsDead() => currentHealth <= 0;
     
     public ElementType GetElementType() => elementType;
@@ -73,10 +84,12 @@ public abstract class CombatCharacter : MonoBehaviour
         if( diedOnce || !canBeDamaged )
             return;
 
-        currentHealth -= damage;
+        bool isDead = currentHealth - damage <= 0;
+        currentHealth = Mathf.Clamp(currentHealth-damage,0,GetMaxHealth());
         
-        if (currentHealth <= 0 ) {
+        if (isDead) {
             diedOnce = true;
+            whenItIsDamaged.Invoke();
             whenItIsDead.Invoke();
         }
         else {

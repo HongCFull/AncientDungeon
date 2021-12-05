@@ -122,7 +122,7 @@ namespace Player
 
 		private Animator _animator;
 		private CharacterController _controller;
-		private StarterAssetsInputs _input;
+		private PlayerInputHandler _input;
 		private GameObject _mainCamera;
 		
 		private const float _threshold = 0.01f;
@@ -265,7 +265,7 @@ namespace Player
 		{
 			_animator = GetComponent<Animator>();
 			_controller = GetComponent<CharacterController>();
-			_input = GetComponent<StarterAssetsInputs>();
+			_input = GetComponent<PlayerInputHandler>();
 			_speed = WalkSpeed;
 		}
 		

@@ -46,7 +46,7 @@ public class TurnState : StateMachineBehaviour
 
     private void RotatePlayerFocus(Animator animator)
     {
-        playerCharacter.transform.LookAt(playerCharacter.GetPlayerWorldPosition()+PlayerCamera.Instance.GetUnitForwardVectorInXZPlane());
+        playerCharacter.transform.LookAt(playerCharacter.GetPlayerWorldPosition()+PlayerMainCamera.Instance.GetUnitForwardVectorInXZPlane());
     }
     
     

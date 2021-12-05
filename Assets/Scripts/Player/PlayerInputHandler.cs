@@ -1,4 +1,5 @@
 using System;
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.Events;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
@@ -8,7 +9,7 @@ using UnityEngine.InputSystem;
 namespace Player
 {
 	[RequireComponent(typeof(ThirdPersonController),typeof(Animator),typeof(PlayerCharacter))]
-	public class StarterAssetsInputs : MonoBehaviour
+	public class PlayerInputHandler : MonoBehaviour
 	{
 		[Header("Custom Input Settings")] 
 		[SerializeField] private bool enableLookInput = true;
@@ -24,6 +25,9 @@ namespace Player
 		[SerializeField] private InputActionReference sKeyDoubleTapAction;
 		[SerializeField] private InputActionReference dKeyDoubleTapAction;
 
+		[Header("References")] 
+		[SerializeField] private PlayerMainCamera playerCamera;
+		
 		[Header("Default Character Input Values")]
 		public Vector2 move;
 		public Vector2 look;
@@ -55,7 +59,7 @@ namespace Player
 		//Dash Variables
 		private float dashCoolDownTimer = 0f;
 		private bool canTriggerDash = true;
-		
+		  
 		//Keys that can be double tapped 
 		//W key
 		private bool enableWKeyDoubleTab = true;
@@ -162,7 +166,7 @@ namespace Player
 
 			public void OnZoomCamera(InputAction.CallbackContext callbackContext)
 			{
-				Debug.Log(callbackContext.ReadValue<Vector2>());
+				HandleZoomCameraInput(callbackContext.ReadValue<Vector2>());
 			}
 		#endregion
 
@@ -325,6 +329,14 @@ namespace Player
 				if (isClicked && animator.GetBool(animIDGrounded) && playerCharacter.playerAttackMode == PlayerAttackMode.NORMAL) {
 					playerCharacter.SetCharacterToAwakeMode();
 				}
+			}
+
+			private void HandleZoomCameraInput(Vector2 scrollVector)
+			{
+				if (scrollVector.y > 0)
+					playerCamera.ZoomOutCameraByOneLevel();
+				else if(scrollVector.y < 0)
+					playerCamera.ZoomInCameraByOneLevel();
 			}
 		#endregion
 		
