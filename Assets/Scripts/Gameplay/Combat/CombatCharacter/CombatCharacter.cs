@@ -5,15 +5,10 @@ using UnityEngine.Events;
 using Element;
 using HitBoxDefinition;
 
+[RequireComponent(typeof(CombatCharacterData))]
 public abstract class CombatCharacter : MonoBehaviour
 {
-    
-    [Header("Character Combat Settings")]
-    [SerializeField] private float attack;
-    [SerializeField] private float defense;
-    [SerializeField] private float currentHealth;
-    [SerializeField] private float maxHealth;
-    [SerializeField] private ElementType elementType;
+    private CombatCharacterData combatCharacterData;
     
     public bool canBeDamaged = true;
     
@@ -30,10 +25,15 @@ public abstract class CombatCharacter : MonoBehaviour
     
     protected virtual void Awake()
     {
+        CacheReferences();
         ValidateData();
-        currentHealth = Mathf.Clamp(currentHealth,0,maxHealth);
+        combatCharacterData.currentHealth = Mathf.Clamp(combatCharacterData.currentHealth,0,combatCharacterData.maxHealth);
     }
     
+    void CacheReferences()
+    {
+        combatCharacterData = GetComponent<CombatCharacterData>();
+    }
     void ValidateData()
     {
         if (Mathf.Approximately(GetMaxHealth(), 0f)) 
@@ -44,13 +44,13 @@ public abstract class CombatCharacter : MonoBehaviour
         
     }
 
-    public bool IsDead() => currentHealth <= 0;
+    public bool IsDead() => combatCharacterData.currentHealth <= 0;
     
-    public ElementType GetElementType() => elementType;
-    public float GetAttack() => attack;
-    public float GetDefense() => defense;
-    public float GetCurrentHealth() =>currentHealth;
-    public float GetMaxHealth() => maxHealth;
+    public ElementType GetElementType() => combatCharacterData.elementType;
+    public float GetAttack() => combatCharacterData.attack;
+    public float GetDefense() => combatCharacterData.defense;
+    public float GetCurrentHealth() => combatCharacterData.currentHealth;
+    public float GetMaxHealth() => combatCharacterData.maxHealth;
     
     public void DisableAllAttackHitBoxes()
     {
@@ -84,8 +84,9 @@ public abstract class CombatCharacter : MonoBehaviour
         if( diedOnce || !canBeDamaged )
             return;
 
-        bool isDead = currentHealth - damage <= 0;
-        currentHealth = Mathf.Clamp(currentHealth-damage,0,GetMaxHealth());
+        bool isDead = combatCharacterData.currentHealth - damage <= 0;
+        combatCharacterData.currentHealth = 
+            Mathf.Clamp(MathfExtension.RoundFloatToDecimal(combatCharacterData.currentHealth-damage,1),0,GetMaxHealth());
         
         if (isDead) {
             diedOnce = true;

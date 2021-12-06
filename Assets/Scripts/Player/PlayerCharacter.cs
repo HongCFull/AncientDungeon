@@ -13,8 +13,8 @@ public enum PlayerAttackMode
 }
 
 /// <summary>
-/// This is bad, dumb, error prone code.
-/// Animation events in another inactive layer is called...
+/// Bad code
+/// Animation event in another inactive layer is called...
 /// Animation event callback function signature is bad :( 
 /// </summary>
 [RequireComponent(typeof(ThirdPersonController),typeof(Animator),typeof(AudioSource))]
@@ -69,6 +69,8 @@ public class PlayerCharacter : CombatCharacter
     //TPS controller
     private ThirdPersonController thirdPersonController;
 
+    //Since some stateMachine behaviors can't ref to PlayerCharacter :(
+    //need to have an Instance for this
     public static PlayerCharacter Instance { get; private set; }
     public PlayerAttackMode playerAttackMode { get; private set; }
     public SlashVFXManager GetSlashVFXManager() => slashVFXManager;

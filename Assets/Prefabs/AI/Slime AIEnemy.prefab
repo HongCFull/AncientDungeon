@@ -555,6 +555,7 @@ GameObject:
   - component: {fileID: 6508980981969963369}
   - component: {fileID: 6508980981969963375}
   - component: {fileID: 6508980981969963372}
+  - component: {fileID: 5075032824034288427}
   m_Layer: 9
   m_Name: Slime AIEnemy
   m_TagString: Untagged
@@ -646,11 +647,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b628b0cdcfa098e4d9b6e75416ebe0c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: 30
-  defense: 20
-  currentHealth: 200
-  maxHealth: 200
-  elementType: 2
   canBeDamaged: 1
   whenItIsDamaged:
     m_PersistentCalls:
@@ -696,6 +692,23 @@ MonoBehaviour:
   dissolveDuration: 2
   dissolveDelay: 1
   fleeDistance: 5
+--- !u!114 &5075032824034288427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3521549444923572140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b259f77d6a320b42ae5fd30523e2202, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: 30
+  defense: 30
+  currentHealth: 200
+  maxHealth: 200
+  elementType: 2
 --- !u!1 &5039057722412128213
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,6 +999,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b82ea449147227f45b071acbf5858cfc, type: 3}
+--- !u!4 &8964349750738797257 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3919907949333788164, guid: b82ea449147227f45b071acbf5858cfc, type: 3}
+  m_PrefabInstance: {fileID: 5332696371384349901}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5872237619725520024 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1981559750924187733, guid: b82ea449147227f45b071acbf5858cfc, type: 3}
@@ -997,8 +1015,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd92d239009e75438ed2067b68e18ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &8964349750738797257 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3919907949333788164, guid: b82ea449147227f45b071acbf5858cfc, type: 3}
-  m_PrefabInstance: {fileID: 5332696371384349901}
-  m_PrefabAsset: {fileID: 0}

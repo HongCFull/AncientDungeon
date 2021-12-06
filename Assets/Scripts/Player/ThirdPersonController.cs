@@ -124,6 +124,7 @@ namespace Player
 		private CharacterController _controller;
 		private PlayerInputHandler _input;
 		private GameObject _mainCamera;
+		private PlayerCharacter _playerCharacter;
 		
 		private const float _threshold = 0.01f;
 
@@ -133,6 +134,7 @@ namespace Player
 			if (_mainCamera == null) {
 				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 			}
+			_playerCharacter = GetComponent<PlayerCharacter>();
 		}
 
 		private void Start()
@@ -181,7 +183,7 @@ namespace Player
 		/// </summary>
 		public void EnableCharacterWalkingForBaseLayer() 
 		{
-			if (!PlayerCharacter.Instance.AwakenLayerIsActive()) {
+			if (!_playerCharacter.AwakenLayerIsActive()) {
 				//Debug.Log("EnableCharacterWalkingForBaseLayer");
 				enableWaling = true;
 			}
@@ -189,7 +191,7 @@ namespace Player
 
 		public void EnableCharacterWalkingForAwakenLayer() 
 		{
-			if (PlayerCharacter.Instance.AwakenLayerIsActive()) {
+			if (_playerCharacter.AwakenLayerIsActive()) {
 				//Debug.Log("EnableCharacterWalkingForAwakenLayer");
 				enableWaling = true;
 			}
@@ -203,7 +205,7 @@ namespace Player
 		
 		public void DisableCharacterWalkingForBaseLayer() 
 		{
-			if (!PlayerCharacter.Instance.AwakenLayerIsActive()) {
+			if (!_playerCharacter.AwakenLayerIsActive()) {
 				//Debug.Log("DisableCharacterWalkingForBaseLayer");
 				enableWaling = false;
 			}
@@ -211,7 +213,7 @@ namespace Player
 		
 		public void DisableCharacterWalkingForAwakenLayer() 
 		{
-			if (PlayerCharacter.Instance.AwakenLayerIsActive()) {
+			if (_playerCharacter.AwakenLayerIsActive()) {
 				//Debug.Log("DisableCharacterWalkingForAwakenLayer");
 				enableWaling = false;
 			}
@@ -310,14 +312,13 @@ namespace Player
 			//ApplyRotationSmoothTimeOnGround(currentHorizontalSpeed);
 			
 			float speedOffset = 0.1f;
-			float inputMagnitude = _input.analogMovement ? _input.move.magnitude : 1f;
 
 			// accelerate or decelerate to target speed
 			if (currentHorizontalSpeed < _targetSpeed - speedOffset || currentHorizontalSpeed > _targetSpeed + speedOffset)
 			{
 				// creates curved result rather than a linear one giving a more organic speed change
 				// note T in Lerp is clamped, so we don't need to clamp our speed
-				_speed = Mathf.Lerp(currentHorizontalSpeed, _targetSpeed * inputMagnitude, Time.deltaTime * SpeedChangeRate);
+				_speed = Mathf.Lerp(currentHorizontalSpeed, _targetSpeed , Time.deltaTime * SpeedChangeRate);
 
 				// round speed to 3 decimal places
 				_speed = Mathf.Round(_speed * 1000f) / 1000f;
@@ -364,7 +365,7 @@ namespace Player
 			_controller.Move(movementVector);
 			
 			_animator.SetFloat(_animIDSpeed, _animationBlend);
-			_animator.SetFloat(_animIDMotionSpeed, inputMagnitude);
+			//_animator.SetFloat(_animIDMotionSpeed, 1);
 
 		}
 

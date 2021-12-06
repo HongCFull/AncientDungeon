@@ -19,7 +19,6 @@ public class AttackHitBox : MonoBehaviour
     [SerializeField] private float skillPower;
     
     private Collider attackCollider;
-    private float originalDamage;
 
     private void Awake()
     {
@@ -57,12 +56,10 @@ public class AttackHitBox : MonoBehaviour
     
     /// <summary>
     /// Disable the attack collider attached with this gameObject.
-    /// Force restoring back the original damage set in the inspector mode 
     /// </summary>
     public void DisableAttackCollider()
     {
         attackCollider.enabled = false;
-        skillPower = originalDamage;
     }
 
     private void ShowHitVFX(ContactPoint contactPoint)
@@ -82,24 +79,6 @@ public class AttackHitBox : MonoBehaviour
 
         Instantiate(hitVFX, pos, quaternion.identity);
     }
-
     
-    // private void OnCollisionEnter(Collision other)
-    // {
-    //     ReceiveHitBox receiveHitBoxComp = other.gameObject.GetComponent<ReceiveHitBox>();
-    //     if (!receiveHitBoxComp)
-    //     {
-    //        // Debug.Log("No receiver and return");
-    //         return;
-    //     }
-    //
-    //     HitBoxTag targetTag = receiveHitBoxComp.GetHitBoxTag();
-    //     foreach (HitBoxTag tag in canDamageHitBoxWithTag) {
-    //         if (targetTag == tag) {
-    //             CombatDamageManager.DealDamageTo(owner,receiveHitBoxComp.GetCombatCharacterOwner(),skillPower);
-    //             ShowHitVFX(other.GetContact(0));
-    //         }
-    //     }
-    // }
 
 }

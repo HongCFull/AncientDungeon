@@ -14,33 +14,31 @@ namespace Player
 		[Header("Custom Input Settings")] 
 		[SerializeField] private bool enableLookInput = true;
 		
+		[Header("Cool Down Settings")]
 		[Tooltip("The time that allows you to trigger double tap after tapping one key")]
 		[SerializeField][Range(0,10)] private float doubleTapTimeInterval;
 		
 		[Tooltip("The time has to pass after the double tap in order to it again")]
 		[SerializeField][Range(0,10)] private float doubleTapCoolDown;
 		
+		[SerializeField] [Range(0f , 10f)]private float dashCoolDownTime; 
+		
+		[Header("References")] 
 		[SerializeField] private InputActionReference wKeyDoubleTapAction;
 		[SerializeField] private InputActionReference aKeyDoubleTapAction;
 		[SerializeField] private InputActionReference sKeyDoubleTapAction;
 		[SerializeField] private InputActionReference dKeyDoubleTapAction;
-
-		[Header("References")] 
 		[SerializeField] private PlayerMainCamera playerCamera;
+
+		//[Header("Default Character Input Values")]
+		public Vector2 move { get; private set; }
+		public Vector2 look{ get; private set; }
+		public bool jump { get; set; } = false;
+		public bool sprint { get; private set; } =false ;
 		
-		[Header("Default Character Input Values")]
-		public Vector2 move;
-		public Vector2 look;
-		public bool jump = false;
-		public bool sprint =false ;
-		public bool meleeAttack = false;
-		
-		[Header("Movement Settings")]
-		public bool analogMovement;
-		[SerializeField] [Range(0f , 10f)]private float dashCoolDownTime; 
 		
 	#if !UNITY_IOS || !UNITY_ANDROID
-		[Header("Mouse Cursor Settings")]
+		[Header("Mouse Cursor Settings")] 
 		public bool cursorLocked = true;
 		public bool cursorInputForLook = true;
 	#endif
