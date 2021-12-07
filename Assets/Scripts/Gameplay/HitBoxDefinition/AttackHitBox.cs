@@ -77,7 +77,9 @@ public class AttackHitBox : MonoBehaviour
         if (!hitVFX)
             return;
 
-        Instantiate(hitVFX, pos, quaternion.identity);
+        ParticleSystem spawnedVFX = Instantiate(hitVFX, pos, quaternion.identity);
+        ParticleSystem.MainModule vfxMainModule = spawnedVFX.main;
+        Destroy(spawnedVFX.gameObject, vfxMainModule.duration);
     }
     
 

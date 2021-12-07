@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class SlashVFXManager : MonoBehaviour
 {
+    [SerializeField] private PlayerCharacter playerCharacter;
     [SerializeField] private ParticleSystem[] normalSlashEffect;
     [SerializeField] private ParticleSystem[] awakenSlashEffect;
     [SerializeField] private ParticleSystem[] spiralSlashEffect; 
+    [SerializeField] private ParticleSystem horizontalSlashEffect; 
+
     /// <summary>
     /// 
     /// </summary>
@@ -15,21 +18,22 @@ public class SlashVFXManager : MonoBehaviour
     /// <param name="duration"></param>
     public void SpawnNormalSlashEffect(int vfxIndex)
     {
-       // StartCoroutine()
-       // Transform transformHolder = moveWithPlayer ? transform : null;
-
-        ParticleSystem vfx = Instantiate<ParticleSystem>(normalSlashEffect[vfxIndex], normalSlashEffect[vfxIndex].gameObject.transform.position, normalSlashEffect[vfxIndex].gameObject.transform.rotation);
-        vfx.gameObject.SetActive(true);
+       if (playerCharacter.AwakenLayerIsActive())
+           return;
+       
+       ParticleSystem vfx = Instantiate<ParticleSystem>(normalSlashEffect[vfxIndex], normalSlashEffect[vfxIndex].gameObject.transform.position, normalSlashEffect[vfxIndex].gameObject.transform.rotation);
+       vfx.gameObject.SetActive(true);
         
-        ParticleSystem.MainModule vfxMainModule = vfx.main;
-        Destroy(vfx.gameObject, vfxMainModule.duration);
+       ParticleSystem.MainModule vfxMainModule = vfx.main;
+       Destroy(vfx.gameObject, vfxMainModule.duration);
     }
     
     
     public void SpawnAwakenSlashEffect(int vfxIndex)
     {
-        // StartCoroutine()
-        // Transform transformHolder = moveWithPlayer ? transform : null;
+        if (!playerCharacter.AwakenLayerIsActive())
+            return;
+
         if (awakenSlashEffect[vfxIndex] == null)
             return;
         
@@ -65,4 +69,26 @@ public class SlashVFXManager : MonoBehaviour
 
         vfxObj.transform.parent = null;
     }
+
+    #region SlashSkillVFX
+        public void SpawnSpiralSlashEffectSlashEffect(int vfxIndex)
+        {
+            ParticleSystem vfx = Instantiate<ParticleSystem>(spiralSlashEffect[vfxIndex], spiralSlashEffect[vfxIndex].gameObject.transform.position, spiralSlashEffect[vfxIndex].gameObject.transform.rotation);
+            vfx.gameObject.SetActive(true);
+            
+            ParticleSystem.MainModule vfxMainModule = vfx.main;
+            Destroy(vfx.gameObject, vfxMainModule.duration);
+        }
+        
+        public void SpawnHorizontalSlashEffectSlashEffect()
+        {
+            ParticleSystem vfx = Instantiate<ParticleSystem>(horizontalSlashEffect, horizontalSlashEffect.gameObject.transform.position, horizontalSlashEffect.gameObject.transform.rotation);
+            vfx.gameObject.SetActive(true);
+        
+            ParticleSystem.MainModule vfxMainModule = vfx.main;
+            Destroy(vfx.gameObject, vfxMainModule.duration);
+        }
+
+
+    #endregion
 }
