@@ -42,7 +42,7 @@ public class PlayerAttackState : ArtificialGravityState
 
         base.OnStateEnter(animator, stateInfo, layerIndex);
         
-        thirdPersonController.DisableCharacterWalkingForBaseLayer();
+        thirdPersonController.ForceDisableCharacterWalking();
         
         SetRootMotionTo(animator,enableRootMotion);
     }
@@ -78,10 +78,8 @@ public class PlayerAttackState : ArtificialGravityState
         base.OnStateExit(animator, stateInfo, layerIndex);
         
        // animator.SetBool(animIDIsInComboState,false);
-       
-       // animator.applyRootMotion = originalRMOption;
-        playerCharacter.ForceDisableAttackHitBoxOfWeapon();
        // thirdPersonController.ForceEnableCharacterWalking();
+        playerCharacter.ForceDisableAttackHitBoxOfWeapon();
         hasExited = true;
         hasRotated = false;
     }

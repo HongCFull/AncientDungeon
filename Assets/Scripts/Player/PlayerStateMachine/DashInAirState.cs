@@ -19,6 +19,8 @@ public class DashInAirState : StateMachineBehaviour
     private float dashVelocity;
     private Vector3 dashDirection;
     
+    private int animIDStateCanBeInterrupted;
+
         
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -26,9 +28,12 @@ public class DashInAirState : StateMachineBehaviour
 
         InitializeVariables(animator,stateInfo);
 
+        animator.applyRootMotion = true;
+        animator.SetBool(animIDStateCanBeInterrupted,false);
+        
         tpsController.ForceDisableCharacterWalking();
         tpsController.DisableGravity();
-        animator.applyRootMotion = true;
+        
         playerCharacter.canBeDamaged = false;
 
     }
@@ -50,11 +55,13 @@ public class DashInAirState : StateMachineBehaviour
         base.OnStateExit(animator, stateInfo, layerIndex);
         hasExited = true;
         
+        animator.SetBool(animIDStateCanBeInterrupted,true);
         animator.applyRootMotion = originalRMOption;
         
         tpsController.ForceEnableCharacterWalking();
         tpsController.EnableGravity();
         playerCharacter.canBeDamaged = true;
+
     }
 
     void InitializeVariables(Animator animator,AnimatorStateInfo stateInfo)
@@ -70,5 +77,8 @@ public class DashInAirState : StateMachineBehaviour
         dashDirection = animator.transform.forward;
         dashDirection.y = 0;
         dashDirection = dashDirection.normalized;
+        
+        animIDStateCanBeInterrupted = Animator.StringToHash("StateCanBeInterrupted");
+
     }
 }

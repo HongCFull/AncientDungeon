@@ -9,6 +9,8 @@ public class DashState : StateMachineBehaviour
     private bool originalRMOption;
     private int animIDCachedDashAngle;
     private int animIDTurningAngle;
+    private int animIDStateCanBeInterrupted;
+    
     private ThirdPersonController tpsController;
     private CharacterController characterController;
     private PlayerCharacter playerCharacter;
@@ -19,12 +21,13 @@ public class DashState : StateMachineBehaviour
 
         InitializeVariables(animator);
  
+        animator.SetBool(animIDStateCanBeInterrupted,false);
         animator.SetFloat(animIDCachedDashAngle,animator.GetFloat(animIDTurningAngle));
         animator.applyRootMotion = true;
+        
         tpsController.ForceDisableCharacterWalking();
         playerCharacter.canBeDamaged = false;
-        //Debug.Log("enter dash state with rm: "+animator.applyRootMotion);
-
+        
     }
 
      public override void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -42,8 +45,10 @@ public class DashState : StateMachineBehaviour
         
         tpsController.ForceEnableCharacterWalking();
         playerCharacter.canBeDamaged = true;
+        
         animator.applyRootMotion = originalRMOption;
-        animator.SetFloat(animIDCachedDashAngle,0f); 
+        animator.SetFloat(animIDCachedDashAngle,0f);
+        animator.SetBool(animIDStateCanBeInterrupted,true);
 
      }
 
@@ -55,6 +60,7 @@ public class DashState : StateMachineBehaviour
          
          animIDCachedDashAngle = Animator.StringToHash("CachedDashAngle");
          animIDTurningAngle = Animator.StringToHash("TurningAngle");
+         animIDStateCanBeInterrupted = Animator.StringToHash("StateCanBeInterrupted");
          
          originalRMOption = animator.applyRootMotion;
 

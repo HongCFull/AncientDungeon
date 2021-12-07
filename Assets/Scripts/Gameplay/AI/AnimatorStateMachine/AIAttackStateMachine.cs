@@ -28,6 +28,7 @@ public class AIAttackStateMachine : StateMachineBehaviour
         animIDAttackIndex = Animator.StringToHash("attackIndex");
     }
 
+    //This won't be called properly
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
@@ -35,7 +36,7 @@ public class AIAttackStateMachine : StateMachineBehaviour
         //To prevent the reset in animation event is not being called
         //Debug.Log("clear attack index = "+randAttackIndex);
         //aiCharacter.DisableAttackHitBox(randAttackIndex);
-        aiCharacter.DisableAllAttackHitBoxes();
+       // aiCharacter.DisableAllAttackHitBoxes();
     }
 
     void StopNavmeshAgent()

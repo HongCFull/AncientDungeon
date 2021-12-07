@@ -6,4 +6,5 @@ public class PlayerCharacterData : CombatCharacterData
 {
     public int level;
     public int experience;
+
 }

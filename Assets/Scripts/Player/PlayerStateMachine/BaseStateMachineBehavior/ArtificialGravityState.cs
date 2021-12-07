@@ -21,8 +21,13 @@ public abstract class ArtificialGravityState : StateMachineBehaviour
             return;
         
         base.OnStateMove(animator, stateInfo, layerIndex);
-        if(applyArtificialGravity)
+        if (applyArtificialGravity)
+        {
+            //Don't know why characterController will be null very rarely 
+            if(!characterController )
+                characterController = animator.GetComponent<CharacterController>();
             characterController.Move(new Vector3(0, -15f, 0f) * Time.deltaTime);
+        }
     }
 
     public new virtual void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

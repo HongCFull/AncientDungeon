@@ -21,9 +21,10 @@ namespace Player
 		[Tooltip("The time has to pass after the double tap in order to it again")]
 		[SerializeField][Range(0,10)] private float doubleTapCoolDown;
 		
-		[SerializeField] [Range(0f , 10f)]private float dashCoolDownTime; 
-		
+		// [SerializeField] [Range(0f , 10f)]private float dashCoolDownTime; 
+
 		[Header("References")] 
+		[SerializeField] private ShirleySkillManager shirleySkillManager;
 		[SerializeField] private InputActionReference wKeyDoubleTapAction;
 		[SerializeField] private InputActionReference aKeyDoubleTapAction;
 		[SerializeField] private InputActionReference sKeyDoubleTapAction;
@@ -55,8 +56,8 @@ namespace Player
 		private int stateIDSpecialAttack2;
 
 		//Dash Variables
-		private float dashCoolDownTimer = 0f;
-		private bool canTriggerDash = true;
+		// private float dashCoolDownTimer = 0f;
+		// private bool canTriggerDash = true;
 		  
 		//Keys that can be double tapped 
 		//W key
@@ -88,16 +89,16 @@ namespace Player
 			AssignDoubleTapActionCallback();
 		}
 		
-		private void Update()
-		{
-			if (!canTriggerDash) {
-				dashCoolDownTimer += Time.deltaTime;
-				if (dashCoolDownTimer >= dashCoolDownTime) {
-					dashCoolDownTimer = 0f;
-					canTriggerDash = true;
-				}
-			}
-		}
+		// private void Update()
+		// {
+		// 	if (!canTriggerDash) {
+		// 		dashCoolDownTimer += Time.deltaTime;
+		// 		if (dashCoolDownTimer >= dashCoolDownTime) {
+		// 			dashCoolDownTimer = 0f;
+		// 			canTriggerDash = true;
+		// 		}
+		// 	}
+		// }
 		
 		private void HashAnimID()
 		{
@@ -147,14 +148,14 @@ namespace Player
 				HandleMeleeAttackInput(callbackContext.ReadValueAsButton());
 			}
 
-			public void OnSpecialAttack1(InputAction.CallbackContext callbackContext)
+			public void OnSkillQInput(InputAction.CallbackContext callbackContext)
 			{
-				HandleSpecialAttack1Input(callbackContext.ReadValueAsButton());
+				HandleSkillQInput(callbackContext.ReadValueAsButton());
 			}
 			
-			public void OnSpecialAttack2(InputAction.CallbackContext callbackContext)
+			public void OnSkillEInput(InputAction.CallbackContext callbackContext)
 			{
-				HandleSpecialAttack2Input(callbackContext.ReadValueAsButton());
+				HandleSkillEInput(callbackContext.ReadValueAsButton());
 			}
 
 			public void OnCharacterAwake(InputAction.CallbackContext callbackContext)
@@ -291,41 +292,26 @@ namespace Player
 
 			private void HandleDashInput(InputAction.CallbackContext callbackContext)
 			{
-				if (canTriggerDash && callbackContext.performed) {
-					sprint = false;
-					canTriggerDash = false;
-					tpsController.TriggerDash();
-				}
+				if(callbackContext.performed)
+					shirleySkillManager.PerformSkill(KeyCode.LeftShift);
 			}
 		
-			private void HandleSpecialAttack1Input(bool isClicked)
+			private void HandleSkillQInput(bool isClicked)
 			{
-				if (isClicked && animator.GetBool(animIDGrounded)) {
-					sprint = false;
-					animator.Play(stateIDSpecialAttack1,activeAnimLayer );
-					//animator.SetTrigger(animIDDoSpecialAttack1);
-				}
-				else if (!isClicked) {
-					//animator.ResetTrigger(animIDDoSpecialAttack1);
-				}
+				if (isClicked) 
+					shirleySkillManager.PerformSkill(KeyCode.Q);
 			}
 		
-			private void HandleSpecialAttack2Input(bool isClicked)
+			private void HandleSkillEInput(bool isClicked)
 			{
-				if (isClicked && animator.GetBool(animIDGrounded)) {
-					sprint = false;
-					animator.Play(stateIDSpecialAttack2,activeAnimLayer );
-					//animator.SetTrigger(animIDDoSpecialAttack2);
-				}
-				else if (!isClicked) {
-					//animator.ResetTrigger(animIDDoSpecialAttack2);
-				}
+				if (isClicked) 
+					shirleySkillManager.PerformSkill(KeyCode.E);
 			}
 		
 			private void HandleCharacterAwakeInput(bool isClicked)
 			{
-				if (isClicked && animator.GetBool(animIDGrounded) && playerCharacter.playerAttackMode == PlayerAttackMode.NORMAL) {
-					playerCharacter.SetCharacterToAwakeMode();
+				if (isClicked) {
+					shirleySkillManager.PerformSkill(KeyCode.LeftControl);
 				}
 			}
 

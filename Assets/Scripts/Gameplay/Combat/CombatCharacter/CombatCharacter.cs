@@ -8,7 +8,8 @@ using HitBoxDefinition;
 [RequireComponent(typeof(CombatCharacterData))]
 public abstract class CombatCharacter : MonoBehaviour
 {
-    private CombatCharacterData combatCharacterData;
+    //Can't use get component as it other awake method depends on this data obj
+    [SerializeField] CombatCharacterData combatCharacterData;
     
     public bool canBeDamaged = true;
     
@@ -25,15 +26,10 @@ public abstract class CombatCharacter : MonoBehaviour
     
     protected virtual void Awake()
     {
-        CacheReferences();
         ValidateData();
         combatCharacterData.currentHealth = Mathf.Clamp(combatCharacterData.currentHealth,0,combatCharacterData.maxHealth);
     }
     
-    void CacheReferences()
-    {
-        combatCharacterData = GetComponent<CombatCharacterData>();
-    }
     void ValidateData()
     {
         if (Mathf.Approximately(GetMaxHealth(), 0f)) 
@@ -45,7 +41,6 @@ public abstract class CombatCharacter : MonoBehaviour
     }
 
     public bool IsDead() => combatCharacterData.currentHealth <= 0;
-    
     public ElementType GetElementType() => combatCharacterData.elementType;
     public float GetAttack() => combatCharacterData.attack;
     public float GetDefense() => combatCharacterData.defense;
@@ -67,7 +62,7 @@ public abstract class CombatCharacter : MonoBehaviour
         attackHitBoxes[i].EnableAttackCollider();
     }
     
-    protected void DisableAttackHitBox(int i)
+    public void DisableAttackHitBox(int i)
     {
         if (i < 0 || i >= attackHitBoxes.Count)
             return;

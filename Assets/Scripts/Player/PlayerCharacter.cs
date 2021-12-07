@@ -13,15 +13,15 @@ public enum PlayerAttackMode
 }
 
 /// <summary>
-/// Bad code
+/// Responsible for interacting with the animator & animation callback
 /// Animation event in another inactive layer is called...
 /// Animation event callback function signature is bad :( 
 /// </summary>
 [RequireComponent(typeof(ThirdPersonController),typeof(Animator),typeof(AudioSource))]
 public class PlayerCharacter : CombatCharacter
 {
-    [Header("Player Stats Settings")]
-    [SerializeField] [Range(0,Mathf.Infinity)] private float awakenDuration;
+   // [Header("Player Stats Settings")]
+  //  [SerializeField] [Range(0,Mathf.Infinity)] private float awakenDuration;
     
     [Header("Special HitBox")]
     [SerializeField] private AttackHitBox weaponHitBox;
@@ -65,6 +65,8 @@ public class PlayerCharacter : CombatCharacter
     private int animID_IsDamaged;
     private int animID_CanTriggerNextCombo;
     private int animID_Awake;
+    private int animID_StateCanBeInterrupted;
+    private int animID_Grounded;
     
     //TPS controller
     private ThirdPersonController thirdPersonController;
@@ -95,15 +97,33 @@ public class PlayerCharacter : CombatCharacter
         animID_CanTriggerNextCombo = Animator.StringToHash("CanTriggerNextCombo");
         animID_IsDamaged = Animator.StringToHash("IsDamaged");
         animID_Awake = Animator.StringToHash("Awake");
+        animID_StateCanBeInterrupted = Animator.StringToHash("StateCanBeInterrupted");
+        animID_Grounded = Animator.StringToHash("Grounded");
     }
     
     public Vector3 GetPlayerWorldPosition()
     {
         return transform.position;
     }
-    
+
+    #region GetAnimatorStateInfo
+        public bool AnimatorStateCanBeInterrupted() => animator.GetBool(animID_StateCanBeInterrupted);
+
+        public bool AnimatorIsGrounded() => animator.GetBool(animID_Grounded);
+
+    #endregion
     
     #region PlayerStateHandling
+
+        /// <summary>
+        /// Set the animator state with the hashedStateID.
+        /// </summary>
+        /// <param name="hashedStateID"> The animID hash of the state name </param>
+        public void SetAnimatorStateTo(int hashedStateID)
+        {
+            animator.Play(hashedStateID);
+        }
+        
         public void SetAnimationTriggerIsDamaged()
         {
             animator.SetTrigger(animID_IsDamaged);
@@ -112,7 +132,7 @@ public class PlayerCharacter : CombatCharacter
 
         public void SetCharacterToAwakeMode()
         {
-            animator.Play(animID_Awake,0);
+            animator.Play(animID_Awake);
             animator.SetLayerWeight(AwakenLayerIndex,1);
 
             PlayCharacterAwakeAudio();
@@ -122,8 +142,9 @@ public class PlayerCharacter : CombatCharacter
             playerAttackMode = PlayerAttackMode.AWAKEN;
             
             //characterAwakeDirector.Play();
-            Invoke(nameof(SetCharacterToNormalMode),awakenDuration);
+            // Invoke(nameof(SetCharacterToNormalMode),());
             OnAwakeAttackMode.Invoke();
+            Debug.Log("Set awake mode alrdy");
         }
         
         public void SetCharacterToNormalMode()
@@ -135,7 +156,7 @@ public class PlayerCharacter : CombatCharacter
             animator.SetLayerWeight(AwakenLayerIndex,0);
             OnNormalAttackMode.Invoke();
         }
-    
+        
 
     #endregion
 
@@ -405,7 +426,11 @@ public class PlayerCharacter : CombatCharacter
             weaponHitBox.EnableAttackCollider();
         }
 
-    
+        public void ForceEnableAttackHitBoxOfWeaponWithPower(float skillPower)
+        {
+            weaponHitBox.EnableAttackColliderWithSkillPower(skillPower);
+        }
+
         //Normal
         public void EnableNormalAttackHitBoxOfWeapon()
         {
