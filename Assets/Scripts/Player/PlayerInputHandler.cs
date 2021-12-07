@@ -89,16 +89,6 @@ namespace Player
 			AssignDoubleTapActionCallback();
 		}
 		
-		// private void Update()
-		// {
-		// 	if (!canTriggerDash) {
-		// 		dashCoolDownTimer += Time.deltaTime;
-		// 		if (dashCoolDownTimer >= dashCoolDownTime) {
-		// 			dashCoolDownTimer = 0f;
-		// 			canTriggerDash = true;
-		// 		}
-		// 	}
-		// }
 		
 		private void HashAnimID()
 		{

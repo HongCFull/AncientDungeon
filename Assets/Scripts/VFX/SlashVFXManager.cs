@@ -6,7 +6,7 @@ public class SlashVFXManager : MonoBehaviour
 {
     [SerializeField] private ParticleSystem[] normalSlashEffect;
     [SerializeField] private ParticleSystem[] awakenSlashEffect;
-
+    [SerializeField] private ParticleSystem[] spiralSlashEffect; 
     /// <summary>
     /// 
     /// </summary>
