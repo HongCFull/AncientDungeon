@@ -18,6 +18,10 @@ public class DungeonTile : MonoBehaviour
     [Header("Enemies")] 
     [SerializeField] private bool canSpawnEnemy;
     [SerializeField] private AICharacter[] aiCharacters;
+    [SerializeField] private int numOfEnemies;
+    [SerializeField] private int randomOffset;
+    [SerializeField] private List<Transform> spawnPositions;
+    
     
     [Space]
     [Header("Debug")]
@@ -113,9 +117,20 @@ public class DungeonTile : MonoBehaviour
     {
         if (aiCharacters.Length <= 0)
             return;
-        //Vector3 worldPos = transform.TransformPoint(Vector3.zero);
-        Vector3 worldPos = transform.position;
-        Instantiate(aiCharacters[Random.Range(0, aiCharacters.Length)], worldPos, quaternion.identity);
+        
+        if(numOfEnemies>spawnPositions.Count)
+            Debug.Log("numOfEnemies greater than spawnPositions");
+        
+        spawnPositions.Shuffle();
+
+        int randomNumOfEnemies = Random.Range(Mathf.Max(0,numOfEnemies - randomOffset), numOfEnemies + randomOffset);
+        int numOfEnemiesToSpawn = Mathf.Min(randomNumOfEnemies, spawnPositions.Count);
+        for (int i = 0; i < numOfEnemiesToSpawn; i++) {
+            //Vector3 position = transform.TransformPoint(spawnPositions[i].position);
+            Vector3 position = spawnPositions[i].position;
+            Instantiate(aiCharacters[Random.Range(0, aiCharacters.Length)], position, quaternion.identity);
+        }
+        
     }
     
 }
