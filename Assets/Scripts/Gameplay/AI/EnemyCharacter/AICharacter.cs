@@ -26,14 +26,7 @@ public abstract class AICharacter : CombatCharacter
     [SerializeField] private SkinnedMeshRenderer skinnedMeshRenderer;
     [SerializeField] private float dissolveDuration;
     [SerializeField] private float dissolveDelay;
-    
-    
-    //Animation
-    private Animator animator;
-    private int animID_isDamaged;
-    private int animID_isDead;
-    private int animID_stateCanBeInterrupted;
-    
+
     //Mesh 
     private Material dissolveMaterial;
     
@@ -42,7 +35,6 @@ public abstract class AICharacter : CombatCharacter
     protected override void Awake()
     {
         base.Awake();
-        //Debug.Log("AICharacter Awake");
         
         InitializeVariables();
         //DisableAllAttackHitBoxes();
@@ -51,12 +43,7 @@ public abstract class AICharacter : CombatCharacter
     void InitializeVariables()
     {
         initPosition = transform.position;
-        animator = GetComponent<Animator>();
         
-        animID_isDamaged = Animator.StringToHash("isDamaged");
-        animID_isDead = Animator.StringToHash("isDead");
-        animID_stateCanBeInterrupted = Animator.StringToHash("stateCanBeInterrupted");
-
         dissolveMaterial = skinnedMeshRenderer.material;
     }
     
@@ -84,13 +71,7 @@ public abstract class AICharacter : CombatCharacter
         return transform.position;
     }
     
-
-    public void SetAnimationTriggerIsDamaged()
-    {
-        if(animator.GetBool(animID_stateCanBeInterrupted))
-            animator.SetTrigger(animID_isDamaged);
-    }
-
+    
     public void WrappedOperationWhenItIsDead()
     {
         StartCoroutine(OperationOnDeath());
@@ -99,8 +80,8 @@ public abstract class AICharacter : CombatCharacter
     IEnumerator OperationOnDeath()
     {
         DisableAllReceiveHitBoxes();
-        SetAnimationTriggerIsDead();
-        yield return StartCoroutine(Dissolve());
+        //SetAnimationTriggerIsDead();
+        yield return StartCoroutine(PerformDissolveEffectWithDuration(dissolveDuration));
         Destroy(gameObject);
     }
 
@@ -111,25 +92,33 @@ public abstract class AICharacter : CombatCharacter
             receiveHitBox.EnableHitBox(false);
         }    
     }
-    
-    void SetAnimationTriggerIsDead()
-    {
-        animator.SetTrigger(animID_isDead);
-    }
 
-
-    IEnumerator Dissolve()
+    public IEnumerator PerformDissolveEffectWithDuration(float duration)
     {
-        yield return new WaitForSeconds(dissolveDelay);
+        //yield return new WaitForSeconds(dissolveDelay);
         float timer = 0;
-        int dissolveID = Shader.PropertyToID("Vector1_a7ed521b31bd49a3aff17f95fd88251b");
+        int dissolveID = Shader.PropertyToID("Vector1_a7ed521b31bd49a3aff17f95fd88251b");   //Forced to use the ugly dissolve ID in the shader graph :O
 
-        while (timer<dissolveDuration) {
+        while (timer<duration) {
             timer += Time.deltaTime;
-            dissolveMaterial.SetFloat(dissolveID,Mathf.Clamp01(timer/dissolveDuration));
+            dissolveMaterial.SetFloat(dissolveID,Mathf.Clamp01(timer/duration));
             yield return null;
         }
     }
+    
+    
+    public IEnumerator PerformAppearEffectWithDuration(float duration)
+    {
+        float timer = 0;
+        int dissolveID = Shader.PropertyToID("Vector1_a7ed521b31bd49a3aff17f95fd88251b");  //Forced to use the ugly dissolve ID in the shader graph :O
+
+        while (timer<duration) {
+            timer += Time.deltaTime;
+            dissolveMaterial.SetFloat(dissolveID,1-Mathf.Clamp01(timer/duration));
+            yield return null;
+        }
+    }
+    
     
 #if UNITY_EDITOR
     private void OnDrawGizmos()

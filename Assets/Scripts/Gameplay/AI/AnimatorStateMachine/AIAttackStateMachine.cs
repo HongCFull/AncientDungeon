@@ -8,11 +8,10 @@ public class AIAttackStateMachine : StateMachineBehaviour
     [SerializeField] private int numOfAttack;
     
     private NavMeshAgent navMeshAgent;
-    private AICharacter aiCharacter;
     private int animIDAttackIndex;
     private int randAttackIndex;
     
-    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public new virtual void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         CacheReferences(animator);
@@ -24,20 +23,9 @@ public class AIAttackStateMachine : StateMachineBehaviour
     void CacheReferences(Animator animator)
     {
         navMeshAgent = animator.gameObject.GetComponent<NavMeshAgent>();
-        aiCharacter = animator.gameObject.GetComponent<AICharacter>();
         animIDAttackIndex = Animator.StringToHash("attackIndex");
     }
 
-    //This won't be called properly
-    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        base.OnStateExit(animator, stateInfo, layerIndex);
-        
-        //To prevent the reset in animation event is not being called
-        //Debug.Log("clear attack index = "+randAttackIndex);
-        //aiCharacter.DisableAttackHitBox(randAttackIndex);
-       // aiCharacter.DisableAllAttackHitBoxes();
-    }
 
     void StopNavmeshAgent()
     {

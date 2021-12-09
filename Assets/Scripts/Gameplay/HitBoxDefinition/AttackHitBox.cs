@@ -18,12 +18,8 @@ public class AttackHitBox : MonoBehaviour
     [Tooltip("This can be updated by the animation event")]
     [SerializeField] private float skillPower;
     
-    private Collider attackCollider;
-
-    private void Awake()
-    {
-        attackCollider = GetComponent<Collider>();
-    }
+    [SerializeField] Collider attackCollider;
+    
     
     private void OnTriggerEnter(Collider other)
     {

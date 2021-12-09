@@ -199,6 +199,7 @@ MonoBehaviour:
   canDamageHitBoxWithTag: 0100000002000000
   hitVFX: {fileID: 1148340808978909828, guid: 627a4c6aaa252314d994dfdc9c94ca12, type: 3}
   skillPower: 20
+  attackCollider: {fileID: 262270387}
 --- !u!1 &264472212
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,6 +515,7 @@ MonoBehaviour:
   canDamageHitBoxWithTag: 0100000002000000
   hitVFX: {fileID: 0}
   skillPower: 5
+  attackCollider: {fileID: 0}
 --- !u!54 &1917209151
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1195,6 +1197,7 @@ MonoBehaviour:
   canDamageHitBoxWithTag: 0100000002000000
   hitVFX: {fileID: 0}
   skillPower: 5
+  attackCollider: {fileID: 0}
 --- !u!54 &20900373
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6219,6 +6222,7 @@ MonoBehaviour:
   canDamageHitBoxWithTag: 0100000002000000
   hitVFX: {fileID: 0}
   skillPower: 5
+  attackCollider: {fileID: 0}
 --- !u!54 &1569596027
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6868,6 +6872,7 @@ MonoBehaviour:
   canDamageHitBoxWithTag: 0100000002000000
   hitVFX: {fileID: 0}
   skillPower: 5
+  attackCollider: {fileID: 0}
 --- !u!54 &2065153548
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7964,6 +7969,7 @@ MonoBehaviour:
   canDamageHitBoxWithTag: 0100000002000000
   hitVFX: {fileID: 0}
   skillPower: 4
+  attackCollider: {fileID: 0}
 --- !u!54 &262430236
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8668,6 +8674,7 @@ MonoBehaviour:
   canDamageHitBoxWithTag: 0100000002000000
   hitVFX: {fileID: 0}
   skillPower: 5
+  attackCollider: {fileID: 0}
 --- !u!54 &580341135
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -52707,7 +52714,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3124140674871090721}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.92999995, z: 0}
+  m_LocalPosition: {x: 0, y: 4.67, z: 4.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7326571894100961149}
@@ -53234,7 +53241,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combatCharacterData: {fileID: 189921038}
-  canBeDamaged: 1
   whenItIsDamaged:
     m_PersistentCalls:
       m_Calls:
@@ -62560,11 +62566,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.44500008
+      value: 6.045
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.350004
+      value: -3.9499998
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -62612,7 +62618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925442191277752, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: CameraDistance
-      value: 5.000004
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2070925442191277752, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: ShoulderOffset.x
@@ -62628,7 +62634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2070925442191277752, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
       propertyPath: CameraCollisionFilter.m_Bits
-      value: 201
+      value: 4297
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
@@ -62693,11 +62699,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.44500008
+      value: 6.045
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.350004
+      value: -3.9499998
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f, type: 3}
       propertyPath: m_LocalRotation.w

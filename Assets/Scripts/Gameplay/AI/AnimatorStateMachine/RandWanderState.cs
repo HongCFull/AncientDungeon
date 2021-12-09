@@ -7,6 +7,7 @@ public class RandWanderState : StateMachineBehaviour
 {
     [SerializeField] private float tolerance=0.5f;
     [SerializeField] private float randWanderRadius;
+    [SerializeField] private bool enableStrafing;
     private NavMeshAgent navMeshAgent;
     private AICharacter aiCharacter;
     
@@ -18,6 +19,10 @@ public class RandWanderState : StateMachineBehaviour
         base.OnStateEnter(animator, stateInfo, layerIndex);
         CacheReferences(animator);
 
+        if (enableStrafing) {
+            SetNavmeshAgentStrafingTo(true);
+        }
+        
         GoToRandPosition();
     }
 
@@ -31,7 +36,9 @@ public class RandWanderState : StateMachineBehaviour
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
+        
         animator.SetBool(hasReachedRandWanderingPosAnimID, false);
+        SetNavmeshAgentStrafingTo(false);
         StopNavmeshAgent();
     }
 
@@ -65,6 +72,9 @@ public class RandWanderState : StateMachineBehaviour
     {
         navMeshAgent.SetDestination(navMeshAgent.transform.position);
     }
-    
-    
+
+    void SetNavmeshAgentStrafingTo(bool strafe)
+    {
+        navMeshAgent.updateRotation = !strafe;
+    }
 }

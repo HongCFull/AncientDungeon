@@ -4,6 +4,7 @@ using UnityEngine;
 using Player;
 using UnityEngine.Animations;
 
+
 public class PlayerDamagedStatemachine : StateMachineBehaviour
 {
     private ThirdPersonController tpsController;
@@ -31,9 +32,9 @@ public class PlayerDamagedStatemachine : StateMachineBehaviour
     void InitializeVariables(Animator animator)
     {
         tpsController = animator.gameObject.GetComponent<ThirdPersonController>();
-        animID_Dash = Animator.StringToHash("Dash");
-        animID_MeleeAttack = Animator.StringToHash("MeleeAttack");
-        animID_CanAttack = Animator.StringToHash("CanAttack");
+        animID_Dash = Animator.StringToHash("dash");
+        animID_MeleeAttack = Animator.StringToHash("meleeAttack");
+        animID_CanAttack = Animator.StringToHash("canAttack");
     }
 
     void ResetInputTriggers(Animator animator)

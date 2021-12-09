@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerDamagedState : ArtificialGravityState
 {
     
-    [SerializeField] private bool stateCanBeInterrupted =true;
+    //[SerializeField] private bool stateCanBeInterrupted =true;
     private ThirdPersonController tpsController;
     private int animID_StateCanBeInterrupted;
     private bool originalOptionStateCanBeInterrupted;
@@ -19,7 +19,7 @@ public class PlayerDamagedState : ArtificialGravityState
 
         InitializeVariables(animator);
         tpsController.ForceDisableCharacterWalking();
-        animator.SetBool(animID_StateCanBeInterrupted,stateCanBeInterrupted);
+        animator.SetBool(animID_StateCanBeInterrupted,false);
     }
     
     public override void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -44,7 +44,7 @@ public class PlayerDamagedState : ArtificialGravityState
             tpsController = animator.GetComponent<ThirdPersonController>();
         
         hasExited = false;
-        animID_StateCanBeInterrupted = Animator.StringToHash("StateCanBeInterrupted");
+        animID_StateCanBeInterrupted = Animator.StringToHash("stateCanBeInterrupted");
         originalOptionStateCanBeInterrupted = animator.GetBool(animID_StateCanBeInterrupted);
     }
 }

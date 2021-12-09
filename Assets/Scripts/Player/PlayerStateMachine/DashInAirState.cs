@@ -34,8 +34,7 @@ public class DashInAirState : StateMachineBehaviour
         tpsController.ForceDisableCharacterWalking();
         tpsController.DisableGravity();
         
-        playerCharacter.canBeDamaged = false;
-
+        playerCharacter.SetCombatCharacterToInvulnerable(true);
     }
 
     public override void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -60,7 +59,7 @@ public class DashInAirState : StateMachineBehaviour
         
         tpsController.ForceEnableCharacterWalking();
         tpsController.EnableGravity();
-        playerCharacter.canBeDamaged = true;
+        playerCharacter.SetCombatCharacterToInvulnerable(false);
 
     }
 
@@ -78,7 +77,7 @@ public class DashInAirState : StateMachineBehaviour
         dashDirection.y = 0;
         dashDirection = dashDirection.normalized;
         
-        animIDStateCanBeInterrupted = Animator.StringToHash("StateCanBeInterrupted");
+        animIDStateCanBeInterrupted = Animator.StringToHash("stateCanBeInterrupted");
 
     }
 }

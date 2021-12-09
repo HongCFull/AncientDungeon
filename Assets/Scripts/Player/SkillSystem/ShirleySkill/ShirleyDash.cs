@@ -11,13 +11,14 @@ public class ShirleyDash : ShirleySkill
 
     public override void PerformSkill()
     {
-        if (!playerCharacter.AnimatorStateCanBeInterrupted() || !canPerformSkill)
+        if (playerCharacter.IsDead() || !canPerformSkill)
             return;
-        
-        skillUISlot.StartCoolDownFilterWrapper(coolDownInSec);
-        canPerformSkill = false;
-        tpsController.TriggerDash();
-        
+
+        if (playerCharacter.AnimatorStateCanBeInterrupted()) {
+            skillUISlot.StartCoolDownFilterWrapper(coolDownInSec);
+            canPerformSkill = false;
+            tpsController.TriggerDash();
+        }
     }
 
 }

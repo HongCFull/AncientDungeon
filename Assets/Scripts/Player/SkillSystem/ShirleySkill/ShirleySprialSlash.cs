@@ -9,7 +9,7 @@ public class ShirleySprialSlash : ShirleySkill
 
     public override void PerformSkill()
     {
-        if ( !canPerformSkill)
+        if ( !canPerformSkill || playerCharacter.IsDead())
             return;
 
         if (playerCharacter.AnimatorStateCanBeInterrupted() &&

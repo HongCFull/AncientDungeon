@@ -18,7 +18,7 @@ public class PlayerAwakeState : StateMachineBehaviour
         
         animator.SetBool(animID_StateCanBeInterrupted,false);
         tpsController.ForceDisableCharacterWalking();
-        playerCharacter.canBeDamaged = false;
+        playerCharacter.SetCombatCharacterToInvulnerable(true);
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -28,13 +28,13 @@ public class PlayerAwakeState : StateMachineBehaviour
         animator.SetBool(animID_StateCanBeInterrupted,true);
         tpsController.ForceEnableCharacterWalking();
         
-        playerCharacter.canBeDamaged = true;
+        playerCharacter.SetCombatCharacterToInvulnerable(false);
     }
 
     void Initialization(Animator animator)
     {
         playerCharacter = animator.GetComponent<PlayerCharacter>();
         tpsController = animator.GetComponent<ThirdPersonController>();
-        animID_StateCanBeInterrupted = Animator.StringToHash("StateCanBeInterrupted");
+        animID_StateCanBeInterrupted = Animator.StringToHash("stateCanBeInterrupted");
     }
 }

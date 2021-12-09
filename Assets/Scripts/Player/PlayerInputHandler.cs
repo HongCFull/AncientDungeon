@@ -52,8 +52,6 @@ namespace Player
 		//Hashed anim ID
 		private int animIDMeleeAttack;
 		private int animIDGrounded;
-		private int stateIDSpecialAttack1;
-		private int stateIDSpecialAttack2;
 
 		//Dash Variables
 		// private float dashCoolDownTimer = 0f;
@@ -92,10 +90,8 @@ namespace Player
 		
 		private void HashAnimID()
 		{
-			animIDMeleeAttack = Animator.StringToHash("MeleeAttack");
-			animIDGrounded = Animator.StringToHash("Grounded");
-			stateIDSpecialAttack1 = Animator.StringToHash("SpecialAttack1");
-			stateIDSpecialAttack2 = Animator.StringToHash("SpecialAttack2");
+			animIDMeleeAttack = Animator.StringToHash("meleeAttack");
+			animIDGrounded = Animator.StringToHash("grounded");
 		}
 
 		public void EnableLookInput()

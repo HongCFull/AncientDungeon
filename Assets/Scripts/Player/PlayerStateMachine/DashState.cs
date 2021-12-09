@@ -26,7 +26,7 @@ public class DashState : StateMachineBehaviour
         animator.applyRootMotion = true;
         
         tpsController.ForceDisableCharacterWalking();
-        playerCharacter.canBeDamaged = false;
+        playerCharacter.SetCombatCharacterToInvulnerable(true);
         
     }
 
@@ -44,7 +44,7 @@ public class DashState : StateMachineBehaviour
        // Debug.Log("exit dash state with rm"+animator.applyRootMotion);
         
         tpsController.ForceEnableCharacterWalking();
-        playerCharacter.canBeDamaged = true;
+        playerCharacter.SetCombatCharacterToInvulnerable(false);
         
         animator.applyRootMotion = originalRMOption;
         animator.SetFloat(animIDCachedDashAngle,0f);
@@ -58,9 +58,9 @@ public class DashState : StateMachineBehaviour
          characterController = animator.GetComponent<CharacterController>();
          playerCharacter = animator.GetComponent<PlayerCharacter>();
          
-         animIDCachedDashAngle = Animator.StringToHash("CachedDashAngle");
-         animIDTurningAngle = Animator.StringToHash("TurningAngle");
-         animIDStateCanBeInterrupted = Animator.StringToHash("StateCanBeInterrupted");
+         animIDCachedDashAngle = Animator.StringToHash("cachedDashAngle");
+         animIDTurningAngle = Animator.StringToHash("turningAngle");
+         animIDStateCanBeInterrupted = Animator.StringToHash("stateCanBeInterrupted");
          
          originalRMOption = animator.applyRootMotion;
 

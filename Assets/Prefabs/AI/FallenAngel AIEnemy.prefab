@@ -84,22 +84,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   combatCharacterData: {fileID: 1425225384184139993}
-  canBeDamaged: 1
   whenItIsDamaged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1264006247645931578}
-        m_TargetAssemblyTypeName: AICharacter, Assembly-CSharp
-        m_MethodName: SetAnimationTriggerIsDamaged
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   whenItIsDead:
     m_PersistentCalls:
       m_Calls:
@@ -3052,6 +3039,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1264006247645931578}
     - target: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
+      propertyPath: attackCollider
+      value: 
+      objectReference: {fileID: 2115912419}
+    - target: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
       propertyPath: canDamageHitBoxWithTag.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -3067,6 +3058,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7144750482778412374, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
   m_PrefabInstance: {fileID: 2402011190970913392}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1671934910032553076 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3919907949333788164, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
+  m_PrefabInstance: {fileID: 2402011190970913392}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2067477898859883602 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
@@ -3078,11 +3074,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fcd443cb5d9f69499e4c11dd33fa83b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1671934910032553076 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3919907949333788164, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
-  m_PrefabInstance: {fileID: 2402011190970913392}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2402011191011511278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3143,12 +3134,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
+      propertyPath: attackCollider
+      value: 
+      objectReference: {fileID: 5217989066002150580}
+    - target: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
       propertyPath: canDamageHitBoxWithTag.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
       propertyPath: canDamageHitBoxWithTag.Array.data[0]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7144750482778412374, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
       propertyPath: m_Name
@@ -3176,11 +3171,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
---- !u!4 &1671934910073683434 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3919907949333788164, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
-  m_PrefabInstance: {fileID: 2402011191011511278}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2067477898819220940 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
@@ -3192,6 +3182,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fcd443cb5d9f69499e4c11dd33fa83b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &5217989066002150580 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 7583970631040843610, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
+  m_PrefabInstance: {fileID: 2402011191011511278}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1671934910073683434 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3919907949333788164, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
+  m_PrefabInstance: {fileID: 2402011191011511278}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2402011191390104301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3248,6 +3248,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1264006247645931578}
     - target: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
+      propertyPath: attackCollider
+      value: 
+      objectReference: {fileID: 5217989065642530231}
+    - target: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
       propertyPath: canDamageHitBoxWithTag.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -3273,6 +3277,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
+--- !u!4 &1671934909646953705 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3919907949333788164, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
+  m_PrefabInstance: {fileID: 2402011191390104301}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &5217989065642530231 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 7583970631040843610, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
+  m_PrefabInstance: {fileID: 2402011191390104301}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2067477897132102863 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
@@ -3284,11 +3298,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fcd443cb5d9f69499e4c11dd33fa83b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1671934909646953705 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3919907949333788164, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
-  m_PrefabInstance: {fileID: 2402011191390104301}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2402011192166753873
 PrefabInstance:
   m_ObjectHideFlags: 0

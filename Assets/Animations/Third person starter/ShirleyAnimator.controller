@@ -34,7 +34,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Dash
+    m_ConditionEvent: dash
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 3306645809493807642}
   m_DstState: {fileID: 0}
@@ -279,7 +279,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Dash
+    m_ConditionEvent: dash
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 3306645809493807642}
   m_DstState: {fileID: 0}
@@ -304,7 +304,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Jump
+    m_ConditionEvent: jump
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2316907928501487792}
@@ -371,7 +371,8 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 4081149821170400927}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -548,7 +549,7 @@ AnimatorTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed
+    m_ConditionEvent: speed
     m_EventTreshold: 7
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7110230739041299925}
@@ -799,7 +800,7 @@ AnimatorTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: TurningAngle
+    m_ConditionEvent: turningAngle
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8052702850492075678}
@@ -1032,7 +1033,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: MeleeAttack
+    m_ConditionEvent: meleeAttack
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: -3941426268958634974}
   m_DstState: {fileID: 0}
@@ -1117,7 +1118,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Jump
+    m_ConditionEvent: jump
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2316907928501487792}
@@ -1154,7 +1155,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed
+    m_ConditionEvent: speed
     m_EventTreshold: 7
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7110230739041299925}
@@ -1438,7 +1439,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Dash
+    m_ConditionEvent: dash
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 3306645809493807642}
   m_DstState: {fileID: 0}
@@ -1463,7 +1464,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed
+    m_ConditionEvent: speed
     m_EventTreshold: 7
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7110230739041299925}
@@ -1538,7 +1539,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Dash
+    m_ConditionEvent: dash
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 3306645809493807642}
   m_DstState: {fileID: 0}
@@ -1563,10 +1564,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed
+    m_ConditionEvent: speed
     m_EventTreshold: 0.5
   - m_ConditionMode: 2
-    m_ConditionEvent: Jump
+    m_ConditionEvent: jump
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: -3263908386180401098}
   m_DstState: {fileID: 0}
@@ -1591,7 +1592,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed
+    m_ConditionEvent: speed
     m_EventTreshold: 0.5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7904879244743014323}
@@ -1683,7 +1684,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Dash
+    m_ConditionEvent: dash
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 3306645809493807642}
   m_DstState: {fileID: 0}
@@ -1732,7 +1733,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Dash
+    m_ConditionEvent: dash
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5844633025860878434}
@@ -1769,10 +1770,10 @@ AnimatorTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: Speed
+    m_ConditionEvent: speed
     m_EventTreshold: 0.5
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed
+    m_ConditionEvent: speed
     m_EventTreshold: -0.5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6828476648224032526}
@@ -1789,7 +1790,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Dash
+    m_ConditionEvent: dash
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 3306645809493807642}
   m_DstState: {fileID: 0}
@@ -1866,7 +1867,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: FreeFall
+    m_ConditionEvent: freeFall
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7469282255733588732}
@@ -1916,10 +1917,10 @@ AnimatorTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed
+    m_ConditionEvent: speed
     m_EventTreshold: 0.5
   - m_ConditionMode: 4
-    m_ConditionEvent: Speed
+    m_ConditionEvent: speed
     m_EventTreshold: 12
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7904879244743014323}
@@ -2195,7 +2196,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Grounded
+    m_ConditionEvent: grounded
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1645763842379584696}
@@ -2254,7 +2255,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Jump
+    m_ConditionEvent: jump
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2316907928501487792}
@@ -2279,7 +2280,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Dash
+    m_ConditionEvent: dash
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5844633025860878434}
@@ -2383,7 +2384,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Jump
+    m_ConditionEvent: jump
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2316907928501487792}
@@ -2408,7 +2409,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsDead
+    m_ConditionEvent: isDead
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7887100081484989276}
@@ -2416,14 +2417,14 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.75
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
+  m_CanTransitionToSelf: 0
 --- !u!114 &-477174392589044839
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2510,7 +2511,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: FreeFall
+    m_ConditionEvent: freeFall
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7469282255733588732}
@@ -2535,7 +2536,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Jump
+    m_ConditionEvent: jump
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2316907928501487792}
@@ -2582,91 +2583,91 @@ AnimatorController:
   m_Name: ShirleyAnimator
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Speed
+  - m_Name: speed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: Grounded
+  - m_Name: grounded
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: FreeFall
+  - m_Name: freeFall
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: MotionSpeed
+  - m_Name: motionSpeed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: MeleeAttack
+  - m_Name: meleeAttack
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: CanTriggerNextCombo
+  - m_Name: canTriggerNextCombo
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: Jump
+  - m_Name: jump
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: IsDamaged
+  - m_Name: isDamaged
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: IsDead
+  - m_Name: isDead
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: dash
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: Dash
-    m_Type: 9
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 0}
-  - m_Name: TurningAngle
+  - m_Name: turningAngle
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: CachedDashAngle
+  - m_Name: cachedDashAngle
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: StateCanBeInterrupted
+  - m_Name: stateCanBeInterrupted
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 1
     m_Controller: {fileID: 0}
-  - m_Name: IsInDamagedState
+  - m_Name: isInDamagedState
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: CanAttack
+  - m_Name: canAttack
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -2814,7 +2815,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Grounded
+    m_ConditionEvent: grounded
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8749952571652923932}
@@ -2998,7 +2999,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Dash
+    m_ConditionEvent: dash
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 3306645809493807642}
   m_DstState: {fileID: 0}
@@ -3056,10 +3057,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed
+    m_ConditionEvent: speed
     m_EventTreshold: -0.5
   - m_ConditionMode: 4
-    m_ConditionEvent: Speed
+    m_ConditionEvent: speed
     m_EventTreshold: 0.5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6828476648224032526}
@@ -3301,7 +3302,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Jump
+    m_ConditionEvent: jump
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2316907928501487792}
@@ -3377,7 +3378,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Jump
+    m_ConditionEvent: jump
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2316907928501487792}
@@ -3425,7 +3426,7 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: Speed
     m_Mirror: 0
-  m_BlendParameter: CachedDashAngle
+  m_BlendParameter: cachedDashAngle
   m_BlendParameterY: Speed
   m_MinThreshold: -180
   m_MaxThreshold: 0
@@ -3485,7 +3486,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: MeleeAttack
+    m_ConditionEvent: meleeAttack
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: -3941426268958634974}
   m_DstState: {fileID: 0}
@@ -3650,7 +3651,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: FreeFall
+    m_ConditionEvent: freeFall
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7469282255733588732}
@@ -3697,7 +3698,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Dash
+    m_ConditionEvent: dash
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 3306645809493807642}
   m_DstState: {fileID: 0}
@@ -3786,7 +3787,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Jump
+    m_ConditionEvent: jump
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2316907928501487792}
@@ -3802,6 +3803,18 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &4081149821170400927
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de0166021958ebc4fb76974129d13296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4165253878735138889
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3965,7 +3978,7 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: Speed
     m_Mirror: 0
-  m_BlendParameter: CachedDashAngle
+  m_BlendParameter: cachedDashAngle
   m_BlendParameterY: Speed
   m_MinThreshold: 0
   m_MaxThreshold: 180
@@ -3981,7 +3994,7 @@ AnimatorTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: Grounded
+    m_ConditionEvent: grounded
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1982354651750542072}
@@ -3998,10 +4011,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed
+    m_ConditionEvent: speed
     m_EventTreshold: 0.5
   - m_ConditionMode: 2
-    m_ConditionEvent: Jump
+    m_ConditionEvent: jump
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: -3263908386180401098}
   m_DstState: {fileID: 0}
@@ -4124,10 +4137,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed
+    m_ConditionEvent: speed
     m_EventTreshold: -0.5
   - m_ConditionMode: 4
-    m_ConditionEvent: Speed
+    m_ConditionEvent: speed
     m_EventTreshold: 0.5
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -6828476648224032526}
@@ -4273,7 +4286,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Dash
+    m_ConditionEvent: dash
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 3306645809493807642}
   m_DstState: {fileID: 0}
@@ -4320,7 +4333,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: MeleeAttack
+    m_ConditionEvent: meleeAttack
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: -3941426268958634974}
   m_DstState: {fileID: 0}
@@ -4428,7 +4441,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Jump
+    m_ConditionEvent: jump
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2316907928501487792}
@@ -4453,10 +4466,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: Speed
+    m_ConditionEvent: speed
     m_EventTreshold: 7
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed
+    m_ConditionEvent: speed
     m_EventTreshold: 0.1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 7904879244743014323}
@@ -4557,10 +4570,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: MeleeAttack
+    m_ConditionEvent: meleeAttack
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: CanTriggerNextCombo
+    m_ConditionEvent: canTriggerNextCombo
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 185469602867190871}
@@ -4585,10 +4598,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed
+    m_ConditionEvent: speed
     m_EventTreshold: 0.5
   - m_ConditionMode: 2
-    m_ConditionEvent: Jump
+    m_ConditionEvent: jump
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: -3263908386180401098}
   m_DstState: {fileID: 0}
@@ -4629,7 +4642,7 @@ AnimatorTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: TurningAngle
+    m_ConditionEvent: turningAngle
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5435968887841594543}
@@ -4725,7 +4738,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Grounded
+    m_ConditionEvent: grounded
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: -3263908386180401098}
   m_DstState: {fileID: 0}
@@ -4783,7 +4796,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IsDamaged
+    m_ConditionEvent: isDamaged
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 846472499342993698}
   m_DstState: {fileID: 0}
@@ -4923,10 +4936,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: MeleeAttack
+    m_ConditionEvent: meleeAttack
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: CanTriggerNextCombo
+    m_ConditionEvent: canTriggerNextCombo
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8406850239478626986}
@@ -5001,10 +5014,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: Speed
+    m_ConditionEvent: speed
     m_EventTreshold: 0.5
   - m_ConditionMode: 2
-    m_ConditionEvent: Jump
+    m_ConditionEvent: jump
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: -3263908386180401098}
   m_DstState: {fileID: 0}
@@ -5074,7 +5087,7 @@ BlendTree:
     m_CycleOffset: 0
     m_DirectBlendParameter: Speed
     m_Mirror: 0
-  m_BlendParameter: Speed
+  m_BlendParameter: speed
   m_BlendParameterY: Speed
   m_MinThreshold: 0
   m_MaxThreshold: 6
@@ -5090,10 +5103,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: MeleeAttack
+    m_ConditionEvent: meleeAttack
     m_EventTreshold: 0
   - m_ConditionMode: 1
-    m_ConditionEvent: CanTriggerNextCombo
+    m_ConditionEvent: canTriggerNextCombo
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4553282558031357932}

@@ -60,13 +60,10 @@ public class PlayerCharacter : CombatCharacter
     private AudioSource audioSource;
     
     //Animations
-    private Animator animator;
     private const int AwakenLayerIndex = 1;
-    private int animID_IsDamaged;
     private int animID_CanTriggerNextCombo;
-    private int animID_Awake;
-    private int animID_StateCanBeInterrupted;
     private int animID_Grounded;
+    private int stateID_Awake;
     
     //TPS controller
     private ThirdPersonController thirdPersonController;
@@ -90,15 +87,12 @@ public class PlayerCharacter : CombatCharacter
         if (!Instance)
             Instance = this;
 
-        animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         thirdPersonController = GetComponent<ThirdPersonController>();
 
-        animID_CanTriggerNextCombo = Animator.StringToHash("CanTriggerNextCombo");
-        animID_IsDamaged = Animator.StringToHash("IsDamaged");
-        animID_Awake = Animator.StringToHash("Awake");
-        animID_StateCanBeInterrupted = Animator.StringToHash("StateCanBeInterrupted");
-        animID_Grounded = Animator.StringToHash("Grounded");
+        animID_CanTriggerNextCombo = Animator.StringToHash("canTriggerNextCombo");
+        animID_Grounded = Animator.StringToHash("grounded");
+        stateID_Awake = Animator.StringToHash("Awake");
     }
     
     public Vector3 GetPlayerWorldPosition()
@@ -107,8 +101,7 @@ public class PlayerCharacter : CombatCharacter
     }
 
     #region GetAnimatorStateInfo
-        public bool AnimatorStateCanBeInterrupted() => animator.GetBool(animID_StateCanBeInterrupted);
-
+        public bool AnimatorStateCanBeInterrupted() => animator.GetBool(animID_stateCanBeInterrupted);
         public bool AnimatorIsGrounded() => animator.GetBool(animID_Grounded);
 
     #endregion
@@ -124,15 +117,10 @@ public class PlayerCharacter : CombatCharacter
             animator.Play(hashedStateID);
         }
         
-        public void SetAnimationTriggerIsDamaged()
-        {
-            animator.SetTrigger(animID_IsDamaged);
-            //Debug.Log("Trigger is damaged");
-        }
 
         public void SetCharacterToAwakeMode()
         {
-            animator.Play(animID_Awake);
+            animator.Play(stateID_Awake);
             animator.SetLayerWeight(AwakenLayerIndex,1);
 
             PlayCharacterAwakeAudio();
@@ -144,7 +132,6 @@ public class PlayerCharacter : CombatCharacter
             //characterAwakeDirector.Play();
             // Invoke(nameof(SetCharacterToNormalMode),());
             OnAwakeAttackMode.Invoke();
-            Debug.Log("Set awake mode alrdy");
         }
         
         public void SetCharacterToNormalMode()

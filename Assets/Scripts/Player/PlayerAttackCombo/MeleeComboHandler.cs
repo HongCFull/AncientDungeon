@@ -14,7 +14,7 @@ public class MeleeComboHandler : MonoBehaviour
     {
         if (!animator) {
             animator = GetComponent<Animator>();
-            animIDCanTriggerNextCombo = Animator.StringToHash("CanTriggerNextCombo");
+            animIDCanTriggerNextCombo = Animator.StringToHash("canTriggerNextCombo");
         }
 
         if (!thirdPersonController) {
