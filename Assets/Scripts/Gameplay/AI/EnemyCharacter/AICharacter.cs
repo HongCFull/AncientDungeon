@@ -93,6 +93,9 @@ public abstract class AICharacter : CombatCharacter
         }    
     }
 
+    public void PerformDissolveEffectWrapper()=> StartCoroutine(PerformAppearEffectWithDuration(0f));
+    
+
     public IEnumerator PerformDissolveEffectWithDuration(float duration)
     {
         //yield return new WaitForSeconds(dissolveDelay);

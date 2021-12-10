@@ -285,7 +285,10 @@ namespace Player
 		private void CameraRotation()
 		{
 			// if there is an input and camera position is not fixed
-			if (_input.look.sqrMagnitude >= _threshold && !LockCameraPosition) {
+			if (LockCameraPosition)
+				return;
+			
+			if (_input.look.sqrMagnitude >= _threshold ) {
 				_cinemachineTargetYaw += _input.look.x * Time.deltaTime;
 				_cinemachineTargetPitch += _input.look.y * Time.deltaTime;
 			}
@@ -294,8 +297,9 @@ namespace Player
 			_cinemachineTargetYaw = ClampAngle(_cinemachineTargetYaw, float.MinValue, float.MaxValue);
 			_cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
 
+			//Debug.Log("yaw "+_cinemachineTargetYaw+" pitch "+_cinemachineTargetPitch);
 			// Cinemachine will follow this target
-			CinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride, _cinemachineTargetYaw, 0.0f);
+			CinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch , _cinemachineTargetYaw +CameraAngleOverride, 0.0f);
 		}
 		
 
