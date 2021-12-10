@@ -9,13 +9,21 @@ public class AICharacterFallenAngel : AICharacter
     [SerializeField] private AttackHitBox leftWeaponHitBox;
     [SerializeField] private AttackHitBox rightWeaponHitBox;
     [SerializeField] private AttackHitBox attack02HitBox;
-    
+
+
+    public override void DisableAllAttackHitBoxes()
+    {
+        DisableLeftWeaponHitBox();
+        DisableRightWeaponHitBox();
+        DisableAttack02HitBox();
+    }
+
     public void EnableLeftWeaponHitBoxWithPower(float power)
     {
         leftWeaponHitBox.EnableAttackColliderWithSkillPower(power);
     }
 
-    public void DisableLeftWeaponHitBox()
+    void DisableLeftWeaponHitBox()
     {
         leftWeaponHitBox.DisableAttackCollider();
     }
@@ -25,7 +33,7 @@ public class AICharacterFallenAngel : AICharacter
         rightWeaponHitBox.EnableAttackColliderWithSkillPower(power);
     }
 
-    public void DisableRightWeaponHitBox()
+    void DisableRightWeaponHitBox()
     {
         rightWeaponHitBox.DisableAttackCollider();
     }
@@ -35,7 +43,7 @@ public class AICharacterFallenAngel : AICharacter
         attack02HitBox.EnableAttackColliderWithSkillPower(power);
     }
 
-    public void DisableAttack02HitBox()
+    void DisableAttack02HitBox()
     {
         attack02HitBox.DisableAttackCollider();
     }

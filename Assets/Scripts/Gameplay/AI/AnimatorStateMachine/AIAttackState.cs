@@ -6,7 +6,6 @@ public class AIAttackState : StateMachineBehaviour
 {
     [SerializeField] private bool canBeInterrupted;
     private AICharacter aiCharacter;
-    private bool orginalInterruptableState;
     private int animIDStateCanBeInterrupted;
 
     
@@ -18,14 +17,13 @@ public class AIAttackState : StateMachineBehaviour
 
         animIDStateCanBeInterrupted = Animator.StringToHash("stateCanBeInterrupted");
         
-        orginalInterruptableState = animator.GetBool(animIDStateCanBeInterrupted);
         animator.SetBool(animIDStateCanBeInterrupted,canBeInterrupted);
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
-        animator.SetBool(animIDStateCanBeInterrupted,orginalInterruptableState);
+        animator.SetBool(animIDStateCanBeInterrupted,true);
 
         aiCharacter.DisableAllAttackHitBoxes();
     }

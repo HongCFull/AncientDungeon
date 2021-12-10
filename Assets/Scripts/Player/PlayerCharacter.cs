@@ -100,6 +100,11 @@ public class PlayerCharacter : CombatCharacter
         return transform.position;
     }
 
+    public override void DisableAllAttackHitBoxes()
+    {
+        weaponHitBox.DisableAttackCollider();
+    }
+
     #region GetAnimatorStateInfo
         public bool AnimatorStateCanBeInterrupted() => animator.GetBool(animID_stateCanBeInterrupted);
         public bool AnimatorIsGrounded() => animator.GetBool(animID_Grounded);

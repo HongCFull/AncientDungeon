@@ -61,13 +61,13 @@ public abstract class CombatCharacter : MonoBehaviour
     public float GetCurrentHealth() => combatCharacterData.currentHealth;
     public float GetMaxHealth() => combatCharacterData.maxHealth;
     public void SetCombatCharacterToInvulnerable(bool isInvulnerable) => this.invulnerable = isInvulnerable;
-    public void DisableAllAttackHitBoxes()
-    {
-        foreach (AttackHitBox attackHitBox in attackHitBoxes) {
-            attackHitBox.DisableAttackCollider();
-        }
-    }
-    
+
+    /// <summary>
+    /// Disable all the attack hit boxes of this combat character.
+    /// Should be implemented individually
+    /// </summary>
+    public abstract void DisableAllAttackHitBoxes();
+
     protected void EnableAttackHitBox(int i)
     {
         if (i < 0 || i >= attackHitBoxes.Count)

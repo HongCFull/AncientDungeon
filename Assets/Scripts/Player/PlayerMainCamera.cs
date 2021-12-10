@@ -28,8 +28,14 @@ public class PlayerMainCamera : MonoBehaviour
     {
         if (!Instance)
             Instance = this;
-        
+
         tpsVirtualCamera = (playerFollowVirtualCamera.GetCinemachineComponent(CinemachineCore.Stage.Body)) as Cinemachine3rdPersonFollow;
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.U))
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
     }
 
     public Vector3 GetUnitForwardVectorInXZPlane()

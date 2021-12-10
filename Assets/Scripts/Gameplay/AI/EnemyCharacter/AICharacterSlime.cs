@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,10 @@ public class AICharacterSlime : AICharacter
     
     public float GetFleeDistance() => fleeDistance;
 
-
-    
+    public override void DisableAllAttackHitBoxes()
+    {
+        foreach (AttackHitBox atkHitBox in attackHitBoxes)
+            atkHitBox.DisableAttackCollider();
+        
+    }
 }
