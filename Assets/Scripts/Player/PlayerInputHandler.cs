@@ -12,6 +12,7 @@ namespace Player
 	public class PlayerInputHandler : MonoBehaviour
 	{
 		[Header("Custom Input Settings")] 
+		[SerializeField] private bool enablePlayerInput = true;
 		[SerializeField] private bool enableLookInput = true;
 		
 		[Header("Cool Down Settings")]
@@ -94,65 +95,79 @@ namespace Player
 			animIDGrounded = Animator.StringToHash("grounded");
 		}
 
-		public void EnableLookInput()
-		{
-			enableLookInput = true;
-		}
-
-		public void DisableLookInput()
-		{
-			enableLookInput = false;
-		}
+		public void EnablePlayerInput() => enablePlayerInput = true;
+		public void DisablePlayerInput() => enablePlayerInput = false;
+		public void EnableLookInput() => enableLookInput = true;
+		public void DisableLookInput() => enableLookInput = false;
+		
 		
 		#region Input Callback events
 
 		//Invoke event method
 			public void OnMove(InputAction.CallbackContext callbackContext)
 			{
+				if (!enablePlayerInput) return;
+				
 				HandleMoveInput(callbackContext.ReadValue<Vector2>());
 			}
 
 			public void OnLook(InputAction.CallbackContext callbackContext)
 			{
-				if(cursorInputForLook && enableLookInput) {
+				if (!enablePlayerInput) return;
+
+				if(cursorInputForLook && enableLookInput) 
 					HandleLookInput(callbackContext.ReadValue<Vector2>());
-				}
 			}
 			
 			public void OnJump(InputAction.CallbackContext callbackContext)
 			{
+				if (!enablePlayerInput) return;
+
 				HandleJumpInput(callbackContext.ReadValueAsButton());
 			}
 
 			public void OnDash(InputAction.CallbackContext callbackContext)
 			{
+				if (!enablePlayerInput) return;
+
 				HandleDashInput(callbackContext);
 			}
 
 			public void OnMeleeAttack(InputAction.CallbackContext callbackContext)
 			{
+				if (!enablePlayerInput) return;
+
 				HandleMeleeAttackInput(callbackContext.ReadValueAsButton());
 			}
 
 			public void OnSkillQInput(InputAction.CallbackContext callbackContext)
 			{
+				if (!enablePlayerInput) return;
+
 				HandleSkillQInput(callbackContext.ReadValueAsButton());
 			}
 			
 			public void OnSkillEInput(InputAction.CallbackContext callbackContext)
 			{
+				if (!enablePlayerInput) return;
+
 				HandleSkillEInput(callbackContext.ReadValueAsButton());
 			}
 
 			public void OnCharacterAwake(InputAction.CallbackContext callbackContext)
 			{
+				if (!enablePlayerInput) return;
+
 				HandleCharacterAwakeInput(callbackContext.ReadValueAsButton());
 			}
 
 			public void OnZoomCamera(InputAction.CallbackContext callbackContext)
 			{
+				if (!enablePlayerInput) return;
+
 				HandleZoomCameraInput(callbackContext.ReadValue<Vector2>());
 			}
+			
 		#endregion
 
 #endif
@@ -309,8 +324,6 @@ namespace Player
 					playerCamera.ZoomInCameraByOneLevel();
 			}
 		#endregion
-		
-		
 		
 		
 #if !UNITY_IOS || !UNITY_ANDROID

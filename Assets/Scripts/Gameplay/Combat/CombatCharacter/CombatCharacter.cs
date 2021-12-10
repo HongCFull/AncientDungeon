@@ -32,6 +32,7 @@ public abstract class CombatCharacter : MonoBehaviour
     
     protected virtual void Awake()
     {
+
         animator = GetComponent<Animator>();
         animID_isDamaged = Animator.StringToHash("isDamaged");
         animID_isDead = Animator.StringToHash("isDead");

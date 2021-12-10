@@ -10,6 +10,10 @@ public class AICharacterFallenAngel : AICharacter
     [SerializeField] private AttackHitBox rightWeaponHitBox;
     [SerializeField] private AttackHitBox attack02HitBox;
 
+    protected override void Awake()
+    {
+        base.Awake();
+    }
 
     public override void DisableAllAttackHitBoxes()
     {

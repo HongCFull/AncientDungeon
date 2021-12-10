@@ -22,7 +22,6 @@ public class DungeonTile : MonoBehaviour
     [SerializeField] private int randomOffset;
     [SerializeField] private List<Transform> spawnPositions;
     
-    
     [Space]
     [Header("Debug")]
     [HideInInspector] public Connector parentConnector = null;
@@ -128,7 +127,8 @@ public class DungeonTile : MonoBehaviour
         for (int i = 0; i < numOfEnemiesToSpawn; i++) {
             //Vector3 position = transform.TransformPoint(spawnPositions[i].position);
             Vector3 position = spawnPositions[i].position;
-            Instantiate(aiCharacters[Random.Range(0, aiCharacters.Length)], position, quaternion.identity);
+            AICharacter aiCharacter = Instantiate(aiCharacters[Random.Range(0, aiCharacters.Length)], position, quaternion.identity);
+            aiCharacter.GetAIController().SetControllerAIToHatred(true);
         }
         
     }

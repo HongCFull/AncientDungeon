@@ -357,7 +357,6 @@ public class DungeonGenerator : MonoBehaviour
                 endTile = tileTo;
             }
         }
-        
     }
 }
 

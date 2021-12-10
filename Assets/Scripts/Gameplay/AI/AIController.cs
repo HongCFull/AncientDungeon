@@ -25,7 +25,7 @@ public class AIController : MonoBehaviour
     //Hatred Variables
     public bool isHatred { get; private set; } = false;
     private float lossSightTimer;
-    private const float wanderTimeAfterLossSight = 5f;
+    private const float wanderTimeAfterSightIsLost = 5f;
     [SerializeField] private float forceHatredDistance;
     
     [Header("Debug settings")]
@@ -55,6 +55,8 @@ public class AIController : MonoBehaviour
         UpdateAnimatorCanAttackPlayer();
     }
 
+    public void SetControllerAIToHatred(bool isHatred) => this.isHatred = isHatred;
+
     void UpdateAnimatorBoolCanSeePlayer() 
     {
         animator.SetBool(canSeePlayerAnimID,aiCharacter.CanSeePlayer());
@@ -70,7 +72,6 @@ public class AIController : MonoBehaviour
     {
         animator.SetBool(canAttackAnimID,aiCharacter.PlayerIsInsideAttackArea());
     }
-
     
     void UpdateAnimatorBoolIsHatred()
     {
@@ -87,7 +88,7 @@ public class AIController : MonoBehaviour
         else if (PlayerIsCloseEnoughToTriggerHatredState()) {
             isHatred = true;
         }
-        else if (!aiCharacter.CanSeePlayer() && lossSightTimer>=wanderTimeAfterLossSight) {
+        else if (!aiCharacter.CanSeePlayer() && lossSightTimer>=wanderTimeAfterSightIsLost) {
             isHatred = false;
         }
 

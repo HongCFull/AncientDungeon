@@ -29,29 +29,23 @@ public abstract class AICharacter : CombatCharacter
 
     //Mesh 
     private Material dissolveMaterial;
-    
+
+    private AIController aiController;
     public Vector3 initPosition { get; private set; }
 
     protected override void Awake()
     {
         base.Awake();
-        
         InitializeVariables();
-        //DisableAllAttackHitBoxes();
     }
 
     void InitializeVariables()
     {
+        aiController = GetComponent<AIController>();
         initPosition = transform.position;
-        
         dissolveMaterial = skinnedMeshRenderer.material;
     }
     
-    public float GetAttackDistance()
-    {
-        return attackDistance;
-    }
-
     public bool PlayerIsInsideAttackArea()
     {
         Vector3 projectedDistance = (PlayerCharacter.Instance.GetPlayerWorldPosition() - transform.position);
@@ -60,23 +54,14 @@ public abstract class AICharacter : CombatCharacter
         projectedDistance.y = 0f;
         return projectedDistance.magnitude  <= attackDistance && verticalDist<= attackDistance;        
     }
-    
 
-    public bool CanSeePlayer()
-    {
-        return vision.canSeePlayer;
-    }
-    public Vector3 GetAICharacterWorldPosition()
-    {
-        return transform.position;
-    }
-    
-    
-    public void WrappedOperationWhenItIsDead()
-    {
-        StartCoroutine(OperationOnDeath());
-    }
-    
+    public AIController GetAIController() => aiController;
+    public float GetAttackDistance() =>  attackDistance;
+    public bool CanSeePlayer() => vision.canSeePlayer;
+    public Vector3 GetAICharacterWorldPosition()=> transform.position;
+    public void WrappedOperationWhenItIsDead() => StartCoroutine(OperationOnDeath());
+    public void PerformAppearEffectWrapper(int duration)=> StartCoroutine(PerformAppearEffectWithDuration(duration));
+
     IEnumerator OperationOnDeath()
     {
         DisableAllReceiveHitBoxes();
@@ -92,10 +77,7 @@ public abstract class AICharacter : CombatCharacter
             receiveHitBox.EnableHitBox(false);
         }    
     }
-
-    public void PerformDissolveEffectWrapper()=> StartCoroutine(PerformAppearEffectWithDuration(0f));
     
-
     public IEnumerator PerformDissolveEffectWithDuration(float duration)
     {
         //yield return new WaitForSeconds(dissolveDelay);
@@ -108,8 +90,7 @@ public abstract class AICharacter : CombatCharacter
             yield return null;
         }
     }
-    
-    
+
     public IEnumerator PerformAppearEffectWithDuration(float duration)
     {
         float timer = 0;
