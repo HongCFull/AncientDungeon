@@ -66,14 +66,15 @@ namespace Player
 		//A key
 		private bool enableAKeyDoubleTab= true;
 		private float aKeylastTapTime = 0f;
-		
+
 		//S key
 		private bool enableSKeyDoubleTab= true;
 		private float sKeylastTapTime = 0f;
-		
+
 		//D key
 		private bool enableDKeyDoubleTab= true;
 		private float dKeylastTapTime = 0f;
+
 
 		
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED 
@@ -85,10 +86,18 @@ namespace Player
 			playerCharacter = GetComponent<PlayerCharacter>();
 			
 			HashAnimID();
+		}
+
+		private void OnEnable()
+		{
 			AssignDoubleTapActionCallback();
 		}
-		
-		
+
+		private void OnDisable()
+		{
+			RemoveDoubleTapActionCallback();
+		}
+
 		private void HashAnimID()
 		{
 			animIDMeleeAttack = Animator.StringToHash("meleeAttack");
@@ -154,6 +163,34 @@ namespace Player
 				HandleSkillEInput(callbackContext.ReadValueAsButton());
 			}
 
+			public void OnDoubleTapKeyA(InputAction.CallbackContext callbackContext)
+			{				
+				if (!enablePlayerInput) return;
+				//if(callbackContext.ReadValueAsButton())
+				//	DetectAKeyDoubleTap();
+			}
+			public void OnDoubleTapKeyS(InputAction.CallbackContext callbackContext)
+			{				
+				if (!enablePlayerInput) return;
+				//if(callbackContext.ReadValueAsButton())
+				//	DetectSKeyDoubleTap();
+			}
+			
+			public void OnDoubleTapKeyW(InputAction.CallbackContext callbackContext)
+			{				
+				if (!enablePlayerInput) return;
+				//if(callbackContext.ReadValueAsButton())
+				//	DetectWKeyDoubleTap();
+			}
+			
+			public void OnDoubleTapKeyD(InputAction.CallbackContext callbackContext)
+			{				
+				if (!enablePlayerInput) return;
+				
+				//if(callbackContext.ReadValueAsButton())
+				//	DetectDKeyDoubleTap();
+			}
+			
 			public void OnCharacterAwake(InputAction.CallbackContext callbackContext)
 			{
 				if (!enablePlayerInput) return;
@@ -178,15 +215,23 @@ namespace Player
 			
 				private void AssignDoubleTapActionCallback()
 				{
-					wKeyDoubleTapAction.action.performed += context => DetectWKeyDoubleTap();
-					aKeyDoubleTapAction.action.performed += context => DetectAKeyDoubleTap();
-					sKeyDoubleTapAction.action.performed += context => DetectSKeyDoubleTap();
-					dKeyDoubleTapAction.action.performed += context => DetectDKeyDoubleTap();
+					wKeyDoubleTapAction.action.performed += DetectWKeyDoubleTap;
+					aKeyDoubleTapAction.action.performed += DetectAKeyDoubleTap;
+					sKeyDoubleTapAction.action.performed += DetectSKeyDoubleTap;
+					dKeyDoubleTapAction.action.performed += DetectDKeyDoubleTap;
 				}
 
-				private void DetectWKeyDoubleTap()
+				private void RemoveDoubleTapActionCallback()
 				{
-					if (!enableWKeyDoubleTab)
+					wKeyDoubleTapAction.action.performed -= DetectWKeyDoubleTap;
+					aKeyDoubleTapAction.action.performed -= DetectAKeyDoubleTap;
+					sKeyDoubleTapAction.action.performed -= DetectSKeyDoubleTap;
+					dKeyDoubleTapAction.action.performed -= DetectDKeyDoubleTap;
+				}
+
+				private void DetectWKeyDoubleTap(InputAction.CallbackContext callbackContext)
+				{
+					if (!enableWKeyDoubleTab || !enablePlayerInput)
 						return;
 					
 					if ( Time.time - wKeylastTapTime < doubleTapTimeInterval) {
@@ -203,9 +248,9 @@ namespace Player
 					enableWKeyDoubleTab = true;
 				}
 				
-				private void DetectAKeyDoubleTap()
+				private void DetectAKeyDoubleTap(InputAction.CallbackContext callbackContext)
 				{
-					if (!enableAKeyDoubleTab)
+					if (!enableAKeyDoubleTab|| !enablePlayerInput)
 						return;
 
 					if (Time.time - aKeylastTapTime < doubleTapTimeInterval) {
@@ -222,9 +267,9 @@ namespace Player
 					enableAKeyDoubleTab = true;
 				}
 				
-				private void DetectSKeyDoubleTap()
+				private void DetectSKeyDoubleTap(InputAction.CallbackContext callbackContext)
 				{
-					if (!enableSKeyDoubleTab)
+					if (!enableSKeyDoubleTab|| !enablePlayerInput)
 						return;
 
 					if (Time.time - sKeylastTapTime < doubleTapTimeInterval) {
@@ -241,9 +286,9 @@ namespace Player
 					enableSKeyDoubleTab = true;
 				}
 				
-				private void DetectDKeyDoubleTap()
+				private void DetectDKeyDoubleTap(InputAction.CallbackContext callbackContext)
 				{
-					if (!enableDKeyDoubleTab)
+					if (!enableDKeyDoubleTab|| !enablePlayerInput)
 						return;
 
 					if (Time.time - dKeylastTapTime < doubleTapTimeInterval) {

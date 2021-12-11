@@ -19,7 +19,7 @@ public class StartAnimFSMCoroutine : MonoBehaviour
         StartCoroutine(ExecuteCoroutineWithDelay(delay));
     }
 
-    public void StopAssignedCoroutine()
+    public void StopExecutedCoroutine()
     {
         StopCoroutine(coroutineToExecute);
         coroutineToExecute = null;

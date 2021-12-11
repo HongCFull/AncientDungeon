@@ -1,12 +1,8 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.WSA;
 
 /// <summary>
-/// The GameObject attached with this script should in the bottom mid of the connector.
+/// The GameObject attached with this script should at the bottom mid of the connector.
 /// </summary>
 public class Connector : MonoBehaviour
 {
@@ -17,6 +13,12 @@ public class Connector : MonoBehaviour
     
     public DungeonTile GetTileOwner() {
         return tileOwner;
+    }
+
+    public void BlockConnector()
+    {
+        GameObject blockObj = Instantiate(blockingPrefab,  gameObject.transform);
+        blockObj.SetActive(true);
     }
     
     private void OnDrawGizmos() {
@@ -42,14 +44,5 @@ public class Connector : MonoBehaviour
         Gizmos.DrawLine(leftUp, rightDown);
         Gizmos.DrawLine(rightUp, leftDown);
 
-    }
-
-    public void BlockConnector()
-    {
-        GameObject blockObj =
-            Instantiate(blockingPrefab,  gameObject.transform);
-        //blockObj.transform.localScale=Vector3.one;
-        blockObj.SetActive(true);
-       // blockObj.transform.Rotate(0f,90f,0f);
     }
 }

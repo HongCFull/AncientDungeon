@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Security.Authentication.ExtendedProtection;
 using UnityEngine;
 using UnityEngine.Events;
 using Element;
@@ -52,7 +50,7 @@ public abstract class CombatCharacter : MonoBehaviour
     }
 
     /// <summary>
-    /// Returns true only if both HP <= 0 and it is in the Death state in animator. 
+    /// Returns true only if both HP <= 0 and animator is in the Death state. 
     /// </summary>
     /// <returns></returns>
     public bool IsDead() => combatCharacterData.currentHealth <= 0 && animator.GetBool(animID_isDead);
@@ -84,11 +82,12 @@ public abstract class CombatCharacter : MonoBehaviour
         
         attackHitBoxes[i].DisableAttackCollider();
     }
+    
     /// <summary>
     /// Deal damage to this combatCharacter.
     /// Invoke events when it is damaged or dead.
     /// </summary>
-    /// <param name="damage"></param>
+    /// <param name="damage">The damage deal to this combat character </param>
     public void TakeDamageBy(float damage)
     {
         if( diedOnce || invulnerable )

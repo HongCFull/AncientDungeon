@@ -13,6 +13,7 @@ public class RandWanderState : StateMachineBehaviour
     
     private int hasReachedRandWanderingPosAnimID;
     private Vector3 destination;
+    private NavMeshPath navMeshPath;
     
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -49,17 +50,29 @@ public class RandWanderState : StateMachineBehaviour
         aiCharacter = animator.gameObject.GetComponent<AICharacter>();
 
         hasReachedRandWanderingPosAnimID = Animator.StringToHash("hasReachedRandWanderingPos");
+
+        if (navMeshPath == null)
+            navMeshPath = new NavMeshPath();
     }
 
     void GoToRandPosition()
     {
-        Vector3 randomDistanceVec = Random.insideUnitSphere * randWanderRadius;
+        for (int trial = 0; trial < 3; trial++) {
+            Vector3 randomDistanceVec = Random.insideUnitSphere * randWanderRadius;
+            Vector3 targetPos = aiCharacter.GetAICharacterWorldPosition() + randomDistanceVec;
+            
+            NavMeshHit hit;
+            NavMesh.SamplePosition(targetPos, out hit,randWanderRadius,1);
+            navMeshAgent.CalculatePath(hit.position, navMeshPath);
 
-        Vector3 targetPos = aiCharacter.GetAICharacterWorldPosition() + randomDistanceVec;
-        NavMeshHit hit;
-        NavMesh.SamplePosition(targetPos, out hit,randWanderRadius,1);
-        destination = hit.position;
-        navMeshAgent.SetDestination(destination);    
+            if (navMeshPath.status == NavMeshPathStatus.PathComplete) {
+                destination = hit.position;
+                navMeshAgent.SetDestination(destination);
+                return;
+            }
+            
+        }
+        
     }
     
     void UpdateAnimatorHasReachedRandWanderPosition(Animator animator)

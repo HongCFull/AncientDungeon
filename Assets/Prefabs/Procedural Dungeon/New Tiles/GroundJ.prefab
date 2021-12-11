@@ -57,7 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b9efddeea438be45bb10cd34f870cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tile: {fileID: 4380335097356059876}
+  tile: {fileID: 5823623701712094345}
   boundingBox: {fileID: 7866623234488562146}
 --- !u!1 &574258429998379927
 GameObject:
@@ -2731,7 +2731,7 @@ GameObject:
   - component: {fileID: 6852846720423965370}
   - component: {fileID: 6852846720423965371}
   - component: {fileID: 465915529030433355}
-  - component: {fileID: 4380335097356059876}
+  - component: {fileID: 5823623701712094345}
   m_Layer: 6
   m_Name: GroundJ
   m_TagString: Untagged
@@ -2824,7 +2824,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: c71efe6e6891d29408d6929ba4f77697, type: 2}
---- !u!114 &4380335097356059876
+--- !u!114 &5823623701712094345
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2833,22 +2833,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 6852846720423965364}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d30da17623c29db418a68d1790c882f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 668c161ae9618054c85058c7098731a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   boundingBox: {fileID: 7806591032258376089}
   corridorConnector:
   - {fileID: 5617660340220735508}
   - {fileID: 397320229707141059}
-  connectedConnectors: []
-  canSpawnEnemy: 0
-  aiCharacters:
-  - {fileID: 6508980981969963372, guid: c8f385ccef4fe00419c80c5459cb8d72, type: 3}
-  - {fileID: 1264006247645931578, guid: 41cd7fb8bb8f92549a2f63586a9eaa1c, type: 3}
   parentConnector: {fileID: 0}
+  collidesHit: []
   parentTile: {fileID: 0}
   pathHolder: {fileID: 0}
-  collidesHit: []
+  canSpawnEnemy: 0
+  aiCharacters: []
+  numOfEnemies: 0
+  randomOffset: 0
+  spawnPositions: []
 --- !u!1 &7357654346040088409
 GameObject:
   m_ObjectHideFlags: 0
@@ -3873,7 +3873,7 @@ PrefabInstance:
     - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
       propertyPath: tileOwner
       value: 
-      objectReference: {fileID: 4380335097356059876}
+      objectReference: {fileID: 5823623701712094345}
     - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
       propertyPath: blockingPrefab
       value: 
@@ -4040,7 +4040,7 @@ PrefabInstance:
     - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
       propertyPath: tileOwner
       value: 
-      objectReference: {fileID: 4380335097356059876}
+      objectReference: {fileID: 5823623701712094345}
     - target: {fileID: 7206126960290751256, guid: c42d90679ee9e5a4998b6d0883eb1d11, type: 3}
       propertyPath: blockingPrefab
       value: 

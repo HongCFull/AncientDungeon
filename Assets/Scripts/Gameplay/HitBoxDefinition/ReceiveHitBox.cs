@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace HitBoxDefinition
 {
@@ -14,19 +10,8 @@ namespace HitBoxDefinition
 
         public CombatCharacter GetCombatCharacterOwner() => parentCombatCharacter;
         
+        public void EnableHitBox(bool enable)=> this.enabled = enable;
 
-        public void EnableHitBox(bool enable)
-        {
-            this.enabled = enable;
-        }
-        
-        /*
-        public override void TakeDamageBy(float damage)
-        {
-            parentCombatCharacter.TakeDamageBy(damage);
-        }
-        */
-        
     }
     
 }

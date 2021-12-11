@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Controlling Shirley's emotion with a State Pattern design 
+/// </summary>
 public class ShirleyEmotionController : MonoBehaviour
 {
    // [SerializeField] private ShirleyEmotionStateBase defaultEmotion;
@@ -10,8 +13,8 @@ public class ShirleyEmotionController : MonoBehaviour
     [SerializeField] private ShirleyAwakenBlinkingState awakenBlinkingState;
     [SerializeField] private ShirleyNormalToAwakeEmotion normalToAwakeEmotionState;
     [SerializeField] private ShirleyAwakeToNormalEmotionState awakeToNormalEmotionState;
+   
     private bool exitCurrentStateIsTriggered = false;
-        
     private ShirleyEmotionStateBase currentState;
     private ShirleyEmotionStateBase defaultState;
     

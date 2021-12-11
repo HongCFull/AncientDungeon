@@ -15,11 +15,11 @@ D:/Unity GameProject/Comp4971C
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-60228
+49281
 Successfully changed project path to: D:/Unity GameProject/Comp4971C
 D:/Unity GameProject/Comp4971C
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 144.73 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 167.97 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.4f1 (0abb6314276a)
 [Subsystems] Discovering subsystems at path D:/Unity/2020.3.4f1/Editor/Data/Resources/UnitySubsystems
@@ -36,1389 +36,1714 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2020.3.4f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2020.3.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'D:/Unity/2020.3.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56032
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56864
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2020.3.4f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/Unity/2020.3.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001125 seconds.
+Registered in 0.001092 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 138.21 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 142.42 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.947 seconds
+- Completed reload, in  1.975 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004603 seconds.
+Registered in 0.004177 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 168.59 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 163.69 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.359 seconds
+- Completed reload, in  2.504 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
+Refreshing native plugins compatible for Editor in 1.61 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5096 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 287.6 MB.
+System memory in use after: 287.7 MB.
+
+Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 5566.
+Total: 5.361700 ms (FindLiveObjects: 0.650200 ms CreateObjectMapping: 0.615700 ms MarkObjects: 3.409600 ms  DeleteObjects: 0.684900 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scenes/Dungeon/NavMesh-Dungeon Generator.asset
+  artifactKey: Guid(e95779282fab5a549b7011d81f8d5018) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Dungeon/NavMesh-Dungeon Generator.asset using Guid(e95779282fab5a549b7011d81f8d5018) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '022844f0758f856597b20334617d294a') in 0.079105 seconds
+  Import took 0.089849 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.919573 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/DungeonTileCollisionBox.cs
+  artifactKey: Guid(1b9efddeea438be45bb10cd34f870cf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/DungeonTileCollisionBox.cs using Guid(1b9efddeea438be45bb10cd34f870cf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2c03832cb08f5a5f7e5d6f2f8843a1d') in 0.019208 seconds
+  Import took 0.029217 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000337 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/DungeonTileCollisionBox.cs
+  artifactKey: Guid(1b9efddeea438be45bb10cd34f870cf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/DungeonTileCollisionBox.cs using Guid(1b9efddeea438be45bb10cd34f870cf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2c03832cb08f5a5f7e5d6f2f8843a1d') in 0.001618 seconds
+  Import took 0.011621 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.818539 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/DungeonTile.cs
+  artifactKey: Guid(d30da17623c29db418a68d1790c882f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/DungeonTile.cs using Guid(d30da17623c29db418a68d1790c882f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7eaf543c49ac899c7c756c37d8a33a64') in 0.005600 seconds
+  Import took 0.015814 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004881 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/DungeonTile.cs
+  artifactKey: Guid(d30da17623c29db418a68d1790c882f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/DungeonTile.cs using Guid(d30da17623c29db418a68d1790c882f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7eaf543c49ac899c7c756c37d8a33a64') in 0.001793 seconds
+  Import took 0.009934 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.301428 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/DungeonGenerator.cs
+  artifactKey: Guid(de0a0c8feb6392449a01bd310ed2f0bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/DungeonGenerator.cs using Guid(de0a0c8feb6392449a01bd310ed2f0bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9cbd31a5782b007ac60d262565a5e13') in 0.005578 seconds
+  Import took 0.016588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.004466 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/DungeonGenerator.cs
+  artifactKey: Guid(de0a0c8feb6392449a01bd310ed2f0bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/DungeonGenerator.cs using Guid(de0a0c8feb6392449a01bd310ed2f0bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9cbd31a5782b007ac60d262565a5e13') in 0.001756 seconds
+  Import took 0.010373 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.876124 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/Connector.cs
+  artifactKey: Guid(977d938f9632dda43b69b10d00b20d77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/Connector.cs using Guid(977d938f9632dda43b69b10d00b20d77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6edd018574536e85239301db77c14ff6') in 0.005642 seconds
+  Import took 0.016216 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009567 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/Connector.cs
+  artifactKey: Guid(977d938f9632dda43b69b10d00b20d77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/Connector.cs using Guid(977d938f9632dda43b69b10d00b20d77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6edd018574536e85239301db77c14ff6') in 0.002023 seconds
+  Import took 0.011669 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 194.259914 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/DungeonStartingTile.cs
+  artifactKey: Guid(9aa539cefd421f349ae747837f8ab327) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/DungeonStartingTile.cs using Guid(9aa539cefd421f349ae747837f8ab327) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8f77162dea711e16ef53e35b31bc068') in 0.006018 seconds
+  Import took 0.017448 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008329 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/DungeonStartingTile.cs
+  artifactKey: Guid(9aa539cefd421f349ae747837f8ab327) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/DungeonStartingTile.cs using Guid(9aa539cefd421f349ae747837f8ab327) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8f77162dea711e16ef53e35b31bc068') in 0.001620 seconds
+  Import took 0.010403 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003822 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.23 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.541 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.47 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4796 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 262.2 MB.
+System memory in use after: 262.3 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5570.
+Total: 6.441900 ms (FindLiveObjects: 0.713000 ms CreateObjectMapping: 0.908800 ms MarkObjects: 4.183800 ms  DeleteObjects: 0.634500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005932 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.43 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.494 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.74 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4796 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 262.2 MB.
+System memory in use after: 262.3 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5573.
+Total: 5.490400 ms (FindLiveObjects: 1.122100 ms CreateObjectMapping: 0.602400 ms MarkObjects: 3.285700 ms  DeleteObjects: 0.478800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 120.084478 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/DungeonStartingTile.cs
+  artifactKey: Guid(9aa539cefd421f349ae747837f8ab327) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/DungeonStartingTile.cs using Guid(9aa539cefd421f349ae747837f8ab327) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32a05da0c29038214898dd3dee495d56') in 0.013146 seconds
+  Import took 0.030000 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.164875 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/DungeonIntermediateTile.cs
+  artifactKey: Guid(668c161ae9618054c85058c7098731a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/DungeonIntermediateTile.cs using Guid(668c161ae9618054c85058c7098731a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88959016b29481f990d9989d0827d8ea') in 0.007174 seconds
+  Import took 0.020502 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008224 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/DungeonIntermediateTile.cs
+  artifactKey: Guid(668c161ae9618054c85058c7098731a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/DungeonIntermediateTile.cs using Guid(668c161ae9618054c85058c7098731a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88959016b29481f990d9989d0827d8ea') in 0.002345 seconds
+  Import took 0.012051 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003948 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.35 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.637 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.46 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 262.3 MB.
+System memory in use after: 262.4 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5577.
+Total: 5.816600 ms (FindLiveObjects: 1.150100 ms CreateObjectMapping: 0.584900 ms MarkObjects: 3.395800 ms  DeleteObjects: 0.683100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004355 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.32 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.522 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.59 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4797 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 262.3 MB.
+System memory in use after: 262.4 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5580.
+Total: 5.083800 ms (FindLiveObjects: 0.683000 ms CreateObjectMapping: 0.557800 ms MarkObjects: 3.332200 ms  DeleteObjects: 0.509500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 188.188627 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/DungeonIntermediateTile.cs
+  artifactKey: Guid(668c161ae9618054c85058c7098731a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/DungeonIntermediateTile.cs using Guid(668c161ae9618054c85058c7098731a9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c0baea5a50e60f7fbe2fc798a37e7a5') in 0.008891 seconds
+  Import took 0.021339 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.882813 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/DungeonEndingTile.cs
+  artifactKey: Guid(8774ac48130adf448b7097830fb29f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/DungeonEndingTile.cs using Guid(8774ac48130adf448b7097830fb29f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7be2b14537ea22ec5d1a092f855a4700') in 0.005578 seconds
+  Import took 0.016416 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005088 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 1.28 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 5094 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 286.6 MB.
-System memory in use after: 286.7 MB.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.383 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.29 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4798 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 262.2 MB.
+System memory in use after: 262.3 MB.
 
-Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 5564.
-Total: 4.219400 ms (FindLiveObjects: 0.476300 ms CreateObjectMapping: 0.237300 ms MarkObjects: 3.033100 ms  DeleteObjects: 0.471200 ms)
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5584.
+Total: 5.446900 ms (FindLiveObjects: 0.765500 ms CreateObjectMapping: 0.587100 ms MarkObjects: 3.595100 ms  DeleteObjects: 0.498000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006691 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.45 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.779 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.39 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4798 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 262.4 MB.
+System memory in use after: 262.5 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5587.
+Total: 6.816800 ms (FindLiveObjects: 0.547900 ms CreateObjectMapping: 0.368700 ms MarkObjects: 5.153200 ms  DeleteObjects: 0.745400 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Imported Assets/AllSkyFree
-  artifactKey: Guid(177a0e1e4b8d7d8429a28852b129257b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported Assets/AllSkyFree using Guid(177a0e1e4b8d7d8429a28852b129257b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e74987230bf05b97f6ea3940aef01346') in 0.014235 seconds
-  Import took 0.023379 seconds .
+  Time since last request: 29.564652 seconds.
+  path: Assets/Scripts/ProceduralDungeonGeneration/DungeonEndingTile.cs
+  artifactKey: Guid(8774ac48130adf448b7097830fb29f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/ProceduralDungeonGeneration/DungeonEndingTile.cs using Guid(8774ac48130adf448b7097830fb29f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a18a6fdd6b31ff7d336dded3b7a8b2d') in 0.008584 seconds
+  Import took 0.019184 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1269.311168 seconds.
-  path: Assets/RPG and MMO UI 6/Prefabs/HUD/Cast Bars/Cast Bar (Player).prefab
-  artifactKey: Guid(1c0ba37226c5c1f499be74df7f71329a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/RPG and MMO UI 6/Prefabs/HUD/Cast Bars/Cast Bar (Player).prefab using Guid(1c0ba37226c5c1f499be74df7f71329a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5fd154dab4b739c701e070b47c84314f') in 0.089967 seconds
-  Import took 0.100064 seconds .
+  Time since last request: 21.374652 seconds.
+  path: Assets/TimeLine/BossCutScenTimeLine/BossCutSceneTimeLine.playable
+  artifactKey: Guid(89106294f4f707c4589d63b1b5947140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TimeLine/BossCutScenTimeLine/BossCutSceneTimeLine.playable using Guid(89106294f4f707c4589d63b1b5947140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e1ca5064b3e029b6391b0ae79f932ec') in 0.063952 seconds
+  Import took 0.076829 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000223 seconds.
-  path: Assets/Imported Assets/StarterAssets/ThirdPersonController/Prefabs/PlayerArmature.prefab
-  artifactKey: Guid(64dce48905ffd9b4293e595fa6941544) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported Assets/StarterAssets/ThirdPersonController/Prefabs/PlayerArmature.prefab using Guid(64dce48905ffd9b4293e595fa6941544) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '944bee69d111421dd232515cda29907c') in 0.927583 seconds
-  Import took 0.943193 seconds .
+  Time since last request: 0.020695 seconds.
+  path: Assets/TimeLine/BossCutScenTimeLine/BossCutSceneTimeLine.playable
+  artifactKey: Guid(89106294f4f707c4589d63b1b5947140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TimeLine/BossCutScenTimeLine/BossCutSceneTimeLine.playable using Guid(89106294f4f707c4589d63b1b5947140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e1ca5064b3e029b6391b0ae79f932ec') in 0.014380 seconds
+  Import took 0.025043 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.458882 seconds.
+  path: Assets/Scenes/BossScene.unity
+  artifactKey: Guid(d1c3109bdb54ad54c8a2b2838528e640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/BossScene.unity using Guid(d1c3109bdb54ad54c8a2b2838528e640) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d6cd4a417eeddbd78ac11fd35b271a3') in 0.005446 seconds
+  Import took 0.014877 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004033 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.91 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.541 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.00 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4798 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 262.4 MB.
+System memory in use after: 262.5 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5590.
+Total: 6.262000 ms (FindLiveObjects: 0.569100 ms CreateObjectMapping: 0.357500 ms MarkObjects: 4.561500 ms  DeleteObjects: 0.772000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004713 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.51 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.642 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.93 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4798 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 262.4 MB.
+System memory in use after: 262.5 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5593.
+Total: 5.594100 ms (FindLiveObjects: 0.673100 ms CreateObjectMapping: 0.572700 ms MarkObjects: 3.782700 ms  DeleteObjects: 0.564200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004033 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.37 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.693 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.29 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4798 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 262.4 MB.
+System memory in use after: 262.5 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5596.
+Total: 6.962400 ms (FindLiveObjects: 1.097600 ms CreateObjectMapping: 0.633900 ms MarkObjects: 4.520600 ms  DeleteObjects: 0.708400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 355.189997 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundA.prefab
+  artifactKey: Guid(15429f147760d9b4e84b4688b805d31c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundA.prefab using Guid(15429f147760d9b4e84b4688b805d31c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundA') references runtime script in scene file. Fixing!
+
+ -> (artifact id: '359e98212da6de96007e59fcf80794f4') in 1.048216 seconds
+  Import took 1.067712 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000206 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundH.prefab
+  artifactKey: Guid(74911cd10bcf5cc4dbe6c631436ef038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundH.prefab using Guid(74911cd10bcf5cc4dbe6c631436ef038) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundH') references runtime script in scene file. Fixing!
+
+ -> (artifact id: '3ac3131d889755fe12d5e2d9f7f716f6') in 0.324278 seconds
+  Import took 0.338948 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundE.prefab
+  artifactKey: Guid(29c69b39f63c6994aaac22b885468df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundE.prefab using Guid(29c69b39f63c6994aaac22b885468df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundE') references runtime script in scene file. Fixing!
+
+ -> (artifact id: '4974800ef4453c4511167e9e09710479') in 0.306535 seconds
+  Import took 0.324532 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab
+  artifactKey: Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab using Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundC') references runtime script in scene file. Fixing!
+
+ -> (artifact id: 'c34f05c81eb84479214946747c118e47') in 0.227546 seconds
+  Import took 0.244945 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab
+  artifactKey: Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab using Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundI') references runtime script in scene file. Fixing!
+
+ -> (artifact id: '7c484a2dd67aaea6617dad8dd8f90e9d') in 0.075791 seconds
+  Import took 0.091766 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundG.prefab
+  artifactKey: Guid(31819293d62219c4faac4dd0ea71329c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundG.prefab using Guid(31819293d62219c4faac4dd0ea71329c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundG') references runtime script in scene file. Fixing!
+
+ -> (artifact id: '8ba41c870999932910ec6a513592b0e5') in 0.094443 seconds
+  Import took 0.113079 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundN.prefab
+  artifactKey: Guid(b21851e87ca64264ab0ae97817b9d71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundN.prefab using Guid(b21851e87ca64264ab0ae97817b9d71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundN') references runtime script in scene file. Fixing!
+
+ -> (artifact id: '2aedf7ba0021b2dc3de970820e96707d') in 0.123978 seconds
+  Import took 0.141777 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundF.prefab
+  artifactKey: Guid(43401c46230bb964e888b0b7989f01d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundF.prefab using Guid(43401c46230bb964e888b0b7989f01d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundF') references runtime script in scene file. Fixing!
+
+ -> (artifact id: '6027a2cf095e6cd2f9c2e04dfac44552') in 0.076446 seconds
+  Import took 0.091929 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundP.prefab
+  artifactKey: Guid(ba5ac244f4bffef418c84436542d0439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundP.prefab using Guid(ba5ac244f4bffef418c84436542d0439) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundP') references runtime script in scene file. Fixing!
+
+ -> (artifact id: 'ad6e75795495d637ce8a542240fba026') in 0.080098 seconds
+  Import took 0.096770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab
+  artifactKey: Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab using Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundO') references runtime script in scene file. Fixing!
+
+ -> (artifact id: 'd0cb9b4ef165957aca6b06928a2d3cc4') in 0.112307 seconds
+  Import took 0.131365 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundD.prefab
+  artifactKey: Guid(1988766d8c08d454d95e13fc0fa38330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundD.prefab using Guid(1988766d8c08d454d95e13fc0fa38330) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundD') references runtime script in scene file. Fixing!
+
+ -> (artifact id: '41b9adcd7e14e4ae6c0b116cef243a10') in 0.311375 seconds
+  Import took 0.331349 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundJ.prefab
+  artifactKey: Guid(52f8e0d8dc7a03840acee23a9d835103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundJ.prefab using Guid(52f8e0d8dc7a03840acee23a9d835103) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundJ') references runtime script in scene file. Fixing!
+
+ -> (artifact id: '0b7025bd8cfc3b39ea401b89c8147f4a') in 0.052558 seconds
+  Import took 0.066532 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab
+  artifactKey: Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab using Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundK') references runtime script in scene file. Fixing!
+
+ -> (artifact id: 'abf7e930546e5e4709275a8348479c0e') in 0.073608 seconds
+  Import took 0.088183 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000264 seconds.
-  path: Assets/Prefabs/Player Character SetUp.prefab
-  artifactKey: Guid(61d13b4a9aa729943bd0ad2c2d4e2c70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player Character SetUp.prefab using Guid(61d13b4a9aa729943bd0ad2c2d4e2c70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96a52a9a9f554111942a2e955012db32') in 0.640391 seconds
-  Import took 0.667890 seconds .
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab
+  artifactKey: Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab using Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundM') references runtime script in scene file. Fixing!
+
+ -> (artifact id: '37f3f8e82cbbd83f828791e1c181b0fa') in 0.081505 seconds
+  Import took 0.096708 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000253 seconds.
-  path: Assets/Imported Assets/StarterAssets/ThirdPersonController/Prefabs/PlayerCapsule.prefab
-  artifactKey: Guid(2553cec8fdb3eb643bbe9f2ec880c472) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported Assets/StarterAssets/ThirdPersonController/Prefabs/PlayerCapsule.prefab using Guid(2553cec8fdb3eb643bbe9f2ec880c472) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10575d4cfb4ee8acd5ae58fc8cfe20e8') in 0.025186 seconds
-  Import took 0.035743 seconds .
+  Time since last request: 0.000200 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundL.prefab
+  artifactKey: Guid(6dc635043250bea4681ae9e6b9489bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundL.prefab using Guid(6dc635043250bea4681ae9e6b9489bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundL') references runtime script in scene file. Fixing!
 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003928 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.29 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.834 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.54 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4793 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 283.8 MB.
-System memory in use after: 283.9 MB.
-
-Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 5698.
-Total: 6.791200 ms (FindLiveObjects: 0.680400 ms CreateObjectMapping: 0.564900 ms MarkObjects: 4.946300 ms  DeleteObjects: 0.597900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003844 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.54 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.799 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.33 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4793 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 283.8 MB.
-System memory in use after: 284.0 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5701.
-Total: 7.124200 ms (FindLiveObjects: 0.534100 ms CreateObjectMapping: 0.248400 ms MarkObjects: 5.830700 ms  DeleteObjects: 0.509600 ms)
+ -> (artifact id: '2b2ee229e71a22bd4aa68e532dff474e') in 0.042930 seconds
+  Import took 0.054965 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 255.820059 seconds.
-  path: Assets/Imported Assets/Ancient-Dungeon-BuiltInRP/Ani/AD_RuneGate_A_01.anim
-  artifactKey: Guid(db7170a1f3a384f48ba78f57bc197739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported Assets/Ancient-Dungeon-BuiltInRP/Ani/AD_RuneGate_A_01.anim using Guid(db7170a1f3a384f48ba78f57bc197739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e00fac2d127b9aca25ab11cd5c6411f5') in 0.024344 seconds
-  Import took 0.035315 seconds .
+  Time since last request: 0.000205 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab
+  artifactKey: Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab using Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundB') references runtime script in scene file. Fixing!
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.002284 seconds.
-  path: Assets/Imported Assets/Ancient-Dungeon-BuiltInRP/Ani/AD_RuneGate_A_01.anim
-  artifactKey: Guid(db7170a1f3a384f48ba78f57bc197739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported Assets/Ancient-Dungeon-BuiltInRP/Ani/AD_RuneGate_A_01.anim using Guid(db7170a1f3a384f48ba78f57bc197739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e00fac2d127b9aca25ab11cd5c6411f5') in 0.002494 seconds
-  Import took 0.011981 seconds .
+ -> (artifact id: '09576a68da55f03780ecff8c2a4ca7d7') in 0.056447 seconds
+  Import took 0.071114 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004450 seconds.
+Registered in 0.004188 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.37 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.797 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.34 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4793 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 283.9 MB.
-System memory in use after: 284.0 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5704.
-Total: 7.513200 ms (FindLiveObjects: 0.723100 ms CreateObjectMapping: 0.274600 ms MarkObjects: 5.771500 ms  DeleteObjects: 0.742500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004653 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.64 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.783 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 2.04 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4793 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 283.9 MB.
-System memory in use after: 284.0 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5707.
-Total: 5.477200 ms (FindLiveObjects: 0.713300 ms CreateObjectMapping: 0.233000 ms MarkObjects: 4.002700 ms  DeleteObjects: 0.526600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004224 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.68 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.870 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.29 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4793 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 283.7 MB.
-System memory in use after: 283.9 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5710.
-Total: 6.217500 ms (FindLiveObjects: 0.819600 ms CreateObjectMapping: 0.439900 ms MarkObjects: 4.427800 ms  DeleteObjects: 0.528000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004166 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.50 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.710 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 2.04 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4793 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 283.9 MB.
-System memory in use after: 284.1 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5713.
-Total: 5.421800 ms (FindLiveObjects: 0.711700 ms CreateObjectMapping: 0.554100 ms MarkObjects: 3.622900 ms  DeleteObjects: 0.531900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004595 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.34 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.805 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.28 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4793 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.0 MB.
-System memory in use after: 284.1 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5716.
-Total: 4.495200 ms (FindLiveObjects: 0.527400 ms CreateObjectMapping: 0.255000 ms MarkObjects: 3.200500 ms  DeleteObjects: 0.510500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003904 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.19 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.595 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Refreshing native plugins compatible for Editor in 1.21 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4793 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.0 MB.
-System memory in use after: 284.1 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5719.
-Total: 4.894500 ms (FindLiveObjects: 0.486400 ms CreateObjectMapping: 0.251500 ms MarkObjects: 3.611200 ms  DeleteObjects: 0.544100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1902.611018 seconds.
-  path: Assets/Scripts/Gameplay/AI/AnimatorStateMachine
-  artifactKey: Guid(74b9c774ef610124cac0584e4fac0411) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Gameplay/AI/AnimatorStateMachine using Guid(74b9c774ef610124cac0584e4fac0411) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25357ec4185337fe4cb44c4cb623af43') in 0.016374 seconds
-  Import took 0.029406 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 22.926807 seconds.
-  path: Assets/Scripts/Gameplay/AI/AnimatorStateMachine/TeleportToRandPositionState.cs
-  artifactKey: Guid(d8a1ed8c2c7034740a5bd1669b4e9234) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Gameplay/AI/AnimatorStateMachine/TeleportToRandPositionState.cs using Guid(d8a1ed8c2c7034740a5bd1669b4e9234) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a63919643d5e48932b754dcfa898617d') in 0.026256 seconds
-  Import took 0.038344 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005348 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.40 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.792 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.38 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4794 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.0 MB.
-System memory in use after: 284.1 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5723.
-Total: 5.283600 ms (FindLiveObjects: 0.763000 ms CreateObjectMapping: 0.358000 ms MarkObjects: 3.614200 ms  DeleteObjects: 0.546900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007404 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.86 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.920 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.29 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4794 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 283.8 MB.
-System memory in use after: 284.0 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5726.
-Total: 5.664900 ms (FindLiveObjects: 0.747900 ms CreateObjectMapping: 0.720800 ms MarkObjects: 3.686100 ms  DeleteObjects: 0.509000 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 2353.175774 seconds.
-  path: Assets/Scripts/Gameplay/AI/AnimatorStateMachine/TeleportToRandPositionState.cs
-  artifactKey: Guid(d8a1ed8c2c7034740a5bd1669b4e9234) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Gameplay/AI/AnimatorStateMachine/TeleportToRandPositionState.cs using Guid(d8a1ed8c2c7034740a5bd1669b4e9234) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2db194fa66971bb398c930163d4905b7') in 0.010831 seconds
-  Import took 0.025142 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004678 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.31 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.640 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.71 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4794 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.0 MB.
-System memory in use after: 284.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5729.
-Total: 7.114300 ms (FindLiveObjects: 1.155300 ms CreateObjectMapping: 0.685600 ms MarkObjects: 4.495300 ms  DeleteObjects: 0.775800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005561 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.19 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.676 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.27 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4794 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.0 MB.
-System memory in use after: 284.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5732.
-Total: 4.456400 ms (FindLiveObjects: 0.453200 ms CreateObjectMapping: 0.219200 ms MarkObjects: 3.311200 ms  DeleteObjects: 0.472000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004598 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.27 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.833 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.37 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4794 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.1 MB.
-System memory in use after: 284.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5735.
-Total: 6.453700 ms (FindLiveObjects: 0.694100 ms CreateObjectMapping: 0.631100 ms MarkObjects: 4.602000 ms  DeleteObjects: 0.525100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004609 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.23 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.662 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.28 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4794 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.1 MB.
-System memory in use after: 284.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5738.
-Total: 4.856100 ms (FindLiveObjects: 0.661800 ms CreateObjectMapping: 0.567400 ms MarkObjects: 3.100800 ms  DeleteObjects: 0.524900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.011181 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.23 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.581 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.24 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4794 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 283.9 MB.
-System memory in use after: 284.0 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5741.
-Total: 5.109200 ms (FindLiveObjects: 0.677700 ms CreateObjectMapping: 0.259200 ms MarkObjects: 3.677800 ms  DeleteObjects: 0.493400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004053 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.75 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.633 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.44 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4794 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.1 MB.
-System memory in use after: 284.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5744.
-Total: 5.530200 ms (FindLiveObjects: 0.775900 ms CreateObjectMapping: 0.560600 ms MarkObjects: 3.637600 ms  DeleteObjects: 0.554400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003918 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.40 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.750 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.40 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4794 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.1 MB.
-System memory in use after: 284.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5747.
-Total: 4.762200 ms (FindLiveObjects: 0.739400 ms CreateObjectMapping: 0.261900 ms MarkObjects: 3.252900 ms  DeleteObjects: 0.506100 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003907 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.40 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.834 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.75 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4794 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.1 MB.
-System memory in use after: 284.2 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5750.
-Total: 5.479900 ms (FindLiveObjects: 0.802800 ms CreateObjectMapping: 0.301000 ms MarkObjects: 3.867000 ms  DeleteObjects: 0.507200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004786 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.34 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 - Completed reload, in  1.657 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.27 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 2.19 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4794 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.1 MB.
-System memory in use after: 284.2 MB.
+Unloading 4798 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 273.5 MB.
+System memory in use after: 273.6 MB.
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5753.
-Total: 5.691300 ms (FindLiveObjects: 0.700400 ms CreateObjectMapping: 0.588400 ms MarkObjects: 3.895200 ms  DeleteObjects: 0.506400 ms)
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 5729.
+Total: 7.183600 ms (FindLiveObjects: 1.188800 ms CreateObjectMapping: 0.681700 ms MarkObjects: 4.777700 ms  DeleteObjects: 0.533700 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003982 seconds.
+Registered in 0.004770 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.28 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.637 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 1.38 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4798 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 273.7 MB.
+System memory in use after: 273.8 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5732.
+Total: 5.906200 ms (FindLiveObjects: 1.089800 ms CreateObjectMapping: 0.535400 ms MarkObjects: 3.633800 ms  DeleteObjects: 0.645800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004840 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.30 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.684 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Refreshing native plugins compatible for Editor in 1.62 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4798 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 273.7 MB.
+System memory in use after: 273.8 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5735.
+Total: 5.253700 ms (FindLiveObjects: 0.766600 ms CreateObjectMapping: 0.304700 ms MarkObjects: 3.602600 ms  DeleteObjects: 0.578400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 513.679415 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundA.prefab
+  artifactKey: Guid(15429f147760d9b4e84b4688b805d31c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundA.prefab using Guid(15429f147760d9b4e84b4688b805d31c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8d1a949584c787d4868268771daa077') in 0.354714 seconds
+  Import took 0.380535 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000329 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundH.prefab
+  artifactKey: Guid(74911cd10bcf5cc4dbe6c631436ef038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundH.prefab using Guid(74911cd10bcf5cc4dbe6c631436ef038) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundH') references runtime script in scene file. Fixing!
+
+ -> (artifact id: '64f500794cb0afa05f81a96c800571bc') in 0.074270 seconds
+  Import took 0.090376 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000305 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundE.prefab
+  artifactKey: Guid(29c69b39f63c6994aaac22b885468df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundE.prefab using Guid(29c69b39f63c6994aaac22b885468df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundE') references runtime script in scene file. Fixing!
+
+ -> (artifact id: '9812b5c4450453826b19ab25398efc7b') in 0.108779 seconds
+  Import took 0.128471 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab
+  artifactKey: Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab using Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundC') references runtime script in scene file. Fixing!
+
+ -> (artifact id: '93019c1eff7c65537ad8ed1723ef02fb') in 0.096730 seconds
+  Import took 0.117158 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab
+  artifactKey: Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab using Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundI') references runtime script in scene file. Fixing!
+
+ -> (artifact id: '4bb1168ba092a6558c90ccfd2e2b666a') in 0.075146 seconds
+  Import took 0.090272 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000414 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundG.prefab
+  artifactKey: Guid(31819293d62219c4faac4dd0ea71329c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundG.prefab using Guid(31819293d62219c4faac4dd0ea71329c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundG') references runtime script in scene file. Fixing!
+
+ -> (artifact id: '2a520ecb70a50dcb43c57719e0c098ad') in 0.080087 seconds
+  Import took 0.098755 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundN.prefab
+  artifactKey: Guid(b21851e87ca64264ab0ae97817b9d71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundN.prefab using Guid(b21851e87ca64264ab0ae97817b9d71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundN') references runtime script in scene file. Fixing!
+
+ -> (artifact id: '1723c3b1e9ed5cbaeb2a95703c3f1065') in 0.089707 seconds
+  Import took 0.105520 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundF.prefab
+  artifactKey: Guid(43401c46230bb964e888b0b7989f01d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundF.prefab using Guid(43401c46230bb964e888b0b7989f01d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundF') references runtime script in scene file. Fixing!
+
+ -> (artifact id: '3bc9a29801a2ba9e223afd0067a8fd14') in 0.073006 seconds
+  Import took 0.087504 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundP.prefab
+  artifactKey: Guid(ba5ac244f4bffef418c84436542d0439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundP.prefab using Guid(ba5ac244f4bffef418c84436542d0439) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundP') references runtime script in scene file. Fixing!
+
+ -> (artifact id: '56247ab7988a7e2575bebac9e52dfada') in 0.076966 seconds
+  Import took 0.092996 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/NavMesh-GroundA.asset
+  artifactKey: Guid(a57dc0fc14805ac49a2bdd7f8463bdb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/NavMesh-GroundA.asset using Guid(a57dc0fc14805ac49a2bdd7f8463bdb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f068ffaac46bd1e48747a5c79587b75c') in 0.006110 seconds
+  Import took 0.016601 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab
+  artifactKey: Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab using Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundO') references runtime script in scene file. Fixing!
+
+ -> (artifact id: 'c6706668103601361d6257bd4ec5d454') in 0.098308 seconds
+  Import took 0.114120 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000332 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundD.prefab
+  artifactKey: Guid(1988766d8c08d454d95e13fc0fa38330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundD.prefab using Guid(1988766d8c08d454d95e13fc0fa38330) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundD') references runtime script in scene file. Fixing!
+
+ -> (artifact id: '7eaa9919bb3a22718a77e269e64e5881') in 0.109401 seconds
+  Import took 0.133150 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundJ.prefab
+  artifactKey: Guid(52f8e0d8dc7a03840acee23a9d835103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundJ.prefab using Guid(52f8e0d8dc7a03840acee23a9d835103) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundJ') references runtime script in scene file. Fixing!
+
+ -> (artifact id: 'dc996ad4eb8e20a2d1128feab74d442b') in 0.048162 seconds
+  Import took 0.063548 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab
+  artifactKey: Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab using Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundK') references runtime script in scene file. Fixing!
+
+ -> (artifact id: '4a48e4491ba3aaa07403afdfca7d5817') in 0.073980 seconds
+  Import took 0.088602 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab
+  artifactKey: Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab using Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundM') references runtime script in scene file. Fixing!
+
+ -> (artifact id: 'e70a1c10b58b075944957d272717fa4a') in 0.086302 seconds
+  Import took 0.103170 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundL.prefab
+  artifactKey: Guid(6dc635043250bea4681ae9e6b9489bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundL.prefab using Guid(6dc635043250bea4681ae9e6b9489bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundL') references runtime script in scene file. Fixing!
+
+ -> (artifact id: '62cf89a988065cff248e06951d73ec45') in 0.041253 seconds
+  Import took 0.053525 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000245 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab
+  artifactKey: Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab using Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) GameObject (named 'GroundB') references runtime script in scene file. Fixing!
+
+ -> (artifact id: 'd29abac9037c316334ce74a97a11336d') in 0.062620 seconds
+  Import took 0.076944 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.103626 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab
+  artifactKey: Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab using Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f45dcd12f03eb5c334b9feea44546988') in 0.059336 seconds
+  Import took 0.075592 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.171668 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab
+  artifactKey: Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab using Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b7379bbaf4c57ad915bb2b8335d103b') in 0.075895 seconds
+  Import took 0.090467 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.371823 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab
+  artifactKey: Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab using Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e84f01876f579593d564cc0c769e8354') in 0.068102 seconds
+  Import took 0.083628 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.263793 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab
+  artifactKey: Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab using Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '536e64fd740c5486ae1b31599a90d2ce') in 0.070313 seconds
+  Import took 0.087433 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.825971 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab
+  artifactKey: Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab using Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a97686dbc9cf189ecfa98842d4c604ba') in 0.057217 seconds
+  Import took 0.073963 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.054408 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab
+  artifactKey: Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab using Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8360d34daf10428621df612187f54346') in 0.061732 seconds
+  Import took 0.075316 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.940159 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab
+  artifactKey: Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab using Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ab302035d1dcfc998ca1e0ef92e94f9') in 0.088884 seconds
+  Import took 0.103796 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.811197 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab
+  artifactKey: Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab using Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbd37fb83e2272d2603cbc8ffa506605') in 0.110663 seconds
+  Import took 0.131819 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.765659 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab
+  artifactKey: Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab using Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6e171ee04786041eb0607e9b4c4477e') in 0.070510 seconds
+  Import took 0.085353 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.900105 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab
+  artifactKey: Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab using Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68354538f3724cf8be97f0f5ea826978') in 0.108232 seconds
+  Import took 0.124191 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.545809 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab
+  artifactKey: Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab using Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c68981d8103cc240277412c88d504773') in 0.091080 seconds
+  Import took 0.109440 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.982830 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab
+  artifactKey: Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab using Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f48cdc2258623388f056638ee706a041') in 0.089228 seconds
+  Import took 0.108734 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.535583 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab
+  artifactKey: Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab using Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73402f92ace14c151f5d363a78adeb74') in 0.086913 seconds
+  Import took 0.102619 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.912951 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab
+  artifactKey: Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab using Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf9dad78ec10462a49ab2d691bd5c342') in 0.086980 seconds
+  Import took 0.103562 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.363458 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab
+  artifactKey: Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab using Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a866aa640e59b8fb8cf8f940338b89e') in 0.094399 seconds
+  Import took 0.111076 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.743648 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab
+  artifactKey: Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab using Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '960fc111e3f33ded5d9879d59a313b6f') in 0.089941 seconds
+  Import took 0.108255 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.671143 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab
+  artifactKey: Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab using Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a283747b46d7672c827c63c9164f0311') in 0.098877 seconds
+  Import took 0.116891 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.022544 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab
+  artifactKey: Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab using Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc494e6b2a2d133a354a91a785cd78a6') in 0.091177 seconds
+  Import took 0.107373 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.209346 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundD.prefab
+  artifactKey: Guid(1988766d8c08d454d95e13fc0fa38330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundD.prefab using Guid(1988766d8c08d454d95e13fc0fa38330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e557ab7ace6ae24098c81941efa88039') in 0.137612 seconds
+  Import took 0.158125 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.682285 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundD.prefab
+  artifactKey: Guid(1988766d8c08d454d95e13fc0fa38330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundD.prefab using Guid(1988766d8c08d454d95e13fc0fa38330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e373a941b7de350b61592eec5aca955') in 0.128798 seconds
+  Import took 0.150871 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.724671 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundD.prefab
+  artifactKey: Guid(1988766d8c08d454d95e13fc0fa38330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundD.prefab using Guid(1988766d8c08d454d95e13fc0fa38330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5bb1299365a17cf2bef2a789ff85112') in 0.135543 seconds
+  Import took 0.155865 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.792997 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundD.prefab
+  artifactKey: Guid(1988766d8c08d454d95e13fc0fa38330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundD.prefab using Guid(1988766d8c08d454d95e13fc0fa38330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbf995fa24d372ffb8f320d0fc193f5b') in 0.136124 seconds
+  Import took 0.159168 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.024681 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundE.prefab
+  artifactKey: Guid(29c69b39f63c6994aaac22b885468df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundE.prefab using Guid(29c69b39f63c6994aaac22b885468df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02562a0f1801a821e5f7dab0a75a9d0b') in 0.120111 seconds
+  Import took 0.137865 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.796987 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundE.prefab
+  artifactKey: Guid(29c69b39f63c6994aaac22b885468df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundE.prefab using Guid(29c69b39f63c6994aaac22b885468df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a092f2377730dc34b96f56016b9013f2') in 0.112574 seconds
+  Import took 0.133465 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.540787 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundE.prefab
+  artifactKey: Guid(29c69b39f63c6994aaac22b885468df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundE.prefab using Guid(29c69b39f63c6994aaac22b885468df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cb5269195f377fb96c8da3849ed2052') in 0.111633 seconds
+  Import took 0.224014 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.475124 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundE.prefab
+  artifactKey: Guid(29c69b39f63c6994aaac22b885468df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundE.prefab using Guid(29c69b39f63c6994aaac22b885468df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1bc46d05b858e39385f55ab6285c027') in 0.098478 seconds
+  Import took 0.116790 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.406298 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundE.prefab
+  artifactKey: Guid(29c69b39f63c6994aaac22b885468df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundE.prefab using Guid(29c69b39f63c6994aaac22b885468df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e041c63cc62586ba6c06a0555c7cf196') in 0.104809 seconds
+  Import took 0.122044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 209.674554 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundF.prefab
+  artifactKey: Guid(43401c46230bb964e888b0b7989f01d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundF.prefab using Guid(43401c46230bb964e888b0b7989f01d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5ae1ab1e392467a0cd22c3abe31b54f') in 0.083728 seconds
+  Import took 0.099805 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.088046 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundG.prefab
+  artifactKey: Guid(31819293d62219c4faac4dd0ea71329c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundG.prefab using Guid(31819293d62219c4faac4dd0ea71329c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cdc2e5794ed6c3252da0021c6f5664f') in 0.091534 seconds
+  Import took 0.107252 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 28.852614 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundH.prefab
+  artifactKey: Guid(74911cd10bcf5cc4dbe6c631436ef038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundH.prefab using Guid(74911cd10bcf5cc4dbe6c631436ef038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd641a264ac4bb50b0223ca94c5c2ab2c') in 0.070414 seconds
+  Import took 0.086957 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.028646 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab
+  artifactKey: Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab using Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14eee650ad5950b79e537882036492da') in 0.072633 seconds
+  Import took 0.090258 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.387300 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab
+  artifactKey: Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab using Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d079078dd4ac6855c9aa1887ba64d7d') in 0.084525 seconds
+  Import took 0.101817 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.880609 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab
+  artifactKey: Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab using Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb9f3a748dc84699a8460af227af4787') in 0.069413 seconds
+  Import took 0.084390 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.530897 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab
+  artifactKey: Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab using Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87cb448941f55ef7401fcfc5ec532891') in 0.068654 seconds
+  Import took 0.084614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.194504 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab
+  artifactKey: Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab using Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44703937148321767ea6668ca11a5e36') in 0.080879 seconds
+  Import took 0.097422 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.411871 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab
+  artifactKey: Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab using Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c34e57a89fa858a9eb797bc66dc3dab4') in 0.072194 seconds
+  Import took 0.088638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.388594 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab
+  artifactKey: Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab using Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90b9c3885c1ac13459bdea55f023d4aa') in 0.080610 seconds
+  Import took 0.096452 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.541274 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab
+  artifactKey: Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab using Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16e0ba4d14db0a9b1557865f8face775') in 0.072274 seconds
+  Import took 0.088666 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.498489 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab
+  artifactKey: Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab using Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b911992704f78e08b6a2d38964f6485') in 0.068480 seconds
+  Import took 0.083728 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.393111 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab
+  artifactKey: Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab using Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '436686329b988a678848063e5f2f91f4') in 0.073563 seconds
+  Import took 0.089541 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.540344 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab
+  artifactKey: Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab using Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '971269092d1994f4f97cf89a22ef239a') in 0.085917 seconds
+  Import took 0.102571 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.884413 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundJ.prefab
+  artifactKey: Guid(52f8e0d8dc7a03840acee23a9d835103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundJ.prefab using Guid(52f8e0d8dc7a03840acee23a9d835103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7ad1372beb6e49a3f322fb8e378e223') in 0.058343 seconds
+  Import took 0.072002 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.543174 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundJ.prefab
+  artifactKey: Guid(52f8e0d8dc7a03840acee23a9d835103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundJ.prefab using Guid(52f8e0d8dc7a03840acee23a9d835103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee5b21ddff09ffcea7e16b9f1b7ed730') in 0.049665 seconds
+  Import took 0.064555 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.779775 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundJ.prefab
+  artifactKey: Guid(52f8e0d8dc7a03840acee23a9d835103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundJ.prefab using Guid(52f8e0d8dc7a03840acee23a9d835103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44e21b9eab3e9f0e0cc6cb0ff3761320') in 0.048974 seconds
+  Import took 0.062785 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.475584 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundJ.prefab
+  artifactKey: Guid(52f8e0d8dc7a03840acee23a9d835103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundJ.prefab using Guid(52f8e0d8dc7a03840acee23a9d835103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6068911991493334fc6250d2e9edef63') in 0.051812 seconds
+  Import took 0.068371 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.150231 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundJ.prefab
+  artifactKey: Guid(52f8e0d8dc7a03840acee23a9d835103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundJ.prefab using Guid(52f8e0d8dc7a03840acee23a9d835103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b826874a8c7fddede9ec1d121403793') in 0.061887 seconds
+  Import took 0.079171 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002000 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundJ.prefab
+  artifactKey: Guid(52f8e0d8dc7a03840acee23a9d835103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundJ.prefab using Guid(52f8e0d8dc7a03840acee23a9d835103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b826874a8c7fddede9ec1d121403793') in 0.046259 seconds
+  Import took 0.059854 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.213401 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab
+  artifactKey: Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab using Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'febc61910f2d28f180fd6603deeb7407') in 0.079775 seconds
+  Import took 0.096026 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.017765 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab
+  artifactKey: Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab using Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c11bd4497c198bd763b9a1af8f6d5935') in 0.074923 seconds
+  Import took 0.090280 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.442893 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab
+  artifactKey: Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab using Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f2c718c6b0257f596406e9f3fb01a6e') in 0.078562 seconds
+  Import took 0.094557 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 18.623673 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab
+  artifactKey: Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab using Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f66b3d00fc6e81faa7a23dfebfda5af7') in 0.087885 seconds
+  Import took 0.104315 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.099017 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab
+  artifactKey: Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab using Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4229f6c52387b3d31e3e854fbdadad91') in 0.070256 seconds
+  Import took 0.086099 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.283364 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab
+  artifactKey: Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab using Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed00d62140c5061b2508b6e7272dddda') in 0.082953 seconds
+  Import took 0.099659 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.126371 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab
+  artifactKey: Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab using Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25f397206eb08d57e27d8567f13c2bea') in 0.081885 seconds
+  Import took 0.098415 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.911996 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab
+  artifactKey: Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab using Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ce662aa82ef1efe5cb0063310f4dd50') in 0.078693 seconds
+  Import took 0.094547 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.137203 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab
+  artifactKey: Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab using Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '539c2e2eb8710d1cde99b9da842b7019') in 0.185725 seconds
+  Import took 0.205501 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.240967 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundL.prefab
+  artifactKey: Guid(6dc635043250bea4681ae9e6b9489bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundL.prefab using Guid(6dc635043250bea4681ae9e6b9489bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edc38ac5ac07e9b0176557175f4d826f') in 0.047043 seconds
+  Import took 0.061128 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.792185 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundL.prefab
+  artifactKey: Guid(6dc635043250bea4681ae9e6b9489bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundL.prefab using Guid(6dc635043250bea4681ae9e6b9489bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e84f7321c4d6fc11e0ab36a1a96f4641') in 0.046736 seconds
+  Import took 0.058841 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.900018 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundL.prefab
+  artifactKey: Guid(6dc635043250bea4681ae9e6b9489bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundL.prefab using Guid(6dc635043250bea4681ae9e6b9489bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2aea75a13579620ef65cdd6baaeccd8') in 0.041798 seconds
+  Import took 0.056990 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.852445 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundL.prefab
+  artifactKey: Guid(6dc635043250bea4681ae9e6b9489bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundL.prefab using Guid(6dc635043250bea4681ae9e6b9489bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e726f993bfcefe829123d155858be82') in 0.043782 seconds
+  Import took 0.056999 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.960089 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundL.prefab
+  artifactKey: Guid(6dc635043250bea4681ae9e6b9489bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundL.prefab using Guid(6dc635043250bea4681ae9e6b9489bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d2f08e109b984bac3bf94d66c6ab835') in 0.046455 seconds
+  Import took 0.063222 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.255937 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab
+  artifactKey: Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab using Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9a77552fe3f6d9f139dfe4eb881cc56') in 0.093905 seconds
+  Import took 0.110276 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.193255 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab
+  artifactKey: Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab using Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd32ae77d24ba140182c352499b92a85c') in 0.083871 seconds
+  Import took 0.100766 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.122735 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab
+  artifactKey: Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab using Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b369e2fd419ef1cc5f445b274a4d4f6') in 0.093447 seconds
+  Import took 0.107480 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.434542 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab
+  artifactKey: Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab using Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ef7def92a05d4f4f1b9fbdf13b82537') in 0.088743 seconds
+  Import took 0.107956 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.393526 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab
+  artifactKey: Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab using Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '778862208d5183600662a3634e0e90a2') in 0.088262 seconds
+  Import took 0.105273 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.653988 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab
+  artifactKey: Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab using Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41f74bfed9e6e48e630a33179f5bb7b6') in 0.091069 seconds
+  Import took 0.108247 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.382896 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab
+  artifactKey: Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab using Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4e340155929394a5b34841dcf809d42') in 0.111327 seconds
+  Import took 0.134862 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.100824 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab
+  artifactKey: Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab using Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35a01d8184dff19e140d1ccf6d2dbe21') in 0.090918 seconds
+  Import took 0.108430 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.573371 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab
+  artifactKey: Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab using Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89e2eb487f337a0e050e190c3d663e05') in 0.099970 seconds
+  Import took 0.118722 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.186139 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab
+  artifactKey: Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab using Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d8251adf79134ad41cdd9daccee331c') in 0.104781 seconds
+  Import took 0.123770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.961632 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundN.prefab
+  artifactKey: Guid(b21851e87ca64264ab0ae97817b9d71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundN.prefab using Guid(b21851e87ca64264ab0ae97817b9d71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36092587832bea572ba878cce73c7698') in 0.087555 seconds
+  Import took 0.106903 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.538419 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundN.prefab
+  artifactKey: Guid(b21851e87ca64264ab0ae97817b9d71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundN.prefab using Guid(b21851e87ca64264ab0ae97817b9d71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14f786152d0bae02dd3c1a310929ee9f') in 0.079173 seconds
+  Import took 0.094195 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.209789 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundN.prefab
+  artifactKey: Guid(b21851e87ca64264ab0ae97817b9d71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundN.prefab using Guid(b21851e87ca64264ab0ae97817b9d71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6533cc06cfaeb2ddb999b9a069fa0cb') in 0.083701 seconds
+  Import took 0.103569 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.789978 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundN.prefab
+  artifactKey: Guid(b21851e87ca64264ab0ae97817b9d71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundN.prefab using Guid(b21851e87ca64264ab0ae97817b9d71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a489d14e77f9fda47203761b3abd40a4') in 0.079304 seconds
+  Import took 0.097044 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.872713 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundN.prefab
+  artifactKey: Guid(b21851e87ca64264ab0ae97817b9d71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundN.prefab using Guid(b21851e87ca64264ab0ae97817b9d71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e46d12c3d90cd02d35f0bd68887ec02e') in 0.088160 seconds
+  Import took 0.108244 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.097618 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab
+  artifactKey: Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab using Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92d2635f63d3e199390ac24958804286') in 0.099135 seconds
+  Import took 0.117105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.465405 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab
+  artifactKey: Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab using Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '003a941af44ae62615087e378c05f411') in 0.109476 seconds
+  Import took 0.129393 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.118960 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab
+  artifactKey: Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab using Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '945d0e9ff684ccbf1650aec0184f5b37') in 0.100733 seconds
+  Import took 0.119371 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.363092 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab
+  artifactKey: Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab using Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caad909b459f96640647507956fea2fa') in 0.105800 seconds
+  Import took 0.125001 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.245179 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab
+  artifactKey: Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab using Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d1c02eaf84eead153c91dbd1ba60bc3') in 0.100695 seconds
+  Import took 0.119970 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.156531 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab
+  artifactKey: Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab using Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a59054234cf3e63b80e88252422a671') in 0.100821 seconds
+  Import took 0.118936 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.226407 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab
+  artifactKey: Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab using Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab14f3623b6346ac6b196d7a02d87c9e') in 0.111948 seconds
+  Import took 0.131614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015957 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab
+  artifactKey: Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab using Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab14f3623b6346ac6b196d7a02d87c9e') in 0.097499 seconds
+  Import took 0.117915 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.395188 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab
+  artifactKey: Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab using Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bfa14e4510066f04613e6b1776309ca') in 0.106365 seconds
+  Import took 0.127580 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.958271 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab
+  artifactKey: Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab using Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c50e8a07e83b4c305e54604822fef53f') in 0.116747 seconds
+  Import took 0.134653 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.173828 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab
+  artifactKey: Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab using Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5e318ab217fe90b5fb4a5ed5dc8b48a') in 0.123365 seconds
+  Import took 0.142313 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.223812 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundP.prefab
+  artifactKey: Guid(ba5ac244f4bffef418c84436542d0439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundP.prefab using Guid(ba5ac244f4bffef418c84436542d0439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd6f93ef704131fe9b58c238896d70ea') in 0.084399 seconds
+  Import took 0.102493 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.786456 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundP.prefab
+  artifactKey: Guid(ba5ac244f4bffef418c84436542d0439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundP.prefab using Guid(ba5ac244f4bffef418c84436542d0439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfa5a394429e1002601f65b875a24a71') in 0.084059 seconds
+  Import took 0.099692 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.649070 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundP.prefab
+  artifactKey: Guid(ba5ac244f4bffef418c84436542d0439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundP.prefab using Guid(ba5ac244f4bffef418c84436542d0439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dae902fd7ace94d8fa1ec48e86ec1731') in 0.090877 seconds
+  Import took 0.107124 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.173044 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundP.prefab
+  artifactKey: Guid(ba5ac244f4bffef418c84436542d0439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundP.prefab using Guid(ba5ac244f4bffef418c84436542d0439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a966476160821bab8b5338648aa567f') in 0.078074 seconds
+  Import took 0.092499 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.768164 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundP.prefab
+  artifactKey: Guid(ba5ac244f4bffef418c84436542d0439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundP.prefab using Guid(ba5ac244f4bffef418c84436542d0439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '125b92f672ddda12afffb6f5cd07c2cf') in 0.085237 seconds
+  Import took 0.101205 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.088369 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundA.prefab
+  artifactKey: Guid(15429f147760d9b4e84b4688b805d31c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundA.prefab using Guid(15429f147760d9b4e84b4688b805d31c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fb6740b0653a325138d36464f342ccf') in 0.131953 seconds
+  Import took 0.151870 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.373358 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundA.prefab
+  artifactKey: Guid(15429f147760d9b4e84b4688b805d31c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundA.prefab using Guid(15429f147760d9b4e84b4688b805d31c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cfc54741e267c88e5a677d9ab56630f') in 0.129007 seconds
+  Import took 0.150700 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.889912 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundA.prefab
+  artifactKey: Guid(15429f147760d9b4e84b4688b805d31c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundA.prefab using Guid(15429f147760d9b4e84b4688b805d31c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9de901e30c0b0866b55ea523e5d6fb9') in 0.125110 seconds
+  Import took 0.146791 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.514846 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundA.prefab
+  artifactKey: Guid(15429f147760d9b4e84b4688b805d31c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundA.prefab using Guid(15429f147760d9b4e84b4688b805d31c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9de496886851a55bb922ada843de16b2') in 0.125528 seconds
+  Import took 0.145330 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.316494 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundA.prefab
+  artifactKey: Guid(15429f147760d9b4e84b4688b805d31c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundA.prefab using Guid(15429f147760d9b4e84b4688b805d31c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c29ce79ea4003665f722919cb97b6e55') in 0.146804 seconds
+  Import took 0.167334 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 738.073154 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundG.prefab
+  artifactKey: Guid(31819293d62219c4faac4dd0ea71329c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundG.prefab using Guid(31819293d62219c4faac4dd0ea71329c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1de01a9bbe1525c17cf7b6a296569a9') in 0.090335 seconds
+  Import took 0.109127 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.788749 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundA.prefab
+  artifactKey: Guid(15429f147760d9b4e84b4688b805d31c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundA.prefab using Guid(15429f147760d9b4e84b4688b805d31c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5553b68283099f3c196344b460254e91') in 0.126050 seconds
+  Import took 0.145927 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.071438 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab
+  artifactKey: Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundB.prefab using Guid(e67a5726fb749ef468a5cf13a45c658d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2132705a8e12fc7163b7041a4e6785f0') in 0.064510 seconds
+  Import took 0.080134 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.017793 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab
+  artifactKey: Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundC.prefab using Guid(4b201f22a04420f4a951e96961cab7ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de922658b3a62dd57d2faa475fafcce6') in 0.090852 seconds
+  Import took 0.109750 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.272733 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundD.prefab
+  artifactKey: Guid(1988766d8c08d454d95e13fc0fa38330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundD.prefab using Guid(1988766d8c08d454d95e13fc0fa38330) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8972fd2af37dfce8f76fb3d76aeb91bf') in 0.115158 seconds
+  Import took 0.136348 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.159356 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundE.prefab
+  artifactKey: Guid(29c69b39f63c6994aaac22b885468df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundE.prefab using Guid(29c69b39f63c6994aaac22b885468df9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eafb1d3ba7d54bc45e39645d6e8d4c93') in 0.102733 seconds
+  Import took 0.120456 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.492965 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundF.prefab
+  artifactKey: Guid(43401c46230bb964e888b0b7989f01d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundF.prefab using Guid(43401c46230bb964e888b0b7989f01d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10abb6b1b4d55685e3848ba25d5d1b32') in 0.077114 seconds
+  Import took 0.092346 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.755126 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundH.prefab
+  artifactKey: Guid(74911cd10bcf5cc4dbe6c631436ef038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundH.prefab using Guid(74911cd10bcf5cc4dbe6c631436ef038) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bbdab854dc7c9e09c89cdb45d0923b6') in 0.068739 seconds
+  Import took 0.082507 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.866690 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab
+  artifactKey: Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundI.prefab using Guid(ac06f72520b2b4d42b1d68ffdc551f3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f8df04fdc260f857c4aa6e846b20a9f') in 0.079883 seconds
+  Import took 0.095561 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.556650 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundJ.prefab
+  artifactKey: Guid(52f8e0d8dc7a03840acee23a9d835103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundJ.prefab using Guid(52f8e0d8dc7a03840acee23a9d835103) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd18b68525faf82925e37ac49335cd2e6') in 0.049186 seconds
+  Import took 0.062015 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.936643 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab
+  artifactKey: Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundK.prefab using Guid(47116e2338d389348b728032c6f50d07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6d4c6a0bb9fee8e2659a8b92cf993a9') in 0.083292 seconds
+  Import took 0.103225 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.295803 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundL.prefab
+  artifactKey: Guid(6dc635043250bea4681ae9e6b9489bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundL.prefab using Guid(6dc635043250bea4681ae9e6b9489bd7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '618da24b7c4901f4efac231496bbb7ef') in 0.046823 seconds
+  Import took 0.059877 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.345735 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab
+  artifactKey: Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundM.prefab using Guid(85109b752b4403747a58cd4664c406cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af781caeb77e3cf7890adaafb2c9d848') in 0.089924 seconds
+  Import took 0.106873 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.829219 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundN.prefab
+  artifactKey: Guid(b21851e87ca64264ab0ae97817b9d71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundN.prefab using Guid(b21851e87ca64264ab0ae97817b9d71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e442fcb1fea4b17a754068c86a1c696') in 0.086860 seconds
+  Import took 0.102315 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.765497 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab
+  artifactKey: Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundO.prefab using Guid(fa6ee8c9a50a68c469e597e5b70c9b4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f31f594cc78239632d441af640e6ef37') in 0.104004 seconds
+  Import took 0.121315 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.756455 seconds.
+  path: Assets/Prefabs/Procedural Dungeon/New Tiles/GroundP.prefab
+  artifactKey: Guid(ba5ac244f4bffef418c84436542d0439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Procedural Dungeon/New Tiles/GroundP.prefab using Guid(ba5ac244f4bffef418c84436542d0439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd49530b2186cf558430d416ffe4ff60d') in 0.088877 seconds
+  Import took 0.104835 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003761 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.30 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.683 seconds
+- Completed reload, in  1.478 seconds
 Platform modules already initialized, skipping
 Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
 Refreshing native plugins compatible for Editor in 1.38 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4794 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.0 MB.
-System memory in use after: 284.1 MB.
+Unloading 4798 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 276.9 MB.
+System memory in use after: 276.9 MB.
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5756.
-Total: 6.120600 ms (FindLiveObjects: 0.766700 ms CreateObjectMapping: 0.325100 ms MarkObjects: 4.498200 ms  DeleteObjects: 0.528900 ms)
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 5858.
+Total: 8.184400 ms (FindLiveObjects: 1.049100 ms CreateObjectMapping: 0.560100 ms MarkObjects: 5.649800 ms  DeleteObjects: 0.924100 ms)
 
-========================================================================
-Received Import Request.
-  Time since last request: 992.480987 seconds.
-  path: Assets/Animations/AI/FallenAngelAnimator.controller
-  artifactKey: Guid(25dc0337c4d789f40a0a6a1d5325648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/AI/FallenAngelAnimator.controller using Guid(25dc0337c4d789f40a0a6a1d5325648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cebd800686c2a2d354c819e815271bf6') in 0.351859 seconds
-  Import took 0.367104 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007704 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 2.00 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.120 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.36 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4794 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.1 MB.
-System memory in use after: 284.3 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5759.
-Total: 5.930700 ms (FindLiveObjects: 1.058700 ms CreateObjectMapping: 0.559800 ms MarkObjects: 3.787500 ms  DeleteObjects: 0.523200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 4069.953954 seconds.
-  path: Assets/Scripts/Gameplay/AI/AnimatorStateMachine/FallenAngel
-  artifactKey: Guid(3afa70d1ec20f0a45b4cd10ae7bfbe8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Gameplay/AI/AnimatorStateMachine/FallenAngel using Guid(3afa70d1ec20f0a45b4cd10ae7bfbe8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2215fec69ea4d45c256832069bde6fa') in 0.012044 seconds
-  Import took 0.024773 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004636 seconds.
-  path: Assets/Scripts/Gameplay/AI/AnimatorStateMachine/FallenAngel
-  artifactKey: Guid(3afa70d1ec20f0a45b4cd10ae7bfbe8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Gameplay/AI/AnimatorStateMachine/FallenAngel using Guid(3afa70d1ec20f0a45b4cd10ae7bfbe8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2215fec69ea4d45c256832069bde6fa') in 0.001574 seconds
-  Import took 0.011246 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.242331 seconds.
-  path: Assets/Scripts/Gameplay/AI/AnimatorStateMachine/FallenAngel/FallenAngelAttackStatmachineState.cs
-  artifactKey: Guid(f8e803da0668254438edb38048332768) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Gameplay/AI/AnimatorStateMachine/FallenAngel/FallenAngelAttackStatmachineState.cs using Guid(f8e803da0668254438edb38048332768) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd24bcfed751f6484c5f3f0cfbe0f2d64') in 0.007994 seconds
-  Import took 0.018361 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004467 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.24 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.572 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.26 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.2 MB.
-System memory in use after: 284.3 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5763.
-Total: 4.818800 ms (FindLiveObjects: 0.446500 ms CreateObjectMapping: 0.231200 ms MarkObjects: 3.637500 ms  DeleteObjects: 0.502800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003940 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.44 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.656 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 2.03 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.2 MB.
-System memory in use after: 284.3 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5766.
-Total: 5.101600 ms (FindLiveObjects: 0.507100 ms CreateObjectMapping: 0.243700 ms MarkObjects: 3.855700 ms  DeleteObjects: 0.494100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1045.055886 seconds.
-  path: Assets/Scripts/Gameplay/AI/AnimatorStateMachine/FallenAngel/FallenAngelAttackStateMachine.cs
-  artifactKey: Guid(f8e803da0668254438edb38048332768) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Gameplay/AI/AnimatorStateMachine/FallenAngel/FallenAngelAttackStateMachine.cs using Guid(f8e803da0668254438edb38048332768) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9163ccdba32adc6329cf1c44d0fc16f') in 0.015284 seconds
-  Import took 0.027107 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 37.708594 seconds.
-  path: Assets/Animations/AI/FallenAngelAnimator.controller
-  artifactKey: Guid(25dc0337c4d789f40a0a6a1d5325648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/AI/FallenAngelAnimator.controller using Guid(25dc0337c4d789f40a0a6a1d5325648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66d2141ffc4d494698ee7289ca7e69c5') in 0.356549 seconds
-  Import took 0.369814 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 34.826463 seconds.
-  path: Assets/Animations/AI/FallenAngelAnimator.controller
-  artifactKey: Guid(25dc0337c4d789f40a0a6a1d5325648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/AI/FallenAngelAnimator.controller using Guid(25dc0337c4d789f40a0a6a1d5325648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e57e153207a044ed7913e244942ba8cf') in 0.259742 seconds
-  Import took 0.273849 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004223 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.37 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.484 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.35 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.2 MB.
-System memory in use after: 284.3 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5769.
-Total: 7.497800 ms (FindLiveObjects: 0.699700 ms CreateObjectMapping: 0.684400 ms MarkObjects: 5.314000 ms  DeleteObjects: 0.797900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 88.743519 seconds.
-  path: Assets/Animations/AI/FallenAngelAnimator.controller
-  artifactKey: Guid(25dc0337c4d789f40a0a6a1d5325648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/AI/FallenAngelAnimator.controller using Guid(25dc0337c4d789f40a0a6a1d5325648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd597435362c2241b38e4214c11ab5af4') in 0.267461 seconds
-  Import took 0.282091 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.408006 seconds.
-  path: Assets/Animations/AI/FallenAngelAnimator.controller
-  artifactKey: Guid(25dc0337c4d789f40a0a6a1d5325648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/AI/FallenAngelAnimator.controller using Guid(25dc0337c4d789f40a0a6a1d5325648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc2195c9fe3e46c4e0cb2636bce0379f') in 0.258571 seconds
-  Import took 0.272517 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.592873 seconds.
-  path: Assets/Animations/AI/FallenAngelAnimator.controller
-  artifactKey: Guid(25dc0337c4d789f40a0a6a1d5325648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/AI/FallenAngelAnimator.controller using Guid(25dc0337c4d789f40a0a6a1d5325648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f39520af03857166a1fcb863fbab851') in 0.255303 seconds
-  Import took 0.270177 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.402518 seconds.
-  path: Assets/Prefabs/AI/FallenAngel AIEnemy.prefab
-  artifactKey: Guid(41cd7fb8bb8f92549a2f63586a9eaa1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/AI/FallenAngel AIEnemy.prefab using Guid(41cd7fb8bb8f92549a2f63586a9eaa1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '481e2bc29a5316a9f5bf1d130cac862e') in 0.454643 seconds
-  Import took 0.470774 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000200 seconds.
-  path: Assets/FallenAngel03/Prefabs/FallenAngel03_01.prefab
-  artifactKey: Guid(afe92a4657ebcd84d8af30f13d8d728a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FallenAngel03/Prefabs/FallenAngel03_01.prefab using Guid(afe92a4657ebcd84d8af30f13d8d728a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00d8a42872d153336211b57ee036587e') in 0.137124 seconds
-  Import took 0.149922 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000230 seconds.
-  path: Assets/FallenAngel03/Prefabs/FallenAngel03_02.prefab
-  artifactKey: Guid(ac507302a6d2a9a47bb64207008d38da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FallenAngel03/Prefabs/FallenAngel03_02.prefab using Guid(ac507302a6d2a9a47bb64207008d38da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '76718aab943f8612d8f574c7da5bacfa') in 0.065666 seconds
-  Import took 0.078472 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.517473 seconds.
-  path: Assets/FallenAngel03/Prefabs/FallenAngel03_03.prefab
-  artifactKey: Guid(0875875f2db451e45953aa9dfa65fa1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FallenAngel03/Prefabs/FallenAngel03_03.prefab using Guid(0875875f2db451e45953aa9dfa65fa1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0aaef89a182abe223d22e293e4caceca') in 0.057938 seconds
-  Import took 0.072463 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.005792 seconds.
-  path: Assets/FallenAngel03/Prefabs/FallenAngel03_03.prefab
-  artifactKey: Guid(0875875f2db451e45953aa9dfa65fa1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/FallenAngel03/Prefabs/FallenAngel03_03.prefab using Guid(0875875f2db451e45953aa9dfa65fa1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0aaef89a182abe223d22e293e4caceca') in 0.043338 seconds
-  Import took 0.055108 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 73.628390 seconds.
-  path: Assets/Imported Assets/AIAssets/Animation
-  artifactKey: Guid(14318943680d08b4d83cb0ab8e33908d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported Assets/AIAssets/Animation using Guid(14318943680d08b4d83cb0ab8e33908d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0182476877702ddd245717274c07cf5') in 0.007075 seconds
-  Import took 0.017354 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003687 seconds.
-  path: Assets/Imported Assets/AIAssets/Animation
-  artifactKey: Guid(14318943680d08b4d83cb0ab8e33908d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported Assets/AIAssets/Animation using Guid(14318943680d08b4d83cb0ab8e33908d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0182476877702ddd245717274c07cf5') in 0.001452 seconds
-  Import took 0.010797 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.993820 seconds.
-  path: Assets/Imported Assets/AIAssets/Animation/FallenAngel
-  artifactKey: Guid(6ef3501f03a1f8a4db4d264cbf38e679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported Assets/AIAssets/Animation/FallenAngel using Guid(6ef3501f03a1f8a4db4d264cbf38e679) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6788b55ed3cf3e916e70a4e7f9cb1958') in 0.001503 seconds
-  Import took 0.012588 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 21.295222 seconds.
-  path: Assets/Imported Assets/AIAssets/Animation/FallenAngel/Dash.anim
-  artifactKey: Guid(743b572051ba3d042a580612e8744a5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported Assets/AIAssets/Animation/FallenAngel/Dash.anim using Guid(743b572051ba3d042a580612e8744a5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78460a7f3215ac95980f58fe060f68e1') in 0.016090 seconds
-  Import took 0.025918 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.994320 seconds.
-  path: Assets/Imported Assets/AIAssets/Animation/FallenAngel/Dash_Inst.anim
-  artifactKey: Guid(743b572051ba3d042a580612e8744a5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported Assets/AIAssets/Animation/FallenAngel/Dash_Inst.anim using Guid(743b572051ba3d042a580612e8744a5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c8f38938286cc39a127fcb8f4532588') in 0.014909 seconds
-  Import took 0.025032 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004614 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.21 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.573 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 3.75 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.3 MB.
-System memory in use after: 284.4 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5892.
-Total: 4.841600 ms (FindLiveObjects: 0.517800 ms CreateObjectMapping: 0.284300 ms MarkObjects: 3.497700 ms  DeleteObjects: 0.540900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004331 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.33 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.741 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.41 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.5 MB.
-System memory in use after: 284.6 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5895.
-Total: 4.694900 ms (FindLiveObjects: 0.747200 ms CreateObjectMapping: 0.248900 ms MarkObjects: 3.223500 ms  DeleteObjects: 0.474100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 220.119362 seconds.
-  path: Assets/Animations/AI/FallenAngelAnimator.controller
-  artifactKey: Guid(25dc0337c4d789f40a0a6a1d5325648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/AI/FallenAngelAnimator.controller using Guid(25dc0337c4d789f40a0a6a1d5325648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b5e6878a98d367491d08868c2eee8a5') in 0.284451 seconds
-  Import took 0.308510 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.007834 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.18 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.677 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.45 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.5 MB.
-System memory in use after: 284.6 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5898.
-Total: 5.360100 ms (FindLiveObjects: 0.813500 ms CreateObjectMapping: 0.390300 ms MarkObjects: 3.649800 ms  DeleteObjects: 0.504900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.010105 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.30 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.666 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.24 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.5 MB.
-System memory in use after: 284.6 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5901.
-Total: 5.341700 ms (FindLiveObjects: 0.476600 ms CreateObjectMapping: 0.223000 ms MarkObjects: 4.163500 ms  DeleteObjects: 0.477400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005855 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.37 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.773 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.27 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.5 MB.
-System memory in use after: 284.6 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5904.
-Total: 6.936600 ms (FindLiveObjects: 0.663700 ms CreateObjectMapping: 0.612800 ms MarkObjects: 5.121500 ms  DeleteObjects: 0.537300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003818 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.24 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.821 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.37 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.3 MB.
-System memory in use after: 284.4 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5907.
-Total: 4.222000 ms (FindLiveObjects: 0.484300 ms CreateObjectMapping: 0.227900 ms MarkObjects: 3.022600 ms  DeleteObjects: 0.486000 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003732 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.25 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.683 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.32 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.5 MB.
-System memory in use after: 284.6 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5910.
-Total: 6.067600 ms (FindLiveObjects: 0.554400 ms CreateObjectMapping: 0.269200 ms MarkObjects: 4.420500 ms  DeleteObjects: 0.820400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006114 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.52 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.747 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 2.80 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.5 MB.
-System memory in use after: 284.7 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5913.
-Total: 5.156900 ms (FindLiveObjects: 0.564600 ms CreateObjectMapping: 0.282200 ms MarkObjects: 3.827400 ms  DeleteObjects: 0.481800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003876 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.37 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.594 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.53 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.5 MB.
-System memory in use after: 284.7 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5916.
-Total: 5.406000 ms (FindLiveObjects: 0.585500 ms CreateObjectMapping: 0.369600 ms MarkObjects: 3.946600 ms  DeleteObjects: 0.502800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004069 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.49 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.596 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.44 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.5 MB.
-System memory in use after: 284.7 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5919.
-Total: 6.165500 ms (FindLiveObjects: 0.664700 ms CreateObjectMapping: 0.569200 ms MarkObjects: 4.336900 ms  DeleteObjects: 0.592900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1480.977012 seconds.
-  path: Assets/Animations/AI/FallenAngelAnimator.controller
-  artifactKey: Guid(25dc0337c4d789f40a0a6a1d5325648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/AI/FallenAngelAnimator.controller using Guid(25dc0337c4d789f40a0a6a1d5325648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbf7fbf3d664f8ae244f1885e212d842') in 0.264462 seconds
-  Import took 0.280105 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004494 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.21 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.500 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.28 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.4 MB.
-System memory in use after: 284.5 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5922.
-Total: 7.550000 ms (FindLiveObjects: 0.677800 ms CreateObjectMapping: 0.582900 ms MarkObjects: 5.534500 ms  DeleteObjects: 0.753600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004727 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.33 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.750 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.27 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.6 MB.
-System memory in use after: 284.7 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5925.
-Total: 6.407200 ms (FindLiveObjects: 0.556300 ms CreateObjectMapping: 0.256000 ms MarkObjects: 4.802700 ms  DeleteObjects: 0.790400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 94.215939 seconds.
-  path: Assets/Animations/AI/FallenAngelAnimator.controller
-  artifactKey: Guid(25dc0337c4d789f40a0a6a1d5325648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/AI/FallenAngelAnimator.controller using Guid(25dc0337c4d789f40a0a6a1d5325648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1189f1046a72110a7edb590fddc813f7') in 0.305688 seconds
-  Import took 0.320407 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006244 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.81 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.667 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.40 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.6 MB.
-System memory in use after: 284.7 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5928.
-Total: 5.459400 ms (FindLiveObjects: 0.702800 ms CreateObjectMapping: 0.474100 ms MarkObjects: 3.726700 ms  DeleteObjects: 0.553900 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005587 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.56 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.641 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.27 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.6 MB.
-System memory in use after: 284.7 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5931.
-Total: 5.370800 ms (FindLiveObjects: 0.531100 ms CreateObjectMapping: 0.224800 ms MarkObjects: 4.077800 ms  DeleteObjects: 0.535900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1215.368772 seconds.
-  path: Assets/Animations/AI/FallenAngelAnimator.controller
-  artifactKey: Guid(25dc0337c4d789f40a0a6a1d5325648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/AI/FallenAngelAnimator.controller using Guid(25dc0337c4d789f40a0a6a1d5325648b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68073869f6db3326729c67e46eb4845a') in 0.281797 seconds
-  Import took 0.297927 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.006380 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.70 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.713 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.29 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.6 MB.
-System memory in use after: 284.7 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5934.
-Total: 4.917900 ms (FindLiveObjects: 0.687100 ms CreateObjectMapping: 0.569600 ms MarkObjects: 3.155600 ms  DeleteObjects: 0.504600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.005015 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.60 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.658 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.30 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.4 MB.
-System memory in use after: 284.6 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5937.
-Total: 4.981700 ms (FindLiveObjects: 0.752700 ms CreateObjectMapping: 0.372000 ms MarkObjects: 3.356400 ms  DeleteObjects: 0.499200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004062 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.50 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.656 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.33 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.6 MB.
-System memory in use after: 284.8 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5940.
-Total: 5.673200 ms (FindLiveObjects: 0.732700 ms CreateObjectMapping: 0.346000 ms MarkObjects: 3.998900 ms  DeleteObjects: 0.594200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003858 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.30 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.592 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.29 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.6 MB.
-System memory in use after: 284.8 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5943.
-Total: 6.326100 ms (FindLiveObjects: 1.116800 ms CreateObjectMapping: 0.640200 ms MarkObjects: 3.999100 ms  DeleteObjects: 0.568400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003770 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.32 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.668 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.80 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.7 MB.
-System memory in use after: 284.8 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5946.
-Total: 5.606800 ms (FindLiveObjects: 0.845600 ms CreateObjectMapping: 0.340700 ms MarkObjects: 3.799400 ms  DeleteObjects: 0.619600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003853 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 2.06 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.664 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.22 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.7 MB.
-System memory in use after: 284.8 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5949.
-Total: 4.960800 ms (FindLiveObjects: 0.574100 ms CreateObjectMapping: 0.314100 ms MarkObjects: 3.546200 ms  DeleteObjects: 0.525300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004436 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.24 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.479 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.22 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.5 MB.
-System memory in use after: 284.6 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5952.
-Total: 4.812000 ms (FindLiveObjects: 0.746200 ms CreateObjectMapping: 0.257200 ms MarkObjects: 3.318100 ms  DeleteObjects: 0.489500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004134 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.37 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.604 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.23 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.7 MB.
-System memory in use after: 284.8 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5955.
-Total: 4.678100 ms (FindLiveObjects: 0.517300 ms CreateObjectMapping: 0.252700 ms MarkObjects: 3.395500 ms  DeleteObjects: 0.511600 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004377 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.55 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.925 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.47 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.7 MB.
-System memory in use after: 284.8 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5958.
-Total: 5.842700 ms (FindLiveObjects: 0.724800 ms CreateObjectMapping: 0.533000 ms MarkObjects: 3.996300 ms  DeleteObjects: 0.586300 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003659 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 1.33 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.604 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.38 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.7 MB.
-System memory in use after: 284.8 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5961.
-Total: 7.516800 ms (FindLiveObjects: 0.790500 ms CreateObjectMapping: 0.478700 ms MarkObjects: 5.665300 ms  DeleteObjects: 0.580700 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003783 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 2.23 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.049 seconds
-Platform modules already initialized, skipping
-Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
-Refreshing native plugins compatible for Editor in 1.28 ms, found 1 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4795 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 284.7 MB.
-System memory in use after: 284.8 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 5964.
-Total: 7.223900 ms (FindLiveObjects: 1.392300 ms CreateObjectMapping: 0.743800 ms MarkObjects: 4.482000 ms  DeleteObjects: 0.604000 ms)
-
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file

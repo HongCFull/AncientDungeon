@@ -1,52 +1,40 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
-using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
-public class DungeonTile : MonoBehaviour
+public abstract class DungeonTile : MonoBehaviour
 {
     [Header("Hit Box")]
     [SerializeField] private DungeonTileCollisionBox boundingBox;
     
     [Header("Connectors")]
     [SerializeField] private List<Connector> corridorConnector;
-    [SerializeField] private List<Connector> connectedConnectors = new List<Connector>();   //should be read only
-
-    [Header("Enemies")] 
-    [SerializeField] private bool canSpawnEnemy;
-    [SerializeField] private AICharacter[] aiCharacters;
-    [SerializeField] private int numOfEnemies;
-    [SerializeField] private int randomOffset;
-    [SerializeField] private List<Transform> spawnPositions;
+    private List<Connector> connectedConnectors = new List<Connector>();   //Serialize it to make it convenient for debugging
     
     [Space]
     [Header("Debug")]
     [HideInInspector] public Connector parentConnector = null;
+    [HideInInspector] public  List<Collider> collidesHit;
     [ReadOnly] public DungeonTile parentTile = null;
     [ReadOnly] public GameObject pathHolder;
-    [ReadOnly] public List<Collider> collidesHit;
 
-    //public BoxCollider boundingBox { get; private set; }
     private Connector latestPopedConnector;
     private Vector3 scaleVector;
-    private bool hasSpawnedEnemies = false;
     
-    private void Awake() {
-        //cache boundingBox
-        //boundingBox = GetComponent<BoxCollider>();
+    //Getters
+    public List<Connector> GetAllConnectableConnectors() => corridorConnector;
+    public bool TileIsFullyConnected() => connectedConnectors.Count == 0;
+    public Vector3 GetGlobalCollisionBoxCenter() => boundingBox.GetGlobalCollisionBoxCenter();
+    public Vector3 GetScaledCollisionBoxHalfExtend() => boundingBox.GetScaledCollisionBoxHalfExtend();
+    public Quaternion GetRotationOfCollisionBox() => boundingBox.GetRotation();
+    public Transform GetCollisionBoxTransform() => boundingBox.transform;
+    
+    protected virtual void Awake() {
         scaleVector = transform.localScale;
     }
-    
-    public void SpawnEnemyOnTrigger(Collider other)
-    {
-        if (canSpawnEnemy && !hasSpawnedEnemies && other.gameObject.tag.Equals("Player")) {
-            hasSpawnedEnemies = true;
-            SpawnAIEnemies();
-        }
-    }
+
+    public abstract void OnPlayerEnterTile(Collider other);
     
     /// <summary>
     /// Pop and assume the connector is connected 
@@ -85,52 +73,7 @@ public class DungeonTile : MonoBehaviour
         latestPopedConnector = null;
     }
 
-    public List<Connector> GetAllConnectableConnectors() {
-        return corridorConnector;
-    }
 
-    public bool TileIsFullyConnected() {
-        return connectedConnectors.Count == 0;
-    }
-
-    public Vector3 GetGlobalCollisionBoxCenter()
-    {
-        return boundingBox.GetGlobalCollisionBoxCenter();
-    }
-
-    public Vector3 GetScaledCollisionBoxHalfExtend() {
-        return boundingBox.GetScaledCollisionBoxHalfExtend();
-    }
-
-    public Quaternion GetRotationOfCollisionBox()
-    {
-        return boundingBox.GetRotation();
-    }
-
-    public Transform GetCollisionBoxTransform()
-    {
-        return boundingBox.transform;
-    }
-    
-    private void SpawnAIEnemies()
-    {
-        if (aiCharacters.Length <= 0)
-            return;
-        
-        if(numOfEnemies>spawnPositions.Count)
-            Debug.Log("numOfEnemies greater than spawnPositions");
-        
-        spawnPositions.Shuffle();
-
-        int randomNumOfEnemies = Random.Range(Mathf.Max(0,numOfEnemies - randomOffset), numOfEnemies + randomOffset);
-        int numOfEnemiesToSpawn = Mathf.Min(randomNumOfEnemies, spawnPositions.Count);
-        for (int i = 0; i < numOfEnemiesToSpawn; i++) {
-            //Vector3 position = transform.TransformPoint(spawnPositions[i].position);
-            Vector3 position = spawnPositions[i].position;
-            AICharacter aiCharacter = Instantiate(aiCharacters[Random.Range(0, aiCharacters.Length)], position, quaternion.identity);
-            aiCharacter.GetAIController().SetControllerAIToHatred(true);
-        }
-        
-    }
+   
     
 }

@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Custom collision detection box for a dungeon tile.
+/// </summary>
 [RequireComponent(typeof(BoxCollider))]
 public class DungeonTileCollisionBox : MonoBehaviour
 {
@@ -10,15 +13,9 @@ public class DungeonTileCollisionBox : MonoBehaviour
     [SerializeField] private BoxCollider boundingBox;
     // Start is called before the first frame update
 
-    private void OnTriggerEnter(Collider other)
-    {
-        tile.SpawnEnemyOnTrigger(other);
-    }
-
-    public Vector3 GetGlobalCollisionBoxCenter() {
-
-        return transform.TransformPoint(boundingBox.center);
-    }
+    private void OnTriggerEnter(Collider other) => tile.OnPlayerEnterTile(other);
+    public Vector3 GetGlobalCollisionBoxCenter() => transform.TransformPoint(boundingBox.center);
+    public Quaternion GetRotation()=> transform.rotation * tile.transform.rotation;
 
     public Vector3 GetScaledCollisionBoxHalfExtend() {
 
@@ -32,10 +29,7 @@ public class DungeonTileCollisionBox : MonoBehaviour
         return scaledBoxHalfExtents;
     }
 
-    public Quaternion GetRotation()
-    {
-        return transform.rotation * tile.transform.rotation;
-    }
+    
         
 #if UNITY_EDITOR
     private void OnDrawGizmos() 
@@ -49,6 +43,5 @@ public class DungeonTileCollisionBox : MonoBehaviour
         Gizmos.DrawWireCube(boundingBox.center,2*GetScaledCollisionBoxHalfExtend());
     }
     
-
 #endif
 }
