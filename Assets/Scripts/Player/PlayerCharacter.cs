@@ -1,10 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using HitBoxDefinition;
 using Player;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Playables;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 
 public enum PlayerAttackMode
@@ -94,17 +97,19 @@ public class PlayerCharacter : CombatCharacter
         animID_Grounded = Animator.StringToHash("grounded");
         stateID_Awake = Animator.StringToHash("Awake");
     }
-    
-    public Vector3 GetPlayerWorldPosition()
-    {
-        return transform.position;
-    }
-
-    public override void DisableAllAttackHitBoxes()
+    public override void DisableAllAttackHitBoxes() 
     {
         weaponHitBox.DisableAttackCollider();
     }
 
+    public override void DisableAllReceiveHitBoxes()
+    {
+        foreach (ReceiveHitBox receiveHitBox in receiveHitBoxes)
+            receiveHitBox.DisableReceiveHitBox();
+    }
+
+    public Vector3 GetPlayerWorldPosition() => transform.position;
+    
     #region GetAnimatorStateInfo
         public bool AnimatorStateCanBeInterrupted() => animator.GetBool(animID_stateCanBeInterrupted);
         public bool AnimatorIsGrounded() => animator.GetBool(animID_Grounded);

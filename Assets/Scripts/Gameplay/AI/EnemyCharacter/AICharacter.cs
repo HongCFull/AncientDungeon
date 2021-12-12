@@ -74,7 +74,7 @@ public abstract class AICharacter : CombatCharacter
     private void DisableAllReceiveHitBoxes()
     {
         foreach (ReceiveHitBox receiveHitBox in receiveHitBoxes) {
-            receiveHitBox.EnableHitBox(false);
+            receiveHitBox.DisableReceiveHitBox();
         }    
     }
     

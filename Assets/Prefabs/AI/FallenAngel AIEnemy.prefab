@@ -3070,7 +3070,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1264006247645931578}
     - target: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
+      propertyPath: hitBoxTag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
       propertyPath: attackCollider
+      value: 
+      objectReference: {fileID: 2115912419}
+    - target: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
+      propertyPath: hitBoxCollider
       value: 
       objectReference: {fileID: 2115912419}
     - target: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
@@ -3161,11 +3169,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1264006247645931578}
     - target: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
+      propertyPath: hitBoxTag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
       propertyPath: skillPower
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
       propertyPath: attackCollider
+      value: 
+      objectReference: {fileID: 5217989066002150580}
+    - target: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
+      propertyPath: hitBoxCollider
       value: 
       objectReference: {fileID: 5217989066002150580}
     - target: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
@@ -3202,16 +3218,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
---- !u!4 &1671934910073683434 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3919907949333788164, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
-  m_PrefabInstance: {fileID: 2402011191011511278}
-  m_PrefabAsset: {fileID: 0}
---- !u!136 &5217989066002150580 stripped
-CapsuleCollider:
-  m_CorrespondingSourceObject: {fileID: 7583970631040843610, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
-  m_PrefabInstance: {fileID: 2402011191011511278}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2067477898819220940 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
@@ -3223,6 +3229,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fcd443cb5d9f69499e4c11dd33fa83b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1671934910073683434 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3919907949333788164, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
+  m_PrefabInstance: {fileID: 2402011191011511278}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &5217989066002150580 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 7583970631040843610, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
+  m_PrefabInstance: {fileID: 2402011191011511278}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2402011191390104301
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3279,7 +3295,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1264006247645931578}
     - target: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
+      propertyPath: hitBoxTag
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
       propertyPath: attackCollider
+      value: 
+      objectReference: {fileID: 5217989065642530231}
+    - target: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
+      propertyPath: hitBoxCollider
       value: 
       objectReference: {fileID: 5217989065642530231}
     - target: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
@@ -3308,6 +3332,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
+--- !u!4 &1671934909646953705 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3919907949333788164, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
+  m_PrefabInstance: {fileID: 2402011191390104301}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2067477897132102863 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4459830553148276258, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
@@ -3324,11 +3353,6 @@ CapsuleCollider:
   m_CorrespondingSourceObject: {fileID: 7583970631040843610, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
   m_PrefabInstance: {fileID: 2402011191390104301}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1671934909646953705 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3919907949333788164, guid: 8bac211160758f94db22d5bd54473aee, type: 3}
-  m_PrefabInstance: {fileID: 2402011191390104301}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2402011192166753873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3337,9 +3361,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 2402011192371165670}
     m_Modifications:
     - target: {fileID: 1981559750924187733, guid: b82ea449147227f45b071acbf5858cfc, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 1264006247645931578}
+    - target: {fileID: 1981559750924187733, guid: b82ea449147227f45b071acbf5858cfc, type: 3}
       propertyPath: hitBoxTag
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1981559750924187733, guid: b82ea449147227f45b071acbf5858cfc, type: 3}
+      propertyPath: hitBoxCollider
+      value: 
+      objectReference: {fileID: 5217989065008453899}
     - target: {fileID: 1981559750924187733, guid: b82ea449147227f45b071acbf5858cfc, type: 3}
       propertyPath: parentCombatCharacter
       value: 
@@ -3409,6 +3441,11 @@ PrefabInstance:
 --- !u!4 &1671934909089419349 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3919907949333788164, guid: b82ea449147227f45b071acbf5858cfc, type: 3}
+  m_PrefabInstance: {fileID: 2402011192166753873}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &5217989065008453899 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 7583970631040843610, guid: b82ea449147227f45b071acbf5858cfc, type: 3}
   m_PrefabInstance: {fileID: 2402011192166753873}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &4191235434049740292 stripped

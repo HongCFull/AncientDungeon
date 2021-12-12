@@ -6,16 +6,15 @@ using HitBoxDefinition;
 using Unity.Mathematics;
 
 [RequireComponent(typeof(Collider))]
-public class AttackHitBox : MonoBehaviour
+public class AttackHitBox : HitBox
 {
-    [SerializeField] private CombatCharacter owner;
     [SerializeField] private List<HitBoxTag> canDamageHitBoxWithTag;
     [SerializeField] private ParticleSystem hitVFX;
     
     [Tooltip("This can be updated by the animation event")]
     [SerializeField] private float skillPower;
     
-    [SerializeField] Collider attackCollider;
+    //[SerializeField] Collider attackCollider;
     
     
     private void OnTriggerEnter(Collider other)
@@ -29,21 +28,21 @@ public class AttackHitBox : MonoBehaviour
         foreach (HitBoxTag tag in canDamageHitBoxWithTag) {
             if (targetTag == tag) {
                 CombatDamageManager.DealDamageTo(owner,receiveHitBoxComp.GetCombatCharacterOwner(),skillPower);
-                ShowHitVFX(attackCollider.ClosestPointOnBounds(other.transform.position));
+                ShowHitVFX(hitBoxCollider.ClosestPointOnBounds(other.transform.position));
             }
         }
     }
     
     public void EnableAttackCollider()
     {
-        if(!attackCollider)
-            attackCollider = GetComponent<Collider>();
-        attackCollider.enabled = true;
+        if(!hitBoxCollider)
+            hitBoxCollider = GetComponent<Collider>();
+        hitBoxCollider.enabled = true;
     }
     
     public void EnableAttackColliderWithSkillPower(float skillPower)
     {
-        attackCollider.enabled = true;
+        hitBoxCollider.enabled = true;
         this.skillPower = skillPower;
     }
     
@@ -52,7 +51,7 @@ public class AttackHitBox : MonoBehaviour
     /// </summary>
     public void DisableAttackCollider()
     {
-        attackCollider.enabled = false;
+        hitBoxCollider.enabled = false;
     }
 
     private void ShowHitVFX(ContactPoint contactPoint)

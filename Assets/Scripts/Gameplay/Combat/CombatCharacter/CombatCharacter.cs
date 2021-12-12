@@ -25,7 +25,6 @@ public abstract class CombatCharacter : MonoBehaviour
     protected int animID_isDamaged;
     protected int animID_isDead;
     protected int animID_stateCanBeInterrupted;
-    
     private bool diedOnce = false;
     
     protected virtual void Awake()
@@ -48,11 +47,22 @@ public abstract class CombatCharacter : MonoBehaviour
         if(GetCurrentHealth()>GetMaxHealth()) 
             throw new System.Exception(name+"'s current health is greater than its max health");
     }
+    
+    /// <summary>
+    /// Disable all the attack hit boxes (aka hurt boxes) of this combat character.
+    /// Should be implemented individually
+    /// </summary>
+    public abstract void DisableAllAttackHitBoxes();
+    
+    /// <summary>
+    /// Disable all the receive hit boxes of this combat character.
+    /// Should be implemented individually
+    /// </summary>
+    public abstract void DisableAllReceiveHitBoxes();
 
     /// <summary>
     /// Returns true only if both HP <= 0 and animator is in the Death state. 
     /// </summary>
-    /// <returns></returns>
     public bool IsDead() => combatCharacterData.currentHealth <= 0 && animator.GetBool(animID_isDead);
     public ElementType GetElementType() => combatCharacterData.elementType;
     public float GetAttack() => combatCharacterData.attack;
@@ -60,13 +70,7 @@ public abstract class CombatCharacter : MonoBehaviour
     public float GetCurrentHealth() => combatCharacterData.currentHealth;
     public float GetMaxHealth() => combatCharacterData.maxHealth;
     public void SetCombatCharacterToInvulnerable(bool isInvulnerable) => this.invulnerable = isInvulnerable;
-
-    /// <summary>
-    /// Disable all the attack hit boxes of this combat character.
-    /// Should be implemented individually
-    /// </summary>
-    public abstract void DisableAllAttackHitBoxes();
-
+    
     protected void EnableAttackHitBox(int i)
     {
         if (i < 0 || i >= attackHitBoxes.Count)
@@ -101,6 +105,7 @@ public abstract class CombatCharacter : MonoBehaviour
         
         if (isDead) {
             diedOnce = true;
+            DisableAllReceiveHitBoxes();
             SetAnimatorIsDeadTo(true);
             whenItIsDead.Invoke();
         }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using HitBoxDefinition;
 using UnityEngine;
 
 public class AICharacterSlime : AICharacter
@@ -15,6 +16,12 @@ public class AICharacterSlime : AICharacter
     {
         foreach (AttackHitBox atkHitBox in attackHitBoxes)
             atkHitBox.DisableAttackCollider();
+    }
+
+    public override void DisableAllReceiveHitBoxes()
+    {
+        foreach (ReceiveHitBox receiveHitBox in receiveHitBoxes)
+            receiveHitBox.DisableReceiveHitBox();        
         
     }
 }

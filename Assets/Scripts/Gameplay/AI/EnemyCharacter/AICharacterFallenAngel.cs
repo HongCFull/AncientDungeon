@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using HitBoxDefinition;
 using UnityEngine;
 
 public class AICharacterFallenAngel : AICharacter
@@ -20,6 +22,12 @@ public class AICharacterFallenAngel : AICharacter
         DisableLeftWeaponHitBox();
         DisableRightWeaponHitBox();
         DisableAttack02HitBox();
+    }
+
+    public override void DisableAllReceiveHitBoxes()
+    {
+        foreach (ReceiveHitBox receiveHitBox in receiveHitBoxes)
+            receiveHitBox.DisableReceiveHitBox();
     }
 
     public void EnableLeftWeaponHitBoxWithPower(float power)
