@@ -59,9 +59,6 @@ public class PlayerCharacter : CombatCharacter
     [Header("Timeline")] 
     [SerializeField] private PlayableDirector characterAwakeDirector;
     
-    //Audio
-    private AudioSource audioSource;
-    
     //Animations
     private const int AwakenLayerIndex = 1;
     private int animID_CanTriggerNextCombo;
@@ -228,7 +225,6 @@ public class PlayerCharacter : CombatCharacter
                 return;
             audioSource.PlayOneShot(combo4Part2WeaponClip);
         }
-
 
         public void PlayNormalAttackAudioOfCombo1( )
         {

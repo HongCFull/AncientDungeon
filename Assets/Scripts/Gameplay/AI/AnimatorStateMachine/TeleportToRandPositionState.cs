@@ -10,16 +10,21 @@ public class TeleportToRandPositionState : StateMachineBehaviour
     private AICharacter aiCharacter;
     private TeleportAIWithEffectsHelper tpAIHelper;
     private int animIDTeleportFinished;
+    private int animIDTeleport;
     private bool hasEnter = false;
     private bool hasExit = false;
     //private bool teleported = false;
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
+        
         animIDTeleportFinished = Animator.StringToHash("teleportFinished");
+        animIDTeleport = Animator.StringToHash("teleport");
+                    
         navMeshAgent = animator.GetComponent<NavMeshAgent>();
         aiCharacter = animator.GetComponent<AICharacter>();
-        
+
+        animator.SetBool(animIDTeleport, false);
         aiCharacter.SetCombatCharacterToInvulnerable(true);
 
         hasEnter = true;

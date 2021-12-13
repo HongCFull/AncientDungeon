@@ -1,10 +1,12 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using Element;
 using HitBoxDefinition;
+using Random = UnityEngine.Random;
 
-[RequireComponent(typeof(CombatCharacterData),typeof(Animator))]
+[RequireComponent(typeof(CombatCharacterData),typeof(Animator),typeof(AudioSource))]
 public abstract class CombatCharacter : MonoBehaviour
 {
     //Can't use get component as it other awake method depends on this data obj
@@ -21,6 +23,12 @@ public abstract class CombatCharacter : MonoBehaviour
     [SerializeField] protected List<ReceiveHitBox> receiveHitBoxes;
     [SerializeField] protected List<AttackHitBox> attackHitBoxes;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip[] footStepAudio;
+    [SerializeField] private AudioClip[] damagedAudio;
+
+    protected AudioSource audioSource;
+
     protected Animator animator;
     protected int animID_isDamaged;
     protected int animID_isDead;
@@ -29,7 +37,8 @@ public abstract class CombatCharacter : MonoBehaviour
     
     protected virtual void Awake()
     {
-
+        audioSource = GetComponent<AudioSource>();
+        
         animator = GetComponent<Animator>();
         animID_isDamaged = Animator.StringToHash("isDamaged");
         animID_isDead = Animator.StringToHash("isDead");
@@ -87,6 +96,13 @@ public abstract class CombatCharacter : MonoBehaviour
         attackHitBoxes[i].DisableAttackCollider();
     }
     
+    public void PlayRandomFootStepAudio()
+    {
+        if (footStepAudio.Length <= 0)
+            throw new Exception(gameObject.name + "'s footstep audio clips are not assigned");
+        audioSource.PlayOneShot(footStepAudio[Random.Range(0,footStepAudio.Length)]);
+    }
+    
     /// <summary>
     /// Deal damage to this combatCharacter.
     /// Invoke events when it is damaged or dead.
@@ -110,26 +126,29 @@ public abstract class CombatCharacter : MonoBehaviour
             whenItIsDead.Invoke();
         }
         else {
-            SetAnimationTriggerIsDamaged();
+
+            if (animator.GetBool(animID_stateCanBeInterrupted)) {
+                SetAnimationTriggerIsDamaged();
+                PlayDamagedAudio();
+            }
         }
     }
     
     /// <summary>
     /// Note:It shouldn't be assigned to character OnDamaged event
     /// </summary>
-    void SetAnimationTriggerIsDamaged()
-    {
-        if(animator.GetBool(animID_stateCanBeInterrupted))
-            animator.SetTrigger(animID_isDamaged);
-    }
-
+    void SetAnimationTriggerIsDamaged() => animator.SetTrigger(animID_isDamaged);
+    
     /// <summary>
     ///  Note:It shouldn't be assigned to character OnDeath event
     /// </summary>
-    void SetAnimatorIsDeadTo(bool isDead)
+    void SetAnimatorIsDeadTo(bool isDead)=> animator.SetBool(animID_isDead,isDead);
+
+    private void PlayDamagedAudio()
     {
-        animator.SetBool(animID_isDead,isDead);
-    }
-    
-    
+        if (damagedAudio.Length <= 0)
+            return;
+            //throw new Exception(gameObject.name + "'s damaged audio clips are not assigned");
+        audioSource.PlayOneShot(damagedAudio[Random.Range(0,damagedAudio.Length)]);
+    }    
 }

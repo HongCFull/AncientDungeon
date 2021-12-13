@@ -49,12 +49,6 @@ public class DungeonGenerator : MonoBehaviour
     {
         StartCoroutine(GenerateDungeon());
     }
-
-    void Update() 
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
     
     IEnumerator GenerateDungeon() 
     {

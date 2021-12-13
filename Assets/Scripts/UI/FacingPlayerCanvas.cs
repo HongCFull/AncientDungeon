@@ -6,16 +6,16 @@ using UnityEngine;
 public class FacingPlayerCanvas : MonoBehaviour
 {
     private Transform playerCameraTransform;
-    private Transform transform;
+    private Transform transformComp;
 
     private void Start()
     {
         playerCameraTransform = PlayerMainCamera.Instance.gameObject.transform;
-        transform = gameObject.transform;
+        transformComp = gameObject.transform;
     }
 
     void Update()
     {
-        transform.LookAt(playerCameraTransform.position);
+        transformComp.LookAt(playerCameraTransform.position);
     }
 }
