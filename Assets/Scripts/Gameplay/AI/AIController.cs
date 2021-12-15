@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 
 /// <summary>
 /// The AIController manipulates the movement and perception components of the AI.
@@ -12,6 +13,23 @@ using UnityEngine.AI;
 [RequireComponent(typeof(Animator),typeof(NavMeshAgent),typeof(AICharacter))]
 public class AIController : MonoBehaviour
 {
+    //Hatred Variables
+    [SerializeField] [Range(0,10f)] private float wanderTimeAfterSightIsLostOffset;
+    [SerializeField] private float forceHatredDistance;
+    public bool isHatred { get; private set; } = false;
+    private float lossSightTimer;
+    private const float wanderTimeAfterSightIsLost = 5f;
+    private bool isHatredInPreviousFrame;
+    
+    [Header("Events")] 
+    [Tooltip("Called when transiting from non hatred to hatred")]
+    [SerializeField] private UnityEvent OnHatred;
+    [SerializeField] private UnityEvent OnNonHatred;
+    
+    [Header("Debug settings")]
+    [SerializeField] private bool displayForceHatredDistance;
+    [SerializeField] private Color displayForceHatredDistanceColor; 
+    
     private AICharacter aiCharacter;
     private Animator animator;
     private NavMeshAgent navMeshAgent;
@@ -21,17 +39,6 @@ public class AIController : MonoBehaviour
     private int isHatredAnimID;
     private int currentSpeedAnimID;
     private int canAttackAnimID;
-    
-    //Hatred Variables
-    public bool isHatred { get; private set; } = false;
-    private float lossSightTimer;
-    private const float wanderTimeAfterSightIsLost = 5f;
-    [SerializeField] private float forceHatredDistance;
-    
-    [Header("Debug settings")]
-    //Debug Settings
-    [SerializeField] private bool displayForceHatredDistance;
-    [SerializeField] private Color displayForceHatredDistanceColor; 
     
     // Start is called before the first frame update
     void Awake()
@@ -44,6 +51,9 @@ public class AIController : MonoBehaviour
         
         navMeshAgent = GetComponent<NavMeshAgent>();
         aiCharacter = GetComponent<AICharacter>();
+
+        //Potential BUG: what if instantiate an enemy and then change the animator variable? Does it guaranteed to get the latest result? 
+        isHatredInPreviousFrame = animator.GetBool(isHatredAnimID);
     }
 
     // Update is called once per frame
@@ -57,11 +67,8 @@ public class AIController : MonoBehaviour
 
     public void SetControllerAIToHatred(bool isHatred) => this.isHatred = isHatred;
 
-    void UpdateAnimatorBoolCanSeePlayer() 
-    {
-        animator.SetBool(canSeePlayerAnimID,aiCharacter.CanSeePlayer());
-    }
-
+    void UpdateAnimatorBoolCanSeePlayer() => animator.SetBool(canSeePlayerAnimID,aiCharacter.CanSeePlayer());
+    
     void UpdateAnimatorWalkSpeed()
     {
         Vector2 horizontalVel = navMeshAgent.velocity;
@@ -84,12 +91,27 @@ public class AIController : MonoBehaviour
         UpdateLossSightTimer();
         if (aiCharacter.CanSeePlayer()) {
             isHatred = true;
+
+            if (isHatredInPreviousFrame == false) { //transited from non hatred to hatred
+                isHatredInPreviousFrame = true;
+                BGMManager.Instance.PlayBattleBGMInThisScene(aiCharacter);
+            }
         }
         else if (PlayerIsCloseEnoughToTriggerHatredState()) {
             isHatred = true;
+
+            if (isHatredInPreviousFrame == false) { //transited from non hatred to hatred
+                isHatredInPreviousFrame = true;
+                BGMManager.Instance.PlayBattleBGMInThisScene(aiCharacter);
+            }
         }
         else if (!aiCharacter.CanSeePlayer() && lossSightTimer>=wanderTimeAfterSightIsLost) {
             isHatred = false;
+
+            if (isHatredInPreviousFrame == true) { //transited from hatred to non hatred
+                isHatredInPreviousFrame = false;
+                BGMManager.Instance.RegisterToPlayNormalBGMInThisScene(aiCharacter);
+            }
         }
 
     }

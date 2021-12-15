@@ -6,6 +6,7 @@ namespace Combat
 {
     using Element;
     
+    //TODO : make it as a singleton instead of static class
     public static class CombatDamageManager 
     {
      
