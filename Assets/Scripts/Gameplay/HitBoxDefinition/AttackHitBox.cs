@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Combat;
 using UnityEngine;
 
 using HitBoxDefinition;
@@ -27,7 +26,7 @@ public class AttackHitBox : HitBox
         HitBoxTag targetTag = receiveHitBoxComp.GetHitBoxTag();
         foreach (HitBoxTag tag in canDamageHitBoxWithTag) {
             if (targetTag == tag) {
-                CombatDamageManager.DealDamageTo(owner,receiveHitBoxComp.GetCombatCharacterOwner(),skillPower);
+                CombatManager.Instance.DealDamageTo(owner,receiveHitBoxComp.GetCombatCharacterOwner(),skillPower);
                 ShowHitVFX(hitBoxCollider.ClosestPointOnBounds(other.transform.position));
             }
         }

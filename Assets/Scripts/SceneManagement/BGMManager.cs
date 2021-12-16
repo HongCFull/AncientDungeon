@@ -9,12 +9,10 @@ public class BGMManager : MonoBehaviour
 
     [Tooltip("The index should match with the scene index")]
     [SerializeField] private SceneBGMHolder[] sceneBGMHolders;
-
     public static BGMManager Instance { get; private set; }
-    private List<AICharacter> hatredAICharacters = new List<AICharacter>();
     private int currentSceneIndex;
 
-    void OnEnable()
+    void Start()
     {
         if (!Instance) {
             Instance = this;
@@ -24,7 +22,15 @@ public class BGMManager : MonoBehaviour
             Destroy(this);
             return;
         }
+
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         sceneBGMHolders[currentSceneIndex].PlayNormalBGM(true);
+        SceneManager.sceneLoaded+=PlayNormalBGMOfThisSceneWrapper;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded-=PlayNormalBGMOfThisSceneWrapper;
     }
 
     private void Update()
@@ -37,21 +43,26 @@ public class BGMManager : MonoBehaviour
 
     }
 
-    //TODO: rename this function
-    public void RegisterToPlayNormalBGMInThisScene(AICharacter aiCharacter)
+    void PlayNormalBGMOfThisSceneWrapper(Scene scene, LoadSceneMode mode)
     {
-        hatredAICharacters.Remove(aiCharacter);
-        
-        if(hatredAICharacters.Count==0)
-            sceneBGMHolders[currentSceneIndex].PlayNormalBGM(true);
+        sceneBGMHolders[currentSceneIndex].TurnOffCurrentPlayingAudioSource();
+        PlayNormalBGMOfScene(scene.buildIndex);
+        currentSceneIndex = scene.buildIndex;
+    }
+    
+    public void PlayNormalBGMOfThisScene( )
+    {
+        Debug.Log("BGM of "+currentSceneIndex);
+        sceneBGMHolders[currentSceneIndex].PlayNormalBGM(true);
     }
 
-    //TODO: rename this function
-    public void PlayBattleBGMInThisScene(AICharacter aiCharacter)
+    public void PlayBattleBGMOfThisScene( )
     {
-        hatredAICharacters.Add(aiCharacter);
-        if(hatredAICharacters.Count==1)
-            sceneBGMHolders[currentSceneIndex].PlayBattleBGM(true);
+        sceneBGMHolders[currentSceneIndex].PlayBattleBGM(true);
     }
 
+    private void PlayNormalBGMOfScene(int sceneIndex)
+    {
+        sceneBGMHolders[sceneIndex].PlayNormalBGM(true);
+    }
 }

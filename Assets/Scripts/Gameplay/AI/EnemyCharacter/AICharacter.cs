@@ -45,7 +45,12 @@ public abstract class AICharacter : CombatCharacter
         initPosition = transform.position;
         dissolveMaterial = skinnedMeshRenderer.material;
     }
-    
+
+    protected override void ComplementaryCallbackOnDeath()
+    {
+        CombatManager.Instance.UnregisterFromHatredEnemyList(this);
+    }
+
     public bool PlayerIsInsideAttackArea()
     {
         Vector3 projectedDistance = (PlayerCharacter.Instance.GetPlayerWorldPosition() - transform.position);

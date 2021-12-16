@@ -8,7 +8,8 @@ public class SceneBGMHolder : MonoBehaviour
     [SerializeField] private SceneBGMScriptableObject sceneBGMSetting;
     [SerializeField] private AudioSource normalBGMAudioSource;
     [SerializeField] private AudioSource battleBGMAudioSource;
-
+    private AudioSource currentPlayingAudioSource;
+    
     //Potential Bug? : PlayBGM functions are called before start 
     public void Start()
     {
@@ -17,13 +18,15 @@ public class SceneBGMHolder : MonoBehaviour
             AssignAudioClipToAudioSource();
     }
 
+    public void TurnOffCurrentPlayingAudioSource() => currentPlayingAudioSource.Stop();
+    
     public void PlayNormalBGM(bool enableTransition)
     {
         if (AudioClipsAreNotAssigned())
             AssignAudioClipToAudioSource();
         
         if (enableTransition) {
-            StartCoroutine(TransitBGMFromBattleToNormal(0.7f, 3f));
+            StartCoroutine(TransitBGMFromBattleToNormal(0.5f, 1f));
         }
         else {
             battleBGMAudioSource.Stop();
@@ -38,7 +41,7 @@ public class SceneBGMHolder : MonoBehaviour
             AssignAudioClipToAudioSource();
         
         if (enableTransition) {
-            StartCoroutine(TransitBGMFromNormalToBattle(0.3f,1f));
+            StartCoroutine(TransitBGMFromNormalToBattle(0.3f,0.4f));
         }
         else {
             normalBGMAudioSource.Stop();
@@ -89,6 +92,7 @@ public class SceneBGMHolder : MonoBehaviour
     /// <param name="duration">Change of volume per second</param>
     IEnumerator GraduallyTurnOnAudioSource(AudioSource audioSource, float volume,float duration)
     {
+        currentPlayingAudioSource = audioSource;
         audioSource.Play();
         float progress = 0f;
         float volDiff = volume-audioSource.volume;

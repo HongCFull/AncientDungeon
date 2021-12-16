@@ -21,11 +21,6 @@ public class AIController : MonoBehaviour
     private const float wanderTimeAfterSightIsLost = 5f;
     private bool isHatredInPreviousFrame;
     
-    [Header("Events")] 
-    [Tooltip("Called when transiting from non hatred to hatred")]
-    [SerializeField] private UnityEvent OnHatred;
-    [SerializeField] private UnityEvent OnNonHatred;
-    
     [Header("Debug settings")]
     [SerializeField] private bool displayForceHatredDistance;
     [SerializeField] private Color displayForceHatredDistanceColor; 
@@ -94,7 +89,7 @@ public class AIController : MonoBehaviour
 
             if (isHatredInPreviousFrame == false) { //transited from non hatred to hatred
                 isHatredInPreviousFrame = true;
-                BGMManager.Instance.PlayBattleBGMInThisScene(aiCharacter);
+                CombatManager.Instance.RegisterAsHatredEnemy(aiCharacter);
             }
         }
         else if (PlayerIsCloseEnoughToTriggerHatredState()) {
@@ -102,7 +97,7 @@ public class AIController : MonoBehaviour
 
             if (isHatredInPreviousFrame == false) { //transited from non hatred to hatred
                 isHatredInPreviousFrame = true;
-                BGMManager.Instance.PlayBattleBGMInThisScene(aiCharacter);
+                CombatManager.Instance.RegisterAsHatredEnemy(aiCharacter);
             }
         }
         else if (!aiCharacter.CanSeePlayer() && lossSightTimer>=wanderTimeAfterSightIsLost) {
@@ -110,7 +105,7 @@ public class AIController : MonoBehaviour
 
             if (isHatredInPreviousFrame == true) { //transited from hatred to non hatred
                 isHatredInPreviousFrame = false;
-                BGMManager.Instance.RegisterToPlayNormalBGMInThisScene(aiCharacter);
+                CombatManager.Instance.UnregisterFromHatredEnemyList(aiCharacter);
             }
         }
 

@@ -14,10 +14,11 @@ public abstract class CombatCharacter : MonoBehaviour
     
     protected bool invulnerable = false;
     
-    [Tooltip("when it is damaged and survived afterward")]
-    [SerializeField] private UnityEvent whenItIsDamaged;
+    [Tooltip("Called when it is damaged, shouldn't include manager callback")]
+    [SerializeField] protected UnityEvent whenItIsDamaged;
     
-    [SerializeField] private UnityEvent whenItIsDead;
+    [Tooltip("Called when it is dead, shouldn't include manager callback")]
+    [SerializeField] protected UnityEvent whenItIsDead;
 
     [Header("HitBoxes")]
     [SerializeField] protected List<ReceiveHitBox> receiveHitBoxes;
@@ -124,6 +125,7 @@ public abstract class CombatCharacter : MonoBehaviour
             DisableAllReceiveHitBoxes();
             SetAnimatorIsDeadTo(true);
             whenItIsDead.Invoke();
+            ComplementaryCallbackOnDeath();
         }
         else {
 
@@ -133,6 +135,12 @@ public abstract class CombatCharacter : MonoBehaviour
             }
         }
     }
+    
+    /// <summary>
+    /// A complementary callback function when this combat character is dead.
+    /// Override this function if the function signature is not void Function (void);  
+    /// </summary>
+    protected virtual void ComplementaryCallbackOnDeath(){}
     
     /// <summary>
     /// Note:It shouldn't be assigned to character OnDamaged event
